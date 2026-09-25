@@ -81,7 +81,7 @@ export const skills = [
 	},
 	{
 		slug: 'proteins',
-		related: ['genes', 'structures', 'pathways', 'diseases', 'interactions', 'atlas', 'alphafold'],
+		related: ['genes', 'structures', 'pathways', 'diseases', 'interactions', 'atlas', 'alphafold', 'complexes'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search proteins in Duaer', zh: '在 Duaer 里检索基因和蛋白' },
 		lede: {
@@ -543,7 +543,7 @@ export const skills = [
 	},
 	{
 		slug: 'interactions',
-		related: ['proteins', 'genes', 'organisms', 'expression'],
+		related: ['proteins', 'genes', 'organisms', 'expression', 'complexes'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search interactions in Duaer', zh: '在 Duaer 里检索互作' },
 		lede: {
@@ -968,6 +968,34 @@ export const skills = [
 				'Provide `words` or `ec` (or both).',
 				'`words` — words in the equation, or a Rhea id (`RHEA:10596`).',
 				'`ec` — optional. Enzyme Commission number (`2.7.10.1` or `ec:2.7.10.1`). Alone is enough.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'complexes',
+		related: ['interactions', 'proteins', 'organisms'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search complexes in Duaer', zh: '在 Duaer 里检索蛋白复合物' },
+		lede: {
+			en: 'In Duaer, search protein complexes via Complex Portal. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 Complex Portal 检索蛋白复合物。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has a Complex Portal accession, name, organism, and member gene or protein names when present.',
+			zh: '每条结果有 Complex Portal 编号、名称、物种，以及可用的成员基因或蛋白名。',
+		},
+		skill: skill({
+			name: 'duaer-complexes',
+			description:
+				'Search protein complexes through Duaer via Complex Portal. One successful search uses 1 Duaer credit.',
+			title: 'Duaer complexes',
+			call: 'GET https://api.duaer.com/v1/data/complexes?words=insulin&organism=Homo%20sapiens&limit=10',
+			fields: [
+				'`words` is required.',
+				'`words` — words in the complex name or description, or a Complex Portal id (`CPX-4305`).',
+				'`organism` — optional. Keep complexes whose organism contains this text, or an NCBI taxonomy id (`9606`).',
 				'`limit` — optional. From 1 to 20. Default 10.',
 			],
 		}),

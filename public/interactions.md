@@ -43,3 +43,4 @@ A missing key returns 401.
 - [Search genes in Duaer](https://skills.duaer.com/genes.md)
 - [Search organisms in Duaer](https://skills.duaer.com/organisms.md)
 - [Search expression in Duaer](https://skills.duaer.com/expression.md)
+- [Search complexes in Duaer](https://skills.duaer.com/complexes.md)
