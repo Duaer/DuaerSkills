@@ -29,7 +29,7 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - `limit` — optional. From 1 to 20. Default 10.
 - Use `pathwayId` as `pathway` when searching proteins. Reuse `pathwayId` in `id` for an exact lookup.
 - Open `browserUrl` for the interactive Reactome diagram, or `diagramUrl` for a PNG export.
-- Result fields: source, title, url, summary, pathwayId, dbId, stIdVersion, species, browserUrl, diagramUrl, figureUrl, hasDiagram, hasEHLD, isDisease, doi, releaseDate, lastUpdatedDate, compartments, compartmentAccessions, goId, goName, schemaClass. Exact id lookup fills more fields than a words search.
+- Result fields: source, title, url, summary, pathwayId, dbId, stIdVersion, species, browserUrl, diagramUrl, figureUrl, hasDiagram, hasEHLD, isDisease, doi, releaseDate, lastUpdatedDate, compartments, compartmentAccessions, goId, goName, schemaClass. Words and name searches are enriched with Reactome detail, same as an id lookup.
 
 ## Result
 

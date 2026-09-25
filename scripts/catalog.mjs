@@ -369,8 +369,8 @@ export const skills = [
 			zh: '在 Duaer 里检索 Reactome 通路。一次成功查询用 1 额度。',
 		},
 		returns: {
-			en: 'Each pathway returns pathwayId, species, summary, diagram links, compartments, GO, doi, dates, and flags. Use pathwayId with proteins.pathway. Exact id lookup fills more fields than words search.',
-			zh: '每条通路返回 pathwayId、物种、摘要、图链、区室、GO、doi、日期和标志。pathwayId 可用于蛋白 pathway。精确 id 比词语检索返回更多字段。',
+			en: 'Each pathway returns pathwayId, species, summary, diagram links, compartments, GO, doi, dates, and flags. Use pathwayId with proteins.pathway. Words and name searches are enriched with the same detail as an id lookup.',
+			zh: '每条通路返回 pathwayId、物种、摘要、图链、区室、GO、doi、日期和标志。pathwayId 可用于蛋白 pathway。词语与名称检索会补全与精确 id 相同的详情字段。',
 		},
 		skill: skill({
 			name: 'duaer-pathways',
@@ -387,7 +387,7 @@ export const skills = [
 							"`limit` — optional. From 1 to 20. Default 10.",
 							"Use `pathwayId` as `pathway` when searching proteins. Reuse `pathwayId` in `id` for an exact lookup.",
 							"Open `browserUrl` for the interactive Reactome diagram, or `diagramUrl` for a PNG export.",
-							"Result fields: source, title, url, summary, pathwayId, dbId, stIdVersion, species, browserUrl, diagramUrl, figureUrl, hasDiagram, hasEHLD, isDisease, doi, releaseDate, lastUpdatedDate, compartments, compartmentAccessions, goId, goName, schemaClass. Exact id lookup fills more fields than a words search."
+								"Result fields: source, title, url, summary, pathwayId, dbId, stIdVersion, species, browserUrl, diagramUrl, figureUrl, hasDiagram, hasEHLD, isDisease, doi, releaseDate, lastUpdatedDate, compartments, compartmentAccessions, goId, goName, schemaClass. Words and name searches are enriched with Reactome detail, same as an id lookup."
 			],
 		}),
 	},
