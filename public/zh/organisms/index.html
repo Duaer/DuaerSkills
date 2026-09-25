@@ -3,26 +3,26 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>在 Duaer 里检索蛋白结构 · Duaer</title>
+<title>在 Duaer 里检索物种 · Duaer</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
-<meta name="description" content="在 Duaer 里检索蛋白结构。一次成功查询用 1 额度。"/>
+<meta name="description" content="在 Duaer 里检索 UniProt 物种分类。一次成功查询用 1 额度。"/>
 <meta name="robots" content="index, follow"/>
-<link rel="canonical" href="https://skills.duaer.com/zh/structures/"/>
-<link rel="alternate" hreflang="zh-CN" href="https://skills.duaer.com/zh/structures/"/>
-<link rel="alternate" hreflang="en" href="https://skills.duaer.com/structures/"/>
-<link rel="alternate" hreflang="x-default" href="https://skills.duaer.com/structures/"/>
+<link rel="canonical" href="https://skills.duaer.com/zh/organisms/"/>
+<link rel="alternate" hreflang="zh-CN" href="https://skills.duaer.com/zh/organisms/"/>
+<link rel="alternate" hreflang="en" href="https://skills.duaer.com/organisms/"/>
+<link rel="alternate" hreflang="x-default" href="https://skills.duaer.com/organisms/"/>
 <link rel="alternate" type="text/plain" href="https://skills.duaer.com/llms.txt" title="LLMs"/>
-<link rel="alternate" type="text/markdown" href="https://skills.duaer.com/zh/structures.md" title="Markdown"/>
+<link rel="alternate" type="text/markdown" href="https://skills.duaer.com/zh/organisms.md" title="Markdown"/>
 <meta property="og:site_name" content="Duaer"/>
 <meta property="og:type" content="article"/>
 <meta property="og:locale" content="zh_CN"/>
-<meta property="og:url" content="https://skills.duaer.com/zh/structures/"/>
-<meta property="og:title" content="在 Duaer 里检索蛋白结构 · Duaer"/>
-<meta property="og:description" content="在 Duaer 里检索蛋白结构。一次成功查询用 1 额度。"/>
+<meta property="og:url" content="https://skills.duaer.com/zh/organisms/"/>
+<meta property="og:title" content="在 Duaer 里检索物种 · Duaer"/>
+<meta property="og:description" content="在 Duaer 里检索 UniProt 物种分类。一次成功查询用 1 额度。"/>
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="在 Duaer 里检索蛋白结构 · Duaer"/>
-<meta name="twitter:description" content="在 Duaer 里检索蛋白结构。一次成功查询用 1 额度。"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.duaer.com/#organization","name":"Duaer","url":"https://www.duaer.com/"},{"@type":"TechArticle","headline":"在 Duaer 里检索蛋白结构","description":"在 Duaer 里检索蛋白结构。一次成功查询用 1 额度。","inLanguage":"zh-CN","url":"https://skills.duaer.com/zh/structures/","author":{"@id":"https://www.duaer.com/#organization"},"publisher":{"@id":"https://www.duaer.com/#organization"}}]}</script>
+<meta name="twitter:title" content="在 Duaer 里检索物种 · Duaer"/>
+<meta name="twitter:description" content="在 Duaer 里检索 UniProt 物种分类。一次成功查询用 1 额度。"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.duaer.com/#organization","name":"Duaer","url":"https://www.duaer.com/"},{"@type":"TechArticle","headline":"在 Duaer 里检索物种","description":"在 Duaer 里检索 UniProt 物种分类。一次成功查询用 1 额度。","inLanguage":"zh-CN","url":"https://skills.duaer.com/zh/organisms/","author":{"@id":"https://www.duaer.com/#organization"},"publisher":{"@id":"https://www.duaer.com/#organization"}}]}</script>
 <link rel="stylesheet" href="/site.css"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"/>
 </head>
@@ -37,33 +37,33 @@
 <a class="nav-link" href="https://www.duaer.com/pricing">Pricing</a>
 <a class="nav-link" href="https://doc.duaer.com/">Docs</a>
 <a class="nav-link is-current" href="/zh/" aria-current="page">Skills</a>
-<span class="lang"><a href="/structures/" hreflang="en">EN</a><a class="active" href="/zh/structures/" hreflang="zh-CN">中文</a></span>
+<span class="lang"><a href="/organisms/" hreflang="en">EN</a><a class="active" href="/zh/organisms/" hreflang="zh-CN">中文</a></span>
 <a class="nav-link" href="https://www.duaer.com/signin">Sign in</a>
 </nav>
 </header>
 <main class="stage article">
 <p class="how-kicker">Skills</p>
-<h1>在 Duaer 里检索蛋白结构</h1>
-<p class="lede">在 Duaer 里检索蛋白结构。一次成功查询用 1 额度。</p>
+<h1>在 Duaer 里检索物种</h1>
+<p class="lede">在 Duaer 里检索 UniProt 物种分类。一次成功查询用 1 额度。</p>
 <h2>能拿到什么</h2>
-<p>每条结构有 PDB 编号、标题、实验方法、分辨率、物种、发布日期和配体。</p>
+<p>每条物种有学名、分类编号、俗名、助记符和等级。学名可用于蛋白与结构检索的 organism。</p>
 <h2>密钥</h2>
 <p>调用前先<a href="/zh/keys/">获取 Duaer 密钥</a>.</p>
 <h2>调用技能</h2>
 <p>下面这段是给智能体复制的英文技能，和数据市场里的复制内容相同。</p>
 <pre><code>---
-name: duaer-structures
+name: duaer-organisms
 description: &gt;-
-  Search protein structures through Duaer. One successful search uses 1 Duaer credit.
+  Search organism names through Duaer. Use the scientific name with proteins.organism and structures.organism. One successful search uses 1 Duaer credit.
 ---
 
-# Duaer structures
+# Duaer organisms
 
-Search protein structures through Duaer. One successful search uses 1 Duaer credit.
+Search organism names through Duaer. Use the scientific name with proteins.organism and structures.organism. One successful search uses 1 Duaer credit.
 
 ## Call
 
-`GET https://api.duaer.com/v1/data/structures?q=insulin&amp;organism=Homo%20sapiens&amp;method=X-RAY%20DIFFRACTION&amp;resolutionTo=2.5&amp;limit=10`
+`GET https://api.duaer.com/v1/data/organisms?q=human&amp;limit=10`
 
 Header: `Authorization: Bearer &lt;Duaer key&gt;`
 
@@ -72,15 +72,13 @@ Use an account key or a model API key.
 Get a Duaer key: https://skills.duaer.com/keys.md
 
 - At least one search field is required. Fields combine.
-- `q` — words in the structure record.
-- `pdbId` — structure id, such as `4HHB`.
-- `organism` — scientific name. Look up formal names with https://skills.duaer.com/organisms.md.
-- `method` — experimental method, such as `X-RAY DIFFRACTION`, `SOLUTION NMR`, or `ELECTRON MICROSCOPY`.
-- `resolutionFrom`, `resolutionTo` — resolution in angstroms. `0` means no bound.
-- `releasedFrom`, `releasedTo` — release date as `YYYY-MM-DD`.
-- `polymer` — `protein`, `dna`, or `rna`.
-- `ligand` — bound chemical name.
+- Search with `q` first; use `taxonId` only when you already have it from a result.
+- `q` — words in the scientific or common name.
+- `taxonId` — optional. NCBI / UniProt taxon id from a result (`taxonId`), such as `9606`.
+- `scientific` — optional. Scientific name, such as `Homo sapiens`.
+- `common` — optional. Common name, such as `human`.
 - `limit` — optional. From 1 to 20. Default 10.
+- Use `title` (scientific name) as `organism` when searching proteins or structures. Reuse `taxonId` as `taxonomyId` on proteins.
 
 ## Result
 

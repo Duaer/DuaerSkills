@@ -24,7 +24,7 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - `q` — words in the protein record.
 - `gene` — gene symbol.
 - `name` — protein name.
-- `organism` — organism name.
+- `organism` — organism name. Look up formal names with https://skills.duaer.com/organisms.md.
 - `accession` — accession.
 - `reviewed` — `yes` or `no`.
 - `lengthFrom`, `lengthTo` — sequence length. `0` means no bound.
@@ -33,7 +33,7 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - `location` — subcellular location.
 - `function` — words in the function text.
 - `go` — Gene Ontology term.
-- `taxonomyId` — NCBI taxonomy id.
+- `taxonomyId` — NCBI taxonomy id. Look up ids with https://skills.duaer.com/organisms.md.
 - `limit` — optional. From 1 to 20. Default 10.
 
 ## Result
