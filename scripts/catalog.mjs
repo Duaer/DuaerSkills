@@ -1284,7 +1284,6 @@ export const skills = [
 			],
 		}),
 	},
-,
 
 	{
 		slug: 'chembl',
@@ -1344,7 +1343,6 @@ export const skills = [
 			],
 		}),
 	},
-,
 
 	{
 		slug: 'kegg',
@@ -1370,6 +1368,35 @@ export const skills = [
 				'`words` — search text, such as apoptosis.',
 				'`id` — optional. KEGG id such as map04210, H00409, or C01405.',
 				'`db` — optional. pathway (default), disease, or compound. Used with words.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'monarch',
+		related: ['diseases', 'phenotypes', 'genes'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search Monarch in Duaer', zh: '在 Duaer 里检索 Monarch' },
+		lede: {
+			en: 'In Duaer, search Monarch diseases, phenotypes, or genes. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 Monarch 检索疾病、表型或基因。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has a Monarch id, name, category, and cross-references when present.',
+			zh: '每条结果有 Monarch 编号、名称、类别，以及可用的交叉引用。',
+		},
+		skill: skill({
+			name: 'duaer-monarch',
+			description:
+				'Search Monarch diseases, phenotypes, or genes through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Monarch',
+			call: 'GET https://api.duaer.com/v1/data/monarch?words=Marfan&category=disease&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — search text, such as Marfan.',
+				'`id` — optional. CURIE such as MONDO:0007947, HP:0000819, or HGNC:1100.',
+				'`category` — optional. disease (default), phenotype, or gene. Used with words.',
 				'`limit` — optional. From 1 to 20. Default 10.',
 			],
 		}),
