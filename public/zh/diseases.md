@@ -47,3 +47,4 @@ A missing key returns 401.
 - [在 Duaer 里检索变异](https://skills.duaer.com/zh/variants.md)
 - [在 Duaer 里检索临床试验](https://skills.duaer.com/zh/trials.md)
 - [在 Duaer 里检索适应症](https://skills.duaer.com/zh/indications.md)
+- [在 Duaer 里检索细胞系](https://skills.duaer.com/zh/cell-lines.md)

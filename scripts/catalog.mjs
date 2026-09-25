@@ -212,7 +212,7 @@ export const skills = [
 	},
 	{
 		slug: 'diseases',
-		related: ['genes', 'proteins', 'variants', 'trials', 'indications'],
+		related: ['genes', 'proteins', 'variants', 'trials', 'indications', 'cell-lines'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search diseases in Duaer', zh: '在 Duaer 里检索疾病' },
 		lede: {
@@ -243,7 +243,7 @@ export const skills = [
 	},
 	{
 		slug: 'organisms',
-		related: ['proteins', 'genes', 'geo'],
+		related: ['proteins', 'genes', 'geo', 'cell-lines'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search organisms in Duaer', zh: '在 Duaer 里检索物种' },
 		lede: {
@@ -882,6 +882,35 @@ export const skills = [
 				'`gene` — gene symbol resolved via UniProt (default organism Homo sapiens).',
 				'`accession` — optional. UniProt accession (`P01308`). Overrides gene when set.',
 				'`organism` — optional. Used when resolving gene (default `Homo sapiens`).',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'cell-lines',
+		related: ['organisms', 'diseases', 'assays'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search cell lines in Duaer', zh: '在 Duaer 里检索细胞系' },
+		lede: {
+			en: 'In Duaer, search cell lines via Cellosaurus. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 Cellosaurus 检索细胞系。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has a Cellosaurus accession, name, species, category, and disease when present.',
+			zh: '每条结果有 Cellosaurus 编号、名称、物种、类别，以及可用的疾病。',
+		},
+		skill: skill({
+			name: 'duaer-cell-lines',
+			description:
+				'Search cell lines through Duaer via Cellosaurus. One successful search uses 1 Duaer credit.',
+			title: 'Duaer cell lines',
+			call: 'GET https://api.duaer.com/v1/data/cell-lines?words=HeLa&species=Homo%20sapiens&category=Cancer&limit=10',
+			fields: [
+				'`words` is required.',
+				'`words` — cell line name, synonym, or Cellosaurus accession (`CVCL_0030`).',
+				'`species` — optional. Keep lines whose species contains this text.',
+				'`category` — optional. Keep lines whose category contains this text.',
 				'`limit` — optional. From 1 to 20. Default 10.',
 			],
 		}),
