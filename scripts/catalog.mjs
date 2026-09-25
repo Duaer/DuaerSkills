@@ -81,7 +81,7 @@ export const skills = [
 	},
 	{
 		slug: 'proteins',
-		related: ['genes', 'structures', 'pathways', 'diseases'],
+		related: ['genes', 'structures', 'pathways', 'diseases', 'interactions'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search proteins in Duaer', zh: '在 Duaer 里检索基因和蛋白' },
 		lede: {
@@ -538,6 +538,33 @@ export const skills = [
 								"`yearFrom` — optional. First fiscal year (1000–2100).",
 								"`yearTo` — optional. Last fiscal year (1000–2100).",
 								"`limit` — optional. From 1 to 20. Default 10."
+			],
+		}),
+	},
+	{
+		slug: 'interactions',
+		related: ['proteins', 'genes', 'organisms'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search interactions in Duaer', zh: '在 Duaer 里检索互作' },
+		lede: {
+			en: 'In Duaer, search STRING protein interaction partners. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 STRING 检索蛋白互作伙伴。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each interaction has partner names, STRING ids, a combined score, and evidence channel scores.',
+			zh: '每条互作有伙伴名称、STRING id、综合分与证据通道分。',
+		},
+		skill: skill({
+			name: 'duaer-interactions',
+			description: 'Search STRING protein interaction partners through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer interactions',
+			call: 'GET https://api.duaer.com/v1/data/interactions?protein=INS&species=9606&limit=10',
+			fields: [
+				'`protein` is required. Other fields are optional.',
+				'`protein` — gene symbol, UniProt accession, or STRING id. Look up symbols with https://skills.duaer.com/genes.md or proteins with https://skills.duaer.com/proteins.md.',
+				'`species` — optional. NCBI taxonomy id. Default `9606` (human). Look up ids with https://skills.duaer.com/organisms.md.',
+				'`requiredScore` — optional. STRING threshold from 0 to 1000. Omit for the STRING default.',
+				'`limit` — optional. From 1 to 20. Default 10.',
 			],
 		}),
 	},

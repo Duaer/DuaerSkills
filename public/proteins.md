@@ -55,3 +55,4 @@ A missing key returns 401.
 - [Search protein structures in Duaer](https://skills.duaer.com/structures.md)
 - [Search pathways in Duaer](https://skills.duaer.com/pathways.md)
 - [Search diseases in Duaer](https://skills.duaer.com/diseases.md)
+- [Search interactions in Duaer](https://skills.duaer.com/interactions.md)
