@@ -18,6 +18,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search Gene Ontology in Duaer](https://skills.duaer.com/gene-ontology.md): In Duaer, search Gene Ontology terms. One successful search uses 1 credit.
 - [Search pathways in Duaer](https://skills.duaer.com/pathways.md): In Duaer, search Reactome pathways. One successful search uses 1 credit.
 - [Search genes in Duaer](https://skills.duaer.com/genes.md): In Duaer, search genes. One successful search uses 1 credit.
+- [Search variants in Duaer](https://skills.duaer.com/variants.md): In Duaer, search variants (ClinVar / dbSNP). One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -40,6 +41,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索基因本体](https://skills.duaer.com/zh/gene-ontology.md): 在 Duaer 里检索 Gene Ontology 术语。一次成功查询用 1 额度。
 - [在 Duaer 里检索通路](https://skills.duaer.com/zh/pathways.md): 在 Duaer 里检索 Reactome 通路。一次成功查询用 1 额度。
 - [在 Duaer 里检索基因](https://skills.duaer.com/zh/genes.md): 在 Duaer 里检索基因。一次成功查询用 1 额度。
+- [在 Duaer 里检索变异](https://skills.duaer.com/zh/variants.md): 在 Duaer 里检索变异（ClinVar / dbSNP）。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -554,6 +556,46 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - `species` — optional. Species for words/symbol search. Default `human`.
 - `limit` — optional. From 1 to 20. Default 10.
 - Use `symbol` as `gene` when searching proteins. Reuse `geneId` in `id` for an exact lookup.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-variants
+description: >-
+  Search variants through Duaer (ClinVar / dbSNP via MyVariant.info). One successful search uses 1 Duaer credit.
+---
+
+# Duaer variants
+
+Search variants through Duaer (ClinVar / dbSNP via MyVariant.info). One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/variants?q=rs113488022&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- At least one search field is required. Fields combine.
+- Search with `q`, `rsid`, or `gene` first; use `id` only when you already have an HGVS genomic id from a result.
+- `q` — words such as an rs id (`rs113488022`).
+- `rsid` — optional. dbSNP rs id, such as `rs113488022`.
+- `gene` — optional. Gene symbol with ClinVar annotations, such as `BRAF`. Look up symbols with https://skills.duaer.com/genes.md.
+- `id` — optional. HGVS genomic id from a result (`variantId`), such as `chr7:g.140453136A>T`.
+- `limit` — optional. From 1 to 20. Default 10.
+- Reuse `variantId` in `id` for an exact lookup.
 
 ## Result
 

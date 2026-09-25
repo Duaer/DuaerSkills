@@ -408,6 +408,35 @@ export const skills = [
 			],
 		}),
 	},
+	{
+		slug: 'variants',
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search variants in Duaer', zh: '在 Duaer 里检索变异' },
+		lede: {
+			en: 'In Duaer, search variants (ClinVar / dbSNP). One successful search uses 1 credit.',
+			zh: '在 Duaer 里检索变异（ClinVar / dbSNP）。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each variant has a variantId, rsid, gene, protein HGVS, clinical significance, chrom, ref, and alt.',
+			zh: '每个变异有 variantId、rsid、基因、蛋白 HGVS、临床意义、染色体、ref 与 alt。',
+		},
+		skill: skill({
+			name: 'duaer-variants',
+			description: 'Search variants through Duaer (ClinVar / dbSNP via MyVariant.info). One successful search uses 1 Duaer credit.',
+			title: 'Duaer variants',
+			call: 'GET https://api.duaer.com/v1/data/variants?q=rs113488022&limit=10',
+			fields: [
+								"At least one search field is required. Fields combine.",
+								"Search with `q`, `rsid`, or `gene` first; use `id` only when you already have an HGVS genomic id from a result.",
+								"`q` — words such as an rs id (`rs113488022`).",
+								"`rsid` — optional. dbSNP rs id, such as `rs113488022`.",
+								"`gene` — optional. Gene symbol with ClinVar annotations, such as `BRAF`. Look up symbols with https://skills.duaer.com/genes.md.",
+								"`id` — optional. HGVS genomic id from a result (`variantId`), such as `chr7:g.140453136A>T`.",
+								"`limit` — optional. From 1 to 20. Default 10.",
+								"Reuse `variantId` in `id` for an exact lookup."
+			],
+		}),
+	},
 ];
 
 export const home = {
