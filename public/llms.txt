@@ -1,0 +1,14 @@
+# Duaer
+
+> The Duaer skill catalog lists call skills you can paste into an agent. Opening the catalog does not search and does not use credits.
+
+Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
+
+## Skills
+
+- [Search papers in Duaer](https://skills.duaer.com/papers.md): In Duaer, search published papers. One successful search uses 1 credit.
+- [Search proteins in Duaer](https://skills.duaer.com/proteins.md): In Duaer, search genes and proteins. One successful search uses 1 credit.
+- [Search clinical trials in Duaer](https://skills.duaer.com/trials.md): In Duaer, search clinical trials. One successful search uses 1 credit.
+- [Search compounds in Duaer](https://skills.duaer.com/compounds.md): In Duaer, search compounds and drugs. One successful search uses 1 credit.
+- [Search protein structures in Duaer](https://skills.duaer.com/structures.md): In Duaer, search protein structures. One successful search uses 1 credit.
+- [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.

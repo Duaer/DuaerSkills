@@ -1,0 +1,274 @@
+# Duaer
+
+> The Duaer skill catalog lists call skills you can paste into an agent. Opening the catalog does not search and does not use credits.
+
+Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
+
+## Skills
+
+- [Search papers in Duaer](https://skills.duaer.com/papers.md): In Duaer, search published papers. One successful search uses 1 credit.
+- [Search proteins in Duaer](https://skills.duaer.com/proteins.md): In Duaer, search genes and proteins. One successful search uses 1 credit.
+- [Search clinical trials in Duaer](https://skills.duaer.com/trials.md): In Duaer, search clinical trials. One successful search uses 1 credit.
+- [Search compounds in Duaer](https://skills.duaer.com/compounds.md): In Duaer, search compounds and drugs. One successful search uses 1 credit.
+- [Search protein structures in Duaer](https://skills.duaer.com/structures.md): In Duaer, search protein structures. One successful search uses 1 credit.
+- [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
+
+# Duaer
+
+> Duaer 技能目录列出可复制给智能体的调用技能。打开目录不检索，也不扣额度。
+
+中文索引在本文件。英文索引：[llms.txt](https://skills.duaer.com/llms.txt)。
+
+## 技能
+
+- [在 Duaer 里检索论文](https://skills.duaer.com/zh/papers.md): 在 Duaer 里检索已发表论文。一次成功查询用 1 额度。
+- [在 Duaer 里检索基因和蛋白](https://skills.duaer.com/zh/proteins.md): 在 Duaer 里检索基因和蛋白。一次成功查询用 1 额度。
+- [在 Duaer 里检索临床试验](https://skills.duaer.com/zh/trials.md): 在 Duaer 里检索临床试验。一次成功查询用 1 额度。
+- [在 Duaer 里检索化合物和药物](https://skills.duaer.com/zh/compounds.md): 在 Duaer 里检索化合物和药物。一次成功查询用 1 额度。
+- [在 Duaer 里检索蛋白结构](https://skills.duaer.com/zh/structures.md): 在 Duaer 里检索蛋白结构。一次成功查询用 1 额度。
+- [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
+
+> Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
+
+# Get a Duaer key
+
+A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
+
+1. Sign in to [Duaer](https://www.duaer.com/signin).
+2. Open [Settings → Model API key](https://www.duaer.com/settings/model-api-key).
+3. Create a key and copy it.
+4. Send `Authorization: Bearer <Duaer key>`.
+
+An admin can also create an account key at [Admin → API](https://www.duaer.com/admin/api).
+
+Opening the Duaer skill catalog does not search and does not use credits.
+
+> 索引：[llms.txt](https://skills.duaer.com/zh/llms.txt)。本页 Markdown：https://skills.duaer.com/zh/keys.md
+
+# 在 Duaer 里获取调用密钥
+
+在 Duaer 里，密钥用来调用数据接口。登录后创建。完整密钥只显示一次。
+
+1. 打开 [Duaer 登录](https://www.duaer.com/signin)。
+2. 进入 [设置里的模型 API 密钥](https://www.duaer.com/settings/model-api-key)。
+3. 新建一把密钥，立刻复制。
+4. 请求头使用 `Authorization: Bearer <Duaer key>`。
+
+管理员也可以在 [管理里的 API 密钥](https://www.duaer.com/admin/api) 生成账号密钥。
+
+打开 Duaer 技能目录不检索，也不扣额度。
+
+---
+name: duaer-papers
+description: >-
+  Search published papers through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer papers
+
+Search published papers through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/papers?title=lithium&author=Zhang&yearFrom=2020&yearTo=2024&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- `q` — words in the title, abstract, or full text.
+- `title` — words in the title.
+- `abstract` — words in the abstract.
+- `author` — author name.
+- `yearFrom`, `yearTo` — publication year. Leave a year out, or send `0`, for any year. A set year is from 1000 to 2100.
+- `type` — work type, such as `article`, `preprint`, or `review`.
+- `openAccess` — `yes` or `no`.
+- `citationsFrom`, `citationsTo` — citation count. `0` means no bound.
+- `language` — code such as `en` or `zh`.
+- `doi` — digital object identifier.
+- `journal`, `institution`, `topic` — names. Duaer uses the closest match.
+- `sort` — `citations` orders by most cited. Omit it for relevance.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-proteins
+description: >-
+  Search genes and proteins through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer proteins
+
+Search genes and proteins through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/proteins?gene=INS&organism=Homo%20sapiens&reviewed=yes&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- At least one search field is required. Fields combine.
+- `q` — words in the protein record.
+- `gene` — gene symbol.
+- `name` — protein name.
+- `organism` — organism name.
+- `accession` — accession.
+- `reviewed` — `yes` or `no`.
+- `lengthFrom`, `lengthTo` — sequence length. `0` means no bound.
+- `disease` — disease name.
+- `keyword` — keyword.
+- `location` — subcellular location.
+- `function` — words in the function text.
+- `go` — Gene Ontology term.
+- `taxonomyId` — NCBI taxonomy id.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-trials
+description: >-
+  Search clinical trials through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer trials
+
+Search clinical trials through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/trials?condition=diabetes&intervention=insulin&status=RECRUITING&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- At least one search field is required. Sort alone is not a search. Fields combine.
+- `condition` — disease or condition.
+- `term` — other words.
+- `intervention` — drug, device, or other intervention.
+- `location` — where the study runs.
+- `title` — words in the title.
+- `outcome` — words in the outcome.
+- `sponsor` — sponsor name.
+- `lead` — lead sponsor name.
+- `nctId` — study id.
+- `status` — recruitment status, such as `RECRUITING` or `COMPLETED`.
+- `phase` — `EARLY_PHASE1`, `PHASE1`, `PHASE2`, `PHASE3`, `PHASE4`, or `NA`.
+- `sort` — `recent` orders by last update. Omit it for relevance.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-compounds
+description: >-
+  Search compounds and drugs through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer compounds
+
+Search compounds and drugs through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/compounds?name=aspirin&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Send one identifier: `name`, `cid`, `formula`, `smiles`, or `inchikey`.
+- `limit` — optional. From 1 to 20. Default 10. A name can return several compounds up to this limit.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-structures
+description: >-
+  Search protein structures through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer structures
+
+Search protein structures through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/structures?q=insulin&organism=Homo%20sapiens&method=X-RAY%20DIFFRACTION&resolutionTo=2.5&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- At least one search field is required. Fields combine.
+- `q` — words in the structure record.
+- `pdbId` — structure id, such as `4HHB`.
+- `organism` — scientific name.
+- `method` — experimental method, such as `X-RAY DIFFRACTION`, `SOLUTION NMR`, or `ELECTRON MICROSCOPY`.
+- `resolutionFrom`, `resolutionTo` — resolution in angstroms. `0` means no bound.
+- `releasedFrom`, `releasedTo` — release date as `YYYY-MM-DD`.
+- `polymer` — `protein`, `dna`, or `rna`.
+- `ligand` — bound chemical name.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+

@@ -1,0 +1,14 @@
+{
+	"name": "duaer-skills",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"render": "node scripts/render.mjs",
+		"dev": "node serve.mjs",
+		"deploy": "wrangler deploy"
+	},
+	"devDependencies": {
+		"wrangler": "^4.135.0"
+	},
+	"packageManager": "pnpm@12.0.0"
+}

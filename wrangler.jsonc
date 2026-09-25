@@ -1,0 +1,11 @@
+{
+	"name": "duaer-skills",
+	"compatibility_date": "2026-09-25",
+	"account_id": "4bdb28422653f9ac6aee3868f8ef3962",
+	"workers_dev": true,
+	"assets": {
+		"directory": "./public",
+		"not_found_handling": "404-page"
+	},
+	"routes": [{ "pattern": "skills.duaer.com", "custom_domain": true }]
+}
