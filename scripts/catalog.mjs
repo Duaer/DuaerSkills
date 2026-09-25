@@ -1201,6 +1201,32 @@ export const skills = [
 		}),
 	},
 
+	{
+		slug: 'crossrefs',
+		related: ['compounds', 'metabolites', 'drug-labels', 'indications'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search crossrefs in Duaer', zh: '在 Duaer 里检索交叉引用' },
+		lede: {
+			en: 'In Duaer, look up UniChem compound cross-references by InChIKey. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 UniChem 按 InChIKey 检索化合物交叉引用。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has a database name, compound id, and link when present.',
+			zh: '每条结果有数据库名、化合物 id，以及可用的链接。',
+		},
+		skill: skill({
+			name: 'duaer-crossrefs',
+			description:
+				'Look up UniChem compound cross-references through Duaer by InChIKey. One successful search uses 1 Duaer credit.',
+			title: 'Duaer crossrefs',
+			call: 'GET https://api.duaer.com/v1/data/crossrefs?inchikey=BSYNRYMUTXBXSQ-UHFFFAOYSA-N&limit=10',
+			fields: [
+				'Provide `inchikey`.',
+				'`inchikey` — compound InChIKey (for example aspirin: BSYNRYMUTXBXSQ-UHFFFAOYSA-N).',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
 
 ];
 

@@ -45,6 +45,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search RxNorm in Duaer](https://skills.duaer.com/rxnorm.md): In Duaer, look up drug names via RxNorm (NLM RxNav). One successful search uses 1 credit.
 - [Search MeSH in Duaer](https://skills.duaer.com/mesh.md): In Duaer, look up MeSH subject headings (NLM MeSH). One successful search uses 1 credit.
 - [Search phenotypes in Duaer](https://skills.duaer.com/phenotypes.md): In Duaer, look up HPO phenotype terms (EBI OLS). One successful search uses 1 credit.
+- [Search crossrefs in Duaer](https://skills.duaer.com/crossrefs.md): In Duaer, look up UniChem compound cross-references by InChIKey. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -94,6 +95,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索 RxNorm](https://skills.duaer.com/zh/rxnorm.md): 在 Duaer 里经 RxNorm（NLM RxNav）检索药名。一次成功查询用 1 额度。
 - [在 Duaer 里检索 MeSH](https://skills.duaer.com/zh/mesh.md): 在 Duaer 里经 MeSH（NLM）检索主题词。一次成功查询用 1 额度。
 - [在 Duaer 里检索表型](https://skills.duaer.com/zh/phenotypes.md): 在 Duaer 里经 HPO（EBI OLS）检索表型术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索交叉引用](https://skills.duaer.com/zh/crossrefs.md): 在 Duaer 里经 UniChem 按 InChIKey 检索化合物交叉引用。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -1607,6 +1609,41 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - Provide `words` or `id` (or both; id wins).
 - `words` — HPO phenotype label.
 - `id` — optional. HPO id (HP:0000819). Overrides words when set.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-crossrefs
+description: >-
+  Look up UniChem compound cross-references through Duaer by InChIKey. One successful search uses 1 Duaer credit.
+---
+
+# Duaer crossrefs
+
+Look up UniChem compound cross-references through Duaer by InChIKey. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/crossrefs?inchikey=BSYNRYMUTXBXSQ-UHFFFAOYSA-N&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `inchikey`.
+- `inchikey` — compound InChIKey (for example aspirin: BSYNRYMUTXBXSQ-UHFFFAOYSA-N).
 - `limit` — optional. From 1 to 20. Default 10.
 
 ## Result
