@@ -3,26 +3,26 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Search proteins in Duaer · Duaer</title>
+<title>Search organisms in Duaer · Duaer</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
-<meta name="description" content="In Duaer, search genes and proteins. One successful search uses 1 credit."/>
+<meta name="description" content="In Duaer, search UniProt taxonomy. One successful search uses 1 credit."/>
 <meta name="robots" content="index, follow"/>
-<link rel="canonical" href="https://skills.duaer.com/proteins/"/>
-<link rel="alternate" hreflang="zh-CN" href="https://skills.duaer.com/zh/proteins/"/>
-<link rel="alternate" hreflang="en" href="https://skills.duaer.com/proteins/"/>
-<link rel="alternate" hreflang="x-default" href="https://skills.duaer.com/proteins/"/>
+<link rel="canonical" href="https://skills.duaer.com/organisms/"/>
+<link rel="alternate" hreflang="zh-CN" href="https://skills.duaer.com/zh/organisms/"/>
+<link rel="alternate" hreflang="en" href="https://skills.duaer.com/organisms/"/>
+<link rel="alternate" hreflang="x-default" href="https://skills.duaer.com/organisms/"/>
 <link rel="alternate" type="text/plain" href="https://skills.duaer.com/llms.txt" title="LLMs"/>
-<link rel="alternate" type="text/markdown" href="https://skills.duaer.com/proteins.md" title="Markdown"/>
+<link rel="alternate" type="text/markdown" href="https://skills.duaer.com/organisms.md" title="Markdown"/>
 <meta property="og:site_name" content="Duaer"/>
 <meta property="og:type" content="article"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://skills.duaer.com/proteins/"/>
-<meta property="og:title" content="Search proteins in Duaer · Duaer"/>
-<meta property="og:description" content="In Duaer, search genes and proteins. One successful search uses 1 credit."/>
+<meta property="og:url" content="https://skills.duaer.com/organisms/"/>
+<meta property="og:title" content="Search organisms in Duaer · Duaer"/>
+<meta property="og:description" content="In Duaer, search UniProt taxonomy. One successful search uses 1 credit."/>
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Search proteins in Duaer · Duaer"/>
-<meta name="twitter:description" content="In Duaer, search genes and proteins. One successful search uses 1 credit."/>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.duaer.com/#organization","name":"Duaer","url":"https://www.duaer.com/"},{"@type":"TechArticle","headline":"Search proteins in Duaer","description":"In Duaer, search genes and proteins. One successful search uses 1 credit.","inLanguage":"en","url":"https://skills.duaer.com/proteins/","author":{"@id":"https://www.duaer.com/#organization"},"publisher":{"@id":"https://www.duaer.com/#organization"}}]}</script>
+<meta name="twitter:title" content="Search organisms in Duaer · Duaer"/>
+<meta name="twitter:description" content="In Duaer, search UniProt taxonomy. One successful search uses 1 credit."/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.duaer.com/#organization","name":"Duaer","url":"https://www.duaer.com/"},{"@type":"TechArticle","headline":"Search organisms in Duaer","description":"In Duaer, search UniProt taxonomy. One successful search uses 1 credit.","inLanguage":"en","url":"https://skills.duaer.com/organisms/","author":{"@id":"https://www.duaer.com/#organization"},"publisher":{"@id":"https://www.duaer.com/#organization"}}]}</script>
 <link rel="stylesheet" href="/site.css"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"/>
 </head>
@@ -37,33 +37,33 @@
 <a class="nav-link" href="https://www.duaer.com/pricing">Pricing</a>
 <a class="nav-link" href="https://doc.duaer.com/">Docs</a>
 <a class="nav-link is-current" href="/" aria-current="page">Skills</a>
-<span class="lang"><a href="/zh/proteins/" hreflang="zh-CN">中文</a><a class="active" href="/proteins/" hreflang="en">EN</a></span>
+<span class="lang"><a href="/zh/organisms/" hreflang="zh-CN">中文</a><a class="active" href="/organisms/" hreflang="en">EN</a></span>
 <a class="nav-link" href="https://www.duaer.com/signin">Sign in</a>
 </nav>
 </header>
 <main class="stage article">
 <p class="how-kicker">Skills</p>
-<h1>Search proteins in Duaer</h1>
-<p class="lede">In Duaer, search genes and proteins. One successful search uses 1 credit.</p>
+<h1>Search organisms in Duaer</h1>
+<p class="lede">In Duaer, search UniProt taxonomy. One successful search uses 1 credit.</p>
 <h2>What Duaer returns</h2>
-<p>Each protein has a name, accession, gene, organism, length, review status, function, disease, and location.</p>
+<p>Each organism has a scientific name, taxon id, common name, mnemonic, and rank. Use the scientific name with proteins.organism and structures.organism.</p>
 <h2>Key</h2>
 <p>Before you call, <a href="/keys/">get a Duaer key</a>.</p>
 <h2>Call skill</h2>
 <p>Paste this English skill into an agent. It matches Copy skill in the Duaer data market.</p>
 <pre><code>---
-name: duaer-proteins
+name: duaer-organisms
 description: &gt;-
-  Search genes and proteins through Duaer. One successful search uses 1 Duaer credit.
+  Search organism names through Duaer. Use the scientific name with proteins.organism and structures.organism. One successful search uses 1 Duaer credit.
 ---
 
-# Duaer proteins
+# Duaer organisms
 
-Search genes and proteins through Duaer. One successful search uses 1 Duaer credit.
+Search organism names through Duaer. Use the scientific name with proteins.organism and structures.organism. One successful search uses 1 Duaer credit.
 
 ## Call
 
-`GET https://api.duaer.com/v1/data/proteins?gene=INS&amp;organism=Homo%20sapiens&amp;reviewed=yes&amp;limit=10`
+`GET https://api.duaer.com/v1/data/organisms?q=human&amp;limit=10`
 
 Header: `Authorization: Bearer &lt;Duaer key&gt;`
 
@@ -72,20 +72,13 @@ Use an account key or a model API key.
 Get a Duaer key: https://skills.duaer.com/keys.md
 
 - At least one search field is required. Fields combine.
-- `q` — words in the protein record.
-- `gene` — gene symbol.
-- `name` — protein name.
-- `organism` — organism name. Look up formal names with https://skills.duaer.com/organisms.md.
-- `accession` — accession.
-- `reviewed` — `yes` or `no`.
-- `lengthFrom`, `lengthTo` — sequence length. `0` means no bound.
-- `disease` — disease name. Look up formal names with https://skills.duaer.com/diseases.md.
-- `keyword` — keyword.
-- `location` — subcellular location.
-- `function` — words in the function text.
-- `go` — Gene Ontology term.
-- `taxonomyId` — NCBI taxonomy id. Look up ids with https://skills.duaer.com/organisms.md.
+- Search with `q` first; use `taxonId` only when you already have it from a result.
+- `q` — words in the scientific or common name.
+- `taxonId` — optional. NCBI / UniProt taxon id from a result (`taxonId`), such as `9606`.
+- `scientific` — optional. Scientific name, such as `Homo sapiens`.
+- `common` — optional. Common name, such as `human`.
 - `limit` — optional. From 1 to 20. Default 10.
+- Use `title` (scientific name) as `organism` when searching proteins or structures. Reuse `taxonId` as `taxonomyId` on proteins.
 
 ## Result
 
