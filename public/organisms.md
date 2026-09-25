@@ -44,3 +44,4 @@ A missing key returns 401.
 
 - [Search proteins in Duaer](https://skills.duaer.com/proteins.md)
 - [Search genes in Duaer](https://skills.duaer.com/genes.md)
+- [Search GEO in Duaer](https://skills.duaer.com/geo.md)

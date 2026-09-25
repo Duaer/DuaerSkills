@@ -243,7 +243,7 @@ export const skills = [
 	},
 	{
 		slug: 'organisms',
-		related: ['proteins', 'genes'],
+		related: ['proteins', 'genes', 'geo'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search organisms in Duaer', zh: '在 Duaer 里检索物种' },
 		lede: {
@@ -393,7 +393,7 @@ export const skills = [
 	},
 	{
 		slug: 'genes',
-		related: ['proteins', 'variants', 'pathways', 'gene-ontology', 'expression', 'atlas'],
+		related: ['proteins', 'variants', 'pathways', 'gene-ontology', 'expression', 'atlas', 'geo'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search genes in Duaer', zh: '在 Duaer 里检索基因' },
 		lede: {
@@ -570,7 +570,7 @@ export const skills = [
 	},
 	{
 		slug: 'expression',
-		related: ['genes', 'proteins', 'interactions', 'targets', 'atlas'],
+		related: ['genes', 'proteins', 'interactions', 'targets', 'atlas', 'geo'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search expression in Duaer', zh: '在 Duaer 里检索表达' },
 		lede: {
@@ -763,6 +763,36 @@ export const skills = [
 				'`molecule` is required.',
 				'`molecule` — molecule name or ChEMBL id (`CHEMBL25`). Names resolve via ChEMBL search. Look up PubChem names with https://skills.duaer.com/compounds.md.',
 				'`limit` — optional. From 1 to 20. Default 10. Results prefer higher max phase.',
+			],
+		}),
+	},
+
+
+	{
+		slug: 'geo',
+		related: ['expression', 'organisms', 'genes'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search GEO in Duaer', zh: '在 Duaer 里检索 GEO' },
+		lede: {
+			en: 'In Duaer, search NCBI GEO series and datasets. One successful search uses 1 credit.',
+			zh: '在 Duaer 里检索 NCBI GEO 系列与数据集。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has an accession, title, organism, dataset type, and sample count when present.',
+			zh: '每条结果有登录号、标题、物种、数据类型，以及可用的样本数。',
+		},
+		skill: skill({
+			name: 'duaer-geo',
+			description:
+				'Search NCBI GEO series and datasets through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer GEO',
+			call: 'GET https://api.duaer.com/v1/data/geo?words=insulin&organism=Homo%20sapiens&entryType=gse&limit=10',
+			fields: [
+				'`words` is required.',
+				'`words` — words in the GEO record, or an accession such as `GSE10072`.',
+				'`organism` — optional. Scientific name (`Homo sapiens`). Look up names with https://skills.duaer.com/organisms.md.',
+				'`entryType` — optional. `gse` (default), `gds`, `gpl`, `gsm`, or `any`.',
+				'`limit` — optional. From 1 to 20. Default 10.',
 			],
 		}),
 	},

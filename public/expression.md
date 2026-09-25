@@ -44,3 +44,4 @@ A missing key returns 401.
 - [Search interactions in Duaer](https://skills.duaer.com/interactions.md)
 - [Search targets in Duaer](https://skills.duaer.com/targets.md)
 - [Search tissue atlas in Duaer](https://skills.duaer.com/atlas.md)
+- [Search GEO in Duaer](https://skills.duaer.com/geo.md)

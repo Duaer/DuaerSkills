@@ -44,3 +44,4 @@ A missing key returns 401.
 
 - [在 Duaer 里检索基因和蛋白](https://skills.duaer.com/zh/proteins.md)
 - [在 Duaer 里检索基因](https://skills.duaer.com/zh/genes.md)
+- [在 Duaer 里检索 GEO](https://skills.duaer.com/zh/geo.md)

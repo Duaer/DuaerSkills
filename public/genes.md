@@ -48,3 +48,4 @@ A missing key returns 401.
 - [Search Gene Ontology in Duaer](https://skills.duaer.com/gene-ontology.md)
 - [Search expression in Duaer](https://skills.duaer.com/expression.md)
 - [Search tissue atlas in Duaer](https://skills.duaer.com/atlas.md)
+- [Search GEO in Duaer](https://skills.duaer.com/geo.md)

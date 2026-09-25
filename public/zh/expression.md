@@ -44,3 +44,4 @@ A missing key returns 401.
 - [在 Duaer 里检索互作](https://skills.duaer.com/zh/interactions.md)
 - [在 Duaer 里检索靶点关联](https://skills.duaer.com/zh/targets.md)
 - [在 Duaer 里检索组织图谱](https://skills.duaer.com/zh/atlas.md)
+- [在 Duaer 里检索 GEO](https://skills.duaer.com/zh/geo.md)
