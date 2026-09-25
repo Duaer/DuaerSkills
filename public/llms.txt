@@ -55,4 +55,5 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search HGNC in Duaer](https://skills.duaer.com/hgnc.md): In Duaer, look up approved gene symbols via HGNC. One successful search uses 1 credit.
 - [Search PRIDE in Duaer](https://skills.duaer.com/pride.md): In Duaer, search proteomics projects in PRIDE. One successful search uses 1 credit.
 - [Search Uberon in Duaer](https://skills.duaer.com/uberon.md): In Duaer, search anatomy terms via Uberon. One successful search uses 1 credit.
+- [Search BioStudies in Duaer](https://skills.duaer.com/biostudies.md): In Duaer, search multi-omics studies in BioStudies. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
