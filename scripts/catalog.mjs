@@ -1429,6 +1429,35 @@ export const skills = [
 		}),
 	},
 
+
+	{
+		slug: 'pride',
+		related: ['geo', 'proteins', 'expression'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search PRIDE in Duaer', zh: '在 Duaer 里检索 PRIDE' },
+		lede: {
+			en: 'In Duaer, search proteomics projects in PRIDE. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 PRIDE 检索蛋白质组学项目。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has a PRIDE accession, title, organisms, and DOI when present.',
+			zh: '每条结果有 PRIDE 编号、标题、物种，以及可用的 DOI。',
+		},
+		skill: skill({
+			name: 'duaer-pride',
+			description:
+				'Search proteomics projects in PRIDE through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer PRIDE',
+			call: 'GET https://api.duaer.com/v1/data/pride?words=insulin&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — project words, such as insulin.',
+				'`id` — optional. PRIDE accession such as PXD000001.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
 ];
 
 export const home = {
