@@ -23,6 +23,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search preprints in Duaer](https://skills.duaer.com/preprints.md): In Duaer, search bioRxiv and medRxiv preprints via Europe PMC. One successful search uses 1 credit.
 - [Search grants in Duaer](https://skills.duaer.com/grants.md): In Duaer, search NIH grants via RePORTER. One successful search uses 1 credit.
 - [Search interactions in Duaer](https://skills.duaer.com/interactions.md): In Duaer, search STRING protein interaction partners. One successful search uses 1 credit.
+- [Search expression in Duaer](https://skills.duaer.com/expression.md): In Duaer, search GTEx median tissue expression. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -50,6 +51,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索预印本](https://skills.duaer.com/zh/preprints.md): 在 Duaer 里经 Europe PMC 检索 bioRxiv / medRxiv 预印本。一次成功查询用 1 额度。
 - [在 Duaer 里检索基金](https://skills.duaer.com/zh/grants.md): 在 Duaer 里经 NIH RePORTER 检索基金与项目。一次成功查询用 1 额度。
 - [在 Duaer 里检索互作](https://skills.duaer.com/zh/interactions.md): 在 Duaer 里经 STRING 检索蛋白互作伙伴。一次成功查询用 1 额度。
+- [在 Duaer 里检索表达](https://skills.duaer.com/zh/expression.md): 在 Duaer 里经 GTEx 检索组织中位表达。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -762,6 +764,43 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - `species` — optional. NCBI taxonomy id. Default `9606` (human). Look up ids with https://skills.duaer.com/organisms.md.
 - `requiredScore` — optional. STRING threshold from 0 to 1000. Omit for the STRING default.
 - `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-expression
+description: >-
+  Search GTEx median tissue expression through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer expression
+
+Search GTEx median tissue expression through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/expression?gene=INS&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- At least `gene` or `gencodeId` is required.
+- `gene` — gene symbol. Look up symbols with https://skills.duaer.com/genes.md.
+- `gencodeId` — optional. Ensembl/Gencode id from a result, such as `ENSG00000254647.6`.
+- `tissue` — optional. GTEx tissue id, such as `Pancreas` or `Adipose_Subcutaneous`.
+- `limit` — optional. From 1 to 20. Default 10. Results are sorted by median TPM descending.
 
 ## Result
 

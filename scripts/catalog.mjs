@@ -393,7 +393,7 @@ export const skills = [
 	},
 	{
 		slug: 'genes',
-		related: ['proteins', 'variants', 'pathways', 'gene-ontology'],
+		related: ['proteins', 'variants', 'pathways', 'gene-ontology', 'expression'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search genes in Duaer', zh: '在 Duaer 里检索基因' },
 		lede: {
@@ -543,7 +543,7 @@ export const skills = [
 	},
 	{
 		slug: 'interactions',
-		related: ['proteins', 'genes', 'organisms'],
+		related: ['proteins', 'genes', 'organisms', 'expression'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search interactions in Duaer', zh: '在 Duaer 里检索互作' },
 		lede: {
@@ -565,6 +565,34 @@ export const skills = [
 				'`species` — optional. NCBI taxonomy id. Default `9606` (human). Look up ids with https://skills.duaer.com/organisms.md.',
 				'`requiredScore` — optional. STRING threshold from 0 to 1000. Omit for the STRING default.',
 				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+	{
+		slug: 'expression',
+		related: ['genes', 'proteins', 'interactions'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search expression in Duaer', zh: '在 Duaer 里检索表达' },
+		lede: {
+			en: 'In Duaer, search GTEx median tissue expression. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 GTEx 检索组织中位表达。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has a tissue, median TPM, Gencode id, and ontology id.',
+			zh: '每条结果有组织、中位 TPM、Gencode id 与本体 id。',
+		},
+		skill: skill({
+			name: 'duaer-expression',
+			description:
+				'Search GTEx median tissue expression through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer expression',
+			call: 'GET https://api.duaer.com/v1/data/expression?gene=INS&limit=10',
+			fields: [
+				'At least `gene` or `gencodeId` is required.',
+				'`gene` — gene symbol. Look up symbols with https://skills.duaer.com/genes.md.',
+				'`gencodeId` — optional. Ensembl/Gencode id from a result, such as `ENSG00000254647.6`.',
+				'`tissue` — optional. GTEx tissue id, such as `Pancreas` or `Adipose_Subcutaneous`.',
+				'`limit` — optional. From 1 to 20. Default 10. Results are sorted by median TPM descending.',
 			],
 		}),
 	},

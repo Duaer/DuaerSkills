@@ -23,4 +23,5 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search preprints in Duaer](https://skills.duaer.com/preprints.md): In Duaer, search bioRxiv and medRxiv preprints via Europe PMC. One successful search uses 1 credit.
 - [Search grants in Duaer](https://skills.duaer.com/grants.md): In Duaer, search NIH grants via RePORTER. One successful search uses 1 credit.
 - [Search interactions in Duaer](https://skills.duaer.com/interactions.md): In Duaer, search STRING protein interaction partners. One successful search uses 1 credit.
+- [Search expression in Duaer](https://skills.duaer.com/expression.md): In Duaer, search GTEx median tissue expression. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
