@@ -49,8 +49,8 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search drug recalls in Duaer](https://skills.duaer.com/drug-recalls.md): In Duaer, search FDA drug recall enforcement reports via OpenFDA. One successful search uses 1 credit.
 - [Search ligands in Duaer](https://skills.duaer.com/ligands.md): In Duaer, look up PDBe chemical component (CCD) ligands. One successful search uses 1 credit.
 - [Search ChEMBL in Duaer](https://skills.duaer.com/chembl.md): In Duaer, search bioactive molecules via ChEMBL. One successful search uses 1 credit.
-
 - [Search Ensembl in Duaer](https://skills.duaer.com/ensembl.md): In Duaer, look up Ensembl genes by symbol or id. One successful search uses 1 credit.
 - [Search KEGG in Duaer](https://skills.duaer.com/kegg.md): In Duaer, search KEGG pathways, diseases, or compounds. One successful search uses 1 credit.
 - [Search Monarch in Duaer](https://skills.duaer.com/monarch.md): In Duaer, search Monarch diseases, phenotypes, or genes. One successful search uses 1 credit.
+- [Search HGNC in Duaer](https://skills.duaer.com/hgnc.md): In Duaer, look up approved gene symbols via HGNC. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
