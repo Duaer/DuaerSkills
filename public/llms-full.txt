@@ -55,6 +55,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search HGNC in Duaer](https://skills.duaer.com/hgnc.md): In Duaer, look up approved gene symbols via HGNC. One successful search uses 1 credit.
 - [Search PRIDE in Duaer](https://skills.duaer.com/pride.md): In Duaer, search proteomics projects in PRIDE. One successful search uses 1 credit.
 - [Search Uberon in Duaer](https://skills.duaer.com/uberon.md): In Duaer, search anatomy terms via Uberon. One successful search uses 1 credit.
+- [Search BioStudies in Duaer](https://skills.duaer.com/biostudies.md): In Duaer, search multi-omics studies in BioStudies. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -114,6 +115,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索 HGNC](https://skills.duaer.com/zh/hgnc.md): 在 Duaer 里经 HGNC 查阅核准基因符号。一次成功查询用 1 额度。
 - [在 Duaer 里检索 PRIDE](https://skills.duaer.com/zh/pride.md): 在 Duaer 里经 PRIDE 检索蛋白质组学项目。一次成功查询用 1 额度。
 - [在 Duaer 里检索 Uberon](https://skills.duaer.com/zh/uberon.md): 在 Duaer 里经 Uberon 检索解剖学术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 BioStudies](https://skills.duaer.com/zh/biostudies.md): 在 Duaer 里经 BioStudies 检索多组学研究。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -1990,6 +1992,42 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - Provide `words` or `id`.
 - `words` — anatomy words, such as liver.
 - `id` — optional. Uberon id such as UBERON:0002107.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-biostudies
+description: >-
+  Search multi-omics studies in BioStudies through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer BioStudies
+
+Search multi-omics studies in BioStudies through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/biostudies?words=diabetes&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — study words, such as diabetes.
+- `id` — optional. BioStudies accession such as S-EPMC7532821.
 - `limit` — optional. From 1 to 20. Default 10.
 
 ## Result

@@ -1487,6 +1487,35 @@ export const skills = [
 		}),
 	},
 
+
+	{
+		slug: 'biostudies',
+		related: ['geo', 'pride', 'expression'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search BioStudies in Duaer', zh: '在 Duaer 里检索 BioStudies' },
+		lede: {
+			en: 'In Duaer, search multi-omics studies in BioStudies. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 BioStudies 检索多组学研究。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has a BioStudies accession, title, type, and release date when present.',
+			zh: '每条结果有 BioStudies 编号、标题、类型，以及可用的发布日期。',
+		},
+		skill: skill({
+			name: 'duaer-biostudies',
+			description:
+				'Search multi-omics studies in BioStudies through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer BioStudies',
+			call: 'GET https://api.duaer.com/v1/data/biostudies?words=diabetes&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — study words, such as diabetes.',
+				'`id` — optional. BioStudies accession such as S-EPMC7532821.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
 ];
 
 export const home = {
