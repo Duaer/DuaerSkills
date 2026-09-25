@@ -1060,7 +1060,7 @@ export const skills = [
 
 	{
 		slug: 'adverse-events',
-		related: ['drug-labels', 'trials', 'indications', 'compounds'],
+		related: ['drug-labels', 'trials', 'indications', 'compounds', 'gwas'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search adverse events in Duaer', zh: '在 Duaer 里检索不良反应' },
 		lede: {
@@ -1082,6 +1082,36 @@ export const skills = [
 				'`words` — brand, generic, substance, or medicinal product.',
 				'`brand` — optional. OpenFDA brand name.',
 				'`generic` — optional. OpenFDA generic name.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'gwas',
+		related: ['variants', 'genes', 'diseases', 'adverse-events'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search GWAS associations in Duaer', zh: '在 Duaer 里检索 GWAS' },
+		lede: {
+			en: 'In Duaer, search GWAS Catalog associations via REST API v2. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 GWAS Catalog REST API v2 检索关联。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has rs id, mapped genes, EFO traits, p-value, and study accession when present.',
+			zh: '每条结果有 rs 编号、定位基因、EFO 性状、p 值，以及可用的研究编号。',
+		},
+		skill: skill({
+			name: 'duaer-gwas',
+			description:
+				'Search GWAS Catalog associations through Duaer (REST API v2). One successful search uses 1 Duaer credit.',
+			title: 'Duaer GWAS',
+			call: 'GET https://api.duaer.com/v1/data/gwas?words=TCF7L2&limit=10',
+			fields: [
+				'Provide `words`, `gene`, `rsId`, or `trait` (or combine).',
+				'`words` — gene symbol or rs id (`rs…`).',
+				'`gene` — optional. Mapped gene symbol.',
+				'`rsId` — optional. Variant rs id (`rs7903146`).',
+				'`trait` — optional. EFO trait text.',
 				'`limit` — optional. From 1 to 20. Default 10.',
 			],
 		}),

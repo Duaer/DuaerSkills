@@ -43,3 +43,4 @@ A missing key returns 401.
 - [Search clinical trials in Duaer](https://skills.duaer.com/trials.md)
 - [Search indications in Duaer](https://skills.duaer.com/indications.md)
 - [Search compounds in Duaer](https://skills.duaer.com/compounds.md)
+- [Search GWAS associations in Duaer](https://skills.duaer.com/gwas.md)
