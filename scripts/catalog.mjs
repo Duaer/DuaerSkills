@@ -1284,6 +1284,36 @@ export const skills = [
 			],
 		}),
 	},
+,
+
+	{
+		slug: 'chembl',
+		related: ['compounds', 'ligands', 'crossrefs', 'metabolites'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search ChEMBL in Duaer', zh: '在 Duaer 里检索 ChEMBL' },
+		lede: {
+			en: 'In Duaer, search bioactive molecules via ChEMBL. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 ChEMBL 检索生物活性分子。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has a ChEMBL id, name, formula, max phase, and InChIKey when present.',
+			zh: '每条结果有 ChEMBL 编号、名称、分子式、最高研发阶段，以及可用的 InChIKey。',
+		},
+		skill: skill({
+			name: 'duaer-chembl',
+			description:
+				'Search bioactive molecules through Duaer via ChEMBL. One successful search uses 1 Duaer credit.',
+			title: 'Duaer ChEMBL',
+			call: 'GET https://api.duaer.com/v1/data/chembl?words=aspirin&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — molecule name, such as aspirin.',
+				'`id` — optional. ChEMBL id such as CHEMBL25.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
 
 ];
 

@@ -48,6 +48,8 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search crossrefs in Duaer](https://skills.duaer.com/crossrefs.md): In Duaer, look up UniChem compound cross-references by InChIKey. One successful search uses 1 credit.
 - [Search drug recalls in Duaer](https://skills.duaer.com/drug-recalls.md): In Duaer, search FDA drug recall enforcement reports via OpenFDA. One successful search uses 1 credit.
 - [Search ligands in Duaer](https://skills.duaer.com/ligands.md): In Duaer, look up PDBe chemical component (CCD) ligands. One successful search uses 1 credit.
+
+- [Search ChEMBL in Duaer](https://skills.duaer.com/chembl.md): In Duaer, search bioactive molecules via ChEMBL. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -100,6 +102,8 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索交叉引用](https://skills.duaer.com/zh/crossrefs.md): 在 Duaer 里经 UniChem 按 InChIKey 检索化合物交叉引用。一次成功查询用 1 额度。
 - [在 Duaer 里检索药品召回](https://skills.duaer.com/zh/drug-recalls.md): 在 Duaer 里经 OpenFDA 检索药品召回执法报告。一次成功查询用 1 额度。
 - [在 Duaer 里检索配体](https://skills.duaer.com/zh/ligands.md): 在 Duaer 里经 PDBe 查阅化学组分（CCD）配体。一次成功查询用 1 额度。
+
+- [在 Duaer 里检索 ChEMBL](https://skills.duaer.com/zh/chembl.md): 在 Duaer 里经 ChEMBL 检索生物活性分子。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -1721,6 +1725,43 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - Provide `words` or `id` as a CCD chemical component id (1–3 characters). Comma-separate several ids.
 - `words` — CCD id such as ATP or HEM.
 - `id` — optional. Same as words; combine for a batch.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+
+---
+name: duaer-chembl
+description: >-
+  Search bioactive molecules through Duaer via ChEMBL. One successful search uses 1 Duaer credit.
+---
+
+# Duaer ChEMBL
+
+Search bioactive molecules through Duaer via ChEMBL. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/chembl?words=aspirin&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — molecule name, such as aspirin.
+- `id` — optional. ChEMBL id such as CHEMBL25.
 - `limit` — optional. From 1 to 20. Default 10.
 
 ## Result

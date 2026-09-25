@@ -48,4 +48,6 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search crossrefs in Duaer](https://skills.duaer.com/crossrefs.md): In Duaer, look up UniChem compound cross-references by InChIKey. One successful search uses 1 credit.
 - [Search drug recalls in Duaer](https://skills.duaer.com/drug-recalls.md): In Duaer, search FDA drug recall enforcement reports via OpenFDA. One successful search uses 1 credit.
 - [Search ligands in Duaer](https://skills.duaer.com/ligands.md): In Duaer, look up PDBe chemical component (CCD) ligands. One successful search uses 1 credit.
+
+- [Search ChEMBL in Duaer](https://skills.duaer.com/chembl.md): In Duaer, search bioactive molecules via ChEMBL. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
