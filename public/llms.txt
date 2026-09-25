@@ -25,4 +25,5 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search interactions in Duaer](https://skills.duaer.com/interactions.md): In Duaer, search STRING protein interaction partners. One successful search uses 1 credit.
 - [Search expression in Duaer](https://skills.duaer.com/expression.md): In Duaer, search GTEx median tissue expression. One successful search uses 1 credit.
 - [Search targets in Duaer](https://skills.duaer.com/targets.md): In Duaer, search Open Targets gene–disease associations. One successful search uses 1 credit.
+- [Search orthologs in Duaer](https://skills.duaer.com/orthologs.md): In Duaer, search cross-species orthologs (MyGene HomoloGene). One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.

@@ -42,3 +42,4 @@ A missing key returns 401.
 - [Search diseases in Duaer](https://skills.duaer.com/diseases.md)
 - [Search proteins in Duaer](https://skills.duaer.com/proteins.md)
 - [Search expression in Duaer](https://skills.duaer.com/expression.md)
+- [Search orthologs in Duaer](https://skills.duaer.com/orthologs.md)

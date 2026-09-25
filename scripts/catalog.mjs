@@ -598,7 +598,7 @@ export const skills = [
 	},
 	{
 		slug: 'targets',
-		related: ['genes', 'diseases', 'proteins', 'expression'],
+		related: ['genes', 'diseases', 'proteins', 'expression', 'orthologs'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search targets in Duaer', zh: '在 Duaer 里检索靶点关联' },
 		lede: {
@@ -620,6 +620,35 @@ export const skills = [
 				'`gene` — gene symbol or Ensembl id. Look up symbols with https://skills.duaer.com/genes.md.',
 				'`disease` — optional. Disease name or ontology id (`EFO_` / `MONDO_`). Alone, returns associated targets. With `gene`, filters that gene’s associations. Look up names with https://skills.duaer.com/diseases.md.',
 				'`limit` — optional. From 1 to 20. Default 10. Results are sorted by association score descending.',
+			],
+		}),
+	},
+
+	{
+		slug: 'orthologs',
+		related: ['genes', 'organisms', 'proteins', 'targets'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search orthologs in Duaer', zh: '在 Duaer 里检索同源基因' },
+		lede: {
+			en: 'In Duaer, search cross-species orthologs (MyGene HomoloGene). One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 MyGene HomoloGene 检索跨物种同源基因。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has a gene symbol, taxonomy id, organism name, Ensembl id, and HomoloGene id.',
+			zh: '每条结果有基因符号、分类编号、物种名、Ensembl id 与 HomoloGene id。',
+		},
+		skill: skill({
+			name: 'duaer-orthologs',
+			description:
+				'Search cross-species orthologs through Duaer (MyGene HomoloGene). One successful search uses 1 Duaer credit.',
+			title: 'Duaer orthologs',
+			call: 'GET https://api.duaer.com/v1/data/orthologs?gene=INS&species=9606&limit=10',
+			fields: [
+				'`gene` is required.',
+				'`gene` — gene symbol or NCBI Gene id. Look up symbols with https://skills.duaer.com/genes.md.',
+				'`species` — optional. NCBI taxonomy id for the query gene. Default `9606` (human). Look up ids with https://skills.duaer.com/organisms.md.',
+				'`orthologSpecies` — optional. Keep only orthologs for this taxonomy id (for example `10090` for mouse).',
+				'`limit` — optional. From 1 to 20. Default 10.',
 			],
 		}),
 	},
