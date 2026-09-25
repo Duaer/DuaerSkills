@@ -58,4 +58,11 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search BioStudies in Duaer](https://skills.duaer.com/biostudies.md): In Duaer, search multi-omics studies in BioStudies. One successful search uses 1 credit.
 - [Search Orphanet in Duaer](https://skills.duaer.com/orphanet.md): In Duaer, search rare diseases via Orphanet. One successful search uses 1 credit.
 - [Search EFO in Duaer](https://skills.duaer.com/efo.md): In Duaer, search experimental factors via EFO. One successful search uses 1 credit.
+- [Search RNAcentral in Duaer](https://skills.duaer.com/rnacentral.md): In Duaer, search non-coding RNA in RNAcentral. One successful search uses 1 credit.
+- [Search Mondo in Duaer](https://skills.duaer.com/mondo.md): In Duaer, search disease terms via Mondo. One successful search uses 1 credit.
+- [Search Cell Ontology in Duaer](https://skills.duaer.com/cell-ontology.md): In Duaer, search cell types via Cell Ontology. One successful search uses 1 credit.
+- [Search MP in Duaer](https://skills.duaer.com/mp.md): In Duaer, search mammalian phenotypes via MP. One successful search uses 1 credit.
+- [Search MyDisease in Duaer](https://skills.duaer.com/mydisease.md): In Duaer, search disease annotations in MyDisease. One successful search uses 1 credit.
+- [Search metabolomics studies in Duaer](https://skills.duaer.com/metabolomics.md): In Duaer, search metabolomics studies in Metabolomics Workbench. One successful search uses 1 credit.
+- [Search IntAct in Duaer](https://skills.duaer.com/intact.md): In Duaer, search molecular interactions in IntAct. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.

@@ -58,6 +58,13 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search BioStudies in Duaer](https://skills.duaer.com/biostudies.md): In Duaer, search multi-omics studies in BioStudies. One successful search uses 1 credit.
 - [Search Orphanet in Duaer](https://skills.duaer.com/orphanet.md): In Duaer, search rare diseases via Orphanet. One successful search uses 1 credit.
 - [Search EFO in Duaer](https://skills.duaer.com/efo.md): In Duaer, search experimental factors via EFO. One successful search uses 1 credit.
+- [Search RNAcentral in Duaer](https://skills.duaer.com/rnacentral.md): In Duaer, search non-coding RNA in RNAcentral. One successful search uses 1 credit.
+- [Search Mondo in Duaer](https://skills.duaer.com/mondo.md): In Duaer, search disease terms via Mondo. One successful search uses 1 credit.
+- [Search Cell Ontology in Duaer](https://skills.duaer.com/cell-ontology.md): In Duaer, search cell types via Cell Ontology. One successful search uses 1 credit.
+- [Search MP in Duaer](https://skills.duaer.com/mp.md): In Duaer, search mammalian phenotypes via MP. One successful search uses 1 credit.
+- [Search MyDisease in Duaer](https://skills.duaer.com/mydisease.md): In Duaer, search disease annotations in MyDisease. One successful search uses 1 credit.
+- [Search metabolomics studies in Duaer](https://skills.duaer.com/metabolomics.md): In Duaer, search metabolomics studies in Metabolomics Workbench. One successful search uses 1 credit.
+- [Search IntAct in Duaer](https://skills.duaer.com/intact.md): In Duaer, search molecular interactions in IntAct. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -120,6 +127,13 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索 BioStudies](https://skills.duaer.com/zh/biostudies.md): 在 Duaer 里经 BioStudies 检索多组学研究。一次成功查询用 1 额度。
 - [在 Duaer 里检索 Orphanet](https://skills.duaer.com/zh/orphanet.md): 在 Duaer 里经 Orphanet 检索罕见病。一次成功查询用 1 额度。
 - [在 Duaer 里检索 EFO](https://skills.duaer.com/zh/efo.md): 在 Duaer 里经 EFO 检索实验因子。一次成功查询用 1 额度。
+- [在 Duaer 里检索 RNAcentral](https://skills.duaer.com/zh/rnacentral.md): 在 Duaer 里经 RNAcentral 检索非编码 RNA。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Mondo](https://skills.duaer.com/zh/mondo.md): 在 Duaer 里经 Mondo 检索疾病术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Cell Ontology](https://skills.duaer.com/zh/cell-ontology.md): 在 Duaer 里经 Cell Ontology 检索细胞类型。一次成功查询用 1 额度。
+- [在 Duaer 里检索 MP](https://skills.duaer.com/zh/mp.md): 在 Duaer 里经 MP 检索哺乳动物表型。一次成功查询用 1 额度。
+- [在 Duaer 里检索 MyDisease](https://skills.duaer.com/zh/mydisease.md): 在 Duaer 里经 MyDisease 检索疾病注释。一次成功查询用 1 额度。
+- [在 Duaer 里检索代谢组学研究](https://skills.duaer.com/zh/metabolomics.md): 在 Duaer 里经 Metabolomics Workbench 检索代谢组学研究。一次成功查询用 1 额度。
+- [在 Duaer 里检索 IntAct](https://skills.duaer.com/zh/intact.md): 在 Duaer 里经 IntAct 检索分子互作。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -2104,6 +2118,258 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - Provide `words` or `id`.
 - `words` — trait or factor words, such as asthma.
 - `id` — optional. EFO id such as EFO:0000270 or EFO_0000270.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-rnacentral
+description: >-
+  Search non-coding RNA in RNAcentral through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer RNAcentral
+
+Search non-coding RNA in RNAcentral through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/rnacentral?words=microRNA&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — RNA description words, such as microRNA.
+- `id` — optional. RNAcentral id such as URS000075C808.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-mondo
+description: >-
+  Search diseases via Mondo through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer Mondo
+
+Search diseases via Mondo through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/mondo?words=diabetes&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — disease words, such as diabetes.
+- `id` — optional. Mondo id such as MONDO:0005148.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-cell-ontology
+description: >-
+  Search cell types via Cell Ontology through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer Cell Ontology
+
+Search cell types via Cell Ontology through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/cell-ontology?words=neuron&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — cell type words, such as neuron.
+- `id` — optional. Cell Ontology id such as CL:0000540.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-mp
+description: >-
+  Search mammalian phenotypes via MP through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer MP
+
+Search mammalian phenotypes via MP through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/mp?words=obesity&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — phenotype words, such as obesity.
+- `id` — optional. MP id such as MP:0001261.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-mydisease
+description: >-
+  Search disease annotations in MyDisease through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer MyDisease
+
+Search disease annotations in MyDisease through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/mydisease?words=asthma&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — disease words, such as asthma.
+- `id` — optional. Disease id such as MONDO:0004979.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-metabolomics
+description: >-
+  Search metabolomics studies in Metabolomics Workbench through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer Metabolomics
+
+Search metabolomics studies in Metabolomics Workbench through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/metabolomics?words=diabetes&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — study title words, such as diabetes.
+- `id` — optional. Study id such as ST000001.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-intact
+description: >-
+  Search molecular interactions in IntAct through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer IntAct
+
+Search molecular interactions in IntAct through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/intact?words=tp53&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — gene or protein words, such as tp53.
+- `id` — optional. Interactor id such as P04637.
 - `limit` — optional. From 1 to 20. Default 10.
 
 ## Result

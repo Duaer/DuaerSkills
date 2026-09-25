@@ -1573,6 +1573,153 @@ export const skills = [
 		}),
 	},
 
+	{
+		slug: 'rnacentral',
+		related: ["genes","ensembl","hgnc"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search RNAcentral in Duaer', zh: '在 Duaer 里检索 RNAcentral' },
+		lede: { en: 'In Duaer, search non-coding RNA in RNAcentral. One successful search uses 1 credit.', zh: '在 Duaer 里经 RNAcentral 检索非编码 RNA。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an RNAcentral id, description, length, and RNA type when present.', zh: '每条结果有 RNAcentral 编号、描述、长度，以及可用的 RNA 类型。' },
+		skill: skill({
+			name: 'duaer-rnacentral',
+			description: 'Search non-coding RNA in RNAcentral through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer RNAcentral',
+			call: 'GET https://api.duaer.com/v1/data/rnacentral?words=microRNA&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — RNA description words, such as microRNA.',
+				'`id` — optional. RNAcentral id such as URS000075C808.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'mondo',
+		related: ["diseases","orphanet","monarch"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search Mondo in Duaer', zh: '在 Duaer 里检索 Mondo' },
+		lede: { en: 'In Duaer, search disease terms via Mondo. One successful search uses 1 credit.', zh: '在 Duaer 里经 Mondo 检索疾病术语。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has a Mondo id, label, and description when present.', zh: '每条结果有 Mondo 编号、名称，以及可用的描述。' },
+		skill: skill({
+			name: 'duaer-mondo',
+			description: 'Search diseases via Mondo through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Mondo',
+			call: 'GET https://api.duaer.com/v1/data/mondo?words=diabetes&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — disease words, such as diabetes.',
+				'`id` — optional. Mondo id such as MONDO:0005148.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'cell-ontology',
+		related: ["cell-lines","uberon","atlas"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search Cell Ontology in Duaer', zh: '在 Duaer 里检索 Cell Ontology' },
+		lede: { en: 'In Duaer, search cell types via Cell Ontology. One successful search uses 1 credit.', zh: '在 Duaer 里经 Cell Ontology 检索细胞类型。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has a CL id, label, and description when present.', zh: '每条结果有 CL 编号、名称，以及可用的描述。' },
+		skill: skill({
+			name: 'duaer-cell-ontology',
+			description: 'Search cell types via Cell Ontology through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Cell Ontology',
+			call: 'GET https://api.duaer.com/v1/data/cell-ontology?words=neuron&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — cell type words, such as neuron.',
+				'`id` — optional. Cell Ontology id such as CL:0000540.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'mp',
+		related: ["phenotypes","monarch","gwas"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search MP in Duaer', zh: '在 Duaer 里检索 MP' },
+		lede: { en: 'In Duaer, search mammalian phenotypes via MP. One successful search uses 1 credit.', zh: '在 Duaer 里经 MP 检索哺乳动物表型。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an MP id, label, and description when present.', zh: '每条结果有 MP 编号、名称，以及可用的描述。' },
+		skill: skill({
+			name: 'duaer-mp',
+			description: 'Search mammalian phenotypes via MP through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer MP',
+			call: 'GET https://api.duaer.com/v1/data/mp?words=obesity&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — phenotype words, such as obesity.',
+				'`id` — optional. MP id such as MP:0001261.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'mydisease',
+		related: ["mondo","diseases","orphanet"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search MyDisease in Duaer', zh: '在 Duaer 里检索 MyDisease' },
+		lede: { en: 'In Duaer, search disease annotations in MyDisease. One successful search uses 1 credit.', zh: '在 Duaer 里经 MyDisease 检索疾病注释。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has a disease id, name, and definition when present.', zh: '每条结果有疾病编号、名称，以及可用的定义。' },
+		skill: skill({
+			name: 'duaer-mydisease',
+			description: 'Search disease annotations in MyDisease through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer MyDisease',
+			call: 'GET https://api.duaer.com/v1/data/mydisease?words=asthma&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — disease words, such as asthma.',
+				'`id` — optional. Disease id such as MONDO:0004979.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'metabolomics',
+		related: ["metabolites","biostudies","pride"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search metabolomics studies in Duaer', zh: '在 Duaer 里检索代谢组学研究' },
+		lede: { en: 'In Duaer, search metabolomics studies in Metabolomics Workbench. One successful search uses 1 credit.', zh: '在 Duaer 里经 Metabolomics Workbench 检索代谢组学研究。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has a study id, title, species, and analysis type when present.', zh: '每条结果有研究编号、标题、物种，以及可用的分析类型。' },
+		skill: skill({
+			name: 'duaer-metabolomics',
+			description: 'Search metabolomics studies in Metabolomics Workbench through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Metabolomics',
+			call: 'GET https://api.duaer.com/v1/data/metabolomics?words=diabetes&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — study title words, such as diabetes.',
+				'`id` — optional. Study id such as ST000001.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'intact',
+		related: ["interactions","proteins","complexes"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search IntAct in Duaer', zh: '在 Duaer 里检索 IntAct' },
+		lede: { en: 'In Duaer, search molecular interactions in IntAct. One successful search uses 1 credit.', zh: '在 Duaer 里经 IntAct 检索分子互作。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an IntAct accession and the two interactors when present.', zh: '每条结果有 IntAct 编号与两个互作分子。' },
+		skill: skill({
+			name: 'duaer-intact',
+			description: 'Search molecular interactions in IntAct through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer IntAct',
+			call: 'GET https://api.duaer.com/v1/data/intact?words=tp53&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — gene or protein words, such as tp53.',
+				'`id` — optional. Interactor id such as P04637.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
 ];
 
 export const home = {
