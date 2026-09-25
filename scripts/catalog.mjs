@@ -1228,6 +1228,35 @@ export const skills = [
 		}),
 	},
 
+	{
+		slug: 'drug-recalls',
+		related: ['adverse-events', 'drug-labels', 'rxnorm', 'compounds'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search drug recalls in Duaer', zh: '在 Duaer 里检索药品召回' },
+		lede: {
+			en: 'In Duaer, search FDA drug recall enforcement reports via OpenFDA. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 OpenFDA 检索药品召回执法报告。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has a recall number, class, status, reason, and firm when present.',
+			zh: '每条结果有召回编号、分类、状态、原因，以及可用的企业名。',
+		},
+		skill: skill({
+			name: 'duaer-drug-recalls',
+			description:
+				'Search FDA drug recall enforcement reports through Duaer via OpenFDA. One successful search uses 1 Duaer credit.',
+			title: 'Duaer drug recalls',
+			call: 'GET https://api.duaer.com/v1/data/drug-recalls?words=aspirin&limit=10',
+			fields: [
+				'Provide `words`, `brand`, or `generic` (or combine brand and generic).',
+				'`words` — brand, generic, substance, or product text.',
+				'`brand` — optional. OpenFDA brand name.',
+				'`generic` — optional. OpenFDA generic name.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
 ];
 
 export const home = {
