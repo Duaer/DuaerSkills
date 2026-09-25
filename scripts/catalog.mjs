@@ -1314,6 +1314,36 @@ export const skills = [
 		}),
 	},
 
+,
+
+	{
+		slug: 'ensembl',
+		related: ['genes', 'proteins', 'variants', 'orthologs'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search Ensembl in Duaer', zh: '在 Duaer 里检索 Ensembl' },
+		lede: {
+			en: 'In Duaer, look up Ensembl genes by symbol or id. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 Ensembl 按基因符号或编号查阅基因。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has an Ensembl id, symbol, biotype, and genomic coordinates when present.',
+			zh: '每条结果有 Ensembl 编号、基因符号、生物类型，以及可用的基因组坐标。',
+		},
+		skill: skill({
+			name: 'duaer-ensembl',
+			description:
+				'Look up Ensembl genes by symbol or id through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Ensembl',
+			call: 'GET https://api.duaer.com/v1/data/ensembl?words=TP53&species=homo_sapiens&limit=10',
+			fields: [
+				'Provide `words` (gene symbol) or `id` (Ensembl gene id).',
+				'`words` — gene symbol, such as TP53.',
+				'`id` — optional. Ensembl id such as ENSG00000141510.',
+				'`species` — optional. Default homo_sapiens. Used with words.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
 
 ];
 
