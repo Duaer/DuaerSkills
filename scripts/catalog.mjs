@@ -1313,8 +1313,6 @@ export const skills = [
 		}),
 	},
 
-,
-
 	{
 		slug: 'ensembl',
 		related: ['genes', 'proteins', 'variants', 'orthologs'],
@@ -1397,6 +1395,35 @@ export const skills = [
 				'`words` — search text, such as Marfan.',
 				'`id` — optional. CURIE such as MONDO:0007947, HP:0000819, or HGNC:1100.',
 				'`category` — optional. disease (default), phenotype, or gene. Used with words.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+
+	{
+		slug: 'hgnc',
+		related: ['genes', 'ensembl', 'proteins'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search HGNC in Duaer', zh: '在 Duaer 里检索 HGNC' },
+		lede: {
+			en: 'In Duaer, look up approved gene symbols via HGNC. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 HGNC 查阅核准基因符号。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has an HGNC id, approved symbol, name, and cross-references when present.',
+			zh: '每条结果有 HGNC 编号、核准符号、名称，以及可用的交叉引用。',
+		},
+		skill: skill({
+			name: 'duaer-hgnc',
+			description:
+				'Look up approved gene symbols via HGNC through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer HGNC',
+			call: 'GET https://api.duaer.com/v1/data/hgnc?words=BRCA1&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — gene symbol or name words, such as BRCA1.',
+				'`id` — optional. HGNC id such as HGNC:1100 or 1100.',
 				'`limit` — optional. From 1 to 20. Default 10.',
 			],
 		}),
