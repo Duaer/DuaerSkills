@@ -21,12 +21,13 @@ Use an account key or a model API key.
 Get a Duaer key: https://skills.duaer.com/keys.md
 
 - At least one search field is required. Fields combine.
+- Search with `q` first; use `id` or `acronym` only when you already have them from a result.
 - `q` — words in the disease name or definition.
-- `id` — UniProt disease id, such as `DI-02060`.
-- `name` — disease name.
-- `acronym` — disease acronym, such as `T2D`.
+- `id` — optional. UniProt disease id from a result (`diseaseId`), such as `DI-02060`.
+- `name` — optional. Disease name.
+- `acronym` — optional. Disease acronym from a result, such as `T2D`.
 - `limit` — optional. From 1 to 20. Default 10.
-- Use `title` as `disease` when searching proteins.
+- Use `title` as `disease` when searching proteins. Reuse `diseaseId` in `id` for an exact lookup.
 
 ## Result
 
