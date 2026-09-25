@@ -156,7 +156,7 @@ export const skills = [
 	},
 	{
 		slug: 'compounds',
-		related: ['trials', 'structures', 'proteins', 'activities'],
+		related: ['trials', 'structures', 'proteins', 'activities', 'indications'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search compounds in Duaer', zh: '在 Duaer 里检索化合物和药物' },
 		lede: {
@@ -212,7 +212,7 @@ export const skills = [
 	},
 	{
 		slug: 'diseases',
-		related: ['genes', 'proteins', 'variants', 'trials'],
+		related: ['genes', 'proteins', 'variants', 'trials', 'indications'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search diseases in Duaer', zh: '在 Duaer 里检索疾病' },
 		lede: {
@@ -656,7 +656,7 @@ export const skills = [
 
 	{
 		slug: 'activities',
-		related: ['compounds', 'targets', 'genes'],
+		related: ['compounds', 'targets', 'genes', 'indications'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search activities in Duaer', zh: '在 Duaer 里检索生物活性' },
 		lede: {
@@ -707,6 +707,34 @@ export const skills = [
 				'`gene` — gene symbol or Ensembl id. Look up symbols with https://skills.duaer.com/genes.md.',
 				'`tissue` — optional. Keep only enriched tissues whose name contains this text (for example `pancreas`).',
 				'`limit` — optional. From 1 to 20. Default 10. Results sort by nTPM descending.',
+			],
+		}),
+	},
+
+
+	{
+		slug: 'indications',
+		related: ['compounds', 'activities', 'diseases'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search indications in Duaer', zh: '在 Duaer 里检索适应症' },
+		lede: {
+			en: 'In Duaer, search ChEMBL drug indications by molecule. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 ChEMBL 按分子检索药物适应症。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has an indication label, EFO/MeSH ids, and max phase for that indication.',
+			zh: '每条结果有适应症名称、EFO/MeSH 编号，以及该适应症的最高阶段。',
+		},
+		skill: skill({
+			name: 'duaer-indications',
+			description:
+				'Search ChEMBL drug indications through Duaer by molecule. One successful search uses 1 Duaer credit.',
+			title: 'Duaer indications',
+			call: 'GET https://api.duaer.com/v1/data/indications?molecule=aspirin&limit=10',
+			fields: [
+				'`molecule` is required.',
+				'`molecule` — molecule name or ChEMBL id (`CHEMBL25`). Names resolve via ChEMBL search. Look up PubChem names with https://skills.duaer.com/compounds.md.',
+				'`limit` — optional. From 1 to 20. Default 10. Results prefer higher max phase.',
 			],
 		}),
 	},

@@ -41,3 +41,4 @@ A missing key returns 401.
 - [在 Duaer 里检索化合物和药物](https://skills.duaer.com/zh/compounds.md)
 - [在 Duaer 里检索靶点关联](https://skills.duaer.com/zh/targets.md)
 - [在 Duaer 里检索基因](https://skills.duaer.com/zh/genes.md)
+- [在 Duaer 里检索适应症](https://skills.duaer.com/zh/indications.md)

@@ -46,3 +46,4 @@ A missing key returns 401.
 - [Search proteins in Duaer](https://skills.duaer.com/proteins.md)
 - [Search variants in Duaer](https://skills.duaer.com/variants.md)
 - [Search clinical trials in Duaer](https://skills.duaer.com/trials.md)
+- [Search indications in Duaer](https://skills.duaer.com/indications.md)

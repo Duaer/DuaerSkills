@@ -28,6 +28,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search orthologs in Duaer](https://skills.duaer.com/orthologs.md): In Duaer, search cross-species orthologs (MyGene HomoloGene). One successful search uses 1 credit.
 - [Search activities in Duaer](https://skills.duaer.com/activities.md): In Duaer, search ChEMBL bioactivities by molecule or target. One successful search uses 1 credit.
 - [Search tissue atlas in Duaer](https://skills.duaer.com/atlas.md): In Duaer, search Human Protein Atlas tissue-enriched expression. One successful search uses 1 credit.
+- [Search indications in Duaer](https://skills.duaer.com/indications.md): In Duaer, search ChEMBL drug indications by molecule. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -60,6 +61,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索同源基因](https://skills.duaer.com/zh/orthologs.md): 在 Duaer 里经 MyGene HomoloGene 检索跨物种同源基因。一次成功查询用 1 额度。
 - [在 Duaer 里检索生物活性](https://skills.duaer.com/zh/activities.md): 在 Duaer 里经 ChEMBL 按分子或靶点检索生物活性。一次成功查询用 1 额度。
 - [在 Duaer 里检索组织图谱](https://skills.duaer.com/zh/atlas.md): 在 Duaer 里经 Human Protein Atlas 检索组织富集表达。一次成功查询用 1 额度。
+- [在 Duaer 里检索适应症](https://skills.duaer.com/zh/indications.md): 在 Duaer 里经 ChEMBL 按分子检索药物适应症。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -954,6 +956,41 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - `gene` — gene symbol or Ensembl id. Look up symbols with https://skills.duaer.com/genes.md.
 - `tissue` — optional. Keep only enriched tissues whose name contains this text (for example `pancreas`).
 - `limit` — optional. From 1 to 20. Default 10. Results sort by nTPM descending.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-indications
+description: >-
+  Search ChEMBL drug indications through Duaer by molecule. One successful search uses 1 Duaer credit.
+---
+
+# Duaer indications
+
+Search ChEMBL drug indications through Duaer by molecule. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/indications?molecule=aspirin&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- `molecule` is required.
+- `molecule` — molecule name or ChEMBL id (`CHEMBL25`). Names resolve via ChEMBL search. Look up PubChem names with https://skills.duaer.com/compounds.md.
+- `limit` — optional. From 1 to 20. Default 10. Results prefer higher max phase.
 
 ## Result
 
