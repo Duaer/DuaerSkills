@@ -1145,6 +1145,35 @@ export const skills = [
 		}),
 	},
 
+	{
+		slug: 'mesh',
+		related: ['keywords', 'rxnorm', 'diseases', 'trials'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search MeSH in Duaer', zh: '在 Duaer 里检索 MeSH' },
+		lede: {
+			en: 'In Duaer, look up MeSH subject headings (NLM MeSH). One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 MeSH（NLM）检索主题词。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has a MeSH unique id, preferred label, and synonyms when present.',
+			zh: '每条结果有 MeSH UI、优选标签，以及可用的同义词。',
+		},
+		skill: skill({
+			name: 'duaer-mesh',
+			description:
+				'Look up MeSH subject headings through Duaer (NLM MeSH). One successful search uses 1 Duaer credit.',
+			title: 'Duaer MeSH',
+			call: 'GET https://api.duaer.com/v1/data/mesh?words=aspirin&limit=10',
+			fields: [
+				'Provide `words` or `id` (or both; id wins).',
+				'`words` — MeSH descriptor label.',
+				'`id` — optional. MeSH unique id (D001241). Overrides words when set.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+
 ];
 
 export const home = {
@@ -1162,3 +1191,4 @@ export const keys = {
 		zh: 'Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。',
 	},
 };
+
