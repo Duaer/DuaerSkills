@@ -47,3 +47,4 @@ A missing key returns 401.
 - [Search pathways in Duaer](https://skills.duaer.com/pathways.md)
 - [Search Gene Ontology in Duaer](https://skills.duaer.com/gene-ontology.md)
 - [Search expression in Duaer](https://skills.duaer.com/expression.md)
+- [Search tissue atlas in Duaer](https://skills.duaer.com/atlas.md)

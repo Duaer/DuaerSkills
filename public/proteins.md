@@ -56,3 +56,4 @@ A missing key returns 401.
 - [Search pathways in Duaer](https://skills.duaer.com/pathways.md)
 - [Search diseases in Duaer](https://skills.duaer.com/diseases.md)
 - [Search interactions in Duaer](https://skills.duaer.com/interactions.md)
+- [Search tissue atlas in Duaer](https://skills.duaer.com/atlas.md)

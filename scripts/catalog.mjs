@@ -81,7 +81,7 @@ export const skills = [
 	},
 	{
 		slug: 'proteins',
-		related: ['genes', 'structures', 'pathways', 'diseases', 'interactions'],
+		related: ['genes', 'structures', 'pathways', 'diseases', 'interactions', 'atlas'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search proteins in Duaer', zh: '在 Duaer 里检索基因和蛋白' },
 		lede: {
@@ -393,7 +393,7 @@ export const skills = [
 	},
 	{
 		slug: 'genes',
-		related: ['proteins', 'variants', 'pathways', 'gene-ontology', 'expression'],
+		related: ['proteins', 'variants', 'pathways', 'gene-ontology', 'expression', 'atlas'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search genes in Duaer', zh: '在 Duaer 里检索基因' },
 		lede: {
@@ -570,7 +570,7 @@ export const skills = [
 	},
 	{
 		slug: 'expression',
-		related: ['genes', 'proteins', 'interactions', 'targets'],
+		related: ['genes', 'proteins', 'interactions', 'targets', 'atlas'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search expression in Duaer', zh: '在 Duaer 里检索表达' },
 		lede: {
@@ -678,6 +678,35 @@ export const skills = [
 				'`molecule` — molecule name or ChEMBL id (`CHEMBL25`). Names resolve via ChEMBL search. Look up PubChem names with https://skills.duaer.com/compounds.md.',
 				'`target` — optional. Target name, gene symbol, or ChEMBL id. Alone, returns activities for that target. With `molecule`, filters both. Look up gene–disease targets with https://skills.duaer.com/targets.md.',
 				'`limit` — optional. From 1 to 20. Default 10. Results prefer higher pChEMBL values.',
+			],
+		}),
+	},
+
+
+	{
+		slug: 'atlas',
+		related: ['expression', 'genes', 'proteins'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search tissue atlas in Duaer', zh: '在 Duaer 里检索组织图谱' },
+		lede: {
+			en: 'In Duaer, search Human Protein Atlas tissue-enriched expression. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 Human Protein Atlas 检索组织富集表达。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has a gene, Ensembl id, enriched tissue, nTPM, specificity, and secretome location when present.',
+			zh: '每条结果有基因、Ensembl id、富集组织、nTPM、特异性，以及可用的分泌位置。',
+		},
+		skill: skill({
+			name: 'duaer-atlas',
+			description:
+				'Search Human Protein Atlas tissue-enriched expression through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer tissue atlas',
+			call: 'GET https://api.duaer.com/v1/data/atlas?gene=INS&limit=10',
+			fields: [
+				'`gene` is required.',
+				'`gene` — gene symbol or Ensembl id. Look up symbols with https://skills.duaer.com/genes.md.',
+				'`tissue` — optional. Keep only enriched tissues whose name contains this text (for example `pancreas`).',
+				'`limit` — optional. From 1 to 20. Default 10. Results sort by nTPM descending.',
 			],
 		}),
 	},
