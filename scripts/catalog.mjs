@@ -1545,6 +1545,34 @@ export const skills = [
 		}),
 	},
 
+	{
+		slug: 'efo',
+		related: ['gwas', 'phenotypes', 'mesh'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search EFO in Duaer', zh: '在 Duaer 里检索 EFO' },
+		lede: {
+			en: 'In Duaer, search experimental factors via EFO. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 EFO 检索实验因子。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has an EFO id, label, and description when present.',
+			zh: '每条结果有 EFO 编号、名称，以及可用的描述。',
+		},
+		skill: skill({
+			name: 'duaer-efo',
+			description:
+				'Search experimental factors via EFO through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer EFO',
+			call: 'GET https://api.duaer.com/v1/data/efo?words=asthma&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — trait or factor words, such as asthma.',
+				'`id` — optional. EFO id such as EFO:0000270 or EFO_0000270.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
 ];
 
 export const home = {
