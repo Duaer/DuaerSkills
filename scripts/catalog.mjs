@@ -357,8 +357,8 @@ export const skills = [
 			zh: '在 Duaer 里检索 Reactome 通路。一次成功查询用 1 额度。',
 		},
 		returns: {
-			en: 'Each pathway has a name, pathwayId, species, and summary. Use pathwayId with proteins.pathway.',
-			zh: '每条通路有名称、pathwayId、物种和摘要。pathwayId 可用于蛋白 pathway。',
+			en: 'Each pathway has a name, pathwayId, species, summary, browserUrl (interactive diagram), and diagramUrl (PNG). Use pathwayId with proteins.pathway.',
+			zh: '每条通路有名称、pathwayId、物种、摘要、browserUrl（交互图）和 diagramUrl（PNG）。pathwayId 可用于蛋白 pathway。',
 		},
 		skill: skill({
 			name: 'duaer-pathways',
@@ -373,7 +373,8 @@ export const skills = [
 							"`id` — optional. Reactome pathway id from a result (`pathwayId`), such as `R-HSA-264876`.",
 							"`name` — optional. Pathway name.",
 							"`limit` — optional. From 1 to 20. Default 10.",
-							"Use `pathwayId` as `pathway` when searching proteins. Reuse `pathwayId` in `id` for an exact lookup."
+							"Use `pathwayId` as `pathway` when searching proteins. Reuse `pathwayId` in `id` for an exact lookup.",
+							"Open `browserUrl` for the interactive Reactome diagram, or `diagramUrl` for a PNG export."
 			],
 		}),
 	},
