@@ -112,6 +112,7 @@ export const skills = [
 				'`function` — words in the function text.',
 				'`go` — Gene Ontology term. Look up terms with https://skills.duaer.com/gene-ontology.md.',
 				'`pathway` — Reactome pathway id or words. Look up pathways with https://skills.duaer.com/pathways.md.',
+				'`domain` — InterPro domain id or words. Look up domains with https://skills.duaer.com/domains.md.',
 				'`taxonomyId` — NCBI taxonomy id. Look up ids with https://skills.duaer.com/organisms.md.',
 				'`limit` — optional. From 1 to 20. Default 10.',
 			],
@@ -447,6 +448,35 @@ export const skills = [
 								"`id` — optional. HGVS genomic id from a result (`variantId`), such as `chr7:g.140453136A>T`.",
 								"`limit` — optional. From 1 to 20. Default 10.",
 								"Reuse `variantId` in `id` for an exact lookup."
+			],
+		}),
+	},
+	{
+		slug: 'domains',
+		related: ['proteins', 'gene-ontology', 'pathways'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search domains in Duaer', zh: '在 Duaer 里检索结构域' },
+		lede: {
+			en: 'In Duaer, search InterPro domains. One successful search uses 1 credit.',
+			zh: '在 Duaer 里检索 InterPro 结构域。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each domain has a domainId, name, type, short name, GO ids, and member databases. Use domainId with proteins.domain.',
+			zh: '每个结构域有 domainId、名称、类型、短名、GO 编号与成员库。domainId 可用于蛋白 domain。',
+		},
+		skill: skill({
+			name: 'duaer-domains',
+			description: 'Search InterPro domains through Duaer. Use the domainId with proteins.domain. One successful search uses 1 Duaer credit.',
+			title: 'Duaer domains',
+			call: 'GET https://api.duaer.com/v1/data/domains?q=kinase&limit=10',
+			fields: [
+								"At least one search field is required. Fields combine.",
+								"Search with `q` first; use `id` only when you already have an InterPro id from a result.",
+								"`q` — words in the domain name or description.",
+								"`id` — optional. InterPro id from a result (`domainId`), such as `IPR000719`.",
+								"`name` — optional. Domain name.",
+								"`limit` — optional. From 1 to 20. Default 10.",
+								"Use `domainId` as `domain` when searching proteins. Reuse `domainId` in `id` for an exact lookup."
 			],
 		}),
 	},

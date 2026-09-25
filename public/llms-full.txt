@@ -19,6 +19,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search pathways in Duaer](https://skills.duaer.com/pathways.md): In Duaer, search Reactome pathways. One successful search uses 1 credit.
 - [Search genes in Duaer](https://skills.duaer.com/genes.md): In Duaer, search genes. One successful search uses 1 credit.
 - [Search variants in Duaer](https://skills.duaer.com/variants.md): In Duaer, search variants (ClinVar / dbSNP). One successful search uses 1 credit.
+- [Search domains in Duaer](https://skills.duaer.com/domains.md): In Duaer, search InterPro domains. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -42,6 +43,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索通路](https://skills.duaer.com/zh/pathways.md): 在 Duaer 里检索 Reactome 通路。一次成功查询用 1 额度。
 - [在 Duaer 里检索基因](https://skills.duaer.com/zh/genes.md): 在 Duaer 里检索基因。一次成功查询用 1 额度。
 - [在 Duaer 里检索变异](https://skills.duaer.com/zh/variants.md): 在 Duaer 里检索变异（ClinVar / dbSNP）。一次成功查询用 1 额度。
+- [在 Duaer 里检索结构域](https://skills.duaer.com/zh/domains.md): 在 Duaer 里检索 InterPro 结构域。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -153,6 +155,7 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - `function` — words in the function text.
 - `go` — Gene Ontology term. Look up terms with https://skills.duaer.com/gene-ontology.md.
 - `pathway` — Reactome pathway id or words. Look up pathways with https://skills.duaer.com/pathways.md.
+- `domain` — InterPro domain id or words. Look up domains with https://skills.duaer.com/domains.md.
 - `taxonomyId` — NCBI taxonomy id. Look up ids with https://skills.duaer.com/organisms.md.
 - `limit` — optional. From 1 to 20. Default 10.
 
@@ -596,6 +599,45 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - `id` — optional. HGVS genomic id from a result (`variantId`), such as `chr7:g.140453136A>T`.
 - `limit` — optional. From 1 to 20. Default 10.
 - Reuse `variantId` in `id` for an exact lookup.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-domains
+description: >-
+  Search InterPro domains through Duaer. Use the domainId with proteins.domain. One successful search uses 1 Duaer credit.
+---
+
+# Duaer domains
+
+Search InterPro domains through Duaer. Use the domainId with proteins.domain. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/domains?q=kinase&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- At least one search field is required. Fields combine.
+- Search with `q` first; use `id` only when you already have an InterPro id from a result.
+- `q` — words in the domain name or description.
+- `id` — optional. InterPro id from a result (`domainId`), such as `IPR000719`.
+- `name` — optional. Domain name.
+- `limit` — optional. From 1 to 20. Default 10.
+- Use `domainId` as `domain` when searching proteins. Reuse `domainId` in `id` for an exact lookup.
 
 ## Result
 
