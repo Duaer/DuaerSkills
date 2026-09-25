@@ -51,3 +51,4 @@ A missing key returns 401.
 - [在 Duaer 里检索临床试验](https://skills.duaer.com/zh/trials.md)
 - [在 Duaer 里检索疾病](https://skills.duaer.com/zh/diseases.md)
 - [在 Duaer 里检索预印本](https://skills.duaer.com/zh/preprints.md)
+- [在 Duaer 里检索基金](https://skills.duaer.com/zh/grants.md)

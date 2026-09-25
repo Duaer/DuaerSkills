@@ -46,7 +46,7 @@ ${credits}`;
 export const skills = [
 	{
 		slug: 'papers',
-		related: ['proteins', 'trials', 'diseases', 'preprints'],
+		related: ['proteins', 'trials', 'diseases', 'preprints', 'grants'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search papers in Duaer', zh: '在 Duaer 里检索论文' },
 		lede: {
@@ -507,6 +507,36 @@ export const skills = [
 								"`server` — optional. `bioRxiv` or `medRxiv`. Omit for both.",
 								"`yearFrom` — optional. First publication year (1000–2100).",
 								"`yearTo` — optional. Last publication year (1000–2100).",
+								"`limit` — optional. From 1 to 20. Default 10."
+			],
+		}),
+	},
+	{
+		slug: 'grants',
+		related: ['papers', 'preprints'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search grants in Duaer', zh: '在 Duaer 里检索基金' },
+		lede: {
+			en: 'In Duaer, search NIH grants via RePORTER. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 NIH RePORTER 检索基金与项目。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each grant has a title, project number, PI, organization, agency, fiscal year, award amount, and dates.',
+			zh: '每条基金有标题、项目编号、PI、机构、资助机构、财年、金额与起止日期。',
+		},
+		skill: skill({
+			name: 'duaer-grants',
+			description: 'Search NIH grants through Duaer (NIH RePORTER). One successful search uses 1 Duaer credit.',
+			title: 'Duaer grants',
+			call: 'GET https://api.duaer.com/v1/data/grants?q=insulin&limit=10',
+			fields: [
+								"At least one search field is required. Fields combine.",
+								"`q` — words in the project title, terms, or abstract.",
+								"`pi` — optional. Principal investigator name.",
+								"`organization` — optional. Awardee organization name.",
+								"`projectNum` — optional. NIH project number, such as `5P20GM152335-03`.",
+								"`yearFrom` — optional. First fiscal year (1000–2100).",
+								"`yearTo` — optional. Last fiscal year (1000–2100).",
 								"`limit` — optional. From 1 to 20. Default 10."
 			],
 		}),

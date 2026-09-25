@@ -21,6 +21,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search variants in Duaer](https://skills.duaer.com/variants.md): In Duaer, search variants (ClinVar / dbSNP). One successful search uses 1 credit.
 - [Search domains in Duaer](https://skills.duaer.com/domains.md): In Duaer, search InterPro domains. One successful search uses 1 credit.
 - [Search preprints in Duaer](https://skills.duaer.com/preprints.md): In Duaer, search bioRxiv and medRxiv preprints via Europe PMC. One successful search uses 1 credit.
+- [Search grants in Duaer](https://skills.duaer.com/grants.md): In Duaer, search NIH grants via RePORTER. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -46,6 +47,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索变异](https://skills.duaer.com/zh/variants.md): 在 Duaer 里检索变异（ClinVar / dbSNP）。一次成功查询用 1 额度。
 - [在 Duaer 里检索结构域](https://skills.duaer.com/zh/domains.md): 在 Duaer 里检索 InterPro 结构域。一次成功查询用 1 额度。
 - [在 Duaer 里检索预印本](https://skills.duaer.com/zh/preprints.md): 在 Duaer 里经 Europe PMC 检索 bioRxiv / medRxiv 预印本。一次成功查询用 1 额度。
+- [在 Duaer 里检索基金](https://skills.duaer.com/zh/grants.md): 在 Duaer 里经 NIH RePORTER 检索基金与项目。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -680,6 +682,46 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - `server` — optional. `bioRxiv` or `medRxiv`. Omit for both.
 - `yearFrom` — optional. First publication year (1000–2100).
 - `yearTo` — optional. Last publication year (1000–2100).
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-grants
+description: >-
+  Search NIH grants through Duaer (NIH RePORTER). One successful search uses 1 Duaer credit.
+---
+
+# Duaer grants
+
+Search NIH grants through Duaer (NIH RePORTER). One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/grants?q=insulin&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- At least one search field is required. Fields combine.
+- `q` — words in the project title, terms, or abstract.
+- `pi` — optional. Principal investigator name.
+- `organization` — optional. Awardee organization name.
+- `projectNum` — optional. NIH project number, such as `5P20GM152335-03`.
+- `yearFrom` — optional. First fiscal year (1000–2100).
+- `yearTo` — optional. Last fiscal year (1000–2100).
 - `limit` — optional. From 1 to 20. Default 10.
 
 ## Result
