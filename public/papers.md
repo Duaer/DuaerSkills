@@ -50,3 +50,4 @@ A missing key returns 401.
 - [Search proteins in Duaer](https://skills.duaer.com/proteins.md)
 - [Search clinical trials in Duaer](https://skills.duaer.com/trials.md)
 - [Search diseases in Duaer](https://skills.duaer.com/diseases.md)
+- [Search preprints in Duaer](https://skills.duaer.com/preprints.md)

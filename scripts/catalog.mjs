@@ -46,7 +46,7 @@ ${credits}`;
 export const skills = [
 	{
 		slug: 'papers',
-		related: ['proteins', 'trials', 'diseases'],
+		related: ['proteins', 'trials', 'diseases', 'preprints'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search papers in Duaer', zh: '在 Duaer 里检索论文' },
 		lede: {
@@ -477,6 +477,37 @@ export const skills = [
 								"`name` — optional. Domain name.",
 								"`limit` — optional. From 1 to 20. Default 10.",
 								"Use `domainId` as `domain` when searching proteins. Reuse `domainId` in `id` for an exact lookup."
+			],
+		}),
+	},
+	{
+		slug: 'preprints',
+		related: ['papers', 'genes'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search preprints in Duaer', zh: '在 Duaer 里检索预印本' },
+		lede: {
+			en: 'In Duaer, search bioRxiv and medRxiv preprints via Europe PMC. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 Europe PMC 检索 bioRxiv / medRxiv 预印本。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each preprint has a title, doi, server, authors, published date, year, and summary.',
+			zh: '每条预印本有标题、doi、服务器、作者、发表日期、年份与摘要。',
+		},
+		skill: skill({
+			name: 'duaer-preprints',
+			description: 'Search bioRxiv and medRxiv preprints through Duaer (Europe PMC). One successful search uses 1 Duaer credit.',
+			title: 'Duaer preprints',
+			call: 'GET https://api.duaer.com/v1/data/preprints?q=insulin&limit=10',
+			fields: [
+								"At least one search field is required (not `server` alone). Fields combine.",
+								"`q` — words in the title or abstract.",
+								"`title` — optional. Words in the title.",
+								"`author` — optional. Author name.",
+								"`doi` — optional. Digital object identifier.",
+								"`server` — optional. `bioRxiv` or `medRxiv`. Omit for both.",
+								"`yearFrom` — optional. First publication year (1000–2100).",
+								"`yearTo` — optional. Last publication year (1000–2100).",
+								"`limit` — optional. From 1 to 20. Default 10."
 			],
 		}),
 	},

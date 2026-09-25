@@ -1,0 +1,47 @@
+> Index: [llms.txt](https://skills.duaer.com/zh/llms.txt). This skill: https://skills.duaer.com/zh/preprints.md
+
+---
+name: duaer-preprints
+description: >-
+  Search bioRxiv and medRxiv preprints through Duaer (Europe PMC). One successful search uses 1 Duaer credit.
+---
+
+# Duaer preprints
+
+Search bioRxiv and medRxiv preprints through Duaer (Europe PMC). One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/preprints?q=insulin&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- At least one search field is required (not `server` alone). Fields combine.
+- `q` — words in the title or abstract.
+- `title` — optional. Words in the title.
+- `author` — optional. Author name.
+- `doi` — optional. Digital object identifier.
+- `server` — optional. `bioRxiv` or `medRxiv`. Omit for both.
+- `yearFrom` — optional. First publication year (1000–2100).
+- `yearTo` — optional. Last publication year (1000–2100).
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## 相关技能
+
+- [在 Duaer 里检索论文](https://skills.duaer.com/zh/papers.md)
+- [在 Duaer 里检索基因](https://skills.duaer.com/zh/genes.md)
