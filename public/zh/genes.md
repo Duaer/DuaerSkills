@@ -49,3 +49,4 @@ A missing key returns 401.
 - [在 Duaer 里检索表达](https://skills.duaer.com/zh/expression.md)
 - [在 Duaer 里检索组织图谱](https://skills.duaer.com/zh/atlas.md)
 - [在 Duaer 里检索 GEO](https://skills.duaer.com/zh/geo.md)
+- [在 Duaer 里检索药–基因互作](https://skills.duaer.com/zh/drug-gene.md)

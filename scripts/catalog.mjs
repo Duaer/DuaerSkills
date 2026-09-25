@@ -156,7 +156,7 @@ export const skills = [
 	},
 	{
 		slug: 'compounds',
-		related: ['trials', 'structures', 'proteins', 'activities', 'indications', 'mechanisms', 'assays', 'patents'],
+		related: ['trials', 'structures', 'proteins', 'activities', 'indications', 'mechanisms', 'assays', 'patents', 'drug-gene'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search compounds in Duaer', zh: '在 Duaer 里检索化合物和药物' },
 		lede: {
@@ -393,7 +393,7 @@ export const skills = [
 	},
 	{
 		slug: 'genes',
-		related: ['proteins', 'variants', 'pathways', 'gene-ontology', 'expression', 'atlas', 'geo'],
+		related: ['proteins', 'variants', 'pathways', 'gene-ontology', 'expression', 'atlas', 'geo', 'drug-gene'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search genes in Duaer', zh: '在 Duaer 里检索基因' },
 		lede: {
@@ -598,7 +598,7 @@ export const skills = [
 	},
 	{
 		slug: 'targets',
-		related: ['genes', 'diseases', 'proteins', 'expression', 'orthologs', 'activities', 'assays'],
+		related: ['genes', 'diseases', 'proteins', 'expression', 'orthologs', 'activities', 'assays', 'drug-gene'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search targets in Duaer', zh: '在 Duaer 里检索靶点关联' },
 		lede: {
@@ -912,6 +912,35 @@ export const skills = [
 				'`species` — optional. Keep lines whose species contains this text.',
 				'`category` — optional. Keep lines whose category contains this text.',
 				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'drug-gene',
+		related: ['genes', 'compounds', 'targets'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search drug–gene interactions in Duaer', zh: '在 Duaer 里检索药–基因互作' },
+		lede: {
+			en: 'In Duaer, search drug–gene interactions via DGIdb. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 DGIdb 检索药–基因互作。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has a gene, drug, interaction type, score, and approval flag when present.',
+			zh: '每条结果有基因、药物、互作类型、评分，以及可用的批准标记。',
+		},
+		skill: skill({
+			name: 'duaer-drug-gene',
+			description:
+				'Search drug–gene interactions through Duaer via DGIdb. One successful search uses 1 Duaer credit.',
+			title: 'Duaer drug–gene',
+			call: 'GET https://api.duaer.com/v1/data/drug-gene?gene=EGFR&approved=yes&limit=10',
+			fields: [
+				'Provide `gene` or `drug` (or both).',
+				'`gene` — gene symbol (e.g. `EGFR`).',
+				'`drug` — drug name (e.g. `imatinib`).',
+				'`approved` — optional. `yes` or `no` to keep only approved or unapproved drugs.',
+				'`limit` — optional. From 1 to 20. Default 10. Results prefer higher interaction score.',
 			],
 		}),
 	},

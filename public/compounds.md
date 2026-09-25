@@ -44,3 +44,4 @@ A missing key returns 401.
 - [Search mechanisms in Duaer](https://skills.duaer.com/mechanisms.md)
 - [Search assays in Duaer](https://skills.duaer.com/assays.md)
 - [Search patents in Duaer](https://skills.duaer.com/patents.md)
+- [Search drug–gene interactions in Duaer](https://skills.duaer.com/drug-gene.md)

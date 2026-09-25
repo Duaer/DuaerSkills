@@ -45,3 +45,4 @@ A missing key returns 401.
 - [在 Duaer 里检索同源基因](https://skills.duaer.com/zh/orthologs.md)
 - [在 Duaer 里检索生物活性](https://skills.duaer.com/zh/activities.md)
 - [在 Duaer 里检索实验测定](https://skills.duaer.com/zh/assays.md)
+- [在 Duaer 里检索药–基因互作](https://skills.duaer.com/zh/drug-gene.md)

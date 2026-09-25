@@ -35,6 +35,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search patents in Duaer](https://skills.duaer.com/patents.md): In Duaer, search patents via Europe PMC. One successful search uses 1 credit.
 - [Look up AlphaFold structures in Duaer](https://skills.duaer.com/alphafold.md): In Duaer, look up AlphaFold predicted structures by gene or UniProt accession. One successful search uses 1 credit.
 - [Search cell lines in Duaer](https://skills.duaer.com/cell-lines.md): In Duaer, search cell lines via Cellosaurus. One successful search uses 1 credit.
+- [Search drug–gene interactions in Duaer](https://skills.duaer.com/drug-gene.md): In Duaer, search drug–gene interactions via DGIdb. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -74,6 +75,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索专利](https://skills.duaer.com/zh/patents.md): 在 Duaer 里经 Europe PMC 检索专利。一次成功查询用 1 额度。
 - [在 Duaer 里查询 AlphaFold 预测结构](https://skills.duaer.com/zh/alphafold.md): 在 Duaer 里按基因或 UniProt 编号查询 AlphaFold 预测结构。一次成功查询用 1 额度。
 - [在 Duaer 里检索细胞系](https://skills.duaer.com/zh/cell-lines.md): 在 Duaer 里经 Cellosaurus 检索细胞系。一次成功查询用 1 额度。
+- [在 Duaer 里检索药–基因互作](https://skills.duaer.com/zh/drug-gene.md): 在 Duaer 里经 DGIdb 检索药–基因互作。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -1223,6 +1225,43 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - `species` — optional. Keep lines whose species contains this text.
 - `category` — optional. Keep lines whose category contains this text.
 - `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-drug-gene
+description: >-
+  Search drug–gene interactions through Duaer via DGIdb. One successful search uses 1 Duaer credit.
+---
+
+# Duaer drug–gene
+
+Search drug–gene interactions through Duaer via DGIdb. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/drug-gene?gene=EGFR&approved=yes&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `gene` or `drug` (or both).
+- `gene` — gene symbol (e.g. `EGFR`).
+- `drug` — drug name (e.g. `imatinib`).
+- `approved` — optional. `yes` or `no` to keep only approved or unapproved drugs.
+- `limit` — optional. From 1 to 20. Default 10. Results prefer higher interaction score.
 
 ## Result
 

@@ -49,3 +49,4 @@ A missing key returns 401.
 - [Search expression in Duaer](https://skills.duaer.com/expression.md)
 - [Search tissue atlas in Duaer](https://skills.duaer.com/atlas.md)
 - [Search GEO in Duaer](https://skills.duaer.com/geo.md)
+- [Search drug–gene interactions in Duaer](https://skills.duaer.com/drug-gene.md)

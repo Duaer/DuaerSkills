@@ -35,4 +35,5 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search patents in Duaer](https://skills.duaer.com/patents.md): In Duaer, search patents via Europe PMC. One successful search uses 1 credit.
 - [Look up AlphaFold structures in Duaer](https://skills.duaer.com/alphafold.md): In Duaer, look up AlphaFold predicted structures by gene or UniProt accession. One successful search uses 1 credit.
 - [Search cell lines in Duaer](https://skills.duaer.com/cell-lines.md): In Duaer, search cell lines via Cellosaurus. One successful search uses 1 credit.
+- [Search drug–gene interactions in Duaer](https://skills.duaer.com/drug-gene.md): In Duaer, search drug–gene interactions via DGIdb. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.

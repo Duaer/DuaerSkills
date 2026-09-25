@@ -45,3 +45,4 @@ A missing key returns 401.
 - [Search orthologs in Duaer](https://skills.duaer.com/orthologs.md)
 - [Search activities in Duaer](https://skills.duaer.com/activities.md)
 - [Search assays in Duaer](https://skills.duaer.com/assays.md)
+- [Search drug–gene interactions in Duaer](https://skills.duaer.com/drug-gene.md)
