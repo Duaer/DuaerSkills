@@ -40,4 +40,5 @@
 - [在 Duaer 里检索蛋白复合物](https://skills.duaer.com/zh/complexes.md): 在 Duaer 里经 Complex Portal 检索蛋白复合物。一次成功查询用 1 额度。
 - [在 Duaer 里检索代谢物](https://skills.duaer.com/zh/metabolites.md): 在 Duaer 里经 ChEBI 检索代谢物。一次成功查询用 1 额度。
 - [在 Duaer 里检索药品标签](https://skills.duaer.com/zh/drug-labels.md): 在 Duaer 里经 OpenFDA 检索 FDA 药品标签。一次成功查询用 1 额度。
+- [在 Duaer 里检索不良反应](https://skills.duaer.com/zh/adverse-events.md): 在 Duaer 里经 OpenFDA FAERS 检索 FDA 不良反应报告。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。

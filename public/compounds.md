@@ -48,3 +48,4 @@ A missing key returns 401.
 - [Search reactions in Duaer](https://skills.duaer.com/reactions.md)
 - [Search metabolites in Duaer](https://skills.duaer.com/metabolites.md)
 - [Search drug labels in Duaer](https://skills.duaer.com/drug-labels.md)
+- [Search adverse events in Duaer](https://skills.duaer.com/adverse-events.md)

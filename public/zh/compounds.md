@@ -48,3 +48,4 @@ A missing key returns 401.
 - [在 Duaer 里检索生化反应](https://skills.duaer.com/zh/reactions.md)
 - [在 Duaer 里检索代谢物](https://skills.duaer.com/zh/metabolites.md)
 - [在 Duaer 里检索药品标签](https://skills.duaer.com/zh/drug-labels.md)
+- [在 Duaer 里检索不良反应](https://skills.duaer.com/zh/adverse-events.md)

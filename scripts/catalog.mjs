@@ -156,7 +156,7 @@ export const skills = [
 	},
 	{
 		slug: 'compounds',
-		related: ['trials', 'structures', 'proteins', 'activities', 'indications', 'mechanisms', 'assays', 'patents', 'drug-gene', 'reactions', 'metabolites', 'drug-labels'],
+		related: ['trials', 'structures', 'proteins', 'activities', 'indications', 'mechanisms', 'assays', 'patents', 'drug-gene', 'reactions', 'metabolites', 'drug-labels', 'adverse-events'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search compounds in Duaer', zh: '在 Duaer 里检索化合物和药物' },
 		lede: {
@@ -1031,7 +1031,7 @@ export const skills = [
 
 	{
 		slug: 'drug-labels',
-		related: ['compounds', 'indications', 'drug-gene', 'metabolites'],
+		related: ['compounds', 'indications', 'drug-gene', 'metabolites', 'adverse-events'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search drug labels in Duaer', zh: '在 Duaer 里检索药品标签' },
 		lede: {
@@ -1057,6 +1057,36 @@ export const skills = [
 			],
 		}),
 	},
+
+	{
+		slug: 'adverse-events',
+		related: ['drug-labels', 'trials', 'indications', 'compounds'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search adverse events in Duaer', zh: '在 Duaer 里检索不良反应' },
+		lede: {
+			en: 'In Duaer, search FDA adverse event reports via OpenFDA FAERS. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 OpenFDA FAERS 检索 FDA 不良反应报告。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has reactions, drugs, seriousness, receipt date, and country when present.',
+			zh: '每条结果有反应、药物、是否严重、接收日期，以及可用的国家。',
+		},
+		skill: skill({
+			name: 'duaer-adverse-events',
+			description:
+				'Search FDA adverse event reports through Duaer via OpenFDA FAERS. One successful search uses 1 Duaer credit.',
+			title: 'Duaer adverse events',
+			call: 'GET https://api.duaer.com/v1/data/adverse-events?words=aspirin&limit=10',
+			fields: [
+				'Provide `words`, `brand`, or `generic` (or combine; brand/generic narrow when set).',
+				'`words` — brand, generic, substance, or medicinal product.',
+				'`brand` — optional. OpenFDA brand name.',
+				'`generic` — optional. OpenFDA generic name.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
 ];
 
 export const home = {
