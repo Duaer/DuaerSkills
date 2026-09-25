@@ -41,3 +41,4 @@ A missing key returns 401.
 - [在 Duaer 里检索基因和蛋白](https://skills.duaer.com/zh/proteins.md)
 - [在 Duaer 里检索生物活性](https://skills.duaer.com/zh/activities.md)
 - [在 Duaer 里检索适应症](https://skills.duaer.com/zh/indications.md)
+- [在 Duaer 里检索作用机制](https://skills.duaer.com/zh/mechanisms.md)

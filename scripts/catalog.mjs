@@ -156,7 +156,7 @@ export const skills = [
 	},
 	{
 		slug: 'compounds',
-		related: ['trials', 'structures', 'proteins', 'activities', 'indications'],
+		related: ['trials', 'structures', 'proteins', 'activities', 'indications', 'mechanisms'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search compounds in Duaer', zh: '在 Duaer 里检索化合物和药物' },
 		lede: {
@@ -656,7 +656,7 @@ export const skills = [
 
 	{
 		slug: 'activities',
-		related: ['compounds', 'targets', 'genes', 'indications'],
+		related: ['compounds', 'targets', 'genes', 'indications', 'mechanisms'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search activities in Duaer', zh: '在 Duaer 里检索生物活性' },
 		lede: {
@@ -714,7 +714,7 @@ export const skills = [
 
 	{
 		slug: 'indications',
-		related: ['compounds', 'activities', 'diseases'],
+		related: ['compounds', 'activities', 'diseases', 'mechanisms'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search indications in Duaer', zh: '在 Duaer 里检索适应症' },
 		lede: {
@@ -731,6 +731,34 @@ export const skills = [
 				'Search ChEMBL drug indications through Duaer by molecule. One successful search uses 1 Duaer credit.',
 			title: 'Duaer indications',
 			call: 'GET https://api.duaer.com/v1/data/indications?molecule=aspirin&limit=10',
+			fields: [
+				'`molecule` is required.',
+				'`molecule` — molecule name or ChEMBL id (`CHEMBL25`). Names resolve via ChEMBL search. Look up PubChem names with https://skills.duaer.com/compounds.md.',
+				'`limit` — optional. From 1 to 20. Default 10. Results prefer higher max phase.',
+			],
+		}),
+	},
+
+
+	{
+		slug: 'mechanisms',
+		related: ['compounds', 'activities', 'indications'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search mechanisms in Duaer', zh: '在 Duaer 里检索作用机制' },
+		lede: {
+			en: 'In Duaer, search ChEMBL mechanisms of action by molecule. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 ChEMBL 按分子检索作用机制。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has a mechanism of action, action type, target ChEMBL id, and max phase.',
+			zh: '每条结果有作用机制描述、作用类型、靶点 ChEMBL id，以及最高阶段。',
+		},
+		skill: skill({
+			name: 'duaer-mechanisms',
+			description:
+				'Search ChEMBL mechanisms of action through Duaer by molecule. One successful search uses 1 Duaer credit.',
+			title: 'Duaer mechanisms',
+			call: 'GET https://api.duaer.com/v1/data/mechanisms?molecule=aspirin&limit=10',
 			fields: [
 				'`molecule` is required.',
 				'`molecule` — molecule name or ChEMBL id (`CHEMBL25`). Names resolve via ChEMBL search. Look up PubChem names with https://skills.duaer.com/compounds.md.',

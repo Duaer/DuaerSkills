@@ -1,18 +1,18 @@
-> Index: [llms.txt](https://skills.duaer.com/llms.txt). This skill: https://skills.duaer.com/indications.md
+> Index: [llms.txt](https://skills.duaer.com/llms.txt). This skill: https://skills.duaer.com/mechanisms.md
 
 ---
-name: duaer-indications
+name: duaer-mechanisms
 description: >-
-  Search ChEMBL drug indications through Duaer by molecule. One successful search uses 1 Duaer credit.
+  Search ChEMBL mechanisms of action through Duaer by molecule. One successful search uses 1 Duaer credit.
 ---
 
-# Duaer indications
+# Duaer mechanisms
 
-Search ChEMBL drug indications through Duaer by molecule. One successful search uses 1 Duaer credit.
+Search ChEMBL mechanisms of action through Duaer by molecule. One successful search uses 1 Duaer credit.
 
 ## Call
 
-`GET https://api.duaer.com/v1/data/indications?molecule=aspirin&limit=10`
+`GET https://api.duaer.com/v1/data/mechanisms?molecule=aspirin&limit=10`
 
 Header: `Authorization: Bearer <Duaer key>`
 
@@ -39,5 +39,4 @@ A missing key returns 401.
 
 - [Search compounds in Duaer](https://skills.duaer.com/compounds.md)
 - [Search activities in Duaer](https://skills.duaer.com/activities.md)
-- [Search diseases in Duaer](https://skills.duaer.com/diseases.md)
-- [Search mechanisms in Duaer](https://skills.duaer.com/mechanisms.md)
+- [Search indications in Duaer](https://skills.duaer.com/indications.md)

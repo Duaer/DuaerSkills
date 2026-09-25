@@ -1,18 +1,18 @@
-> Index: [llms.txt](https://skills.duaer.com/llms.txt). This skill: https://skills.duaer.com/indications.md
+> Index: [llms.txt](https://skills.duaer.com/zh/llms.txt). This skill: https://skills.duaer.com/zh/mechanisms.md
 
 ---
-name: duaer-indications
+name: duaer-mechanisms
 description: >-
-  Search ChEMBL drug indications through Duaer by molecule. One successful search uses 1 Duaer credit.
+  Search ChEMBL mechanisms of action through Duaer by molecule. One successful search uses 1 Duaer credit.
 ---
 
-# Duaer indications
+# Duaer mechanisms
 
-Search ChEMBL drug indications through Duaer by molecule. One successful search uses 1 Duaer credit.
+Search ChEMBL mechanisms of action through Duaer by molecule. One successful search uses 1 Duaer credit.
 
 ## Call
 
-`GET https://api.duaer.com/v1/data/indications?molecule=aspirin&limit=10`
+`GET https://api.duaer.com/v1/data/mechanisms?molecule=aspirin&limit=10`
 
 Header: `Authorization: Bearer <Duaer key>`
 
@@ -35,9 +35,8 @@ An empty search, a failed search, a compound that matches nothing, or no remaini
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
-## Related skills
+## 相关技能
 
-- [Search compounds in Duaer](https://skills.duaer.com/compounds.md)
-- [Search activities in Duaer](https://skills.duaer.com/activities.md)
-- [Search diseases in Duaer](https://skills.duaer.com/diseases.md)
-- [Search mechanisms in Duaer](https://skills.duaer.com/mechanisms.md)
+- [在 Duaer 里检索化合物和药物](https://skills.duaer.com/zh/compounds.md)
+- [在 Duaer 里检索生物活性](https://skills.duaer.com/zh/activities.md)
+- [在 Duaer 里检索适应症](https://skills.duaer.com/zh/indications.md)
