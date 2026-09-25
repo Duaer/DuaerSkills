@@ -1458,6 +1458,35 @@ export const skills = [
 		}),
 	},
 
+
+	{
+		slug: 'uberon',
+		related: ['locations', 'atlas', 'organisms'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search Uberon in Duaer', zh: '在 Duaer 里检索 Uberon' },
+		lede: {
+			en: 'In Duaer, search anatomy terms via Uberon. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 Uberon 检索解剖学术语。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has an Uberon id, label, and description when present.',
+			zh: '每条结果有 Uberon 编号、名称，以及可用的描述。',
+		},
+		skill: skill({
+			name: 'duaer-uberon',
+			description:
+				'Search anatomy terms via Uberon through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Uberon',
+			call: 'GET https://api.duaer.com/v1/data/uberon?words=liver&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — anatomy words, such as liver.',
+				'`id` — optional. Uberon id such as UBERON:0002107.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
 ];
 
 export const home = {
