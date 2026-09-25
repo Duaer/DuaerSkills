@@ -28,7 +28,7 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - `accession` — accession.
 - `reviewed` — `yes` or `no`.
 - `lengthFrom`, `lengthTo` — sequence length. `0` means no bound.
-- `disease` — disease name.
+- `disease` — disease name. Look up formal names with https://skills.duaer.com/diseases.md.
 - `keyword` — keyword.
 - `location` — subcellular location.
 - `function` — words in the function text.
