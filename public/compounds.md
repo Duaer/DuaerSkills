@@ -47,3 +47,4 @@ A missing key returns 401.
 - [Search drug–gene interactions in Duaer](https://skills.duaer.com/drug-gene.md)
 - [Search reactions in Duaer](https://skills.duaer.com/reactions.md)
 - [Search metabolites in Duaer](https://skills.duaer.com/metabolites.md)
+- [Search drug labels in Duaer](https://skills.duaer.com/drug-labels.md)

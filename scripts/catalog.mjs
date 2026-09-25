@@ -156,7 +156,7 @@ export const skills = [
 	},
 	{
 		slug: 'compounds',
-		related: ['trials', 'structures', 'proteins', 'activities', 'indications', 'mechanisms', 'assays', 'patents', 'drug-gene', 'reactions', 'metabolites'],
+		related: ['trials', 'structures', 'proteins', 'activities', 'indications', 'mechanisms', 'assays', 'patents', 'drug-gene', 'reactions', 'metabolites', 'drug-labels'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search compounds in Duaer', zh: '在 Duaer 里检索化合物和药物' },
 		lede: {
@@ -1003,7 +1003,7 @@ export const skills = [
 
 	{
 		slug: 'metabolites',
-		related: ['compounds', 'reactions', 'pathways'],
+		related: ['compounds', 'reactions', 'pathways', 'drug-labels'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search metabolites in Duaer', zh: '在 Duaer 里检索代谢物' },
 		lede: {
@@ -1024,6 +1024,35 @@ export const skills = [
 				'Provide `words` or `id` (or both; id wins).',
 				'`words` — metabolite or small-molecule name.',
 				'`id` — optional. ChEBI id (`CHEBI:17234` or `17234`). Overrides words when set.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'drug-labels',
+		related: ['compounds', 'indications', 'drug-gene', 'metabolites'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search drug labels in Duaer', zh: '在 Duaer 里检索药品标签' },
+		lede: {
+			en: 'In Duaer, search FDA drug labels via OpenFDA. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 OpenFDA 检索 FDA 药品标签。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has brand and generic names, manufacturer, set id, and indications when present.',
+			zh: '每条结果有商品名、通用名、厂家、set id，以及可用的适应症摘要。',
+		},
+		skill: skill({
+			name: 'duaer-drug-labels',
+			description:
+				'Search FDA drug labels through Duaer via OpenFDA. One successful search uses 1 Duaer credit.',
+			title: 'Duaer drug labels',
+			call: 'GET https://api.duaer.com/v1/data/drug-labels?words=aspirin&limit=10',
+			fields: [
+				'Provide `words`, `brand`, or `generic` (or combine; brand/generic narrow when set).',
+				'`words` — brand, generic, or substance name.',
+				'`brand` — optional. OpenFDA brand name.',
+				'`generic` — optional. OpenFDA generic name.',
 				'`limit` — optional. From 1 to 20. Default 10.',
 			],
 		}),

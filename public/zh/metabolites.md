@@ -41,3 +41,4 @@ A missing key returns 401.
 - [在 Duaer 里检索化合物和药物](https://skills.duaer.com/zh/compounds.md)
 - [在 Duaer 里检索生化反应](https://skills.duaer.com/zh/reactions.md)
 - [在 Duaer 里检索通路](https://skills.duaer.com/zh/pathways.md)
+- [在 Duaer 里检索药品标签](https://skills.duaer.com/zh/drug-labels.md)

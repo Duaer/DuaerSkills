@@ -39,6 +39,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search reactions in Duaer](https://skills.duaer.com/reactions.md): In Duaer, search biochemical reactions via Rhea. One successful search uses 1 credit.
 - [Search complexes in Duaer](https://skills.duaer.com/complexes.md): In Duaer, search protein complexes via Complex Portal. One successful search uses 1 credit.
 - [Search metabolites in Duaer](https://skills.duaer.com/metabolites.md): In Duaer, search metabolites via ChEBI. One successful search uses 1 credit.
+- [Search drug labels in Duaer](https://skills.duaer.com/drug-labels.md): In Duaer, search FDA drug labels via OpenFDA. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -82,6 +83,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索生化反应](https://skills.duaer.com/zh/reactions.md): 在 Duaer 里经 Rhea 检索生化反应。一次成功查询用 1 额度。
 - [在 Duaer 里检索蛋白复合物](https://skills.duaer.com/zh/complexes.md): 在 Duaer 里经 Complex Portal 检索蛋白复合物。一次成功查询用 1 额度。
 - [在 Duaer 里检索代谢物](https://skills.duaer.com/zh/metabolites.md): 在 Duaer 里经 ChEBI 检索代谢物。一次成功查询用 1 额度。
+- [在 Duaer 里检索药品标签](https://skills.duaer.com/zh/drug-labels.md): 在 Duaer 里经 OpenFDA 检索 FDA 药品标签。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -1375,6 +1377,43 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - Provide `words` or `id` (or both; id wins).
 - `words` — metabolite or small-molecule name.
 - `id` — optional. ChEBI id (`CHEBI:17234` or `17234`). Overrides words when set.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-drug-labels
+description: >-
+  Search FDA drug labels through Duaer via OpenFDA. One successful search uses 1 Duaer credit.
+---
+
+# Duaer drug labels
+
+Search FDA drug labels through Duaer via OpenFDA. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/drug-labels?words=aspirin&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words`, `brand`, or `generic` (or combine; brand/generic narrow when set).
+- `words` — brand, generic, or substance name.
+- `brand` — optional. OpenFDA brand name.
+- `generic` — optional. OpenFDA generic name.
 - `limit` — optional. From 1 to 20. Default 10.
 
 ## Result
