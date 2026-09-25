@@ -47,3 +47,10 @@ One successful search uses 1 credit.
 An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related skills
+
+- [Search genes in Duaer](https://skills.duaer.com/genes.md)
+- [Search protein structures in Duaer](https://skills.duaer.com/structures.md)
+- [Search pathways in Duaer](https://skills.duaer.com/pathways.md)
+- [Search diseases in Duaer](https://skills.duaer.com/diseases.md)

@@ -46,6 +46,7 @@ ${credits}`;
 export const skills = [
 	{
 		slug: 'papers',
+		related: ['proteins', 'trials', 'diseases'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search papers in Duaer', zh: '在 Duaer 里检索论文' },
 		lede: {
@@ -80,6 +81,7 @@ export const skills = [
 	},
 	{
 		slug: 'proteins',
+		related: ['genes', 'structures', 'pathways', 'diseases'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search proteins in Duaer', zh: '在 Duaer 里检索基因和蛋白' },
 		lede: {
@@ -117,6 +119,7 @@ export const skills = [
 	},
 	{
 		slug: 'trials',
+		related: ['compounds', 'diseases', 'papers'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search clinical trials in Duaer', zh: '在 Duaer 里检索临床试验' },
 		lede: {
@@ -152,6 +155,7 @@ export const skills = [
 	},
 	{
 		slug: 'compounds',
+		related: ['trials', 'structures', 'proteins'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search compounds in Duaer', zh: '在 Duaer 里检索化合物和药物' },
 		lede: {
@@ -175,6 +179,7 @@ export const skills = [
 	},
 	{
 		slug: 'structures',
+		related: ['proteins', 'compounds', 'genes'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search protein structures in Duaer', zh: '在 Duaer 里检索蛋白结构' },
 		lede: {
@@ -206,6 +211,7 @@ export const skills = [
 	},
 	{
 		slug: 'diseases',
+		related: ['genes', 'proteins', 'variants', 'trials'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search diseases in Duaer', zh: '在 Duaer 里检索疾病' },
 		lede: {
@@ -236,6 +242,7 @@ export const skills = [
 	},
 	{
 		slug: 'organisms',
+		related: ['proteins', 'genes'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search organisms in Duaer', zh: '在 Duaer 里检索物种' },
 		lede: {
@@ -266,6 +273,7 @@ export const skills = [
 	},
 	{
 		slug: 'keywords',
+		related: ['proteins', 'gene-ontology'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search keywords in Duaer', zh: '在 Duaer 里检索关键词' },
 		lede: {
@@ -294,6 +302,7 @@ export const skills = [
 	},
 	{
 		slug: 'locations',
+		related: ['proteins', 'genes'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search locations in Duaer', zh: '在 Duaer 里检索亚细胞定位' },
 		lede: {
@@ -322,6 +331,7 @@ export const skills = [
 	},
 	{
 		slug: 'gene-ontology',
+		related: ['genes', 'proteins', 'pathways'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search Gene Ontology in Duaer', zh: '在 Duaer 里检索基因本体' },
 		lede: {
@@ -350,6 +360,7 @@ export const skills = [
 	},
 	{
 		slug: 'pathways',
+		related: ['genes', 'proteins', 'compounds'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search pathways in Duaer', zh: '在 Duaer 里检索通路' },
 		lede: {
@@ -381,6 +392,7 @@ export const skills = [
 	},
 	{
 		slug: 'genes',
+		related: ['proteins', 'variants', 'pathways', 'gene-ontology'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search genes in Duaer', zh: '在 Duaer 里检索基因' },
 		lede: {
@@ -410,6 +422,7 @@ export const skills = [
 	},
 	{
 		slug: 'variants',
+		related: ['genes', 'diseases', 'proteins'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search variants in Duaer', zh: '在 Duaer 里检索变异' },
 		lede: {
