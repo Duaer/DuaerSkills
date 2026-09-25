@@ -28,6 +28,7 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - `name` — optional. Pathway name.
 - `limit` — optional. From 1 to 20. Default 10.
 - Use `pathwayId` as `pathway` when searching proteins. Reuse `pathwayId` in `id` for an exact lookup.
+- Open `browserUrl` for the interactive Reactome diagram, or `diagramUrl` for a PNG export.
 
 ## Result
 
