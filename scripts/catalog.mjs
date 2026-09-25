@@ -109,6 +109,7 @@ export const skills = [
 				'`location` — subcellular location. Look up formal names with https://skills.duaer.com/locations.md.',
 				'`function` — words in the function text.',
 				'`go` — Gene Ontology term. Look up terms with https://skills.duaer.com/gene-ontology.md.',
+				'`pathway` — Reactome pathway id or words. Look up pathways with https://skills.duaer.com/pathways.md.',
 				'`taxonomyId` — NCBI taxonomy id. Look up ids with https://skills.duaer.com/organisms.md.',
 				'`limit` — optional. From 1 to 20. Default 10.',
 			],
@@ -344,6 +345,35 @@ export const skills = [
 							"`name` — optional. Term name.",
 							"`limit` — optional. From 1 to 20. Default 10.",
 							"Use `title` or `goId` as `go` when searching proteins. Reuse `goId` in `id` for an exact lookup."
+			],
+		}),
+	},
+	{
+		slug: 'pathways',
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search pathways in Duaer', zh: '在 Duaer 里检索通路' },
+		lede: {
+			en: 'In Duaer, search Reactome pathways. One successful search uses 1 credit.',
+			zh: '在 Duaer 里检索 Reactome 通路。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each pathway has a name, pathwayId, species, and summary. Use pathwayId with proteins.pathway.',
+			zh: '每条通路有名称、pathwayId、物种和摘要。pathwayId 可用于蛋白 pathway。',
+		},
+		skill: skill({
+			name: 'duaer-pathways',
+			description: 'Search Reactome pathways through Duaer. Use the pathwayId with proteins.pathway. One successful search uses 1 Duaer credit.',
+			title: 'Duaer pathways',
+			call: 'GET https://api.duaer.com/v1/data/pathways?q=insulin&limit=10',
+			fields: [
+							"At least one search field is required. Fields combine.",
+							"Search with `q` first; use `id` only when you already have it from a result.",
+							"Word searches default to Homo sapiens pathways.",
+							"`q` — words in the pathway name or summary.",
+							"`id` — optional. Reactome pathway id from a result (`pathwayId`), such as `R-HSA-264876`.",
+							"`name` — optional. Pathway name.",
+							"`limit` — optional. From 1 to 20. Default 10.",
+							"Use `pathwayId` as `pathway` when searching proteins. Reuse `pathwayId` in `id` for an exact lookup."
 			],
 		}),
 	},
