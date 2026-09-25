@@ -1117,6 +1117,34 @@ export const skills = [
 		}),
 	},
 
+	{
+		slug: 'rxnorm',
+		related: ['compounds', 'drug-labels', 'indications', 'gwas'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search RxNorm in Duaer', zh: '在 Duaer 里检索 RxNorm' },
+		lede: {
+			en: 'In Duaer, look up drug names via RxNorm (NLM RxNav). One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 RxNorm（NLM RxNav）检索药名。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has an RxCUI, name, and term type when present.',
+			zh: '每条结果有 RxCUI、名称，以及可用的术语类型。',
+		},
+		skill: skill({
+			name: 'duaer-rxnorm',
+			description:
+				'Look up drug names through Duaer via RxNorm (NLM RxNav). One successful search uses 1 Duaer credit.',
+			title: 'Duaer RxNorm',
+			call: 'GET https://api.duaer.com/v1/data/rxnorm?words=aspirin&limit=10',
+			fields: [
+				'Provide `words` or `id` (or both; id wins).',
+				'`words` — drug or ingredient name.',
+				'`id` — optional. RxNorm concept id (RxCUI). Overrides words when set.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
 ];
 
 export const home = {
