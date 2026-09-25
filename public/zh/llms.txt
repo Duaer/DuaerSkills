@@ -56,4 +56,5 @@
 - [在 Duaer 里检索 PRIDE](https://skills.duaer.com/zh/pride.md): 在 Duaer 里经 PRIDE 检索蛋白质组学项目。一次成功查询用 1 额度。
 - [在 Duaer 里检索 Uberon](https://skills.duaer.com/zh/uberon.md): 在 Duaer 里经 Uberon 检索解剖学术语。一次成功查询用 1 额度。
 - [在 Duaer 里检索 BioStudies](https://skills.duaer.com/zh/biostudies.md): 在 Duaer 里经 BioStudies 检索多组学研究。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Orphanet](https://skills.duaer.com/zh/orphanet.md): 在 Duaer 里经 Orphanet 检索罕见病。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。

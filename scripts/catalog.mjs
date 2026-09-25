@@ -1516,6 +1516,35 @@ export const skills = [
 		}),
 	},
 
+
+	{
+		slug: 'orphanet',
+		related: ['monarch', 'diseases', 'phenotypes'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search Orphanet in Duaer', zh: '在 Duaer 里检索 Orphanet' },
+		lede: {
+			en: 'In Duaer, search rare diseases via Orphanet. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 Orphanet 检索罕见病。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has an Orphanet id, name, and synonyms when present.',
+			zh: '每条结果有 Orphanet 编号、名称，以及可用的同义词。',
+		},
+		skill: skill({
+			name: 'duaer-orphanet',
+			description:
+				'Search rare diseases via Orphanet through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Orphanet',
+			call: 'GET https://api.duaer.com/v1/data/orphanet?words=Marfan&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — rare disease words, such as Marfan.',
+				'`id` — optional. Orphanet code such as ORPHA:558 or 558.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
 ];
 
 export const home = {
