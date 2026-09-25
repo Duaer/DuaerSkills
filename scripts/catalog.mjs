@@ -1173,6 +1173,34 @@ export const skills = [
 		}),
 	},
 
+	{
+		slug: 'phenotypes',
+		related: ['diseases', 'mesh', 'trials', 'adverse-events'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search phenotypes in Duaer', zh: '在 Duaer 里检索表型' },
+		lede: {
+			en: 'In Duaer, look up HPO phenotype terms (EBI OLS). One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 HPO（EBI OLS）检索表型术语。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has an HPO id, preferred label, and synonyms when present.',
+			zh: '每条结果有 HPO id、优选标签，以及可用的同义词。',
+		},
+		skill: skill({
+			name: 'duaer-phenotypes',
+			description:
+				'Look up HPO phenotype terms through Duaer (EBI OLS). One successful search uses 1 Duaer credit.',
+			title: 'Duaer phenotypes',
+			call: 'GET https://api.duaer.com/v1/data/phenotypes?words=diabetes&limit=10',
+			fields: [
+				'Provide `words` or `id` (or both; id wins).',
+				'`words` — HPO phenotype label.',
+				'`id` — optional. HPO id (HP:0000819). Overrides words when set.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
 
 ];
 
