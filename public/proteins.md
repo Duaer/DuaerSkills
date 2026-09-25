@@ -57,3 +57,4 @@ A missing key returns 401.
 - [Search diseases in Duaer](https://skills.duaer.com/diseases.md)
 - [Search interactions in Duaer](https://skills.duaer.com/interactions.md)
 - [Search tissue atlas in Duaer](https://skills.duaer.com/atlas.md)
+- [Look up AlphaFold structures in Duaer](https://skills.duaer.com/alphafold.md)

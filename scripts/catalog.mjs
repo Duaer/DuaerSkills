@@ -81,7 +81,7 @@ export const skills = [
 	},
 	{
 		slug: 'proteins',
-		related: ['genes', 'structures', 'pathways', 'diseases', 'interactions', 'atlas'],
+		related: ['genes', 'structures', 'pathways', 'diseases', 'interactions', 'atlas', 'alphafold'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search proteins in Duaer', zh: '在 Duaer 里检索基因和蛋白' },
 		lede: {
@@ -180,7 +180,7 @@ export const skills = [
 	},
 	{
 		slug: 'structures',
-		related: ['proteins', 'compounds', 'genes'],
+		related: ['proteins', 'compounds', 'genes', 'alphafold'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search protein structures in Duaer', zh: '在 Duaer 里检索蛋白结构' },
 		lede: {
@@ -857,6 +857,35 @@ export const skills = [
 		}),
 	},
 
+
+	{
+		slug: 'alphafold',
+		related: ['structures', 'proteins', 'genes'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Look up AlphaFold structures in Duaer', zh: '在 Duaer 里查询 AlphaFold 预测结构' },
+		lede: {
+			en: 'In Duaer, look up AlphaFold predicted structures by gene or UniProt accession. One successful search uses 1 credit.',
+			zh: '在 Duaer 里按基因或 UniProt 编号查询 AlphaFold 预测结构。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has accession, gene, pLDDT, model version, and PDB/CIF download urls when present.',
+			zh: '每条结果有 accession、基因、pLDDT、模型版本，以及可用的 PDB/CIF 下载链接。',
+		},
+		skill: skill({
+			name: 'duaer-alphafold',
+			description:
+				'Look up AlphaFold predicted structures through Duaer by gene or UniProt accession. One successful search uses 1 Duaer credit.',
+			title: 'Duaer AlphaFold',
+			call: 'GET https://api.duaer.com/v1/data/alphafold?gene=INS&organism=Homo%20sapiens&limit=10',
+			fields: [
+				'Provide `gene` or `accession` (or both; accession wins).',
+				'`gene` — gene symbol resolved via UniProt (default organism Homo sapiens).',
+				'`accession` — optional. UniProt accession (`P01308`). Overrides gene when set.',
+				'`organism` — optional. Used when resolving gene (default `Homo sapiens`).',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
 ];
 
 export const home = {

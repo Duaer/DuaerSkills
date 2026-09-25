@@ -57,3 +57,4 @@ A missing key returns 401.
 - [在 Duaer 里检索疾病](https://skills.duaer.com/zh/diseases.md)
 - [在 Duaer 里检索互作](https://skills.duaer.com/zh/interactions.md)
 - [在 Duaer 里检索组织图谱](https://skills.duaer.com/zh/atlas.md)
+- [在 Duaer 里查询 AlphaFold 预测结构](https://skills.duaer.com/zh/alphafold.md)

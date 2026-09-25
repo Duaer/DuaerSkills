@@ -47,3 +47,4 @@ A missing key returns 401.
 - [Search proteins in Duaer](https://skills.duaer.com/proteins.md)
 - [Search compounds in Duaer](https://skills.duaer.com/compounds.md)
 - [Search genes in Duaer](https://skills.duaer.com/genes.md)
+- [Look up AlphaFold structures in Duaer](https://skills.duaer.com/alphafold.md)

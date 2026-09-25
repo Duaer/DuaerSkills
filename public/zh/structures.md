@@ -47,3 +47,4 @@ A missing key returns 401.
 - [在 Duaer 里检索基因和蛋白](https://skills.duaer.com/zh/proteins.md)
 - [在 Duaer 里检索化合物和药物](https://skills.duaer.com/zh/compounds.md)
 - [在 Duaer 里检索基因](https://skills.duaer.com/zh/genes.md)
+- [在 Duaer 里查询 AlphaFold 预测结构](https://skills.duaer.com/zh/alphafold.md)
