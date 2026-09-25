@@ -33,6 +33,7 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - `location` — subcellular location. Look up formal names with https://skills.duaer.com/locations.md.
 - `function` — words in the function text.
 - `go` — Gene Ontology term. Look up terms with https://skills.duaer.com/gene-ontology.md.
+- `pathway` — Reactome pathway id or words. Look up pathways with https://skills.duaer.com/pathways.md.
 - `taxonomyId` — NCBI taxonomy id. Look up ids with https://skills.duaer.com/organisms.md.
 - `limit` — optional. From 1 to 20. Default 10.
 
