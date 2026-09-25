@@ -13,6 +13,9 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search protein structures in Duaer](https://skills.duaer.com/structures.md): In Duaer, search protein structures. One successful search uses 1 credit.
 - [Search diseases in Duaer](https://skills.duaer.com/diseases.md): In Duaer, search UniProt disease names. One successful search uses 1 credit.
 - [Search organisms in Duaer](https://skills.duaer.com/organisms.md): In Duaer, search UniProt taxonomy. One successful search uses 1 credit.
+- [Search keywords in Duaer](https://skills.duaer.com/keywords.md): In Duaer, search UniProt keywords. One successful search uses 1 credit.
+- [Search locations in Duaer](https://skills.duaer.com/locations.md): In Duaer, search UniProt subcellular locations. One successful search uses 1 credit.
+- [Search Gene Ontology in Duaer](https://skills.duaer.com/gene-ontology.md): In Duaer, search Gene Ontology terms. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -30,6 +33,9 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索蛋白结构](https://skills.duaer.com/zh/structures.md): 在 Duaer 里检索蛋白结构。一次成功查询用 1 额度。
 - [在 Duaer 里检索疾病](https://skills.duaer.com/zh/diseases.md): 在 Duaer 里检索 UniProt 疾病名称。一次成功查询用 1 额度。
 - [在 Duaer 里检索物种](https://skills.duaer.com/zh/organisms.md): 在 Duaer 里检索 UniProt 物种分类。一次成功查询用 1 额度。
+- [在 Duaer 里检索关键词](https://skills.duaer.com/zh/keywords.md): 在 Duaer 里检索 UniProt 关键词。一次成功查询用 1 额度。
+- [在 Duaer 里检索亚细胞定位](https://skills.duaer.com/zh/locations.md): 在 Duaer 里检索 UniProt 亚细胞定位。一次成功查询用 1 额度。
+- [在 Duaer 里检索基因本体](https://skills.duaer.com/zh/gene-ontology.md): 在 Duaer 里检索 Gene Ontology 术语。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -136,10 +142,10 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - `reviewed` — `yes` or `no`.
 - `lengthFrom`, `lengthTo` — sequence length. `0` means no bound.
 - `disease` — disease name. Look up formal names with https://skills.duaer.com/diseases.md.
-- `keyword` — keyword.
-- `location` — subcellular location.
+- `keyword` — UniProt keyword. Look up formal names with https://skills.duaer.com/keywords.md.
+- `location` — subcellular location. Look up formal names with https://skills.duaer.com/locations.md.
 - `function` — words in the function text.
-- `go` — Gene Ontology term.
+- `go` — Gene Ontology term. Look up terms with https://skills.duaer.com/gene-ontology.md.
 - `taxonomyId` — NCBI taxonomy id. Look up ids with https://skills.duaer.com/organisms.md.
 - `limit` — optional. From 1 to 20. Default 10.
 
@@ -344,6 +350,123 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - `common` — optional. Common name, such as `human`.
 - `limit` — optional. From 1 to 20. Default 10.
 - Use `title` (scientific name) as `organism` when searching proteins or structures. Reuse `taxonId` as `taxonomyId` on proteins.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-keywords
+description: >-
+  Search UniProt keywords through Duaer. Use the name with proteins.keyword. One successful search uses 1 Duaer credit.
+---
+
+# Duaer keywords
+
+Search UniProt keywords through Duaer. Use the name with proteins.keyword. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/keywords?q=kinase&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- At least one search field is required. Fields combine.
+- Search with `q` first; use `id` only when you already have it from a result.
+- `q` — words in the keyword name or definition.
+- `id` — optional. UniProt keyword id from a result (`keywordId`), such as `KW-0418`.
+- `name` — optional. Keyword name.
+- `limit` — optional. From 1 to 20. Default 10.
+- Use `title` as `keyword` when searching proteins. Reuse `keywordId` in `id` for an exact lookup.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-locations
+description: >-
+  Search UniProt subcellular locations through Duaer. Use the name with proteins.location. One successful search uses 1 Duaer credit.
+---
+
+# Duaer locations
+
+Search UniProt subcellular locations through Duaer. Use the name with proteins.location. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/locations?q=nucleus&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- At least one search field is required. Fields combine.
+- Search with `q` first; use `id` only when you already have it from a result.
+- `q` — words in the location name or definition.
+- `id` — optional. UniProt location id from a result (`locationId`), such as `SL-0191`.
+- `name` — optional. Location name.
+- `limit` — optional. From 1 to 20. Default 10.
+- Use `title` as `location` when searching proteins. Reuse `locationId` in `id` for an exact lookup.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-gene-ontology
+description: >-
+  Search Gene Ontology terms through Duaer. Use the name or id with proteins.go. One successful search uses 1 Duaer credit.
+---
+
+# Duaer Gene Ontology
+
+Search Gene Ontology terms through Duaer. Use the name or id with proteins.go. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/gene-ontology?q=apoptosis&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- At least one search field is required. Fields combine.
+- Search with `q` first; use `id` only when you already have it from a result.
+- `q` — words in the term name or definition.
+- `id` — optional. Gene Ontology id from a result (`goId`), such as `GO:0006915`.
+- `name` — optional. Term name.
+- `limit` — optional. From 1 to 20. Default 10.
+- Use `title` or `goId` as `go` when searching proteins. Reuse `goId` in `id` for an exact lookup.
 
 ## Result
 
