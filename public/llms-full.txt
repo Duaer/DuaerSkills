@@ -53,6 +53,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search KEGG in Duaer](https://skills.duaer.com/kegg.md): In Duaer, search KEGG pathways, diseases, or compounds. One successful search uses 1 credit.
 - [Search Monarch in Duaer](https://skills.duaer.com/monarch.md): In Duaer, search Monarch diseases, phenotypes, or genes. One successful search uses 1 credit.
 - [Search HGNC in Duaer](https://skills.duaer.com/hgnc.md): In Duaer, look up approved gene symbols via HGNC. One successful search uses 1 credit.
+- [Search PRIDE in Duaer](https://skills.duaer.com/pride.md): In Duaer, search proteomics projects in PRIDE. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -110,6 +111,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索 KEGG](https://skills.duaer.com/zh/kegg.md): 在 Duaer 里经 KEGG 检索通路、疾病或化合物。一次成功查询用 1 额度。
 - [在 Duaer 里检索 Monarch](https://skills.duaer.com/zh/monarch.md): 在 Duaer 里经 Monarch 检索疾病、表型或基因。一次成功查询用 1 额度。
 - [在 Duaer 里检索 HGNC](https://skills.duaer.com/zh/hgnc.md): 在 Duaer 里经 HGNC 查阅核准基因符号。一次成功查询用 1 额度。
+- [在 Duaer 里检索 PRIDE](https://skills.duaer.com/zh/pride.md): 在 Duaer 里经 PRIDE 检索蛋白质组学项目。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -1914,6 +1916,42 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - Provide `words` or `id`.
 - `words` — gene symbol or name words, such as BRCA1.
 - `id` — optional. HGNC id such as HGNC:1100 or 1100.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-pride
+description: >-
+  Search proteomics projects in PRIDE through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer PRIDE
+
+Search proteomics projects in PRIDE through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/pride?words=insulin&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — project words, such as insulin.
+- `id` — optional. PRIDE accession such as PXD000001.
 - `limit` — optional. From 1 to 20. Default 10.
 
 ## Result
