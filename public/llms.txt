@@ -38,4 +38,5 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search drug–gene interactions in Duaer](https://skills.duaer.com/drug-gene.md): In Duaer, search drug–gene interactions via DGIdb. One successful search uses 1 credit.
 - [Search reactions in Duaer](https://skills.duaer.com/reactions.md): In Duaer, search biochemical reactions via Rhea. One successful search uses 1 credit.
 - [Search complexes in Duaer](https://skills.duaer.com/complexes.md): In Duaer, search protein complexes via Complex Portal. One successful search uses 1 credit.
+- [Search metabolites in Duaer](https://skills.duaer.com/metabolites.md): In Duaer, search metabolites via ChEBI. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.

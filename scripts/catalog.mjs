@@ -156,7 +156,7 @@ export const skills = [
 	},
 	{
 		slug: 'compounds',
-		related: ['trials', 'structures', 'proteins', 'activities', 'indications', 'mechanisms', 'assays', 'patents', 'drug-gene', 'reactions'],
+		related: ['trials', 'structures', 'proteins', 'activities', 'indications', 'mechanisms', 'assays', 'patents', 'drug-gene', 'reactions', 'metabolites'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search compounds in Duaer', zh: '在 Duaer 里检索化合物和药物' },
 		lede: {
@@ -947,7 +947,7 @@ export const skills = [
 
 	{
 		slug: 'reactions',
-		related: ['pathways', 'compounds', 'proteins'],
+		related: ['pathways', 'compounds', 'proteins', 'metabolites'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search reactions in Duaer', zh: '在 Duaer 里检索生化反应' },
 		lede: {
@@ -996,6 +996,34 @@ export const skills = [
 				'`words` is required.',
 				'`words` — words in the complex name or description, or a Complex Portal id (`CPX-4305`).',
 				'`organism` — optional. Keep complexes whose organism contains this text, or an NCBI taxonomy id (`9606`).',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'metabolites',
+		related: ['compounds', 'reactions', 'pathways'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search metabolites in Duaer', zh: '在 Duaer 里检索代谢物' },
+		lede: {
+			en: 'In Duaer, search metabolites via ChEBI. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 ChEBI 检索代谢物。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has a ChEBI id, name, description, and synonyms when present.',
+			zh: '每条结果有 ChEBI 编号、名称、描述，以及可用的同义词。',
+		},
+		skill: skill({
+			name: 'duaer-metabolites',
+			description:
+				'Search metabolites through Duaer via ChEBI. One successful search uses 1 Duaer credit.',
+			title: 'Duaer metabolites',
+			call: 'GET https://api.duaer.com/v1/data/metabolites?words=glucose&limit=10',
+			fields: [
+				'Provide `words` or `id` (or both; id wins).',
+				'`words` — metabolite or small-molecule name.',
+				'`id` — optional. ChEBI id (`CHEBI:17234` or `17234`). Overrides words when set.',
 				'`limit` — optional. From 1 to 20. Default 10.',
 			],
 		}),

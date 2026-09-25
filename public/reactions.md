@@ -41,3 +41,4 @@ A missing key returns 401.
 - [Search pathways in Duaer](https://skills.duaer.com/pathways.md)
 - [Search compounds in Duaer](https://skills.duaer.com/compounds.md)
 - [Search proteins in Duaer](https://skills.duaer.com/proteins.md)
+- [Search metabolites in Duaer](https://skills.duaer.com/metabolites.md)

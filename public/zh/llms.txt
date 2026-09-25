@@ -38,4 +38,5 @@
 - [在 Duaer 里检索药–基因互作](https://skills.duaer.com/zh/drug-gene.md): 在 Duaer 里经 DGIdb 检索药–基因互作。一次成功查询用 1 额度。
 - [在 Duaer 里检索生化反应](https://skills.duaer.com/zh/reactions.md): 在 Duaer 里经 Rhea 检索生化反应。一次成功查询用 1 额度。
 - [在 Duaer 里检索蛋白复合物](https://skills.duaer.com/zh/complexes.md): 在 Duaer 里经 Complex Portal 检索蛋白复合物。一次成功查询用 1 额度。
+- [在 Duaer 里检索代谢物](https://skills.duaer.com/zh/metabolites.md): 在 Duaer 里经 ChEBI 检索代谢物。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
