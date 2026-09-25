@@ -44,3 +44,4 @@ A missing key returns 401.
 - [Search expression in Duaer](https://skills.duaer.com/expression.md)
 - [Search orthologs in Duaer](https://skills.duaer.com/orthologs.md)
 - [Search activities in Duaer](https://skills.duaer.com/activities.md)
+- [Search assays in Duaer](https://skills.duaer.com/assays.md)

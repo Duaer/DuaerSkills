@@ -156,7 +156,7 @@ export const skills = [
 	},
 	{
 		slug: 'compounds',
-		related: ['trials', 'structures', 'proteins', 'activities', 'indications', 'mechanisms'],
+		related: ['trials', 'structures', 'proteins', 'activities', 'indications', 'mechanisms', 'assays'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search compounds in Duaer', zh: '在 Duaer 里检索化合物和药物' },
 		lede: {
@@ -598,7 +598,7 @@ export const skills = [
 	},
 	{
 		slug: 'targets',
-		related: ['genes', 'diseases', 'proteins', 'expression', 'orthologs', 'activities'],
+		related: ['genes', 'diseases', 'proteins', 'expression', 'orthologs', 'activities', 'assays'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search targets in Duaer', zh: '在 Duaer 里检索靶点关联' },
 		lede: {
@@ -656,7 +656,7 @@ export const skills = [
 
 	{
 		slug: 'activities',
-		related: ['compounds', 'targets', 'genes', 'indications', 'mechanisms'],
+		related: ['compounds', 'targets', 'genes', 'indications', 'mechanisms', 'assays'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search activities in Duaer', zh: '在 Duaer 里检索生物活性' },
 		lede: {
@@ -793,6 +793,36 @@ export const skills = [
 				'`organism` — optional. Scientific name (`Homo sapiens`). Look up names with https://skills.duaer.com/organisms.md.',
 				'`entryType` — optional. `gse` (default), `gds`, `gpl`, `gsm`, or `any`.',
 				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+
+	{
+		slug: 'assays',
+		related: ['activities', 'targets', 'compounds'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search assays in Duaer', zh: '在 Duaer 里检索实验测定' },
+		lede: {
+			en: 'In Duaer, search ChEMBL assays by words or assay id. One successful search uses 1 credit.',
+			zh: '在 Duaer 里按关键词或 id 检索 ChEMBL 实验测定。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has an assay id, description, type, organism, target id, and confidence when present.',
+			zh: '每条结果有 assay id、描述、类型、物种、靶点 id，以及可用的置信度。',
+		},
+		skill: skill({
+			name: 'duaer-assays',
+			description:
+				'Search ChEMBL assays through Duaer by words or assay id. One successful search uses 1 Duaer credit.',
+			title: 'Duaer assays',
+			call: 'GET https://api.duaer.com/v1/data/assays?words=EGFR&organism=Homo%20sapiens&assayType=B&limit=10',
+			fields: [
+				'`words` is required.',
+				'`words` — words in the assay description, or a ChEMBL assay id (`CHEMBL5344031`).',
+				'`organism` — optional. Keep assays whose organism contains this text.',
+				'`assayType` — optional. Letter code (`B`/`F`/`A`/…) or words from the type description.',
+				'`limit` — optional. From 1 to 20. Default 10. Results prefer higher confidence.',
 			],
 		}),
 	},
