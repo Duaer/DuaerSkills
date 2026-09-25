@@ -42,7 +42,7 @@ async function put(relative, body) {
 	await writeFile(file, body);
 }
 
-function chrome({ locale, path, title, description, body, article }) {
+function chrome({ locale, path, title, description, body, article, related = [] }) {
 	const enUrl = pageUrl(path, 'en');
 	const zhUrl = pageUrl(path, 'zh');
 	const here = pageUrl(path, locale);
@@ -66,6 +66,15 @@ function chrome({ locale, path, title, description, body, article }) {
 				url: here,
 				author: { '@id': 'https://www.duaer.com/#organization' },
 				publisher: { '@id': 'https://www.duaer.com/#organization' },
+				...(related.length
+					? {
+							isRelatedTo: related.map((item) => ({
+								'@type': 'TechArticle',
+								headline: item.title[locale],
+								url: pageUrl(`/${item.slug}/`, locale),
+							})),
+						}
+					: {}),
 			},
 		],
 	};
@@ -142,6 +151,29 @@ function homeBody(locale) {
 <div class="cards">${cards}</div>`;
 }
 
+function relatedOf(skill) {
+	return (skill.related ?? [])
+		.map((slug) => skills.find((item) => item.slug === slug))
+		.filter(Boolean);
+}
+
+function relatedHtml(skill, locale) {
+	const items = relatedOf(skill);
+	if (!items.length) return '';
+	const label = locale === 'zh' ? '相关技能' : 'Related skills';
+	const cards = items
+		.map(
+			(item) => `<a class="card" href="${href(`/${item.slug}/`, locale)}">
+<span class="card-type">${esc(item.type[locale])}</span>
+<h3>${esc(item.title[locale])}</h3>
+<p>${esc(item.lede[locale])}</p>
+</a>`,
+		)
+		.join('\n');
+	return `<h2>${label}</h2>
+<div class="cards">${cards}</div>`;
+}
+
 function skillBody(skill, locale) {
 	const copy = locale === 'zh';
 	const fieldsLabel = copy ? '调用技能' : 'Call skill';
@@ -157,7 +189,8 @@ function skillBody(skill, locale) {
 <p>${copy ? '调用前先' : 'Before you call, '}<a href="${href('/keys/', locale)}">${copy ? '获取 Duaer 密钥' : 'get a Duaer key'}</a>.</p>
 <h2>${fieldsLabel}</h2>
 <p>${note}</p>
-<pre><code>${esc(skill.skill)}</code></pre>`;
+<pre><code>${esc(skill.skill)}</code></pre>
+${relatedHtml(skill, locale)}`;
 }
 
 function keysBody(locale) {
@@ -232,11 +265,21 @@ Opening the Duaer skill catalog does not search and does not use credits.
 `;
 }
 
+function relatedMd(skill, locale) {
+	const items = relatedOf(skill);
+	if (!items.length) return '';
+	const label = locale === 'zh' ? '相关技能' : 'Related skills';
+	const lines = items
+		.map((item) => `- [${item.title[locale]}](${mdUrl(`/${item.slug}/`, locale)})`)
+		.join('\n');
+	return `\n## ${label}\n\n${lines}\n`;
+}
+
 function skillMd(skill, locale) {
 	const index = locale === 'zh' ? `${site}/zh/llms.txt` : `${site}/llms.txt`;
 	return `> Index: [llms.txt](${index}). This skill: ${mdUrl(`/${skill.slug}/`, locale)}
 
-${skill.skill}`;
+${skill.skill}${relatedMd(skill, locale)}`;
 }
 
 function llms(locale) {
@@ -293,7 +336,7 @@ for (const page of pages) {
 	const body = skill ? skillBody(skill, locale) : page.path === '/keys/' ? keysBody(locale) : homeBody(locale);
 	const htmlPath = href(page.path, locale).replace(/^\//, '') + (href(page.path, locale).endsWith('/') ? '' : '/');
 	const folder = htmlPath.replace(/\/$/, '');
-	await put(join(folder, 'index.html'), chrome({ locale, path: page.path, title, description, body, article: page.path !== '/' }));
+	await put(join(folder, 'index.html'), chrome({ locale, path: page.path, title, description, body, article: page.path !== '/', related: skill ? relatedOf(skill) : [] }));
 	if (page.path !== '/') {
 		const md = skill ? skillMd(skill, locale) : keysMd(locale);
 		const mdName = href(page.path, locale).replace(/\/$/, '').replace(/^\//, '') + '.md';

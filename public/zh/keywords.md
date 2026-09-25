@@ -38,3 +38,8 @@ One successful search uses 1 credit.
 An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## 相关技能
+
+- [在 Duaer 里检索基因和蛋白](https://skills.duaer.com/zh/proteins.md)
+- [在 Duaer 里检索基因本体](https://skills.duaer.com/zh/gene-ontology.md)
