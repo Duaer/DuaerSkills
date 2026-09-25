@@ -156,7 +156,7 @@ export const skills = [
 	},
 	{
 		slug: 'compounds',
-		related: ['trials', 'structures', 'proteins', 'activities', 'indications', 'mechanisms', 'assays', 'patents', 'drug-gene'],
+		related: ['trials', 'structures', 'proteins', 'activities', 'indications', 'mechanisms', 'assays', 'patents', 'drug-gene', 'reactions'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search compounds in Duaer', zh: '在 Duaer 里检索化合物和药物' },
 		lede: {
@@ -361,7 +361,7 @@ export const skills = [
 	},
 	{
 		slug: 'pathways',
-		related: ['genes', 'proteins', 'compounds'],
+		related: ['genes', 'proteins', 'compounds', 'reactions'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search pathways in Duaer', zh: '在 Duaer 里检索通路' },
 		lede: {
@@ -941,6 +941,34 @@ export const skills = [
 				'`drug` — drug name (e.g. `imatinib`).',
 				'`approved` — optional. `yes` or `no` to keep only approved or unapproved drugs.',
 				'`limit` — optional. From 1 to 20. Default 10. Results prefer higher interaction score.',
+			],
+		}),
+	},
+
+	{
+		slug: 'reactions',
+		related: ['pathways', 'compounds', 'proteins'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search reactions in Duaer', zh: '在 Duaer 里检索生化反应' },
+		lede: {
+			en: 'In Duaer, search biochemical reactions via Rhea. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 Rhea 检索生化反应。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has a Rhea id, equation, EC number, and status when present.',
+			zh: '每条结果有 Rhea 编号、方程式、EC 号，以及可用的状态。',
+		},
+		skill: skill({
+			name: 'duaer-reactions',
+			description:
+				'Search biochemical reactions through Duaer via Rhea. One successful search uses 1 Duaer credit.',
+			title: 'Duaer reactions',
+			call: 'GET https://api.duaer.com/v1/data/reactions?words=kinase&ec=2.7.10.1&limit=10',
+			fields: [
+				'Provide `words` or `ec` (or both).',
+				'`words` — words in the equation, or a Rhea id (`RHEA:10596`).',
+				'`ec` — optional. Enzyme Commission number (`2.7.10.1` or `ec:2.7.10.1`). Alone is enough.',
+				'`limit` — optional. From 1 to 20. Default 10.',
 			],
 		}),
 	},

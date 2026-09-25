@@ -45,3 +45,4 @@ A missing key returns 401.
 - [在 Duaer 里检索实验测定](https://skills.duaer.com/zh/assays.md)
 - [在 Duaer 里检索专利](https://skills.duaer.com/zh/patents.md)
 - [在 Duaer 里检索药–基因互作](https://skills.duaer.com/zh/drug-gene.md)
+- [在 Duaer 里检索生化反应](https://skills.duaer.com/zh/reactions.md)
