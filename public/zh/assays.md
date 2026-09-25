@@ -42,3 +42,4 @@ A missing key returns 401.
 - [在 Duaer 里检索生物活性](https://skills.duaer.com/zh/activities.md)
 - [在 Duaer 里检索靶点关联](https://skills.duaer.com/zh/targets.md)
 - [在 Duaer 里检索化合物和药物](https://skills.duaer.com/zh/compounds.md)
+- [在 Duaer 里检索专利](https://skills.duaer.com/zh/patents.md)

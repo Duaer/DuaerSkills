@@ -32,6 +32,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search mechanisms in Duaer](https://skills.duaer.com/mechanisms.md): In Duaer, search ChEMBL mechanisms of action by molecule. One successful search uses 1 credit.
 - [Search GEO in Duaer](https://skills.duaer.com/geo.md): In Duaer, search NCBI GEO series and datasets. One successful search uses 1 credit.
 - [Search assays in Duaer](https://skills.duaer.com/assays.md): In Duaer, search ChEMBL assays by words or assay id. One successful search uses 1 credit.
+- [Search patents in Duaer](https://skills.duaer.com/patents.md): In Duaer, search patents via Europe PMC. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -68,6 +69,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索作用机制](https://skills.duaer.com/zh/mechanisms.md): 在 Duaer 里经 ChEMBL 按分子检索作用机制。一次成功查询用 1 额度。
 - [在 Duaer 里检索 GEO](https://skills.duaer.com/zh/geo.md): 在 Duaer 里检索 NCBI GEO 系列与数据集。一次成功查询用 1 额度。
 - [在 Duaer 里检索实验测定](https://skills.duaer.com/zh/assays.md): 在 Duaer 里按关键词或 id 检索 ChEMBL 实验测定。一次成功查询用 1 额度。
+- [在 Duaer 里检索专利](https://skills.duaer.com/zh/patents.md): 在 Duaer 里经 Europe PMC 检索专利。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -1106,6 +1108,43 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - `organism` — optional. Keep assays whose organism contains this text.
 - `assayType` — optional. Letter code (`B`/`F`/`A`/…) or words from the type description.
 - `limit` — optional. From 1 to 20. Default 10. Results prefer higher confidence.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-patents
+description: >-
+  Search patents through Duaer via Europe PMC. One successful search uses 1 Duaer credit.
+---
+
+# Duaer patents
+
+Search patents through Duaer via Europe PMC. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/patents?words=insulin&yearFrom=2010&yearTo=2020&country=US&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- `words` is required.
+- `words` — words in the patent title or abstract.
+- `yearFrom` / `yearTo` — optional. Publication year range (YYYY).
+- `country` — optional. Country code on the patent id (`US`, `EP`, `WO`, …).
+- `limit` — optional. From 1 to 20. Default 10.
 
 ## Result
 

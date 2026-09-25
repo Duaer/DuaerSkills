@@ -46,7 +46,7 @@ ${credits}`;
 export const skills = [
 	{
 		slug: 'papers',
-		related: ['proteins', 'trials', 'diseases', 'preprints', 'grants'],
+		related: ['proteins', 'trials', 'diseases', 'preprints', 'grants', 'patents'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search papers in Duaer', zh: '在 Duaer 里检索论文' },
 		lede: {
@@ -156,7 +156,7 @@ export const skills = [
 	},
 	{
 		slug: 'compounds',
-		related: ['trials', 'structures', 'proteins', 'activities', 'indications', 'mechanisms', 'assays'],
+		related: ['trials', 'structures', 'proteins', 'activities', 'indications', 'mechanisms', 'assays', 'patents'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search compounds in Duaer', zh: '在 Duaer 里检索化合物和药物' },
 		lede: {
@@ -800,7 +800,7 @@ export const skills = [
 
 	{
 		slug: 'assays',
-		related: ['activities', 'targets', 'compounds'],
+		related: ['activities', 'targets', 'compounds', 'patents'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search assays in Duaer', zh: '在 Duaer 里检索实验测定' },
 		lede: {
@@ -823,6 +823,36 @@ export const skills = [
 				'`organism` — optional. Keep assays whose organism contains this text.',
 				'`assayType` — optional. Letter code (`B`/`F`/`A`/…) or words from the type description.',
 				'`limit` — optional. From 1 to 20. Default 10. Results prefer higher confidence.',
+			],
+		}),
+	},
+
+
+	{
+		slug: 'patents',
+		related: ['papers', 'compounds', 'assays'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search patents in Duaer', zh: '在 Duaer 里检索专利' },
+		lede: {
+			en: 'In Duaer, search patents via Europe PMC. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 Europe PMC 检索专利。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has a patent id, title, country, year, and assignee when present.',
+			zh: '每条结果有专利编号、标题、国家、年份，以及可用的申请人。',
+		},
+		skill: skill({
+			name: 'duaer-patents',
+			description:
+				'Search patents through Duaer via Europe PMC. One successful search uses 1 Duaer credit.',
+			title: 'Duaer patents',
+			call: 'GET https://api.duaer.com/v1/data/patents?words=insulin&yearFrom=2010&yearTo=2020&country=US&limit=10',
+			fields: [
+				'`words` is required.',
+				'`words` — words in the patent title or abstract.',
+				'`yearFrom` / `yearTo` — optional. Publication year range (YYYY).',
+				'`country` — optional. Country code on the patent id (`US`, `EP`, `WO`, …).',
+				'`limit` — optional. From 1 to 20. Default 10.',
 			],
 		}),
 	},

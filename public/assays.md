@@ -42,3 +42,4 @@ A missing key returns 401.
 - [Search activities in Duaer](https://skills.duaer.com/activities.md)
 - [Search targets in Duaer](https://skills.duaer.com/targets.md)
 - [Search compounds in Duaer](https://skills.duaer.com/compounds.md)
+- [Search patents in Duaer](https://skills.duaer.com/patents.md)
