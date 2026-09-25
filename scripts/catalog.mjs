@@ -1257,6 +1257,34 @@ export const skills = [
 		}),
 	},
 
+	{
+		slug: 'ligands',
+		related: ['structures', 'compounds', 'crossrefs', 'metabolites'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search ligands in Duaer', zh: '在 Duaer 里检索配体' },
+		lede: {
+			en: 'In Duaer, look up PDBe chemical component (CCD) ligands. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 PDBe 查阅化学组分（CCD）配体。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has a CCD id, name, formula, weight, and InChIKey when present.',
+			zh: '每条结果有 CCD 编号、名称、分子式、分子量，以及可用的 InChIKey。',
+		},
+		skill: skill({
+			name: 'duaer-ligands',
+			description:
+				'Look up PDBe chemical component (CCD) ligands through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer ligands',
+			call: 'GET https://api.duaer.com/v1/data/ligands?words=ATP&limit=10',
+			fields: [
+				'Provide `words` or `id` as a CCD chemical component id (1–3 characters). Comma-separate several ids.',
+				'`words` — CCD id such as ATP or HEM.',
+				'`id` — optional. Same as words; combine for a batch.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
 ];
 
 export const home = {
