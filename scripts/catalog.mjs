@@ -570,7 +570,7 @@ export const skills = [
 	},
 	{
 		slug: 'expression',
-		related: ['genes', 'proteins', 'interactions'],
+		related: ['genes', 'proteins', 'interactions', 'targets'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search expression in Duaer', zh: '在 Duaer 里检索表达' },
 		lede: {
@@ -596,6 +596,34 @@ export const skills = [
 			],
 		}),
 	},
+	{
+		slug: 'targets',
+		related: ['genes', 'diseases', 'proteins', 'expression'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search targets in Duaer', zh: '在 Duaer 里检索靶点关联' },
+		lede: {
+			en: 'In Duaer, search Open Targets gene–disease associations. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 Open Targets 检索基因–疾病关联。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has a gene, Ensembl id, disease, ontology id, and association score.',
+			zh: '每条结果有基因、Ensembl id、疾病、本体 id 与关联分。',
+		},
+		skill: skill({
+			name: 'duaer-targets',
+			description:
+				'Search Open Targets gene–disease associations through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer targets',
+			call: 'GET https://api.duaer.com/v1/data/targets?gene=INS&limit=10',
+			fields: [
+				'At least `gene` or `disease` is required.',
+				'`gene` — gene symbol or Ensembl id. Look up symbols with https://skills.duaer.com/genes.md.',
+				'`disease` — optional. Disease name or ontology id (`EFO_` / `MONDO_`). Alone, returns associated targets. With `gene`, filters that gene’s associations. Look up names with https://skills.duaer.com/diseases.md.',
+				'`limit` — optional. From 1 to 20. Default 10. Results are sorted by association score descending.',
+			],
+		}),
+	},
+
 ];
 
 export const home = {
