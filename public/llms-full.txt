@@ -17,6 +17,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search locations in Duaer](https://skills.duaer.com/locations.md): In Duaer, search UniProt subcellular locations. One successful search uses 1 credit.
 - [Search Gene Ontology in Duaer](https://skills.duaer.com/gene-ontology.md): In Duaer, search Gene Ontology terms. One successful search uses 1 credit.
 - [Search pathways in Duaer](https://skills.duaer.com/pathways.md): In Duaer, search Reactome pathways. One successful search uses 1 credit.
+- [Search genes in Duaer](https://skills.duaer.com/genes.md): In Duaer, search genes. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -38,6 +39,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索亚细胞定位](https://skills.duaer.com/zh/locations.md): 在 Duaer 里检索 UniProt 亚细胞定位。一次成功查询用 1 额度。
 - [在 Duaer 里检索基因本体](https://skills.duaer.com/zh/gene-ontology.md): 在 Duaer 里检索 Gene Ontology 术语。一次成功查询用 1 额度。
 - [在 Duaer 里检索通路](https://skills.duaer.com/zh/pathways.md): 在 Duaer 里检索 Reactome 通路。一次成功查询用 1 额度。
+- [在 Duaer 里检索基因](https://skills.duaer.com/zh/genes.md): 在 Duaer 里检索基因。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -137,7 +139,7 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 
 - At least one search field is required. Fields combine.
 - `q` — words in the protein record.
-- `gene` — gene symbol.
+- `gene` — gene symbol. Look up symbols with https://skills.duaer.com/genes.md.
 - `name` — protein name.
 - `organism` — organism name. Look up formal names with https://skills.duaer.com/organisms.md.
 - `accession` — accession.
@@ -512,6 +514,46 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - Use `pathwayId` as `pathway` when searching proteins. Reuse `pathwayId` in `id` for an exact lookup.
 - Open `browserUrl` for the interactive Reactome diagram, or `diagramUrl` for a PNG export.
 - Result fields: source, title, url, summary, pathwayId, dbId, stIdVersion, species, browserUrl, diagramUrl, figureUrl, hasDiagram, hasEHLD, isDisease, doi, releaseDate, lastUpdatedDate, compartments, compartmentAccessions, goId, goName, schemaClass. Exact id lookup fills more fields than a words search.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-genes
+description: >-
+  Search genes through Duaer. Use the symbol with proteins.gene. One successful search uses 1 Duaer credit.
+---
+
+# Duaer genes
+
+Search genes through Duaer. Use the symbol with proteins.gene. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/genes?q=INS&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- At least one search field is required. Fields combine.
+- Search with `q` or `symbol` first; use `id` only when you already have an NCBI Gene id.
+- `q` — words in the gene symbol, name, or summary.
+- `symbol` — optional. Official gene symbol, such as `INS`.
+- `id` — optional. NCBI Gene id from a result (`geneId`), such as `3630`.
+- `species` — optional. Species for words/symbol search. Default `human`.
+- `limit` — optional. From 1 to 20. Default 10.
+- Use `symbol` as `gene` when searching proteins. Reuse `geneId` in `id` for an exact lookup.
 
 ## Result
 

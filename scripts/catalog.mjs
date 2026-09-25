@@ -98,7 +98,7 @@ export const skills = [
 			fields: [
 				'At least one search field is required. Fields combine.',
 				'`q` — words in the protein record.',
-				'`gene` — gene symbol.',
+				'`gene` — gene symbol. Look up symbols with https://skills.duaer.com/genes.md.',
 				'`name` — protein name.',
 				'`organism` — organism name. Look up formal names with https://skills.duaer.com/organisms.md.',
 				'`accession` — accession.',
@@ -376,6 +376,35 @@ export const skills = [
 							"Use `pathwayId` as `pathway` when searching proteins. Reuse `pathwayId` in `id` for an exact lookup.",
 							"Open `browserUrl` for the interactive Reactome diagram, or `diagramUrl` for a PNG export.",
 							"Result fields: source, title, url, summary, pathwayId, dbId, stIdVersion, species, browserUrl, diagramUrl, figureUrl, hasDiagram, hasEHLD, isDisease, doi, releaseDate, lastUpdatedDate, compartments, compartmentAccessions, goId, goName, schemaClass. Exact id lookup fills more fields than a words search."
+			],
+		}),
+	},
+	{
+		slug: 'genes',
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search genes in Duaer', zh: '在 Duaer 里检索基因' },
+		lede: {
+			en: 'In Duaer, search genes. One successful search uses 1 credit.',
+			zh: '在 Duaer 里检索基因。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each gene has a symbol, geneId, name, aliases, Ensembl id, map location, and summary. Use the symbol with proteins.gene.',
+			zh: '每个基因有符号、geneId、名称、别名、Ensembl 编号、定位和摘要。符号可用于蛋白 gene。',
+		},
+		skill: skill({
+			name: 'duaer-genes',
+			description: 'Search genes through Duaer. Use the symbol with proteins.gene. One successful search uses 1 Duaer credit.',
+			title: 'Duaer genes',
+			call: 'GET https://api.duaer.com/v1/data/genes?q=INS&limit=10',
+			fields: [
+								"At least one search field is required. Fields combine.",
+								"Search with `q` or `symbol` first; use `id` only when you already have an NCBI Gene id.",
+								"`q` — words in the gene symbol, name, or summary.",
+								"`symbol` — optional. Official gene symbol, such as `INS`.",
+								"`id` — optional. NCBI Gene id from a result (`geneId`), such as `3630`.",
+								"`species` — optional. Species for words/symbol search. Default `human`.",
+								"`limit` — optional. From 1 to 20. Default 10.",
+								"Use `symbol` as `gene` when searching proteins. Reuse `geneId` in `id` for an exact lookup."
 			],
 		}),
 	},
