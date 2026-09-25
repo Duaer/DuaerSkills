@@ -1344,6 +1344,36 @@ export const skills = [
 			],
 		}),
 	},
+,
+
+	{
+		slug: 'kegg',
+		related: ['pathways', 'diseases', 'compounds', 'gene-ontology'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search KEGG in Duaer', zh: '在 Duaer 里检索 KEGG' },
+		lede: {
+			en: 'In Duaer, search KEGG pathways, diseases, or compounds. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 KEGG 检索通路、疾病或化合物。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has a KEGG id, name, and database when present.',
+			zh: '每条结果有 KEGG 编号、名称，以及可用的数据库类型。',
+		},
+		skill: skill({
+			name: 'duaer-kegg',
+			description:
+				'Search KEGG pathways, diseases, or compounds through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer KEGG',
+			call: 'GET https://api.duaer.com/v1/data/kegg?words=apoptosis&db=pathway&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — search text, such as apoptosis.',
+				'`id` — optional. KEGG id such as map04210, H00409, or C01405.',
+				'`db` — optional. pathway (default), disease, or compound. Used with words.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
 
 ];
 
