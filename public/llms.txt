@@ -18,4 +18,5 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search Gene Ontology in Duaer](https://skills.duaer.com/gene-ontology.md): In Duaer, search Gene Ontology terms. One successful search uses 1 credit.
 - [Search pathways in Duaer](https://skills.duaer.com/pathways.md): In Duaer, search Reactome pathways. One successful search uses 1 credit.
 - [Search genes in Duaer](https://skills.duaer.com/genes.md): In Duaer, search genes. One successful search uses 1 credit.
+- [Search variants in Duaer](https://skills.duaer.com/variants.md): In Duaer, search variants (ClinVar / dbSNP). One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
