@@ -39,3 +39,4 @@ A missing key returns 401.
 - [在 Duaer 里检索临床试验](https://skills.duaer.com/zh/trials.md)
 - [在 Duaer 里检索蛋白结构](https://skills.duaer.com/zh/structures.md)
 - [在 Duaer 里检索基因和蛋白](https://skills.duaer.com/zh/proteins.md)
+- [在 Duaer 里检索生物活性](https://skills.duaer.com/zh/activities.md)

@@ -156,7 +156,7 @@ export const skills = [
 	},
 	{
 		slug: 'compounds',
-		related: ['trials', 'structures', 'proteins'],
+		related: ['trials', 'structures', 'proteins', 'activities'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search compounds in Duaer', zh: '在 Duaer 里检索化合物和药物' },
 		lede: {
@@ -598,7 +598,7 @@ export const skills = [
 	},
 	{
 		slug: 'targets',
-		related: ['genes', 'diseases', 'proteins', 'expression', 'orthologs'],
+		related: ['genes', 'diseases', 'proteins', 'expression', 'orthologs', 'activities'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search targets in Duaer', zh: '在 Duaer 里检索靶点关联' },
 		lede: {
@@ -649,6 +649,35 @@ export const skills = [
 				'`species` — optional. NCBI taxonomy id for the query gene. Default `9606` (human). Look up ids with https://skills.duaer.com/organisms.md.',
 				'`orthologSpecies` — optional. Keep only orthologs for this taxonomy id (for example `10090` for mouse).',
 				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+
+	{
+		slug: 'activities',
+		related: ['compounds', 'targets', 'genes'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search activities in Duaer', zh: '在 Duaer 里检索生物活性' },
+		lede: {
+			en: 'In Duaer, search ChEMBL bioactivities by molecule or target. One successful search uses 1 credit.',
+			zh: '在 Duaer 里经 ChEMBL 按分子或靶点检索生物活性。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each row has molecule and target ChEMBL ids, standard type/value, assay, and pChEMBL when present.',
+			zh: '每条结果有分子与靶点 ChEMBL id、标准类型/数值、assay，以及可用的 pChEMBL。',
+		},
+		skill: skill({
+			name: 'duaer-activities',
+			description:
+				'Search ChEMBL bioactivities through Duaer by molecule or target. One successful search uses 1 Duaer credit.',
+			title: 'Duaer activities',
+			call: 'GET https://api.duaer.com/v1/data/activities?molecule=aspirin&limit=10',
+			fields: [
+				'At least `molecule` or `target` is required.',
+				'`molecule` — molecule name or ChEMBL id (`CHEMBL25`). Names resolve via ChEMBL search. Look up PubChem names with https://skills.duaer.com/compounds.md.',
+				'`target` — optional. Target name, gene symbol, or ChEMBL id. Alone, returns activities for that target. With `molecule`, filters both. Look up gene–disease targets with https://skills.duaer.com/targets.md.',
+				'`limit` — optional. From 1 to 20. Default 10. Results prefer higher pChEMBL values.',
 			],
 		}),
 	},
