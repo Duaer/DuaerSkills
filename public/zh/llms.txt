@@ -95,4 +95,67 @@
 - [在 Duaer 里检索 Crossref](https://skills.duaer.com/zh/crossref.md): 在 Duaer 里经 Crossref 检索学术作品。一次成功查询用 1 额度。
 - [在 Duaer 里检索 MyChem](https://skills.duaer.com/zh/mychem.md): 在 Duaer 里经 MyChem 检索化合物聚合注释。一次成功查询用 1 额度。
 - [在 Duaer 里检索 Drugs@FDA](https://skills.duaer.com/zh/drugs-fda.md): 在 Duaer 里检索 FDA 批准药品申请。一次成功查询用 1 额度。
+- [在 Duaer 里检索 UniRef](https://skills.duaer.com/zh/uniref.md): 在 Duaer 里检索 UniRef 蛋白序列聚类。一次成功查询用 1 额度。
+- [在 Duaer 里检索 UniRule](https://skills.duaer.com/zh/unirule.md): 在 Duaer 里检索 UniRule 注释规则。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Proteomes](https://skills.duaer.com/zh/proteomes.md): 在 Duaer 里检索 UniProt 蛋白质组。一次成功查询用 1 额度。
+- [在 Duaer 里检索 ENA](https://skills.duaer.com/zh/ena.md): 在 Duaer 里在 ENA 检索核酸序列。一次成功查询用 1 额度。
+- [在 Duaer 里检索 EMPIAR](https://skills.duaer.com/zh/empiar.md): 在 Duaer 里在 EMPIAR 检索冷冻电镜公共影像条目。一次成功查询用 1 额度。
+- [在 Duaer 里检索 BMRB](https://skills.duaer.com/zh/bmrb.md): 在 Duaer 里在 BMRB 检索核磁条目。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Swiss-Model](https://skills.duaer.com/zh/swiss-model.md): 在 Duaer 里按 UniProt 登录号查阅 Swiss-Model 结构。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Lipid Maps](https://skills.duaer.com/zh/lipid-maps.md): 在 Duaer 里在 LIPID MAPS 检索脂质结构。一次成功查询用 1 额度。
+- [在 Duaer 里检索 MGnify](https://skills.duaer.com/zh/mgnify.md): 在 Duaer 里在 MGnify 检索微生物组研究。一次成功查询用 1 额度。
+- [在 Duaer 里检索 BV-BRC](https://skills.duaer.com/zh/bv-brc.md): 在 Duaer 里在 BV-BRC 检索病原基因组。一次成功查询用 1 额度。
+- [在 Duaer 里检索 ClinPGx](https://skills.duaer.com/zh/clinpgx.md): 在 Duaer 里在 ClinPGx 检索药物基因组基因。一次成功查询用 1 额度。
+- [在 Duaer 里检索 DailyMed](https://skills.duaer.com/zh/daily-med.md): 在 Duaer 里在 DailyMed 检索药品说明书。一次成功查询用 1 额度。
+- [在 Duaer 里检索 RxClass](https://skills.duaer.com/zh/rxclass.md): 在 Duaer 里在 RxClass 检索药物分类。一次成功查询用 1 额度。
+- [在 Duaer 里检索 OpenFDA 510(k)](https://skills.duaer.com/zh/device-510k.md): 在 Duaer 里检索 FDA 510(k) 器械批准。一次成功查询用 1 额度。
+- [在 Duaer 里检索 OpenFDA Food](https://skills.duaer.com/zh/food-enforcement.md): 在 Duaer 里检索 FDA 食品执法报告。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Zenodo](https://skills.duaer.com/zh/zenodo.md): 在 Duaer 里在 Zenodo 检索研究产出。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Figshare](https://skills.duaer.com/zh/figshare.md): 在 Duaer 里在 Figshare 检索研究产出。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Dryad](https://skills.duaer.com/zh/dryad.md): 在 Duaer 里在 Dryad 检索研究数据集。一次成功查询用 1 额度。
+- [在 Duaer 里检索 ProteomeXchange](https://skills.duaer.com/zh/proteomexchange.md): 在 Duaer 里查阅 ProteomeXchange 数据集。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Omnipath](https://skills.duaer.com/zh/omnipath.md): 在 Duaer 里在 OmniPath 检索分子互作。一次成功查询用 1 额度。
+- [在 Duaer 里检索 OMA](https://skills.duaer.com/zh/oma.md): 在 Duaer 里在 OMA 查阅蛋白。一次成功查询用 1 额度。
+- [在 Duaer 里检索 OrthoDB](https://skills.duaer.com/zh/orthodb.md): 在 Duaer 里在 OrthoDB 检索同源基因。一次成功查询用 1 额度。
+- [在 Duaer 里检索 PANTHER](https://skills.duaer.com/zh/panther.md): 在 Duaer 里在 PANTHER 查阅基因信息。一次成功查询用 1 额度。
+- [在 Duaer 里检索 PATO](https://skills.duaer.com/zh/pato.md): 在 Duaer 里经 PATO 检索表型质量术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 EDAM](https://skills.duaer.com/zh/edam.md): 在 Duaer 里经 EDAM 检索生物信息学术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 BAO](https://skills.duaer.com/zh/bao.md): 在 Duaer 里经 BAO 检索生物测定本体术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 BTO](https://skills.duaer.com/zh/bto.md): 在 Duaer 里经 BTO 检索组织术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 PW](https://skills.duaer.com/zh/pw.md): 在 Duaer 里经 PW 检索通路本体术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 VO](https://skills.duaer.com/zh/vo.md): 在 Duaer 里经 VO 检索疫苗本体术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 OncoTree](https://skills.duaer.com/zh/oncotree.md): 在 Duaer 里在 OncoTree 检索肿瘤类型。一次成功查询用 1 额度。
+- [在 Duaer 里检索 IDR](https://skills.duaer.com/zh/idr.md): 在 Duaer 里在 IDR 浏览成像项目。一次成功查询用 1 额度。
+- [在 Duaer 里检索 HCA](https://skills.duaer.com/zh/hca.md): 在 Duaer 里检索人类细胞图谱项目。一次成功查询用 1 额度。
+- [在 Duaer 里检索 UCSC](https://skills.duaer.com/zh/ucsc.md): 在 Duaer 里检索 UCSC 基因组组装。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Harmonizome](https://skills.duaer.com/zh/harmonizome.md): 在 Duaer 里在 Harmonizome 查阅基因注释。一次成功查询用 1 额度。
+- [在 Duaer 里检索 PubTator](https://skills.duaer.com/zh/pubtator.md): 在 Duaer 里在 PubTator 自动补全生医实体。一次成功查询用 1 额度。
+- [在 Duaer 里检索 iCite](https://skills.duaer.com/zh/icite.md): 在 Duaer 里在 iCite 查阅 NIH 相对引用比。一次成功查询用 1 额度。
+- [在 Duaer 里检索 ROR](https://skills.duaer.com/zh/ror.md): 在 Duaer 里在 ROR 检索研究机构。一次成功查询用 1 额度。
+- [在 Duaer 里检索 OpenAlex Authors](https://skills.duaer.com/zh/openalex-authors.md): 在 Duaer 里在 OpenAlex 检索作者。一次成功查询用 1 额度。
+- [在 Duaer 里检索 OpenAlex Institutions](https://skills.duaer.com/zh/openalex-institutions.md): 在 Duaer 里在 OpenAlex 检索机构。一次成功查询用 1 额度。
+- [在 Duaer 里检索 OpenAlex Topics](https://skills.duaer.com/zh/openalex-topics.md): 在 Duaer 里在 OpenAlex 检索主题。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Crossref Funders](https://skills.duaer.com/zh/crossref-funders.md): 在 Duaer 里在 Crossref 检索资助方。一次成功查询用 1 额度。
+- [在 Duaer 里检索 NSF Awards](https://skills.duaer.com/zh/nsf-awards.md): 在 Duaer 里检索 NSF 资助项目。一次成功查询用 1 额度。
+- [在 Duaer 里检索 EVA](https://skills.duaer.com/zh/eva.md): 在 Duaer 里在 EVA 浏览变异研究。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Ensembl VEP](https://skills.duaer.com/zh/ensembl-vep.md): 在 Duaer 里用 Ensembl VEP 预测变异效应。一次成功查询用 1 额度。
+- [在 Duaer 里检索 NCBI Datasets](https://skills.duaer.com/zh/ncbi-datasets.md): 在 Duaer 里在 NCBI Datasets 查阅基因。一次成功查询用 1 额度。
+- [在 Duaer 里检索 4DN](https://skills.duaer.com/zh/4dn.md): 在 Duaer 里检索 4D Nucleome 文献。一次成功查询用 1 额度。
+- [在 Duaer 里检索 RGD](https://skills.duaer.com/zh/rgd.md): 在 Duaer 里在 RGD 查阅大鼠基因。一次成功查询用 1 额度。
+- [在 Duaer 里检索 SGD](https://skills.duaer.com/zh/sgd.md): 在 Duaer 里在 SGD 查阅酵母基因。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Nextstrain](https://skills.duaer.com/zh/nextstrain.md): 在 Duaer 里在 Nextstrain 检索病原数据集。一次成功查询用 1 额度。
+- [在 Duaer 里检索 MedlinePlus](https://skills.duaer.com/zh/medlineplus.md): 在 Duaer 里在 MedlinePlus 查阅消费者健康主题。一次成功查询用 1 额度。
+- [在 Duaer 里检索 ICD-10](https://skills.duaer.com/zh/icd10.md): 在 Duaer 里经 ClinicalTables 检索 ICD-10-CM 编码。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Bioregistry](https://skills.duaer.com/zh/bioregistry.md): 在 Duaer 里在 Bioregistry 检索前缀注册表。一次成功查询用 1 额度。
+- [在 Duaer 里检索 bio.tools](https://skills.duaer.com/zh/bio-tools.md): 在 Duaer 里在 bio.tools 检索生信工具。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Dockstore](https://skills.duaer.com/zh/dockstore.md): 在 Duaer 里在 Dockstore 检索工作流。一次成功查询用 1 额度。
+- [在 Duaer 里检索 WorkflowHub](https://skills.duaer.com/zh/workflowhub.md): 在 Duaer 里在 WorkflowHub 检索工作流。一次成功查询用 1 额度。
+- [在 Duaer 里检索 DOAJ](https://skills.duaer.com/zh/doaj.md): 在 Duaer 里在 DOAJ 检索开放获取文章。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Wikidata](https://skills.duaer.com/zh/wikidata.md): 在 Duaer 里在 Wikidata 检索实体。一次成功查询用 1 额度。
+- [在 Duaer 里检索 NodeNorm](https://skills.duaer.com/zh/node-norm.md): 在 Duaer 里经 SRI NodeNorm 规范化生医 Curie。一次成功查询用 1 额度。
+- [在 Duaer 里检索 NameResolver](https://skills.duaer.com/zh/name-resolver.md): 在 Duaer 里经 SRI Name Resolver 解析生医名称。一次成功查询用 1 额度。
+- [在 Duaer 里检索 GBIF](https://skills.duaer.com/zh/gbif.md): 在 Duaer 里在 GBIF 检索物种。一次成功查询用 1 额度。
+- [在 Duaer 里检索 ITIS](https://skills.duaer.com/zh/itis.md): 在 Duaer 里在 ITIS 检索分类学。一次成功查询用 1 额度。
+- [在 Duaer 里检索 WoRMS](https://skills.duaer.com/zh/worms.md): 在 Duaer 里在 WoRMS 检索海洋物种。一次成功查询用 1 额度。
+- [在 Duaer 里检索 iNaturalist](https://skills.duaer.com/zh/inaturalist.md): 在 Duaer 里在 iNaturalist 检索分类单元。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
