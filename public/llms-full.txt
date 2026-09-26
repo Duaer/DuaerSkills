@@ -233,6 +233,16 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search ChecklistBank in Duaer](https://skills.duaer.com/checklistbank.md): In Duaer, search Catalogue of Life names in ChecklistBank. One successful search uses 1 credit.
 - [Search TogoVar in Duaer](https://skills.duaer.com/togovar.md): In Duaer, search TogoVar Japanese genome variants by rsID or gene. One successful search uses 1 credit.
 - [Search PubMed in Duaer](https://skills.duaer.com/pubmed.md): In Duaer, search PubMed literature via NCBI E-utilities. One successful search uses 1 credit.
+- [Search PECO in Duaer](https://skills.duaer.com/peco.md): In Duaer, search Plant Experimental Conditions Ontology terms in OLS. One successful search uses 1 credit.
+- [Search NBO in Duaer](https://skills.duaer.com/nbo.md): In Duaer, search Neuro Behavior Ontology terms in OLS. One successful search uses 1 credit.
+- [Search GENO in Duaer](https://skills.duaer.com/geno.md): In Duaer, search Genotype Ontology terms in OLS. One successful search uses 1 credit.
+- [Search SYMP in Duaer](https://skills.duaer.com/symp.md): In Duaer, search Symptom Ontology terms in OLS. One successful search uses 1 credit.
+- [Search uPheno in Duaer](https://skills.duaer.com/upheno.md): In Duaer, search Unified Phenotype Ontology terms in OLS. One successful search uses 1 credit.
+- [Search FMA in Duaer](https://skills.duaer.com/fma.md): In Duaer, search Foundational Model of Anatomy terms in OLS. One successful search uses 1 credit.
+- [Search LOINC in Duaer](https://skills.duaer.com/loinc.md): In Duaer, search LOINC laboratory and clinical terms in OLS. One successful search uses 1 credit.
+- [Search CORE in Duaer](https://skills.duaer.com/core.md): In Duaer, search open-access research works in CORE. One successful search uses 1 credit.
+- [Search Open Tree in Duaer](https://skills.duaer.com/opentree.md): In Duaer, match scientific names in Open Tree of Life. One successful search uses 1 credit.
+- [Search Europe PMC Annotations in Duaer](https://skills.duaer.com/europe-pmc-annotations.md): In Duaer, fetch Europe PMC text-mined annotations for a PubMed or PMC article. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -470,6 +480,16 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索 ChecklistBank](https://skills.duaer.com/zh/checklistbank.md): 在 Duaer 里在 ChecklistBank 检索名录生命（Catalogue of Life）名称。一次成功查询用 1 额度。
 - [在 Duaer 里检索 TogoVar](https://skills.duaer.com/zh/togovar.md): 在 Duaer 里按 rsID 或基因检索 TogoVar 日本基因组变异。一次成功查询用 1 额度。
 - [在 Duaer 里检索 PubMed](https://skills.duaer.com/zh/pubmed.md): 在 Duaer 里通过 NCBI E-utilities 检索 PubMed 文献。一次成功查询用 1 额度。
+- [在 Duaer 里检索 PECO](https://skills.duaer.com/zh/peco.md): 在 Duaer 里在 OLS 检索植物实验条件本体（PECO）术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 NBO](https://skills.duaer.com/zh/nbo.md): 在 Duaer 里在 OLS 检索神经行为本体（NBO）术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 GENO](https://skills.duaer.com/zh/geno.md): 在 Duaer 里在 OLS 检索基因型本体（GENO）术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 SYMP](https://skills.duaer.com/zh/symp.md): 在 Duaer 里在 OLS 检索症状本体（SYMP）术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 uPheno](https://skills.duaer.com/zh/upheno.md): 在 Duaer 里在 OLS 检索统一表型本体（uPheno）术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 FMA](https://skills.duaer.com/zh/fma.md): 在 Duaer 里在 OLS 检索解剖学基础模型（FMA）术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 LOINC](https://skills.duaer.com/zh/loinc.md): 在 Duaer 里在 OLS 检索 LOINC 检验与临床术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 CORE](https://skills.duaer.com/zh/core.md): 在 Duaer 里在 CORE 检索开放获取研究文献。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Open Tree](https://skills.duaer.com/zh/opentree.md): 在 Duaer 里在 Open Tree of Life 匹配学名。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Europe PMC Annotations](https://skills.duaer.com/zh/europe-pmc-annotations.md): 在 Duaer 里按 PubMed/PMC 文章编号取 Europe PMC 文本挖掘标注。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -8754,6 +8774,366 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - Provide `words` or `id`.
 - `words` — search words, such as BRCA1 breast cancer.
 - `id` — optional. Id such as 23193287.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-peco
+description: >-
+  Search Plant Experimental Conditions Ontology terms in OLS through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer PECO
+
+Search Plant Experimental Conditions Ontology terms in OLS through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/peco?words=drought&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as drought.
+- `id` — optional. Id such as PECO:0007008.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-nbo
+description: >-
+  Search Neuro Behavior Ontology terms in OLS through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer NBO
+
+Search Neuro Behavior Ontology terms in OLS through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/nbo?words=anxiety&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as anxiety.
+- `id` — optional. Id such as NBO:0000010.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-geno
+description: >-
+  Search Genotype Ontology terms in OLS through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer GENO
+
+Search Genotype Ontology terms in OLS through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/geno?words=genotype&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as genotype.
+- `id` — optional. Id such as GENO:0000000.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-symp
+description: >-
+  Search Symptom Ontology terms in OLS through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer SYMP
+
+Search Symptom Ontology terms in OLS through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/symp?words=fever&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as fever.
+- `id` — optional. Id such as SYMP:0000001.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-upheno
+description: >-
+  Search Unified Phenotype Ontology terms in OLS through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer uPheno
+
+Search Unified Phenotype Ontology terms in OLS through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/upheno?words=abnormal&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as abnormal.
+- `id` — optional. Id such as UPHENO:0001001.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-fma
+description: >-
+  Search Foundational Model of Anatomy terms in OLS through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer FMA
+
+Search Foundational Model of Anatomy terms in OLS through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/fma?words=heart&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as heart.
+- `id` — optional. Id such as FMA:7088.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-loinc
+description: >-
+  Search LOINC laboratory and clinical terms in OLS through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer LOINC
+
+Search LOINC laboratory and clinical terms in OLS through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/loinc?words=glucose&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as glucose.
+- `id` — optional. Id such as LOINC:2345-7.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-core
+description: >-
+  Search open-access research works in CORE through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer CORE
+
+Search open-access research works in CORE through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/core?words=crispr&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as crispr.
+- `id` — optional. Id such as 13120640.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-opentree
+description: >-
+  Match scientific names in Open Tree of Life through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer Open Tree
+
+Match scientific names in Open Tree of Life through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/opentree?words=Homo%20sapiens&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as Homo sapiens.
+- `id` — optional. Id such as 770315.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-europe-pmc-annotations
+description: >-
+  Fetch Europe PMC text-mined annotations for a PubMed or PMC article through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer Europe PMC Annotations
+
+Fetch Europe PMC text-mined annotations for a PubMed or PMC article through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/europe-pmc-annotations?words=23193287&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as 23193287.
+- `id` — optional. Id such as PMC3531190.
 - `limit` — optional. From 1 to 20. Default 10.
 
 ## Result

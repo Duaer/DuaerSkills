@@ -4508,6 +4508,166 @@ export const skills = [
 		}),
 	},
 
+	{
+		slug: 'peco',
+		related: ["envo","po","to"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search PECO in Duaer', zh: '在 Duaer 里检索 PECO' },
+		lede: { en: 'In Duaer, search Plant Experimental Conditions Ontology terms in OLS. One successful search uses 1 credit.', zh: '在 Duaer 里在 OLS 检索植物实验条件本体（PECO）术语。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-peco',
+			description: 'Search Plant Experimental Conditions Ontology terms in OLS through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer PECO',
+			call: 'GET https://api.duaer.com/v1/data/peco?words=drought&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as drought.","`id` — optional. Id such as PECO:0007008.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'nbo',
+		related: ["phenotypes","mp"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search NBO in Duaer', zh: '在 Duaer 里检索 NBO' },
+		lede: { en: 'In Duaer, search Neuro Behavior Ontology terms in OLS. One successful search uses 1 credit.', zh: '在 Duaer 里在 OLS 检索神经行为本体（NBO）术语。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-nbo',
+			description: 'Search Neuro Behavior Ontology terms in OLS through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer NBO',
+			call: 'GET https://api.duaer.com/v1/data/nbo?words=anxiety&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as anxiety.","`id` — optional. Id such as NBO:0000010.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'geno',
+		related: ["sequence-ontology","variants"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search GENO in Duaer', zh: '在 Duaer 里检索 GENO' },
+		lede: { en: 'In Duaer, search Genotype Ontology terms in OLS. One successful search uses 1 credit.', zh: '在 Duaer 里在 OLS 检索基因型本体（GENO）术语。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-geno',
+			description: 'Search Genotype Ontology terms in OLS through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer GENO',
+			call: 'GET https://api.duaer.com/v1/data/geno?words=genotype&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as genotype.","`id` — optional. Id such as GENO:0000000.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'symp',
+		related: ["phenotypes","diseases"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search SYMP in Duaer', zh: '在 Duaer 里检索 SYMP' },
+		lede: { en: 'In Duaer, search Symptom Ontology terms in OLS. One successful search uses 1 credit.', zh: '在 Duaer 里在 OLS 检索症状本体（SYMP）术语。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-symp',
+			description: 'Search Symptom Ontology terms in OLS through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer SYMP',
+			call: 'GET https://api.duaer.com/v1/data/symp?words=fever&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as fever.","`id` — optional. Id such as SYMP:0000001.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'upheno',
+		related: ["phenotypes","mondo"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search uPheno in Duaer', zh: '在 Duaer 里检索 uPheno' },
+		lede: { en: 'In Duaer, search Unified Phenotype Ontology terms in OLS. One successful search uses 1 credit.', zh: '在 Duaer 里在 OLS 检索统一表型本体（uPheno）术语。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-upheno',
+			description: 'Search Unified Phenotype Ontology terms in OLS through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer uPheno',
+			call: 'GET https://api.duaer.com/v1/data/upheno?words=abnormal&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as abnormal.","`id` — optional. Id such as UPHENO:0001001.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'fma',
+		related: ["uberon","cell-ontology"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search FMA in Duaer', zh: '在 Duaer 里检索 FMA' },
+		lede: { en: 'In Duaer, search Foundational Model of Anatomy terms in OLS. One successful search uses 1 credit.', zh: '在 Duaer 里在 OLS 检索解剖学基础模型（FMA）术语。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-fma',
+			description: 'Search Foundational Model of Anatomy terms in OLS through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer FMA',
+			call: 'GET https://api.duaer.com/v1/data/fma?words=heart&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as heart.","`id` — optional. Id such as FMA:7088.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'loinc',
+		related: ["rxnorm","icd10"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search LOINC in Duaer', zh: '在 Duaer 里检索 LOINC' },
+		lede: { en: 'In Duaer, search LOINC laboratory and clinical terms in OLS. One successful search uses 1 credit.', zh: '在 Duaer 里在 OLS 检索 LOINC 检验与临床术语。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-loinc',
+			description: 'Search LOINC laboratory and clinical terms in OLS through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer LOINC',
+			call: 'GET https://api.duaer.com/v1/data/loinc?words=glucose&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as glucose.","`id` — optional. Id such as LOINC:2345-7.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'core',
+		related: ["papers","pubmed","europe-pmc"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search CORE in Duaer', zh: '在 Duaer 里检索 CORE' },
+		lede: { en: 'In Duaer, search open-access research works in CORE. One successful search uses 1 credit.', zh: '在 Duaer 里在 CORE 检索开放获取研究文献。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-core',
+			description: 'Search open-access research works in CORE through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer CORE',
+			call: 'GET https://api.duaer.com/v1/data/core?words=crispr&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as crispr.","`id` — optional. Id such as 13120640.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'opentree',
+		related: ["organisms","ncbi-taxon","checklistbank"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search Open Tree in Duaer', zh: '在 Duaer 里检索 Open Tree' },
+		lede: { en: 'In Duaer, match scientific names in Open Tree of Life. One successful search uses 1 credit.', zh: '在 Duaer 里在 Open Tree of Life 匹配学名。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-opentree',
+			description: 'Match scientific names in Open Tree of Life through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Open Tree',
+			call: 'GET https://api.duaer.com/v1/data/opentree?words=Homo%20sapiens&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as Homo sapiens.","`id` — optional. Id such as 770315.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'europe-pmc-annotations',
+		related: ["europe-pmc","pubmed","papers"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search Europe PMC Annotations in Duaer', zh: '在 Duaer 里检索 Europe PMC Annotations' },
+		lede: { en: 'In Duaer, fetch Europe PMC text-mined annotations for a PubMed or PMC article. One successful search uses 1 credit.', zh: '在 Duaer 里按 PubMed/PMC 文章编号取 Europe PMC 文本挖掘标注。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-europe-pmc-annotations',
+			description: 'Fetch Europe PMC text-mined annotations for a PubMed or PMC article through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Europe PMC Annotations',
+			call: 'GET https://api.duaer.com/v1/data/europe-pmc-annotations?words=23193287&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as 23193287.","`id` — optional. Id such as PMC3531190.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
 ];
 
 export const home = {
