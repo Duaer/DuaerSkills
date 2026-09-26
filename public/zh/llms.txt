@@ -267,4 +267,8 @@
 - [在 Duaer 里检索 VariantValidator](https://skills.duaer.com/zh/variant-validator.md): 在 Duaer 里用 VariantValidator 校验 HGVS 描述。一次成功查询用 1 额度。
 - [在 Duaer 里检索 MetaboLights](https://skills.duaer.com/zh/metabolights.md): 在 Duaer 里在 MetaboLights 搜索代谢组学实验。一次成功查询用 1 额度。
 - [在 Duaer 里检索 ModelSEED](https://skills.duaer.com/zh/modelseed.md): 在 Duaer 里在 ModelSEED 搜索反应。一次成功查询用 1 额度。
+- [在 Duaer 里检索 USDA FoodData Central](https://skills.duaer.com/zh/usda-fdc.md): 在 Duaer 里在 USDA FoodData Central 搜索食品。一次成功查询用 1 额度。
+- [在 Duaer 里检索 AlphaFill](https://skills.duaer.com/zh/alphafill.md): 在 Duaer 里按 UniProt 登录号列出 AlphaFill 配体移植。一次成功查询用 1 额度。
+- [在 Duaer 里检索 PDBe](https://skills.duaer.com/zh/pdbe.md): 在 Duaer 里在 PDBe 搜索结构。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Open Food Facts](https://skills.duaer.com/zh/open-food-facts.md): 在 Duaer 里在 Open Food Facts 搜索食品。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
