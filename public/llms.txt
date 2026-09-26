@@ -225,4 +225,12 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search OSF in Duaer](https://skills.duaer.com/osf.md): In Duaer, search Open Science Framework project nodes. One successful search uses 1 credit.
 - [Search UKRI in Duaer](https://skills.duaer.com/ukri.md): In Duaer, search UK Research and Innovation Gateway to Research projects. One successful search uses 1 credit.
 - [Search Cellosaurus in Duaer](https://skills.duaer.com/cellosaurus.md): In Duaer, search the Cellosaurus cell line encyclopedia. One successful search uses 1 credit.
+- [Search BindingDB in Duaer](https://skills.duaer.com/bindingdb.md): In Duaer, search BindingDB ligand affinities by UniProt accession. One successful search uses 1 credit.
+- [Search IEDB in Duaer](https://skills.duaer.com/iedb.md): In Duaer, search IEDB immune epitopes by peptide sequence. One successful search uses 1 credit.
+- [Search MAXO in Duaer](https://skills.duaer.com/maxo.md): In Duaer, search Medical Action Ontology terms in OLS. One successful search uses 1 credit.
+- [Search ECO in Duaer](https://skills.duaer.com/eco.md): In Duaer, search Evidence and Conclusion Ontology terms in OLS. One successful search uses 1 credit.
+- [Search Rfam in Duaer](https://skills.duaer.com/rfam.md): In Duaer, search Rfam RNA families by name or accession. One successful search uses 1 credit.
+- [Search ChecklistBank in Duaer](https://skills.duaer.com/checklistbank.md): In Duaer, search Catalogue of Life names in ChecklistBank. One successful search uses 1 credit.
+- [Search TogoVar in Duaer](https://skills.duaer.com/togovar.md): In Duaer, search TogoVar Japanese genome variants by rsID or gene. One successful search uses 1 credit.
+- [Search PubMed in Duaer](https://skills.duaer.com/pubmed.md): In Duaer, search PubMed literature via NCBI E-utilities. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
