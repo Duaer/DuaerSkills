@@ -249,4 +249,9 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search miRNA in Duaer](https://skills.duaer.com/mirna.md): In Duaer, search microRNA entries in RNAcentral. One successful search uses 1 credit.
 - [Search HumanMine in Duaer](https://skills.duaer.com/humanmine.md): In Duaer, search human genes and related entities in HumanMine. One successful search uses 1 credit.
 - [Search RegulomeDB in Duaer](https://skills.duaer.com/regulomedb.md): In Duaer, score regulatory evidence for a variant in RegulomeDB. One successful search uses 1 credit.
+- [Search CIViC in Duaer](https://skills.duaer.com/civic.md): In Duaer, search clinical interpretation features in CIViC. One successful search uses 1 credit.
+- [Search OmicsDI in Duaer](https://skills.duaer.com/omicsdi.md): In Duaer, search multi-omics datasets in OmicsDI. One successful search uses 1 credit.
+- [Search GTEx expression in Duaer](https://skills.duaer.com/gtex-expression.md): In Duaer, look up GTEx median tissue expression for a gene. One successful search uses 1 credit.
+- [Search BioModels in Duaer](https://skills.duaer.com/biomodels.md): In Duaer, search systems biology models in EBI BioModels. One successful search uses 1 credit.
+- [Search Open Targets drugs in Duaer](https://skills.duaer.com/ot-drugs.md): In Duaer, search drug entities in Open Targets. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.

@@ -249,6 +249,11 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search miRNA in Duaer](https://skills.duaer.com/mirna.md): In Duaer, search microRNA entries in RNAcentral. One successful search uses 1 credit.
 - [Search HumanMine in Duaer](https://skills.duaer.com/humanmine.md): In Duaer, search human genes and related entities in HumanMine. One successful search uses 1 credit.
 - [Search RegulomeDB in Duaer](https://skills.duaer.com/regulomedb.md): In Duaer, score regulatory evidence for a variant in RegulomeDB. One successful search uses 1 credit.
+- [Search CIViC in Duaer](https://skills.duaer.com/civic.md): In Duaer, search clinical interpretation features in CIViC. One successful search uses 1 credit.
+- [Search OmicsDI in Duaer](https://skills.duaer.com/omicsdi.md): In Duaer, search multi-omics datasets in OmicsDI. One successful search uses 1 credit.
+- [Search GTEx expression in Duaer](https://skills.duaer.com/gtex-expression.md): In Duaer, look up GTEx median tissue expression for a gene. One successful search uses 1 credit.
+- [Search BioModels in Duaer](https://skills.duaer.com/biomodels.md): In Duaer, search systems biology models in EBI BioModels. One successful search uses 1 credit.
+- [Search Open Targets drugs in Duaer](https://skills.duaer.com/ot-drugs.md): In Duaer, search drug entities in Open Targets. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -502,6 +507,11 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索 miRNA](https://skills.duaer.com/zh/mirna.md): 在 Duaer 里在 RNAcentral 检索 microRNA 条目。一次成功查询用 1 额度。
 - [在 Duaer 里检索 HumanMine](https://skills.duaer.com/zh/humanmine.md): 在 Duaer 里在 HumanMine 检索人类基因及相关实体。一次成功查询用 1 额度。
 - [在 Duaer 里检索 RegulomeDB](https://skills.duaer.com/zh/regulomedb.md): 在 Duaer 里在 RegulomeDB 评分变异的调控证据。一次成功查询用 1 额度。
+- [在 Duaer 里检索 CIViC](https://skills.duaer.com/zh/civic.md): 在 Duaer 里在 CIViC 搜索临床解读特征。一次成功查询用 1 额度。
+- [在 Duaer 里检索 OmicsDI](https://skills.duaer.com/zh/omicsdi.md): 在 Duaer 里在 OmicsDI 搜索多组学数据集。一次成功查询用 1 额度。
+- [在 Duaer 里检索 GTEx expression](https://skills.duaer.com/zh/gtex-expression.md): 在 Duaer 里查询基因在 GTEx 各组织的中位表达。一次成功查询用 1 额度。
+- [在 Duaer 里检索 BioModels](https://skills.duaer.com/zh/biomodels.md): 在 Duaer 里在 EBI BioModels 搜索系统生物学模型。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Open Targets drugs](https://skills.duaer.com/zh/ot-drugs.md): 在 Duaer 里在 Open Targets 搜索药物实体。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -9368,6 +9378,186 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - Provide `words` or `id`.
 - `words` — search words, such as rs33980857.
 - `id` — optional. Id such as chr1:1000205-1000205.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-civic
+description: >-
+  Search clinical interpretation features in CIViC through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer CIViC
+
+Search clinical interpretation features in CIViC through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/civic?words=BRAF&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as BRAF.
+- `id` — optional. Feature name such as BRAF.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-omicsdi
+description: >-
+  Search multi-omics datasets in OmicsDI through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer OmicsDI
+
+Search multi-omics datasets in OmicsDI through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/omicsdi?words=BRCA1&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as BRCA1.
+- `id` — optional. Dataset id such as MTBLS12109.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-gtex-expression
+description: >-
+  Look up GTEx median tissue expression for a gene through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer GTEx expression
+
+Look up GTEx median tissue expression for a gene through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/gtex-expression?words=BRCA1&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — gene symbol, such as BRCA1.
+- `id` — optional. Gencode id such as ENSG00000012048.20.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-biomodels
+description: >-
+  Search systems biology models in EBI BioModels through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer BioModels
+
+Search systems biology models in EBI BioModels through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/biomodels?words=apoptosis&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as apoptosis.
+- `id` — optional. Model id such as BIOMD0000000001.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-ot-drugs
+description: >-
+  Search drug entities in Open Targets through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer Open Targets drugs
+
+Search drug entities in Open Targets through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/ot-drugs?words=imatinib&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as imatinib.
+- `id` — optional. ChEMBL id such as CHEMBL941.
 - `limit` — optional. From 1 to 20. Default 10.
 
 ## Result

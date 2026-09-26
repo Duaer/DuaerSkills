@@ -4807,6 +4807,87 @@ Acceptance: https://doc.duaer.com/getting-started/accept-deliverables/
 		}),
 	},
 
+
+	{
+		slug: 'civic',
+		related: ["variants","clinvar","gwas"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search CIViC in Duaer', zh: '在 Duaer 里检索 CIViC' },
+		lede: { en: 'In Duaer, search clinical interpretation features in CIViC. One successful search uses 1 credit.', zh: '在 Duaer 里在 CIViC 搜索临床解读特征。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-civic',
+			description: 'Search clinical interpretation features in CIViC through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer CIViC',
+			call: 'GET https://api.duaer.com/v1/data/civic?words=BRAF&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as BRAF.","`id` — optional. Feature name such as BRAF.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'omicsdi',
+		related: ["geo","pride","expression-atlas"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search OmicsDI in Duaer', zh: '在 Duaer 里检索 OmicsDI' },
+		lede: { en: 'In Duaer, search multi-omics datasets in OmicsDI. One successful search uses 1 credit.', zh: '在 Duaer 里在 OmicsDI 搜索多组学数据集。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-omicsdi',
+			description: 'Search multi-omics datasets in OmicsDI through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer OmicsDI',
+			call: 'GET https://api.duaer.com/v1/data/omicsdi?words=BRCA1&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as BRCA1.","`id` — optional. Dataset id such as MTBLS12109.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'gtex-expression',
+		related: ["gtex-eqtl","expression","atlas"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search GTEx expression in Duaer', zh: '在 Duaer 里检索 GTEx expression' },
+		lede: { en: 'In Duaer, look up GTEx median tissue expression for a gene. One successful search uses 1 credit.', zh: '在 Duaer 里查询基因在 GTEx 各组织的中位表达。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-gtex-expression',
+			description: 'Look up GTEx median tissue expression for a gene through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer GTEx expression',
+			call: 'GET https://api.duaer.com/v1/data/gtex-expression?words=BRCA1&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — gene symbol, such as BRCA1.","`id` — optional. Gencode id such as ENSG00000012048.20.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'biomodels',
+		related: ["pathways","reactions","bigg"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search BioModels in Duaer', zh: '在 Duaer 里检索 BioModels' },
+		lede: { en: 'In Duaer, search systems biology models in EBI BioModels. One successful search uses 1 credit.', zh: '在 Duaer 里在 EBI BioModels 搜索系统生物学模型。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-biomodels',
+			description: 'Search systems biology models in EBI BioModels through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer BioModels',
+			call: 'GET https://api.duaer.com/v1/data/biomodels?words=apoptosis&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as apoptosis.","`id` — optional. Model id such as BIOMD0000000001.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'ot-drugs',
+		related: ["targets","chembl","drug-gene"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search Open Targets drugs in Duaer', zh: '在 Duaer 里检索 Open Targets drugs' },
+		lede: { en: 'In Duaer, search drug entities in Open Targets. One successful search uses 1 credit.', zh: '在 Duaer 里在 Open Targets 搜索药物实体。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-ot-drugs',
+			description: 'Search drug entities in Open Targets through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Open Targets drugs',
+			call: 'GET https://api.duaer.com/v1/data/ot-drugs?words=imatinib&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as imatinib.","`id` — optional. ChEMBL id such as CHEMBL941.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
 ];
 
 export const home = {
