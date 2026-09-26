@@ -1,0 +1,41 @@
+> Index: [llms.txt](https://skills.duaer.com/llms.txt). This skill: https://skills.duaer.com/lotus.md
+
+---
+name: duaer-lotus
+description: >-
+  Search natural products in LOTUS through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer LOTUS
+
+Search natural products in LOTUS through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/lotus?words=caffeine&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as caffeine.
+- `id` — optional. Id such as LTS0000001.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related skills
+
+- [Search compounds in Duaer](https://skills.duaer.com/compounds.md)

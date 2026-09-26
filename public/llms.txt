@@ -158,4 +158,64 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search ITIS in Duaer](https://skills.duaer.com/itis.md): In Duaer, search taxonomy in ITIS. One successful search uses 1 credit.
 - [Search WoRMS in Duaer](https://skills.duaer.com/worms.md): In Duaer, search marine species in WoRMS. One successful search uses 1 credit.
 - [Search iNaturalist in Duaer](https://skills.duaer.com/inaturalist.md): In Duaer, search taxa in iNaturalist. One successful search uses 1 credit.
+- [Search DisProt in Duaer](https://skills.duaer.com/disprot.md): In Duaer, search intrinsically disordered proteins in DisProt. One successful search uses 1 credit.
+- [Search LOTUS in Duaer](https://skills.duaer.com/lotus.md): In Duaer, search natural products in LOTUS. One successful search uses 1 credit.
+- [Search LINCS in Duaer](https://skills.duaer.com/lincs.md): In Duaer, search LINCS portal datasets. One successful search uses 1 credit.
+- [Search CELLxGENE in Duaer](https://skills.duaer.com/cellxgene.md): In Duaer, search CELLxGENE collections. One successful search uses 1 credit.
+- [Search MG-RAST in Duaer](https://skills.duaer.com/mgrast.md): In Duaer, search MG-RAST metagenome projects. One successful search uses 1 credit.
+- [Search Galaxy in Duaer](https://skills.duaer.com/galaxy.md): In Duaer, search Galaxy tools and version. One successful search uses 1 credit.
+- [Search nf-core in Duaer](https://skills.duaer.com/nf-core.md): In Duaer, search nf-core pipelines. One successful search uses 1 credit.
+- [Search re3data in Duaer](https://skills.duaer.com/re3data.md): In Duaer, search research data repositories in re3data. One successful search uses 1 credit.
+- [Search arXiv in Duaer](https://skills.duaer.com/arxiv.md): In Duaer, search preprints on arXiv. One successful search uses 1 credit.
+- [Search HAL in Duaer](https://skills.duaer.com/hal.md): In Duaer, search open archive documents in HAL. One successful search uses 1 credit.
+- [Search Hugging Face in Duaer](https://skills.duaer.com/huggingface.md): In Duaer, search models on Hugging Face. One successful search uses 1 credit.
+- [Search OpenAIRE in Duaer](https://skills.duaer.com/openaire.md): In Duaer, search publications in OpenAIRE. One successful search uses 1 credit.
+- [Search Harvard Dataverse in Duaer](https://skills.duaer.com/harvard-dataverse.md): In Duaer, search datasets in Harvard Dataverse. One successful search uses 1 credit.
+- [Search DOAJ Journals in Duaer](https://skills.duaer.com/doaj-journals.md): In Duaer, search open access journals in DOAJ. One successful search uses 1 credit.
+- [Search OpenAlex Sources in Duaer](https://skills.duaer.com/openalex-sources.md): In Duaer, search sources in OpenAlex. One successful search uses 1 credit.
+- [Search OpenAlex Funders in Duaer](https://skills.duaer.com/openalex-funders.md): In Duaer, search funders in OpenAlex. One successful search uses 1 credit.
+- [Search OpenAlex Publishers in Duaer](https://skills.duaer.com/openalex-publishers.md): In Duaer, search publishers in OpenAlex. One successful search uses 1 credit.
+- [Search OpenAlex Concepts in Duaer](https://skills.duaer.com/openalex-concepts.md): In Duaer, search concepts in OpenAlex. One successful search uses 1 credit.
+- [Search OpenFDA Device UDI in Duaer](https://skills.duaer.com/device-udi.md): In Duaer, search FDA device UDI records. One successful search uses 1 credit.
+- [Search OpenFDA Device PMA in Duaer](https://skills.duaer.com/device-pma.md): In Duaer, search FDA device PMA approvals. One successful search uses 1 credit.
+- [Search OpenFDA Device Recall in Duaer](https://skills.duaer.com/device-recall.md): In Duaer, search FDA device recalls. One successful search uses 1 credit.
+- [Search OpenFDA Device Class in Duaer](https://skills.duaer.com/device-classification.md): In Duaer, search FDA device classifications. One successful search uses 1 credit.
+- [Search OpenFDA Animal Events in Duaer](https://skills.duaer.com/animal-events.md): In Duaer, search FDA animal drug adverse events. One successful search uses 1 credit.
+- [Search OpenFDA Food Events in Duaer](https://skills.duaer.com/food-events.md): In Duaer, search FDA food adverse events. One successful search uses 1 credit.
+- [Search OpenFDA Tobacco in Duaer](https://skills.duaer.com/tobacco.md): In Duaer, search FDA tobacco problem reports. One successful search uses 1 credit.
+- [Search RxTerms in Duaer](https://skills.duaer.com/rxterms.md): In Duaer, search drug terms in RxTerms. One successful search uses 1 credit.
+- [Search NCBI Assembly in Duaer](https://skills.duaer.com/ncbi-assembly.md): In Duaer, search genome assemblies in NCBI. One successful search uses 1 credit.
+- [Search NCBI BioProject in Duaer](https://skills.duaer.com/ncbi-bioproject.md): In Duaer, search BioProjects in NCBI. One successful search uses 1 credit.
+- [Search NCBI SRA in Duaer](https://skills.duaer.com/ncbi-sra.md): In Duaer, search sequencing runs in NCBI SRA. One successful search uses 1 credit.
+- [Search NCBI GTR in Duaer](https://skills.duaer.com/ncbi-gtr.md): In Duaer, search genetic tests in NCBI GTR. One successful search uses 1 credit.
+- [Search NCBI MedGen in Duaer](https://skills.duaer.com/ncbi-medgen.md): In Duaer, search MedGen concepts in NCBI. One successful search uses 1 credit.
+- [Search NCBI Variation in Duaer](https://skills.duaer.com/ncbi-variation.md): In Duaer, look up RefSNP records in NCBI Variation. One successful search uses 1 credit.
+- [Search dbVar in Duaer](https://skills.duaer.com/dbvar.md): In Duaer, search structural variants in dbVar. One successful search uses 1 credit.
+- [Search HomoloGene in Duaer](https://skills.duaer.com/homologene.md): In Duaer, search gene homologs in HomoloGene. One successful search uses 1 credit.
+- [Search GTEx eQTL in Duaer](https://skills.duaer.com/gtex-eqtl.md): In Duaer, search single-tissue eQTLs in GTEx. One successful search uses 1 credit.
+- [Search SCOP in Duaer](https://skills.duaer.com/scop.md): In Duaer, search SCOP domain mappings via PDBe. One successful search uses 1 credit.
+- [Search PomBase in Duaer](https://skills.duaer.com/pombase.md): In Duaer, look up fission yeast genes in PomBase. One successful search uses 1 credit.
+- [Search MGI in Duaer](https://skills.duaer.com/mgi.md): In Duaer, search mouse genes in MGI. One successful search uses 1 credit.
+- [Search CLO in Duaer](https://skills.duaer.com/clo.md): In Duaer, search cell line ontology terms via CLO. One successful search uses 1 credit.
+- [Search ECTO in Duaer](https://skills.duaer.com/ecto.md): In Duaer, search environmental exposure terms via ECTO. One successful search uses 1 credit.
+- [Search RO in Duaer](https://skills.duaer.com/ro.md): In Duaer, search relation ontology terms via RO. One successful search uses 1 credit.
+- [Search FBbt in Duaer](https://skills.duaer.com/fbbt.md): In Duaer, search Drosophila anatomy via FBbt. One successful search uses 1 credit.
+- [Search ZFA in Duaer](https://skills.duaer.com/zfa.md): In Duaer, search zebrafish anatomy via ZFA. One successful search uses 1 credit.
+- [Search WBbt in Duaer](https://skills.duaer.com/wbbt.md): In Duaer, search C. elegans anatomy via WBbt. One successful search uses 1 credit.
+- [Search XAO in Duaer](https://skills.duaer.com/xao.md): In Duaer, search Xenopus anatomy via XAO. One successful search uses 1 credit.
+- [Search ENVO in Duaer](https://skills.duaer.com/envo.md): In Duaer, search environment terms via ENVO. One successful search uses 1 credit.
+- [Search FOODON in Duaer](https://skills.duaer.com/foodon.md): In Duaer, search food ontology terms via FOODON. One successful search uses 1 credit.
+- [Search OAE in Duaer](https://skills.duaer.com/oae.md): In Duaer, search adverse event terms via OAE. One successful search uses 1 credit.
+- [Search IDO in Duaer](https://skills.duaer.com/ido.md): In Duaer, search infectious disease terms via IDO. One successful search uses 1 credit.
+- [Search CIDO in Duaer](https://skills.duaer.com/cido.md): In Duaer, search coronavirus terms via CIDO. One successful search uses 1 credit.
+- [Search AGRO in Duaer](https://skills.duaer.com/agro.md): In Duaer, search agronomy terms via AGRO. One successful search uses 1 credit.
+- [Search PO in Duaer](https://skills.duaer.com/po.md): In Duaer, search plant ontology terms via PO. One successful search uses 1 credit.
+- [Search TO in Duaer](https://skills.duaer.com/to.md): In Duaer, search plant trait terms via TO. One successful search uses 1 credit.
+- [Search CHMO in Duaer](https://skills.duaer.com/chmo.md): In Duaer, search chemical methods via CHMO. One successful search uses 1 credit.
+- [Search MS in Duaer](https://skills.duaer.com/ms.md): In Duaer, search mass spectrometry terms via MS. One successful search uses 1 credit.
+- [Search STATO in Duaer](https://skills.duaer.com/stato.md): In Duaer, search statistics terms via STATO. One successful search uses 1 credit.
+- [Search DUO in Duaer](https://skills.duaer.com/duo.md): In Duaer, search data use ontology terms via DUO. One successful search uses 1 credit.
+- [Search IAO in Duaer](https://skills.duaer.com/iao.md): In Duaer, search information artifact terms via IAO. One successful search uses 1 credit.
+- [Search SIO in Duaer](https://skills.duaer.com/sio.md): In Duaer, search semantics science terms via SIO. One successful search uses 1 credit.
+- [Search CHEMINF in Duaer](https://skills.duaer.com/cheminf.md): In Duaer, search chemical information terms via CHEMINF. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
