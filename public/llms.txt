@@ -85,4 +85,14 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search ChEBI in Duaer](https://skills.duaer.com/chebi.md): In Duaer, search chemical entities via ChEBI. One successful search uses 1 credit.
 - [Search NCIt in Duaer](https://skills.duaer.com/ncit.md): In Duaer, search clinical terms via NCI Thesaurus. One successful search uses 1 credit.
 - [Search Pfam in Duaer](https://skills.duaer.com/pfam.md): In Duaer, search Pfam protein families. One successful search uses 1 credit.
+- [Search EMDB in Duaer](https://skills.duaer.com/emdb.md): In Duaer, search cryo-EM structures in EMDB. One successful search uses 1 credit.
+- [Search UniParc in Duaer](https://skills.duaer.com/uniparc.md): In Duaer, search the UniParc sequence archive. One successful search uses 1 credit.
+- [Search Europe PMC in Duaer](https://skills.duaer.com/europe-pmc.md): In Duaer, search life-science literature in Europe PMC. One successful search uses 1 credit.
+- [Search ORCID in Duaer](https://skills.duaer.com/orcid.md): In Duaer, search researchers in ORCID. One successful search uses 1 credit.
+- [Search Protein Ontology in Duaer](https://skills.duaer.com/protein-ontology.md): In Duaer, search protein entities via Protein Ontology. One successful search uses 1 credit.
+- [Search OBI in Duaer](https://skills.duaer.com/obi.md): In Duaer, search assay terms via OBI. One successful search uses 1 credit.
+- [Search MPATH in Duaer](https://skills.duaer.com/mpath.md): In Duaer, search pathology terms via MPATH. One successful search uses 1 credit.
+- [Search Crossref in Duaer](https://skills.duaer.com/crossref.md): In Duaer, search scholarly works in Crossref. One successful search uses 1 credit.
+- [Search MyChem in Duaer](https://skills.duaer.com/mychem.md): In Duaer, search aggregated compound annotations in MyChem. One successful search uses 1 credit.
+- [Search Drugs@FDA in Duaer](https://skills.duaer.com/drugs-fda.md): In Duaer, search FDA-approved drug applications. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.

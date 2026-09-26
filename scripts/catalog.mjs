@@ -2140,6 +2140,166 @@ export const skills = [
 		}),
 	},
 
+	{
+		slug: 'emdb',
+		related: ["structures","alphafold","pride"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search EMDB in Duaer', zh: '在 Duaer 里检索 EMDB' },
+		lede: { en: 'In Duaer, search cryo-EM structures in EMDB. One successful search uses 1 credit.', zh: '在 Duaer 里检索 EMDB 冷冻电镜结构。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-emdb',
+			description: 'Search cryo-EM structures in EMDB through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer EMDB',
+			call: 'GET https://api.duaer.com/v1/data/emdb?words=insulin&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as insulin.","`id` — optional. Id such as EMD-74236.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'uniparc',
+		related: ["proteins","pfam","domains"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search UniParc in Duaer', zh: '在 Duaer 里检索 UniParc' },
+		lede: { en: 'In Duaer, search the UniParc sequence archive. One successful search uses 1 credit.', zh: '在 Duaer 里检索 UniParc 序列档案。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-uniparc',
+			description: 'Search UniParc protein sequence archive through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer UniParc',
+			call: 'GET https://api.duaer.com/v1/data/uniparc?words=insulin&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as insulin.","`id` — optional. Id such as UPI000C3A63FD.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'europe-pmc',
+		related: ["papers","preprints","crossref"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search Europe PMC in Duaer', zh: '在 Duaer 里检索 Europe PMC' },
+		lede: { en: 'In Duaer, search life-science literature in Europe PMC. One successful search uses 1 credit.', zh: '在 Duaer 里经 Europe PMC 检索生医文献。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-europe-pmc',
+			description: 'Search life-science literature in Europe PMC through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Europe PMC',
+			call: 'GET https://api.duaer.com/v1/data/europe-pmc?words=BRCA1&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as BRCA1.","`id` — optional. Id such as 42757486.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'orcid',
+		related: ["papers","europe-pmc","crossref"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search ORCID in Duaer', zh: '在 Duaer 里检索 ORCID' },
+		lede: { en: 'In Duaer, search researchers in ORCID. One successful search uses 1 credit.', zh: '在 Duaer 里检索 ORCID 研究者。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-orcid',
+			description: 'Search researchers in ORCID through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer ORCID',
+			call: 'GET https://api.duaer.com/v1/data/orcid?words=family-name%3ASmith&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as family-name:Smith.","`id` — optional. Id such as 0000-0003-1660-3511.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'protein-ontology',
+		related: ["proteins","chebi","gene-ontology"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search Protein Ontology in Duaer', zh: '在 Duaer 里检索 Protein Ontology' },
+		lede: { en: 'In Duaer, search protein entities via Protein Ontology. One successful search uses 1 credit.', zh: '在 Duaer 里经 Protein Ontology 检索蛋白实体。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-protein-ontology',
+			description: 'Search protein entities via Protein Ontology through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Protein Ontology',
+			call: 'GET https://api.duaer.com/v1/data/protein-ontology?words=insulin&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as insulin.","`id` — optional. Id such as PR:000003276.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'obi',
+		related: ["assays","expression-atlas","geo"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search OBI in Duaer', zh: '在 Duaer 里检索 OBI' },
+		lede: { en: 'In Duaer, search assay terms via OBI. One successful search uses 1 credit.', zh: '在 Duaer 里经 OBI 检索实验测定术语。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-obi',
+			description: 'Search assay terms via Ontology for Biomedical Investigations through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer OBI',
+			call: 'GET https://api.duaer.com/v1/data/obi?words=assay&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as assay.","`id` — optional. Id such as OBI:0000070.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'mpath',
+		related: ["ncit","mondo","doid"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search MPATH in Duaer', zh: '在 Duaer 里检索 MPATH' },
+		lede: { en: 'In Duaer, search pathology terms via MPATH. One successful search uses 1 credit.', zh: '在 Duaer 里经 MPATH 检索病理术语。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-mpath',
+			description: 'Search pathology terms via MPATH through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer MPATH',
+			call: 'GET https://api.duaer.com/v1/data/mpath?words=inflammation&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as inflammation.","`id` — optional. Id such as MPATH:212.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'crossref',
+		related: ["papers","europe-pmc","preprints"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search Crossref in Duaer', zh: '在 Duaer 里检索 Crossref' },
+		lede: { en: 'In Duaer, search scholarly works in Crossref. One successful search uses 1 credit.', zh: '在 Duaer 里经 Crossref 检索学术作品。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-crossref',
+			description: 'Search scholarly works in Crossref through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Crossref',
+			call: 'GET https://api.duaer.com/v1/data/crossref?words=BRCA1&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as BRCA1.","`id` — optional. Id such as 10.1038/nature12373.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'mychem',
+		related: ["compounds","chebi","chembl"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search MyChem in Duaer', zh: '在 Duaer 里检索 MyChem' },
+		lede: { en: 'In Duaer, search aggregated compound annotations in MyChem. One successful search uses 1 credit.', zh: '在 Duaer 里经 MyChem 检索化合物聚合注释。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-mychem',
+			description: 'Search aggregated compound annotations in MyChem through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer MyChem',
+			call: 'GET https://api.duaer.com/v1/data/mychem?words=aspirin&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as aspirin.","`id` — optional. Id such as CHEBI:15365.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'drugs-fda',
+		related: ["ndc","drug-labels","drug-recalls"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search Drugs@FDA in Duaer', zh: '在 Duaer 里检索 Drugs@FDA' },
+		lede: { en: 'In Duaer, search FDA-approved drug applications. One successful search uses 1 credit.', zh: '在 Duaer 里检索 FDA 批准药品申请。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-drugs-fda',
+			description: 'Search FDA-approved drug applications through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Drugs@FDA',
+			call: 'GET https://api.duaer.com/v1/data/drugs-fda?words=aspirin&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as aspirin.","`id` — optional. Id such as ANDA075141.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
 ];
 
 export const home = {
