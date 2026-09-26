@@ -233,4 +233,14 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search ChecklistBank in Duaer](https://skills.duaer.com/checklistbank.md): In Duaer, search Catalogue of Life names in ChecklistBank. One successful search uses 1 credit.
 - [Search TogoVar in Duaer](https://skills.duaer.com/togovar.md): In Duaer, search TogoVar Japanese genome variants by rsID or gene. One successful search uses 1 credit.
 - [Search PubMed in Duaer](https://skills.duaer.com/pubmed.md): In Duaer, search PubMed literature via NCBI E-utilities. One successful search uses 1 credit.
+- [Search PECO in Duaer](https://skills.duaer.com/peco.md): In Duaer, search Plant Experimental Conditions Ontology terms in OLS. One successful search uses 1 credit.
+- [Search NBO in Duaer](https://skills.duaer.com/nbo.md): In Duaer, search Neuro Behavior Ontology terms in OLS. One successful search uses 1 credit.
+- [Search GENO in Duaer](https://skills.duaer.com/geno.md): In Duaer, search Genotype Ontology terms in OLS. One successful search uses 1 credit.
+- [Search SYMP in Duaer](https://skills.duaer.com/symp.md): In Duaer, search Symptom Ontology terms in OLS. One successful search uses 1 credit.
+- [Search uPheno in Duaer](https://skills.duaer.com/upheno.md): In Duaer, search Unified Phenotype Ontology terms in OLS. One successful search uses 1 credit.
+- [Search FMA in Duaer](https://skills.duaer.com/fma.md): In Duaer, search Foundational Model of Anatomy terms in OLS. One successful search uses 1 credit.
+- [Search LOINC in Duaer](https://skills.duaer.com/loinc.md): In Duaer, search LOINC laboratory and clinical terms in OLS. One successful search uses 1 credit.
+- [Search CORE in Duaer](https://skills.duaer.com/core.md): In Duaer, search open-access research works in CORE. One successful search uses 1 credit.
+- [Search Open Tree in Duaer](https://skills.duaer.com/opentree.md): In Duaer, match scientific names in Open Tree of Life. One successful search uses 1 credit.
+- [Search Europe PMC Annotations in Duaer](https://skills.duaer.com/europe-pmc-annotations.md): In Duaer, fetch Europe PMC text-mined annotations for a PubMed or PMC article. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
