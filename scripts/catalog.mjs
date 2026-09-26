@@ -4668,6 +4668,86 @@ export const skills = [
 		}),
 	},
 
+	{
+		slug: 'bigg',
+		related: ["metabolites","reactions","kegg"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search BiGG in Duaer', zh: '在 Duaer 里检索 BiGG' },
+		lede: { en: 'In Duaer, search BiGG Models metabolites, genes, and genome-scale models. One successful search uses 1 credit.', zh: '在 Duaer 里在 BiGG Models 检索代谢物、基因与基因组规模模型。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-bigg',
+			description: 'Search BiGG Models metabolites, genes, and genome-scale models through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer BiGG',
+			call: 'GET https://api.duaer.com/v1/data/bigg?words=glucose&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as glucose.","`id` — optional. Id such as glc__D.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'gnomad',
+		related: ["variants","clinvar","dbsnp"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search gnomAD in Duaer', zh: '在 Duaer 里检索 gnomAD' },
+		lede: { en: 'In Duaer, look up a gene symbol in gnomAD (GRCh38). One successful search uses 1 credit.', zh: '在 Duaer 里在 gnomAD（GRCh38）按基因符号查询。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-gnomad',
+			description: 'Look up a gene symbol in gnomAD (GRCh38) through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer gnomAD',
+			call: 'GET https://api.duaer.com/v1/data/gnomad?words=PCSK9&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as PCSK9.","`id` — optional. Id such as BRCA1.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'mirna',
+		related: ["rnacentral","rfam","genes"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search miRNA in Duaer', zh: '在 Duaer 里检索 miRNA' },
+		lede: { en: 'In Duaer, search microRNA entries in RNAcentral. One successful search uses 1 credit.', zh: '在 Duaer 里在 RNAcentral 检索 microRNA 条目。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-mirna',
+			description: 'Search microRNA entries in RNAcentral through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer miRNA',
+			call: 'GET https://api.duaer.com/v1/data/mirna?words=hsa-miR-21&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as hsa-miR-21.","`id` — optional. Id such as URS000075C808.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'humanmine',
+		related: ["genes","proteins","monarch"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search HumanMine in Duaer', zh: '在 Duaer 里检索 HumanMine' },
+		lede: { en: 'In Duaer, search human genes and related entities in HumanMine. One successful search uses 1 credit.', zh: '在 Duaer 里在 HumanMine 检索人类基因及相关实体。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-humanmine',
+			description: 'Search human genes and related entities in HumanMine through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer HumanMine',
+			call: 'GET https://api.duaer.com/v1/data/humanmine?words=BRCA1&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as BRCA1.","`id` — optional. Id such as 1205471.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'regulomedb',
+		related: ["variants","dbsnp","encode"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search RegulomeDB in Duaer', zh: '在 Duaer 里检索 RegulomeDB' },
+		lede: { en: 'In Duaer, score regulatory evidence for a variant in RegulomeDB. One successful search uses 1 credit.', zh: '在 Duaer 里在 RegulomeDB 评分变异的调控证据。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-regulomedb',
+			description: 'Score regulatory evidence for a variant in RegulomeDB through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer RegulomeDB',
+			call: 'GET https://api.duaer.com/v1/data/regulomedb?words=rs33980857&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as rs33980857.","`id` — optional. Id such as chr1:1000205-1000205.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
 ];
 
 export const home = {

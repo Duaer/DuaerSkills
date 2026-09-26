@@ -243,4 +243,9 @@
 - [在 Duaer 里检索 CORE](https://skills.duaer.com/zh/core.md): 在 Duaer 里在 CORE 检索开放获取研究文献。一次成功查询用 1 额度。
 - [在 Duaer 里检索 Open Tree](https://skills.duaer.com/zh/opentree.md): 在 Duaer 里在 Open Tree of Life 匹配学名。一次成功查询用 1 额度。
 - [在 Duaer 里检索 Europe PMC Annotations](https://skills.duaer.com/zh/europe-pmc-annotations.md): 在 Duaer 里按 PubMed/PMC 文章编号取 Europe PMC 文本挖掘标注。一次成功查询用 1 额度。
+- [在 Duaer 里检索 BiGG](https://skills.duaer.com/zh/bigg.md): 在 Duaer 里在 BiGG Models 检索代谢物、基因与基因组规模模型。一次成功查询用 1 额度。
+- [在 Duaer 里检索 gnomAD](https://skills.duaer.com/zh/gnomad.md): 在 Duaer 里在 gnomAD（GRCh38）按基因符号查询。一次成功查询用 1 额度。
+- [在 Duaer 里检索 miRNA](https://skills.duaer.com/zh/mirna.md): 在 Duaer 里在 RNAcentral 检索 microRNA 条目。一次成功查询用 1 额度。
+- [在 Duaer 里检索 HumanMine](https://skills.duaer.com/zh/humanmine.md): 在 Duaer 里在 HumanMine 检索人类基因及相关实体。一次成功查询用 1 额度。
+- [在 Duaer 里检索 RegulomeDB](https://skills.duaer.com/zh/regulomedb.md): 在 Duaer 里在 RegulomeDB 评分变异的调控证据。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
