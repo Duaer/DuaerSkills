@@ -259,4 +259,12 @@
 - [在 Duaer 里检索 GO 注释](https://skills.duaer.com/zh/goa.md): 在 Duaer 里查询基因产物的 GO 注释。一次成功查询用 1 额度。
 - [在 Duaer 里检索 PubChem Assay](https://skills.duaer.com/zh/pubchem-assay.md): 在 Duaer 里列出基因相关的 PubChem BioAssay。一次成功查询用 1 额度。
 - [在 Duaer 里检索 MassIVE](https://skills.duaer.com/zh/massive.md): 在 Duaer 里在 MassIVE 搜索蛋白质组学数据集。一次成功查询用 1 额度。
+- [在 Duaer 里检索 InterPro](https://skills.duaer.com/zh/interpro.md): 在 Duaer 里在 InterPro 搜索蛋白结构域。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Rhea](https://skills.duaer.com/zh/rhea.md): 在 Duaer 里在 Rhea 搜索生化反应。一次成功查询用 1 额度。
+- [在 Duaer 里检索 PROSITE](https://skills.duaer.com/zh/prosite.md): 在 Duaer 里按 UniProt 登录号扫描 PROSITE motif。一次成功查询用 1 额度。
+- [在 Duaer 里检索 DGIdb](https://skills.duaer.com/zh/dgidb.md): 在 Duaer 里在 DGIdb 查询基因–药物相互作用。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Mutalyzer](https://skills.duaer.com/zh/mutalyzer.md): 在 Duaer 里用 Mutalyzer 规范化 HGVS 描述。一次成功查询用 1 额度。
+- [在 Duaer 里检索 VariantValidator](https://skills.duaer.com/zh/variant-validator.md): 在 Duaer 里用 VariantValidator 校验 HGVS 描述。一次成功查询用 1 额度。
+- [在 Duaer 里检索 MetaboLights](https://skills.duaer.com/zh/metabolights.md): 在 Duaer 里在 MetaboLights 搜索代谢组学实验。一次成功查询用 1 额度。
+- [在 Duaer 里检索 ModelSEED](https://skills.duaer.com/zh/modelseed.md): 在 Duaer 里在 ModelSEED 搜索反应。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
