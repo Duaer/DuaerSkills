@@ -1720,6 +1720,363 @@ export const skills = [
 		}),
 	},
 
+	{
+		slug: 'biosamples',
+		related: ["geo","biostudies","cell-lines"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search BioSamples in Duaer', zh: '在 Duaer 里检索 BioSamples' },
+		lede: { en: 'In Duaer, search biological samples in BioSamples. One successful search uses 1 credit.', zh: '在 Duaer 里经 BioSamples 检索生物样本。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has a BioSamples accession, organism, and tax id when present.', zh: '每条结果有 BioSamples 编号、物种与税号。' },
+		skill: skill({
+			name: 'duaer-biosamples',
+			description: 'Search biological samples in BioSamples through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer BioSamples',
+			call: 'GET https://api.duaer.com/v1/data/biosamples?words=blood&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — sample words, such as blood.',
+				'`id` — optional. Accession such as SAMN00000000.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'encode',
+		related: ["geo","expression","jaspar"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search ENCODE in Duaer', zh: '在 Duaer 里检索 ENCODE' },
+		lede: { en: 'In Duaer, search functional genomics experiments in ENCODE. One successful search uses 1 credit.', zh: '在 Duaer 里经 ENCODE 检索功能基因组实验。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an ENCODE accession, assay, and status when present.', zh: '每条结果有 ENCODE 编号、实验类型与状态。' },
+		skill: skill({
+			name: 'duaer-encode',
+			description: 'Search functional genomics experiments in ENCODE through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer ENCODE',
+			call: 'GET https://api.duaer.com/v1/data/encode?words=CTCF&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — experiment words, such as CTCF.',
+				'`id` — optional. Accession such as ENCSR000EJV.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'pathway-commons',
+		related: ["pathways","interactions","kegg"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search Pathway Commons in Duaer', zh: '在 Duaer 里检索 Pathway Commons' },
+		lede: { en: 'In Duaer, search pathways in Pathway Commons. One successful search uses 1 credit.', zh: '在 Duaer 里经 Pathway Commons 检索通路。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has a pathway name, URI, and data source when present.', zh: '每条结果有通路名、URI 与数据源。' },
+		skill: skill({
+			name: 'duaer-pathway-commons',
+			description: 'Search pathways in Pathway Commons through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Pathway Commons',
+			call: 'GET https://api.duaer.com/v1/data/pathway-commons?words=TP53&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — pathway words, such as TP53.',
+				'`id` — optional. Query such as TP53.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'alliance',
+		related: ["genes","orthologs","hgnc"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search Alliance genes in Duaer', zh: '在 Duaer 里检索 Alliance 基因' },
+		lede: { en: 'In Duaer, search genes in the Alliance of Genome Resources. One successful search uses 1 credit.', zh: '在 Duaer 里经 Alliance of Genome Resources 检索基因。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has a gene id, symbol, and species when present.', zh: '每条结果有基因编号、符号与物种。' },
+		skill: skill({
+			name: 'duaer-alliance',
+			description: 'Search genes in the Alliance of Genome Resources through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Alliance',
+			call: 'GET https://api.duaer.com/v1/data/alliance?words=BRCA1&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — gene words, such as BRCA1.',
+				'`id` — optional. Gene id such as HGNC:1100.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'clinvar',
+		related: ["variants","dbsnp","gwas"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search ClinVar in Duaer', zh: '在 Duaer 里检索 ClinVar' },
+		lede: { en: 'In Duaer, search clinical variants in ClinVar. One successful search uses 1 credit.', zh: '在 Duaer 里经 ClinVar 检索临床变异。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has a ClinVar accession, gene, and clinical significance when present.', zh: '每条结果有 ClinVar 编号、基因与临床意义。' },
+		skill: skill({
+			name: 'duaer-clinvar',
+			description: 'Search clinical variants in ClinVar through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer ClinVar',
+			call: 'GET https://api.duaer.com/v1/data/clinvar?words=BRCA1&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — gene or variant words, such as BRCA1.',
+				'`id` — optional. ClinVar uid or accession.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'dbsnp',
+		related: ["variants","clinvar","gwas"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search dbSNP in Duaer', zh: '在 Duaer 里检索 dbSNP' },
+		lede: { en: 'In Duaer, search variant ids in dbSNP. One successful search uses 1 credit.', zh: '在 Duaer 里经 dbSNP 检索变异位点。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an rs id, chromosome, and gene when present.', zh: '每条结果有 rs 编号、染色体与基因。' },
+		skill: skill({
+			name: 'duaer-dbsnp',
+			description: 'Search variant ids in dbSNP through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer dbSNP',
+			call: 'GET https://api.duaer.com/v1/data/dbsnp?words=BRCA1&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — gene words, such as BRCA1.',
+				'`id` — optional. rs id such as rs56116432.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'jaspar',
+		related: ["encode","genes","gene-ontology"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search JASPAR in Duaer', zh: '在 Duaer 里检索 JASPAR' },
+		lede: { en: 'In Duaer, search TF binding motifs in JASPAR. One successful search uses 1 credit.', zh: '在 Duaer 里经 JASPAR 检索转录因子结合模体。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has a JASPAR matrix id, name, and collection when present.', zh: '每条结果有 JASPAR 矩阵编号、名称与集合。' },
+		skill: skill({
+			name: 'duaer-jaspar',
+			description: 'Search TF binding motifs in JASPAR through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer JASPAR',
+			call: 'GET https://api.duaer.com/v1/data/jaspar?words=TP53&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — TF words, such as TP53.',
+				'`id` — optional. Matrix id such as MA0106.1.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'cbioportal',
+		related: ["gdc","gwas","variants"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search cBioPortal in Duaer', zh: '在 Duaer 里检索 cBioPortal' },
+		lede: { en: 'In Duaer, search cancer genomics studies in cBioPortal. One successful search uses 1 credit.', zh: '在 Duaer 里经 cBioPortal 检索癌症基因组研究。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has a study id, cancer type, and sample count when present.', zh: '每条结果有研究编号、癌种与样本数。' },
+		skill: skill({
+			name: 'duaer-cbioportal',
+			description: 'Search cancer genomics studies in cBioPortal through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer cBioPortal',
+			call: 'GET https://api.duaer.com/v1/data/cbioportal?words=brca&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — study words, such as brca.',
+				'`id` — optional. Study id such as brca_tcga.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'gdc',
+		related: ["cbioportal","gwas","trials"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search GDC in Duaer', zh: '在 Duaer 里检索 GDC' },
+		lede: { en: 'In Duaer, search NCI GDC cancer projects. One successful search uses 1 credit.', zh: '在 Duaer 里经 NCI GDC 检索癌症项目。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has a GDC project id, primary site, and disease type when present.', zh: '每条结果有 GDC 项目编号、原发部位与疾病类型。' },
+		skill: skill({
+			name: 'duaer-gdc',
+			description: 'Search NCI GDC cancer projects through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer GDC',
+			call: 'GET https://api.duaer.com/v1/data/gdc?words=breast&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — project words, such as breast.',
+				'`id` — optional. Project id such as TCGA-BRCA.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'expression-atlas',
+		related: ["expression","geo","single-cell-atlas"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search Expression Atlas in Duaer', zh: '在 Duaer 里检索 Expression Atlas' },
+		lede: { en: 'In Duaer, search bulk expression experiments in Expression Atlas. One successful search uses 1 credit.', zh: '在 Duaer 里经 Expression Atlas 检索表达实验。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an experiment accession, species, and type when present.', zh: '每条结果有实验编号、物种与类型。' },
+		skill: skill({
+			name: 'duaer-expression-atlas',
+			description: 'Search bulk expression experiments in Expression Atlas through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Expression Atlas',
+			call: 'GET https://api.duaer.com/v1/data/expression-atlas?words=human%20liver&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — experiment words, such as human liver.',
+				'`id` — optional. Accession such as E-MTAB-5214.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'single-cell-atlas',
+		related: ["expression-atlas","expression","cell-ontology"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search Single Cell Atlas in Duaer', zh: '在 Duaer 里检索单细胞表达图谱' },
+		lede: { en: 'In Duaer, search single-cell experiments in Single Cell Expression Atlas. One successful search uses 1 credit.', zh: '在 Duaer 里经 Single Cell Expression Atlas 检索单细胞实验。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an experiment accession, species, and assay count when present.', zh: '每条结果有实验编号、物种与 assay 数。' },
+		skill: skill({
+			name: 'duaer-single-cell-atlas',
+			description: 'Search single-cell experiments in Single Cell Expression Atlas through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Single Cell Atlas',
+			call: 'GET https://api.duaer.com/v1/data/single-cell-atlas?words=lung&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — experiment words, such as lung.',
+				'`id` — optional. Accession such as E-HCAD-14.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'ndc',
+		related: ["rxnorm","drug-labels","adverse-events"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search NDC in Duaer', zh: '在 Duaer 里检索 NDC' },
+		lede: { en: 'In Duaer, search drug NDC records in OpenFDA. One successful search uses 1 credit.', zh: '在 Duaer 里经 OpenFDA 检索药品 NDC。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has a product NDC, brand, and generic name when present.', zh: '每条结果有产品 NDC、商品名与通用名。' },
+		skill: skill({
+			name: 'duaer-ndc',
+			description: 'Search drug NDC records in OpenFDA through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer NDC',
+			call: 'GET https://api.duaer.com/v1/data/ndc?words=tylenol&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — brand words, such as tylenol.',
+				'`id` — optional. Product NDC such as 50580-176.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'device-events',
+		related: ["adverse-events","ndc","drug-recalls"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search device events in Duaer', zh: '在 Duaer 里检索器械不良事件' },
+		lede: { en: 'In Duaer, search device adverse events in OpenFDA. One successful search uses 1 credit.', zh: '在 Duaer 里经 OpenFDA 检索器械不良事件。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has a report id, brand, and event type when present.', zh: '每条结果有报告编号、品牌与事件类型。' },
+		skill: skill({
+			name: 'duaer-device-events',
+			description: 'Search device adverse events in OpenFDA through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Device events',
+			call: 'GET https://api.duaer.com/v1/data/device-events?words=insulin&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — device words, such as insulin.',
+				'`id` — optional. Report number.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'sequence-ontology',
+		related: ["gene-ontology","ensembl","rnacentral"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search Sequence Ontology in Duaer', zh: '在 Duaer 里检索 Sequence Ontology' },
+		lede: { en: 'In Duaer, search sequence feature terms via Sequence Ontology. One successful search uses 1 credit.', zh: '在 Duaer 里经 Sequence Ontology 检索序列特征术语。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an SO id, label, and description when present.', zh: '每条结果有 SO 编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-sequence-ontology',
+			description: 'Search sequence feature terms via Sequence Ontology through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Sequence Ontology',
+			call: 'GET https://api.duaer.com/v1/data/sequence-ontology?words=exon&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — feature words, such as exon.',
+				'`id` — optional. SO id such as SO:0000147.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'doid',
+		related: ["mondo","diseases","orphanet"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search DOID in Duaer', zh: '在 Duaer 里检索 DOID' },
+		lede: { en: 'In Duaer, search disease terms via DOID. One successful search uses 1 credit.', zh: '在 Duaer 里经 DOID 检索疾病术语。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has a DOID, label, and description when present.', zh: '每条结果有 DOID、名称与描述。' },
+		skill: skill({
+			name: 'duaer-doid',
+			description: 'Search disease terms via DOID through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer DOID',
+			call: 'GET https://api.duaer.com/v1/data/doid?words=asthma&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — disease words, such as asthma.',
+				'`id` — optional. DOID such as DOID:2841.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'ncbi-taxon',
+		related: ["organisms","alliance","uberon"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search NCBI Taxonomy in Duaer', zh: '在 Duaer 里检索 NCBI Taxonomy' },
+		lede: { en: 'In Duaer, search taxa via NCBI Taxonomy ontology. One successful search uses 1 credit.', zh: '在 Duaer 里经 NCBI Taxonomy 本体检索物种。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has a taxonomy id, label, and synonyms when present.', zh: '每条结果有分类编号、名称与同义词。' },
+		skill: skill({
+			name: 'duaer-ncbi-taxon',
+			description: 'Search taxa via NCBI Taxonomy ontology through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer NCBI Taxonomy',
+			call: 'GET https://api.duaer.com/v1/data/ncbi-taxon?words=Homo%20sapiens&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — taxon words, such as Homo sapiens.',
+				'`id` — optional. NCBITaxon id such as NCBITaxon:9606.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
+	{
+		slug: 'glygen',
+		related: ["metabolites","compounds","reactions"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search GlyGen in Duaer', zh: '在 Duaer 里检索 GlyGen' },
+		lede: { en: 'In Duaer, look up glycans in GlyGen by GlyTouCan id. One successful search uses 1 credit.', zh: '在 Duaer 里经 GlyGen 按 GlyTouCan 编号查阅糖链。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has a GlyTouCan accession, mass, and IUPAC when present.', zh: '每条结果有 GlyTouCan 编号、质量与 IUPAC。' },
+		skill: skill({
+			name: 'duaer-glygen',
+			description: 'Look up glycans in GlyGen by GlyTouCan id through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer GlyGen',
+			call: 'GET https://api.duaer.com/v1/data/glygen?id=G00054MO&limit=10',
+			fields: [
+				'Provide `words` or `id`.',
+				'`words` — GlyTouCan accession, such as G00054MO.',
+				'`id` — optional. GlyTouCan accession such as G00054MO.',
+				'`limit` — optional. From 1 to 20. Default 10.',
+			],
+		}),
+	},
+
 ];
 
 export const home = {

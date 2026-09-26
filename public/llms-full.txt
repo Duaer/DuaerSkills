@@ -65,6 +65,23 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search MyDisease in Duaer](https://skills.duaer.com/mydisease.md): In Duaer, search disease annotations in MyDisease. One successful search uses 1 credit.
 - [Search metabolomics studies in Duaer](https://skills.duaer.com/metabolomics.md): In Duaer, search metabolomics studies in Metabolomics Workbench. One successful search uses 1 credit.
 - [Search IntAct in Duaer](https://skills.duaer.com/intact.md): In Duaer, search molecular interactions in IntAct. One successful search uses 1 credit.
+- [Search BioSamples in Duaer](https://skills.duaer.com/biosamples.md): In Duaer, search biological samples in BioSamples. One successful search uses 1 credit.
+- [Search ENCODE in Duaer](https://skills.duaer.com/encode.md): In Duaer, search functional genomics experiments in ENCODE. One successful search uses 1 credit.
+- [Search Pathway Commons in Duaer](https://skills.duaer.com/pathway-commons.md): In Duaer, search pathways in Pathway Commons. One successful search uses 1 credit.
+- [Search Alliance genes in Duaer](https://skills.duaer.com/alliance.md): In Duaer, search genes in the Alliance of Genome Resources. One successful search uses 1 credit.
+- [Search ClinVar in Duaer](https://skills.duaer.com/clinvar.md): In Duaer, search clinical variants in ClinVar. One successful search uses 1 credit.
+- [Search dbSNP in Duaer](https://skills.duaer.com/dbsnp.md): In Duaer, search variant ids in dbSNP. One successful search uses 1 credit.
+- [Search JASPAR in Duaer](https://skills.duaer.com/jaspar.md): In Duaer, search TF binding motifs in JASPAR. One successful search uses 1 credit.
+- [Search cBioPortal in Duaer](https://skills.duaer.com/cbioportal.md): In Duaer, search cancer genomics studies in cBioPortal. One successful search uses 1 credit.
+- [Search GDC in Duaer](https://skills.duaer.com/gdc.md): In Duaer, search NCI GDC cancer projects. One successful search uses 1 credit.
+- [Search Expression Atlas in Duaer](https://skills.duaer.com/expression-atlas.md): In Duaer, search bulk expression experiments in Expression Atlas. One successful search uses 1 credit.
+- [Search Single Cell Atlas in Duaer](https://skills.duaer.com/single-cell-atlas.md): In Duaer, search single-cell experiments in Single Cell Expression Atlas. One successful search uses 1 credit.
+- [Search NDC in Duaer](https://skills.duaer.com/ndc.md): In Duaer, search drug NDC records in OpenFDA. One successful search uses 1 credit.
+- [Search device events in Duaer](https://skills.duaer.com/device-events.md): In Duaer, search device adverse events in OpenFDA. One successful search uses 1 credit.
+- [Search Sequence Ontology in Duaer](https://skills.duaer.com/sequence-ontology.md): In Duaer, search sequence feature terms via Sequence Ontology. One successful search uses 1 credit.
+- [Search DOID in Duaer](https://skills.duaer.com/doid.md): In Duaer, search disease terms via DOID. One successful search uses 1 credit.
+- [Search NCBI Taxonomy in Duaer](https://skills.duaer.com/ncbi-taxon.md): In Duaer, search taxa via NCBI Taxonomy ontology. One successful search uses 1 credit.
+- [Search GlyGen in Duaer](https://skills.duaer.com/glygen.md): In Duaer, look up glycans in GlyGen by GlyTouCan id. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -134,6 +151,23 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索 MyDisease](https://skills.duaer.com/zh/mydisease.md): 在 Duaer 里经 MyDisease 检索疾病注释。一次成功查询用 1 额度。
 - [在 Duaer 里检索代谢组学研究](https://skills.duaer.com/zh/metabolomics.md): 在 Duaer 里经 Metabolomics Workbench 检索代谢组学研究。一次成功查询用 1 额度。
 - [在 Duaer 里检索 IntAct](https://skills.duaer.com/zh/intact.md): 在 Duaer 里经 IntAct 检索分子互作。一次成功查询用 1 额度。
+- [在 Duaer 里检索 BioSamples](https://skills.duaer.com/zh/biosamples.md): 在 Duaer 里经 BioSamples 检索生物样本。一次成功查询用 1 额度。
+- [在 Duaer 里检索 ENCODE](https://skills.duaer.com/zh/encode.md): 在 Duaer 里经 ENCODE 检索功能基因组实验。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Pathway Commons](https://skills.duaer.com/zh/pathway-commons.md): 在 Duaer 里经 Pathway Commons 检索通路。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Alliance 基因](https://skills.duaer.com/zh/alliance.md): 在 Duaer 里经 Alliance of Genome Resources 检索基因。一次成功查询用 1 额度。
+- [在 Duaer 里检索 ClinVar](https://skills.duaer.com/zh/clinvar.md): 在 Duaer 里经 ClinVar 检索临床变异。一次成功查询用 1 额度。
+- [在 Duaer 里检索 dbSNP](https://skills.duaer.com/zh/dbsnp.md): 在 Duaer 里经 dbSNP 检索变异位点。一次成功查询用 1 额度。
+- [在 Duaer 里检索 JASPAR](https://skills.duaer.com/zh/jaspar.md): 在 Duaer 里经 JASPAR 检索转录因子结合模体。一次成功查询用 1 额度。
+- [在 Duaer 里检索 cBioPortal](https://skills.duaer.com/zh/cbioportal.md): 在 Duaer 里经 cBioPortal 检索癌症基因组研究。一次成功查询用 1 额度。
+- [在 Duaer 里检索 GDC](https://skills.duaer.com/zh/gdc.md): 在 Duaer 里经 NCI GDC 检索癌症项目。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Expression Atlas](https://skills.duaer.com/zh/expression-atlas.md): 在 Duaer 里经 Expression Atlas 检索表达实验。一次成功查询用 1 额度。
+- [在 Duaer 里检索单细胞表达图谱](https://skills.duaer.com/zh/single-cell-atlas.md): 在 Duaer 里经 Single Cell Expression Atlas 检索单细胞实验。一次成功查询用 1 额度。
+- [在 Duaer 里检索 NDC](https://skills.duaer.com/zh/ndc.md): 在 Duaer 里经 OpenFDA 检索药品 NDC。一次成功查询用 1 额度。
+- [在 Duaer 里检索器械不良事件](https://skills.duaer.com/zh/device-events.md): 在 Duaer 里经 OpenFDA 检索器械不良事件。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Sequence Ontology](https://skills.duaer.com/zh/sequence-ontology.md): 在 Duaer 里经 Sequence Ontology 检索序列特征术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 DOID](https://skills.duaer.com/zh/doid.md): 在 Duaer 里经 DOID 检索疾病术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 NCBI Taxonomy](https://skills.duaer.com/zh/ncbi-taxon.md): 在 Duaer 里经 NCBI Taxonomy 本体检索物种。一次成功查询用 1 额度。
+- [在 Duaer 里检索 GlyGen](https://skills.duaer.com/zh/glygen.md): 在 Duaer 里经 GlyGen 按 GlyTouCan 编号查阅糖链。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -2370,6 +2404,618 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - Provide `words` or `id`.
 - `words` — gene or protein words, such as tp53.
 - `id` — optional. Interactor id such as P04637.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-biosamples
+description: >-
+  Search biological samples in BioSamples through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer BioSamples
+
+Search biological samples in BioSamples through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/biosamples?words=blood&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — sample words, such as blood.
+- `id` — optional. Accession such as SAMN00000000.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-encode
+description: >-
+  Search functional genomics experiments in ENCODE through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer ENCODE
+
+Search functional genomics experiments in ENCODE through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/encode?words=CTCF&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — experiment words, such as CTCF.
+- `id` — optional. Accession such as ENCSR000EJV.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-pathway-commons
+description: >-
+  Search pathways in Pathway Commons through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer Pathway Commons
+
+Search pathways in Pathway Commons through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/pathway-commons?words=TP53&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — pathway words, such as TP53.
+- `id` — optional. Query such as TP53.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-alliance
+description: >-
+  Search genes in the Alliance of Genome Resources through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer Alliance
+
+Search genes in the Alliance of Genome Resources through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/alliance?words=BRCA1&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — gene words, such as BRCA1.
+- `id` — optional. Gene id such as HGNC:1100.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-clinvar
+description: >-
+  Search clinical variants in ClinVar through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer ClinVar
+
+Search clinical variants in ClinVar through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/clinvar?words=BRCA1&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — gene or variant words, such as BRCA1.
+- `id` — optional. ClinVar uid or accession.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-dbsnp
+description: >-
+  Search variant ids in dbSNP through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer dbSNP
+
+Search variant ids in dbSNP through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/dbsnp?words=BRCA1&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — gene words, such as BRCA1.
+- `id` — optional. rs id such as rs56116432.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-jaspar
+description: >-
+  Search TF binding motifs in JASPAR through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer JASPAR
+
+Search TF binding motifs in JASPAR through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/jaspar?words=TP53&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — TF words, such as TP53.
+- `id` — optional. Matrix id such as MA0106.1.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-cbioportal
+description: >-
+  Search cancer genomics studies in cBioPortal through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer cBioPortal
+
+Search cancer genomics studies in cBioPortal through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/cbioportal?words=brca&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — study words, such as brca.
+- `id` — optional. Study id such as brca_tcga.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-gdc
+description: >-
+  Search NCI GDC cancer projects through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer GDC
+
+Search NCI GDC cancer projects through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/gdc?words=breast&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — project words, such as breast.
+- `id` — optional. Project id such as TCGA-BRCA.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-expression-atlas
+description: >-
+  Search bulk expression experiments in Expression Atlas through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer Expression Atlas
+
+Search bulk expression experiments in Expression Atlas through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/expression-atlas?words=human%20liver&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — experiment words, such as human liver.
+- `id` — optional. Accession such as E-MTAB-5214.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-single-cell-atlas
+description: >-
+  Search single-cell experiments in Single Cell Expression Atlas through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer Single Cell Atlas
+
+Search single-cell experiments in Single Cell Expression Atlas through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/single-cell-atlas?words=lung&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — experiment words, such as lung.
+- `id` — optional. Accession such as E-HCAD-14.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-ndc
+description: >-
+  Search drug NDC records in OpenFDA through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer NDC
+
+Search drug NDC records in OpenFDA through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/ndc?words=tylenol&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — brand words, such as tylenol.
+- `id` — optional. Product NDC such as 50580-176.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-device-events
+description: >-
+  Search device adverse events in OpenFDA through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer Device events
+
+Search device adverse events in OpenFDA through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/device-events?words=insulin&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — device words, such as insulin.
+- `id` — optional. Report number.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-sequence-ontology
+description: >-
+  Search sequence feature terms via Sequence Ontology through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer Sequence Ontology
+
+Search sequence feature terms via Sequence Ontology through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/sequence-ontology?words=exon&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — feature words, such as exon.
+- `id` — optional. SO id such as SO:0000147.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-doid
+description: >-
+  Search disease terms via DOID through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer DOID
+
+Search disease terms via DOID through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/doid?words=asthma&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — disease words, such as asthma.
+- `id` — optional. DOID such as DOID:2841.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-ncbi-taxon
+description: >-
+  Search taxa via NCBI Taxonomy ontology through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer NCBI Taxonomy
+
+Search taxa via NCBI Taxonomy ontology through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/ncbi-taxon?words=Homo%20sapiens&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — taxon words, such as Homo sapiens.
+- `id` — optional. NCBITaxon id such as NCBITaxon:9606.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-glygen
+description: >-
+  Look up glycans in GlyGen by GlyTouCan id through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer GlyGen
+
+Look up glycans in GlyGen by GlyTouCan id through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/glygen?id=G00054MO&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — GlyTouCan accession, such as G00054MO.
+- `id` — optional. GlyTouCan accession such as G00054MO.
 - `limit` — optional. From 1 to 20. Default 10.
 
 ## Result

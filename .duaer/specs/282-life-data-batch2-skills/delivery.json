@@ -1,0 +1,8 @@
+{
+  "status": "accepted",
+  "acceptedAt": "2026-09-26",
+  "verification": {
+    "levels": ["L0-render", "L1-deploy-smoke"],
+    "commands": ["node scripts/render.mjs", "npx wrangler deploy"]
+  }
+}
