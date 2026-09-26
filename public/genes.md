@@ -50,3 +50,4 @@ A missing key returns 401.
 - [Search tissue atlas in Duaer](https://skills.duaer.com/atlas.md)
 - [Search GEO in Duaer](https://skills.duaer.com/geo.md)
 - [Search drug–gene interactions in Duaer](https://skills.duaer.com/drug-gene.md)
+- [Life research brief employee in Duaer](https://skills.duaer.com/life-research-brief.md)

@@ -6,6 +6,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 
 ## Skills
 
+- [Life research brief employee in Duaer](https://skills.duaer.com/life-research-brief.md): In Duaer, hire the Life research brief digital employee: papers, genes, and variants into one acceptable brief.
 - [Search papers in Duaer](https://skills.duaer.com/papers.md): In Duaer, search published papers. One successful search uses 1 credit.
 - [Search proteins in Duaer](https://skills.duaer.com/proteins.md): In Duaer, search genes and proteins. One successful search uses 1 credit.
 - [Search clinical trials in Duaer](https://skills.duaer.com/trials.md): In Duaer, search clinical trials. One successful search uses 1 credit.

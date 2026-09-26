@@ -6,6 +6,7 @@
 
 ## 技能
 
+- [Duaer 生命科学文献简报员工](https://skills.duaer.com/zh/life-research-brief.md): 在 Duaer 里雇佣生命科学文献简报数字员工：论文、基因与变异合成一份可验收简报。
 - [在 Duaer 里检索论文](https://skills.duaer.com/zh/papers.md): 在 Duaer 里检索已发表论文。一次成功查询用 1 额度。
 - [在 Duaer 里检索基因和蛋白](https://skills.duaer.com/zh/proteins.md): 在 Duaer 里检索基因和蛋白。一次成功查询用 1 额度。
 - [在 Duaer 里检索临床试验](https://skills.duaer.com/zh/trials.md): 在 Duaer 里检索临床试验。一次成功查询用 1 额度。

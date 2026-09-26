@@ -53,3 +53,4 @@ A missing key returns 401.
 - [Search preprints in Duaer](https://skills.duaer.com/preprints.md)
 - [Search grants in Duaer](https://skills.duaer.com/grants.md)
 - [Search patents in Duaer](https://skills.duaer.com/patents.md)
+- [Life research brief employee in Duaer](https://skills.duaer.com/life-research-brief.md)

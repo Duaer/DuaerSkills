@@ -45,3 +45,4 @@ A missing key returns 401.
 - [在 Duaer 里检索基因](https://skills.duaer.com/zh/genes.md)
 - [在 Duaer 里检索疾病](https://skills.duaer.com/zh/diseases.md)
 - [在 Duaer 里检索基因和蛋白](https://skills.duaer.com/zh/proteins.md)
+- [Duaer 生命科学文献简报员工](https://skills.duaer.com/zh/life-research-brief.md)
