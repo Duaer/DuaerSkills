@@ -274,6 +274,14 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search STRING enrichment in Duaer](https://skills.duaer.com/string-enrichment.md): In Duaer, run STRING functional enrichment for gene symbols. One successful search uses 1 credit.
 - [Search Foldseek in Duaer](https://skills.duaer.com/foldseek.md): In Duaer, list Foldseek searchable structure databases. One successful search uses 1 credit.
 - [Search Ensembl homology in Duaer](https://skills.duaer.com/ensembl-homology.md): In Duaer, list Ensembl compara orthologues for a gene symbol. One successful search uses 1 credit.
+- [Search EBI OLS in Duaer](https://skills.duaer.com/ols.md): In Duaer, search ontology terms in EBI OLS. One successful search uses 1 credit.
+- [Search RefMet in Duaer](https://skills.duaer.com/refmet.md): In Duaer, search metabolites in Metabolomics Workbench RefMet. One successful search uses 1 credit.
+- [Search WormBase in Duaer](https://skills.duaer.com/wormbase.md): In Duaer, search C. elegans genes via Alliance / WormBase. One successful search uses 1 credit.
+- [Search FlyBase in Duaer](https://skills.duaer.com/flybase.md): In Duaer, search Drosophila genes via Alliance / FlyBase. One successful search uses 1 credit.
+- [Search ZFIN in Duaer](https://skills.duaer.com/zfin.md): In Duaer, search zebrafish genes via Alliance / ZFIN. One successful search uses 1 credit.
+- [Search bioRxiv in Duaer](https://skills.duaer.com/biorxiv.md): In Duaer, search bioRxiv preprints. One successful search uses 1 credit.
+- [Search medRxiv in Duaer](https://skills.duaer.com/medrxiv.md): In Duaer, search medRxiv preprints. One successful search uses 1 credit.
+- [Search miRBase in Duaer](https://skills.duaer.com/mirbase.md): In Duaer, search miRNA entries via RNAcentral. One successful search uses 1 credit.
 - [Search Open Food Facts in Duaer](https://skills.duaer.com/open-food-facts.md): In Duaer, search products in Open Food Facts. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
@@ -553,6 +561,14 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索 STRING enrichment](https://skills.duaer.com/zh/string-enrichment.md): 在 Duaer 里对基因符号运行 STRING 功能富集。一次成功查询用 1 额度。
 - [在 Duaer 里检索 Foldseek](https://skills.duaer.com/zh/foldseek.md): 在 Duaer 里列出 Foldseek 可检索结构库。一次成功查询用 1 额度。
 - [在 Duaer 里检索 Ensembl homology](https://skills.duaer.com/zh/ensembl-homology.md): 在 Duaer 里按基因符号列出 Ensembl 同源基因。一次成功查询用 1 额度。
+- [在 Duaer 里检索 EBI OLS](https://skills.duaer.com/zh/ols.md): 在 Duaer 里在 EBI OLS 搜索本体词条。一次成功查询用 1 额度。
+- [在 Duaer 里检索 RefMet](https://skills.duaer.com/zh/refmet.md): 在 Duaer 里在 Metabolomics Workbench RefMet 搜索代谢物。一次成功查询用 1 额度。
+- [在 Duaer 里检索 WormBase](https://skills.duaer.com/zh/wormbase.md): 在 Duaer 里经 Alliance 检索秀丽隐杆线虫基因。一次成功查询用 1 额度。
+- [在 Duaer 里检索 FlyBase](https://skills.duaer.com/zh/flybase.md): 在 Duaer 里经 Alliance 检索果蝇基因。一次成功查询用 1 额度。
+- [在 Duaer 里检索 ZFIN](https://skills.duaer.com/zh/zfin.md): 在 Duaer 里经 Alliance 检索斑马鱼基因。一次成功查询用 1 额度。
+- [在 Duaer 里检索 bioRxiv](https://skills.duaer.com/zh/biorxiv.md): 在 Duaer 里检索 bioRxiv 预印本。一次成功查询用 1 额度。
+- [在 Duaer 里检索 medRxiv](https://skills.duaer.com/zh/medrxiv.md): 在 Duaer 里检索 medRxiv 预印本。一次成功查询用 1 额度。
+- [在 Duaer 里检索 miRBase](https://skills.duaer.com/zh/mirbase.md): 在 Duaer 里经 RNAcentral 检索 miRNA。一次成功查询用 1 额度。
 - [在 Duaer 里检索 Open Food Facts](https://skills.duaer.com/zh/open-food-facts.md): 在 Duaer 里在 Open Food Facts 搜索食品。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
@@ -10318,6 +10334,294 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - Provide `words` or `id`.
 - `words` — gene symbol, such as BRCA1.
 - `id` — optional. Gene symbol such as BRCA1.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-ols
+description: >-
+  Search ontology terms in EBI OLS through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer EBI OLS
+
+Search ontology terms in EBI OLS through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/ols?words=apoptosis&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — such as apoptosis.
+- `id` — optional.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-refmet
+description: >-
+  Search metabolites in Metabolomics Workbench RefMet through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer RefMet
+
+Search metabolites in Metabolomics Workbench RefMet through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/refmet?words=glucose&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — such as glucose.
+- `id` — optional.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-wormbase
+description: >-
+  Search C. elegans genes via Alliance / WormBase through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer WormBase
+
+Search C. elegans genes via Alliance / WormBase through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/wormbase?words=unc-26&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — such as unc-26.
+- `id` — optional.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-flybase
+description: >-
+  Search Drosophila genes via Alliance / FlyBase through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer FlyBase
+
+Search Drosophila genes via Alliance / FlyBase through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/flybase?words=Adh&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — such as Adh.
+- `id` — optional.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-zfin
+description: >-
+  Search zebrafish genes via Alliance / ZFIN through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer ZFIN
+
+Search zebrafish genes via Alliance / ZFIN through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/zfin?words=pax2a&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — such as pax2a.
+- `id` — optional.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-biorxiv
+description: >-
+  Search bioRxiv preprints through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer bioRxiv
+
+Search bioRxiv preprints through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/biorxiv?words=BRCA1&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — such as BRCA1.
+- `id` — optional.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-medrxiv
+description: >-
+  Search medRxiv preprints through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer medRxiv
+
+Search medRxiv preprints through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/medrxiv?words=covid&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — such as covid.
+- `id` — optional.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-mirbase
+description: >-
+  Search miRNA entries via RNAcentral through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer miRBase
+
+Search miRNA entries via RNAcentral through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/mirbase?words=hsa-let-7a&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — such as hsa-let-7a.
+- `id` — optional.
 - `limit` — optional. From 1 to 20. Default 10.
 
 ## Result
