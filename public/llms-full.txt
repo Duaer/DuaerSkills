@@ -85,6 +85,16 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search ChEBI in Duaer](https://skills.duaer.com/chebi.md): In Duaer, search chemical entities via ChEBI. One successful search uses 1 credit.
 - [Search NCIt in Duaer](https://skills.duaer.com/ncit.md): In Duaer, search clinical terms via NCI Thesaurus. One successful search uses 1 credit.
 - [Search Pfam in Duaer](https://skills.duaer.com/pfam.md): In Duaer, search Pfam protein families. One successful search uses 1 credit.
+- [Search EMDB in Duaer](https://skills.duaer.com/emdb.md): In Duaer, search cryo-EM structures in EMDB. One successful search uses 1 credit.
+- [Search UniParc in Duaer](https://skills.duaer.com/uniparc.md): In Duaer, search the UniParc sequence archive. One successful search uses 1 credit.
+- [Search Europe PMC in Duaer](https://skills.duaer.com/europe-pmc.md): In Duaer, search life-science literature in Europe PMC. One successful search uses 1 credit.
+- [Search ORCID in Duaer](https://skills.duaer.com/orcid.md): In Duaer, search researchers in ORCID. One successful search uses 1 credit.
+- [Search Protein Ontology in Duaer](https://skills.duaer.com/protein-ontology.md): In Duaer, search protein entities via Protein Ontology. One successful search uses 1 credit.
+- [Search OBI in Duaer](https://skills.duaer.com/obi.md): In Duaer, search assay terms via OBI. One successful search uses 1 credit.
+- [Search MPATH in Duaer](https://skills.duaer.com/mpath.md): In Duaer, search pathology terms via MPATH. One successful search uses 1 credit.
+- [Search Crossref in Duaer](https://skills.duaer.com/crossref.md): In Duaer, search scholarly works in Crossref. One successful search uses 1 credit.
+- [Search MyChem in Duaer](https://skills.duaer.com/mychem.md): In Duaer, search aggregated compound annotations in MyChem. One successful search uses 1 credit.
+- [Search Drugs@FDA in Duaer](https://skills.duaer.com/drugs-fda.md): In Duaer, search FDA-approved drug applications. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -174,6 +184,16 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索 ChEBI](https://skills.duaer.com/zh/chebi.md): 在 Duaer 里经 ChEBI 检索化学实体。一次成功查询用 1 额度。
 - [在 Duaer 里检索 NCIt](https://skills.duaer.com/zh/ncit.md): 在 Duaer 里经 NCI Thesaurus 检索临床术语。一次成功查询用 1 额度。
 - [在 Duaer 里检索 Pfam](https://skills.duaer.com/zh/pfam.md): 在 Duaer 里检索 Pfam 蛋白家族。一次成功查询用 1 额度。
+- [在 Duaer 里检索 EMDB](https://skills.duaer.com/zh/emdb.md): 在 Duaer 里检索 EMDB 冷冻电镜结构。一次成功查询用 1 额度。
+- [在 Duaer 里检索 UniParc](https://skills.duaer.com/zh/uniparc.md): 在 Duaer 里检索 UniParc 序列档案。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Europe PMC](https://skills.duaer.com/zh/europe-pmc.md): 在 Duaer 里经 Europe PMC 检索生医文献。一次成功查询用 1 额度。
+- [在 Duaer 里检索 ORCID](https://skills.duaer.com/zh/orcid.md): 在 Duaer 里检索 ORCID 研究者。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Protein Ontology](https://skills.duaer.com/zh/protein-ontology.md): 在 Duaer 里经 Protein Ontology 检索蛋白实体。一次成功查询用 1 额度。
+- [在 Duaer 里检索 OBI](https://skills.duaer.com/zh/obi.md): 在 Duaer 里经 OBI 检索实验测定术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 MPATH](https://skills.duaer.com/zh/mpath.md): 在 Duaer 里经 MPATH 检索病理术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Crossref](https://skills.duaer.com/zh/crossref.md): 在 Duaer 里经 Crossref 检索学术作品。一次成功查询用 1 额度。
+- [在 Duaer 里检索 MyChem](https://skills.duaer.com/zh/mychem.md): 在 Duaer 里经 MyChem 检索化合物聚合注释。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Drugs@FDA](https://skills.duaer.com/zh/drugs-fda.md): 在 Duaer 里检索 FDA 批准药品申请。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -3130,6 +3150,366 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - Provide `words` or `id`.
 - `words` — search words, such as kinase.
 - `id` — optional. Id such as PF00069.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-emdb
+description: >-
+  Search cryo-EM structures in EMDB through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer EMDB
+
+Search cryo-EM structures in EMDB through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/emdb?words=insulin&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as insulin.
+- `id` — optional. Id such as EMD-74236.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-uniparc
+description: >-
+  Search UniParc protein sequence archive through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer UniParc
+
+Search UniParc protein sequence archive through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/uniparc?words=insulin&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as insulin.
+- `id` — optional. Id such as UPI000C3A63FD.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-europe-pmc
+description: >-
+  Search life-science literature in Europe PMC through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer Europe PMC
+
+Search life-science literature in Europe PMC through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/europe-pmc?words=BRCA1&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as BRCA1.
+- `id` — optional. Id such as 42757486.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-orcid
+description: >-
+  Search researchers in ORCID through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer ORCID
+
+Search researchers in ORCID through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/orcid?words=family-name%3ASmith&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as family-name:Smith.
+- `id` — optional. Id such as 0000-0003-1660-3511.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-protein-ontology
+description: >-
+  Search protein entities via Protein Ontology through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer Protein Ontology
+
+Search protein entities via Protein Ontology through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/protein-ontology?words=insulin&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as insulin.
+- `id` — optional. Id such as PR:000003276.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-obi
+description: >-
+  Search assay terms via Ontology for Biomedical Investigations through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer OBI
+
+Search assay terms via Ontology for Biomedical Investigations through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/obi?words=assay&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as assay.
+- `id` — optional. Id such as OBI:0000070.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-mpath
+description: >-
+  Search pathology terms via MPATH through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer MPATH
+
+Search pathology terms via MPATH through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/mpath?words=inflammation&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as inflammation.
+- `id` — optional. Id such as MPATH:212.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-crossref
+description: >-
+  Search scholarly works in Crossref through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer Crossref
+
+Search scholarly works in Crossref through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/crossref?words=BRCA1&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as BRCA1.
+- `id` — optional. Id such as 10.1038/nature12373.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-mychem
+description: >-
+  Search aggregated compound annotations in MyChem through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer MyChem
+
+Search aggregated compound annotations in MyChem through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/mychem?words=aspirin&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as aspirin.
+- `id` — optional. Id such as CHEBI:15365.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-drugs-fda
+description: >-
+  Search FDA-approved drug applications through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer Drugs@FDA
+
+Search FDA-approved drug applications through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/drugs-fda?words=aspirin&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as aspirin.
+- `id` — optional. Id such as ANDA075141.
 - `limit` — optional. From 1 to 20. Default 10.
 
 ## Result
