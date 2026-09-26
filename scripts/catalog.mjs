@@ -4888,6 +4888,82 @@ Acceptance: https://doc.duaer.com/getting-started/accept-deliverables/
 		}),
 	},
 
+
+	{
+		slug: 'wikipathways',
+		related: ["pathways","reactome","kegg"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search WikiPathways in Duaer', zh: '在 Duaer 里检索 WikiPathways' },
+		lede: { en: 'In Duaer, search community pathways in WikiPathways. One successful search uses 1 credit.', zh: '在 Duaer 里在 WikiPathways 搜索社区通路。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-wikipathways',
+			description: 'Search community pathways in WikiPathways through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer WikiPathways',
+			call: 'GET https://api.duaer.com/v1/data/wikipathways?words=apoptosis&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as apoptosis.","`id` — optional. Pathway id such as WP254.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+	{
+		slug: 'panelapp',
+		related: ["genes","clinvar","civic"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search PanelApp in Duaer', zh: '在 Duaer 里检索 PanelApp' },
+		lede: { en: 'In Duaer, search gene panels in Genomics England PanelApp. One successful search uses 1 credit.', zh: '在 Duaer 里在 Genomics England PanelApp 搜索基因面板。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-panelapp',
+			description: 'Search gene panels in Genomics England PanelApp through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer PanelApp',
+			call: 'GET https://api.duaer.com/v1/data/panelapp?words=BRCA1&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — gene symbol, such as BRCA1.","`id` — optional. Gene symbol such as BRCA1.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+	{
+		slug: 'goa',
+		related: ["gene-ontology","proteins","genes"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search GO annotations in Duaer', zh: '在 Duaer 里检索 GO 注释' },
+		lede: { en: 'In Duaer, look up GO annotations for a gene product. One successful search uses 1 credit.', zh: '在 Duaer 里查询基因产物的 GO 注释。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-goa',
+			description: 'Look up GO annotations for a gene product through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer GO annotations',
+			call: 'GET https://api.duaer.com/v1/data/goa?words=BRCA1&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — gene symbol or UniProt accession, such as BRCA1.","`id` — optional. UniProt accession such as P38398.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+	{
+		slug: 'pubchem-assay',
+		related: ["assays","compounds","chembl"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search PubChem Assay in Duaer', zh: '在 Duaer 里检索 PubChem Assay' },
+		lede: { en: 'In Duaer, list PubChem BioAssays for a gene. One successful search uses 1 credit.', zh: '在 Duaer 里列出基因相关的 PubChem BioAssay。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-pubchem-assay',
+			description: 'List PubChem BioAssays for a gene through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer PubChem Assay',
+			call: 'GET https://api.duaer.com/v1/data/pubchem-assay?words=BRCA1&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — gene symbol, such as BRCA1.","`id` — optional. NCBI Gene id such as 672.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+	{
+		slug: 'massive',
+		related: ["pride","proteomexchange","proteins"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search MassIVE in Duaer', zh: '在 Duaer 里检索 MassIVE' },
+		lede: { en: 'In Duaer, search proteomics datasets in MassIVE. One successful search uses 1 credit.', zh: '在 Duaer 里在 MassIVE 搜索蛋白质组学数据集。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-massive',
+			description: 'Search proteomics datasets in MassIVE through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer MassIVE',
+			call: 'GET https://api.duaer.com/v1/data/massive?words=BRCA1&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as BRCA1.","`id` — optional. Accession such as MSV000065795.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
 ];
 
 export const home = {

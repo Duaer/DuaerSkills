@@ -254,6 +254,11 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search GTEx expression in Duaer](https://skills.duaer.com/gtex-expression.md): In Duaer, look up GTEx median tissue expression for a gene. One successful search uses 1 credit.
 - [Search BioModels in Duaer](https://skills.duaer.com/biomodels.md): In Duaer, search systems biology models in EBI BioModels. One successful search uses 1 credit.
 - [Search Open Targets drugs in Duaer](https://skills.duaer.com/ot-drugs.md): In Duaer, search drug entities in Open Targets. One successful search uses 1 credit.
+- [Search WikiPathways in Duaer](https://skills.duaer.com/wikipathways.md): In Duaer, search community pathways in WikiPathways. One successful search uses 1 credit.
+- [Search PanelApp in Duaer](https://skills.duaer.com/panelapp.md): In Duaer, search gene panels in Genomics England PanelApp. One successful search uses 1 credit.
+- [Search GO annotations in Duaer](https://skills.duaer.com/goa.md): In Duaer, look up GO annotations for a gene product. One successful search uses 1 credit.
+- [Search PubChem Assay in Duaer](https://skills.duaer.com/pubchem-assay.md): In Duaer, list PubChem BioAssays for a gene. One successful search uses 1 credit.
+- [Search MassIVE in Duaer](https://skills.duaer.com/massive.md): In Duaer, search proteomics datasets in MassIVE. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -512,6 +517,11 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索 GTEx expression](https://skills.duaer.com/zh/gtex-expression.md): 在 Duaer 里查询基因在 GTEx 各组织的中位表达。一次成功查询用 1 额度。
 - [在 Duaer 里检索 BioModels](https://skills.duaer.com/zh/biomodels.md): 在 Duaer 里在 EBI BioModels 搜索系统生物学模型。一次成功查询用 1 额度。
 - [在 Duaer 里检索 Open Targets drugs](https://skills.duaer.com/zh/ot-drugs.md): 在 Duaer 里在 Open Targets 搜索药物实体。一次成功查询用 1 额度。
+- [在 Duaer 里检索 WikiPathways](https://skills.duaer.com/zh/wikipathways.md): 在 Duaer 里在 WikiPathways 搜索社区通路。一次成功查询用 1 额度。
+- [在 Duaer 里检索 PanelApp](https://skills.duaer.com/zh/panelapp.md): 在 Duaer 里在 Genomics England PanelApp 搜索基因面板。一次成功查询用 1 额度。
+- [在 Duaer 里检索 GO 注释](https://skills.duaer.com/zh/goa.md): 在 Duaer 里查询基因产物的 GO 注释。一次成功查询用 1 额度。
+- [在 Duaer 里检索 PubChem Assay](https://skills.duaer.com/zh/pubchem-assay.md): 在 Duaer 里列出基因相关的 PubChem BioAssay。一次成功查询用 1 额度。
+- [在 Duaer 里检索 MassIVE](https://skills.duaer.com/zh/massive.md): 在 Duaer 里在 MassIVE 搜索蛋白质组学数据集。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -9558,6 +9568,186 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - Provide `words` or `id`.
 - `words` — search words, such as imatinib.
 - `id` — optional. ChEMBL id such as CHEMBL941.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-wikipathways
+description: >-
+  Search community pathways in WikiPathways through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer WikiPathways
+
+Search community pathways in WikiPathways through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/wikipathways?words=apoptosis&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as apoptosis.
+- `id` — optional. Pathway id such as WP254.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-panelapp
+description: >-
+  Search gene panels in Genomics England PanelApp through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer PanelApp
+
+Search gene panels in Genomics England PanelApp through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/panelapp?words=BRCA1&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — gene symbol, such as BRCA1.
+- `id` — optional. Gene symbol such as BRCA1.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-goa
+description: >-
+  Look up GO annotations for a gene product through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer GO annotations
+
+Look up GO annotations for a gene product through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/goa?words=BRCA1&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — gene symbol or UniProt accession, such as BRCA1.
+- `id` — optional. UniProt accession such as P38398.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-pubchem-assay
+description: >-
+  List PubChem BioAssays for a gene through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer PubChem Assay
+
+List PubChem BioAssays for a gene through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/pubchem-assay?words=BRCA1&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — gene symbol, such as BRCA1.
+- `id` — optional. NCBI Gene id such as 672.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-massive
+description: >-
+  Search proteomics datasets in MassIVE through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer MassIVE
+
+Search proteomics datasets in MassIVE through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/massive?words=BRCA1&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as BRCA1.
+- `id` — optional. Accession such as MSV000065795.
 - `limit` — optional. From 1 to 20. Default 10.
 
 ## Result

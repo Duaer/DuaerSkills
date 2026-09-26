@@ -254,4 +254,9 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search GTEx expression in Duaer](https://skills.duaer.com/gtex-expression.md): In Duaer, look up GTEx median tissue expression for a gene. One successful search uses 1 credit.
 - [Search BioModels in Duaer](https://skills.duaer.com/biomodels.md): In Duaer, search systems biology models in EBI BioModels. One successful search uses 1 credit.
 - [Search Open Targets drugs in Duaer](https://skills.duaer.com/ot-drugs.md): In Duaer, search drug entities in Open Targets. One successful search uses 1 credit.
+- [Search WikiPathways in Duaer](https://skills.duaer.com/wikipathways.md): In Duaer, search community pathways in WikiPathways. One successful search uses 1 credit.
+- [Search PanelApp in Duaer](https://skills.duaer.com/panelapp.md): In Duaer, search gene panels in Genomics England PanelApp. One successful search uses 1 credit.
+- [Search GO annotations in Duaer](https://skills.duaer.com/goa.md): In Duaer, look up GO annotations for a gene product. One successful search uses 1 credit.
+- [Search PubChem Assay in Duaer](https://skills.duaer.com/pubchem-assay.md): In Duaer, list PubChem BioAssays for a gene. One successful search uses 1 credit.
+- [Search MassIVE in Duaer](https://skills.duaer.com/massive.md): In Duaer, search proteomics datasets in MassIVE. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
