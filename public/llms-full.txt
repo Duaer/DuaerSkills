@@ -259,6 +259,14 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search GO annotations in Duaer](https://skills.duaer.com/goa.md): In Duaer, look up GO annotations for a gene product. One successful search uses 1 credit.
 - [Search PubChem Assay in Duaer](https://skills.duaer.com/pubchem-assay.md): In Duaer, list PubChem BioAssays for a gene. One successful search uses 1 credit.
 - [Search MassIVE in Duaer](https://skills.duaer.com/massive.md): In Duaer, search proteomics datasets in MassIVE. One successful search uses 1 credit.
+- [Search InterPro in Duaer](https://skills.duaer.com/interpro.md): In Duaer, search protein domains in InterPro. One successful search uses 1 credit.
+- [Search Rhea in Duaer](https://skills.duaer.com/rhea.md): In Duaer, search biochemical reactions in Rhea. One successful search uses 1 credit.
+- [Search PROSITE in Duaer](https://skills.duaer.com/prosite.md): In Duaer, scan PROSITE motifs for a UniProt accession. One successful search uses 1 credit.
+- [Search DGIdb in Duaer](https://skills.duaer.com/dgidb.md): In Duaer, look up gene–drug interactions in DGIdb. One successful search uses 1 credit.
+- [Search Mutalyzer in Duaer](https://skills.duaer.com/mutalyzer.md): In Duaer, normalize an HGVS description with Mutalyzer. One successful search uses 1 credit.
+- [Search VariantValidator in Duaer](https://skills.duaer.com/variant-validator.md): In Duaer, validate an HGVS description with VariantValidator. One successful search uses 1 credit.
+- [Search MetaboLights in Duaer](https://skills.duaer.com/metabolights.md): In Duaer, search metabolomics studies in MetaboLights. One successful search uses 1 credit.
+- [Search ModelSEED in Duaer](https://skills.duaer.com/modelseed.md): In Duaer, search reactions in ModelSEED. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -522,6 +530,14 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索 GO 注释](https://skills.duaer.com/zh/goa.md): 在 Duaer 里查询基因产物的 GO 注释。一次成功查询用 1 额度。
 - [在 Duaer 里检索 PubChem Assay](https://skills.duaer.com/zh/pubchem-assay.md): 在 Duaer 里列出基因相关的 PubChem BioAssay。一次成功查询用 1 额度。
 - [在 Duaer 里检索 MassIVE](https://skills.duaer.com/zh/massive.md): 在 Duaer 里在 MassIVE 搜索蛋白质组学数据集。一次成功查询用 1 额度。
+- [在 Duaer 里检索 InterPro](https://skills.duaer.com/zh/interpro.md): 在 Duaer 里在 InterPro 搜索蛋白结构域。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Rhea](https://skills.duaer.com/zh/rhea.md): 在 Duaer 里在 Rhea 搜索生化反应。一次成功查询用 1 额度。
+- [在 Duaer 里检索 PROSITE](https://skills.duaer.com/zh/prosite.md): 在 Duaer 里按 UniProt 登录号扫描 PROSITE motif。一次成功查询用 1 额度。
+- [在 Duaer 里检索 DGIdb](https://skills.duaer.com/zh/dgidb.md): 在 Duaer 里在 DGIdb 查询基因–药物相互作用。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Mutalyzer](https://skills.duaer.com/zh/mutalyzer.md): 在 Duaer 里用 Mutalyzer 规范化 HGVS 描述。一次成功查询用 1 额度。
+- [在 Duaer 里检索 VariantValidator](https://skills.duaer.com/zh/variant-validator.md): 在 Duaer 里用 VariantValidator 校验 HGVS 描述。一次成功查询用 1 额度。
+- [在 Duaer 里检索 MetaboLights](https://skills.duaer.com/zh/metabolights.md): 在 Duaer 里在 MetaboLights 搜索代谢组学实验。一次成功查询用 1 额度。
+- [在 Duaer 里检索 ModelSEED](https://skills.duaer.com/zh/modelseed.md): 在 Duaer 里在 ModelSEED 搜索反应。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -9748,6 +9764,292 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - Provide `words` or `id`.
 - `words` — search words, such as BRCA1.
 - `id` — optional. Accession such as MSV000065795.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-interpro
+description: >-
+  Search protein domains in InterPro through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer InterPro
+
+Search protein domains in InterPro through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/interpro?words=kinase&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words or UniProt accession, such as kinase or P04637.
+- `id` — optional. InterPro id such as IPR000023, or UniProt accession.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-rhea
+description: >-
+  Search biochemical reactions in Rhea through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer Rhea
+
+Search biochemical reactions in Rhea through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/rhea?words=kinase&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as kinase.
+- `id` — optional. Rhea id such as 15465.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-prosite
+description: >-
+  Scan PROSITE motifs for a UniProt accession through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer PROSITE
+
+Scan PROSITE motifs for a UniProt accession through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/prosite?words=P04637&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — UniProt accession, such as P04637.
+- `id` — optional. UniProt accession such as P04637.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-dgidb
+description: >-
+  Look up gene–drug interactions in DGIdb through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer DGIdb
+
+Look up gene–drug interactions in DGIdb through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/dgidb?words=BRCA1&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — gene symbol, such as BRCA1.
+- `id` — optional. Gene symbol such as BRCA1.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-mutalyzer
+description: >-
+  Normalize an HGVS description with Mutalyzer through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer Mutalyzer
+
+Normalize an HGVS description with Mutalyzer through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/mutalyzer?words=NM_007294.4:c.68_69del`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — HGVS description, such as NM_007294.4:c.68_69del.
+- `id` — optional. HGVS description.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-variant-validator
+description: >-
+  Validate an HGVS description with VariantValidator through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer VariantValidator
+
+Validate an HGVS description with VariantValidator through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/variant-validator?words=NM_007294.4:c.68_69del`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — HGVS description, such as NM_007294.4:c.68_69del.
+- `id` — optional. HGVS description.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-metabolights
+description: >-
+  Search metabolomics studies in MetaboLights through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer MetaboLights
+
+Search metabolomics studies in MetaboLights through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/metabolights?words=cancer&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as cancer.
+- `id` — optional. Study id such as MTBLS1.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-modelseed
+description: >-
+  Search reactions in ModelSEED through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer ModelSEED
+
+Search reactions in ModelSEED through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/modelseed?words=ATP&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as ATP.
+- `id` — optional. Reaction id such as rxn00001.
 - `limit` — optional. From 1 to 20. Default 10.
 
 ## Result
