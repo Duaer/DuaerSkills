@@ -65,4 +65,21 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search MyDisease in Duaer](https://skills.duaer.com/mydisease.md): In Duaer, search disease annotations in MyDisease. One successful search uses 1 credit.
 - [Search metabolomics studies in Duaer](https://skills.duaer.com/metabolomics.md): In Duaer, search metabolomics studies in Metabolomics Workbench. One successful search uses 1 credit.
 - [Search IntAct in Duaer](https://skills.duaer.com/intact.md): In Duaer, search molecular interactions in IntAct. One successful search uses 1 credit.
+- [Search BioSamples in Duaer](https://skills.duaer.com/biosamples.md): In Duaer, search biological samples in BioSamples. One successful search uses 1 credit.
+- [Search ENCODE in Duaer](https://skills.duaer.com/encode.md): In Duaer, search functional genomics experiments in ENCODE. One successful search uses 1 credit.
+- [Search Pathway Commons in Duaer](https://skills.duaer.com/pathway-commons.md): In Duaer, search pathways in Pathway Commons. One successful search uses 1 credit.
+- [Search Alliance genes in Duaer](https://skills.duaer.com/alliance.md): In Duaer, search genes in the Alliance of Genome Resources. One successful search uses 1 credit.
+- [Search ClinVar in Duaer](https://skills.duaer.com/clinvar.md): In Duaer, search clinical variants in ClinVar. One successful search uses 1 credit.
+- [Search dbSNP in Duaer](https://skills.duaer.com/dbsnp.md): In Duaer, search variant ids in dbSNP. One successful search uses 1 credit.
+- [Search JASPAR in Duaer](https://skills.duaer.com/jaspar.md): In Duaer, search TF binding motifs in JASPAR. One successful search uses 1 credit.
+- [Search cBioPortal in Duaer](https://skills.duaer.com/cbioportal.md): In Duaer, search cancer genomics studies in cBioPortal. One successful search uses 1 credit.
+- [Search GDC in Duaer](https://skills.duaer.com/gdc.md): In Duaer, search NCI GDC cancer projects. One successful search uses 1 credit.
+- [Search Expression Atlas in Duaer](https://skills.duaer.com/expression-atlas.md): In Duaer, search bulk expression experiments in Expression Atlas. One successful search uses 1 credit.
+- [Search Single Cell Atlas in Duaer](https://skills.duaer.com/single-cell-atlas.md): In Duaer, search single-cell experiments in Single Cell Expression Atlas. One successful search uses 1 credit.
+- [Search NDC in Duaer](https://skills.duaer.com/ndc.md): In Duaer, search drug NDC records in OpenFDA. One successful search uses 1 credit.
+- [Search device events in Duaer](https://skills.duaer.com/device-events.md): In Duaer, search device adverse events in OpenFDA. One successful search uses 1 credit.
+- [Search Sequence Ontology in Duaer](https://skills.duaer.com/sequence-ontology.md): In Duaer, search sequence feature terms via Sequence Ontology. One successful search uses 1 credit.
+- [Search DOID in Duaer](https://skills.duaer.com/doid.md): In Duaer, search disease terms via DOID. One successful search uses 1 credit.
+- [Search NCBI Taxonomy in Duaer](https://skills.duaer.com/ncbi-taxon.md): In Duaer, search taxa via NCBI Taxonomy ontology. One successful search uses 1 credit.
+- [Search GlyGen in Duaer](https://skills.duaer.com/glygen.md): In Duaer, look up glycans in GlyGen by GlyTouCan id. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.

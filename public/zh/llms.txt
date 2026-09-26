@@ -65,4 +65,21 @@
 - [在 Duaer 里检索 MyDisease](https://skills.duaer.com/zh/mydisease.md): 在 Duaer 里经 MyDisease 检索疾病注释。一次成功查询用 1 额度。
 - [在 Duaer 里检索代谢组学研究](https://skills.duaer.com/zh/metabolomics.md): 在 Duaer 里经 Metabolomics Workbench 检索代谢组学研究。一次成功查询用 1 额度。
 - [在 Duaer 里检索 IntAct](https://skills.duaer.com/zh/intact.md): 在 Duaer 里经 IntAct 检索分子互作。一次成功查询用 1 额度。
+- [在 Duaer 里检索 BioSamples](https://skills.duaer.com/zh/biosamples.md): 在 Duaer 里经 BioSamples 检索生物样本。一次成功查询用 1 额度。
+- [在 Duaer 里检索 ENCODE](https://skills.duaer.com/zh/encode.md): 在 Duaer 里经 ENCODE 检索功能基因组实验。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Pathway Commons](https://skills.duaer.com/zh/pathway-commons.md): 在 Duaer 里经 Pathway Commons 检索通路。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Alliance 基因](https://skills.duaer.com/zh/alliance.md): 在 Duaer 里经 Alliance of Genome Resources 检索基因。一次成功查询用 1 额度。
+- [在 Duaer 里检索 ClinVar](https://skills.duaer.com/zh/clinvar.md): 在 Duaer 里经 ClinVar 检索临床变异。一次成功查询用 1 额度。
+- [在 Duaer 里检索 dbSNP](https://skills.duaer.com/zh/dbsnp.md): 在 Duaer 里经 dbSNP 检索变异位点。一次成功查询用 1 额度。
+- [在 Duaer 里检索 JASPAR](https://skills.duaer.com/zh/jaspar.md): 在 Duaer 里经 JASPAR 检索转录因子结合模体。一次成功查询用 1 额度。
+- [在 Duaer 里检索 cBioPortal](https://skills.duaer.com/zh/cbioportal.md): 在 Duaer 里经 cBioPortal 检索癌症基因组研究。一次成功查询用 1 额度。
+- [在 Duaer 里检索 GDC](https://skills.duaer.com/zh/gdc.md): 在 Duaer 里经 NCI GDC 检索癌症项目。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Expression Atlas](https://skills.duaer.com/zh/expression-atlas.md): 在 Duaer 里经 Expression Atlas 检索表达实验。一次成功查询用 1 额度。
+- [在 Duaer 里检索单细胞表达图谱](https://skills.duaer.com/zh/single-cell-atlas.md): 在 Duaer 里经 Single Cell Expression Atlas 检索单细胞实验。一次成功查询用 1 额度。
+- [在 Duaer 里检索 NDC](https://skills.duaer.com/zh/ndc.md): 在 Duaer 里经 OpenFDA 检索药品 NDC。一次成功查询用 1 额度。
+- [在 Duaer 里检索器械不良事件](https://skills.duaer.com/zh/device-events.md): 在 Duaer 里经 OpenFDA 检索器械不良事件。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Sequence Ontology](https://skills.duaer.com/zh/sequence-ontology.md): 在 Duaer 里经 Sequence Ontology 检索序列特征术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 DOID](https://skills.duaer.com/zh/doid.md): 在 Duaer 里经 DOID 检索疾病术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 NCBI Taxonomy](https://skills.duaer.com/zh/ncbi-taxon.md): 在 Duaer 里经 NCBI Taxonomy 本体检索物种。一次成功查询用 1 额度。
+- [在 Duaer 里检索 GlyGen](https://skills.duaer.com/zh/glygen.md): 在 Duaer 里经 GlyGen 按 GlyTouCan 编号查阅糖链。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
