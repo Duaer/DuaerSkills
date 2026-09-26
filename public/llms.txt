@@ -267,4 +267,8 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search VariantValidator in Duaer](https://skills.duaer.com/variant-validator.md): In Duaer, validate an HGVS description with VariantValidator. One successful search uses 1 credit.
 - [Search MetaboLights in Duaer](https://skills.duaer.com/metabolights.md): In Duaer, search metabolomics studies in MetaboLights. One successful search uses 1 credit.
 - [Search ModelSEED in Duaer](https://skills.duaer.com/modelseed.md): In Duaer, search reactions in ModelSEED. One successful search uses 1 credit.
+- [Search USDA FoodData Central in Duaer](https://skills.duaer.com/usda-fdc.md): In Duaer, search foods in USDA FoodData Central. One successful search uses 1 credit.
+- [Search AlphaFill in Duaer](https://skills.duaer.com/alphafill.md): In Duaer, list AlphaFill ligand transplants for a UniProt accession. One successful search uses 1 credit.
+- [Search PDBe in Duaer](https://skills.duaer.com/pdbe.md): In Duaer, search structures in PDBe. One successful search uses 1 credit.
+- [Search Open Food Facts in Duaer](https://skills.duaer.com/open-food-facts.md): In Duaer, search products in Open Food Facts. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.

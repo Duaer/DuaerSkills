@@ -5085,6 +5085,67 @@ Acceptance: https://doc.duaer.com/getting-started/accept-deliverables/
 			fields: ["Provide `words` or `id`.","`words` — search words, such as ATP.","`id` — optional. Reaction id such as rxn00001.","`limit` — optional. From 1 to 20. Default 10."],
 		}),
 	},
+
+	{
+		slug: 'usda-fdc',
+		related: ["metabolites","lipid-maps","compounds"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search USDA FoodData Central in Duaer', zh: '在 Duaer 里检索 USDA FoodData Central' },
+		lede: { en: 'In Duaer, search foods in USDA FoodData Central. One successful search uses 1 credit.', zh: '在 Duaer 里在 USDA FoodData Central 搜索食品。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-usda-fdc',
+			description: 'Search foods in USDA FoodData Central through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer USDA FoodData Central',
+			call: 'GET https://api.duaer.com/v1/data/usda-fdc?words=apple&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — food name, such as apple.","`id` — optional. FDC id such as 1750340.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+	{
+		slug: 'alphafill',
+		related: ["alphafold","structures","proteins"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search AlphaFill in Duaer', zh: '在 Duaer 里检索 AlphaFill' },
+		lede: { en: 'In Duaer, list AlphaFill ligand transplants for a UniProt accession. One successful search uses 1 credit.', zh: '在 Duaer 里按 UniProt 登录号列出 AlphaFill 配体移植。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-alphafill',
+			description: 'List AlphaFill ligand transplants for a UniProt accession through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer AlphaFill',
+			call: 'GET https://api.duaer.com/v1/data/alphafill?words=P04637&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — UniProt accession, such as P04637.","`id` — optional. UniProt accession such as P04637.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+	{
+		slug: 'pdbe',
+		related: ["structures","alphafold","emdb"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search PDBe in Duaer', zh: '在 Duaer 里检索 PDBe' },
+		lede: { en: 'In Duaer, search structures in PDBe. One successful search uses 1 credit.', zh: '在 Duaer 里在 PDBe 搜索结构。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-pdbe',
+			description: 'Search structures in PDBe through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer PDBe',
+			call: 'GET https://api.duaer.com/v1/data/pdbe?words=BRCA1&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as BRCA1.","`id` — optional. PDB id such as 1tup.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+	{
+		slug: 'open-food-facts',
+		related: ["metabolites","usda-fdc","compounds"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search Open Food Facts in Duaer', zh: '在 Duaer 里检索 Open Food Facts' },
+		lede: { en: 'In Duaer, search products in Open Food Facts. One successful search uses 1 credit.', zh: '在 Duaer 里在 Open Food Facts 搜索食品。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-open-food-facts',
+			description: 'Search products in Open Food Facts through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Open Food Facts',
+			call: 'GET https://api.duaer.com/v1/data/open-food-facts?words=yogurt&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — product name, such as yogurt.","`id` — optional. Barcode such as 3017620422003.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
 ];
 
 export const home = {
