@@ -218,4 +218,11 @@
 - [在 Duaer 里检索 IAO](https://skills.duaer.com/zh/iao.md): 在 Duaer 里经 IAO 检索信息工件术语。一次成功查询用 1 额度。
 - [在 Duaer 里检索 SIO](https://skills.duaer.com/zh/sio.md): 在 Duaer 里经 SIO 检索语义科学术语。一次成功查询用 1 额度。
 - [在 Duaer 里检索 CHEMINF](https://skills.duaer.com/zh/cheminf.md): 在 Duaer 里经 CHEMINF 检索化学信息术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Enrichr](https://skills.duaer.com/zh/enrichr.md): 在 Duaer 里按基因符号或文库名检索 Enrichr 基因集。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Unpaywall](https://skills.duaer.com/zh/unpaywall.md): 在 Duaer 里用 DOI 在 Unpaywall 查开放获取状态。一次成功查询用 1 额度。
+- [在 Duaer 里检索 DataCite](https://skills.duaer.com/zh/datacite.md): 在 Duaer 里在 DataCite 检索数据集与作品的 DOI 元数据。一次成功查询用 1 额度。
+- [在 Duaer 里检索 CPIC](https://skills.duaer.com/zh/cpic.md): 在 Duaer 里检索 CPIC 药物基因组基因与药物。一次成功查询用 1 额度。
+- [在 Duaer 里检索 OSF](https://skills.duaer.com/zh/osf.md): 在 Duaer 里检索 Open Science Framework 项目节点。一次成功查询用 1 额度。
+- [在 Duaer 里检索 UKRI](https://skills.duaer.com/zh/ukri.md): 在 Duaer 里检索英国 UKRI Gateway to Research 资助项目。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Cellosaurus](https://skills.duaer.com/zh/cellosaurus.md): 在 Duaer 里检索 Cellosaurus 细胞系百科。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
