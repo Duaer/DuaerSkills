@@ -4268,6 +4268,118 @@ export const skills = [
 		}),
 	},
 
+	{
+		slug: 'enrichr',
+		related: ["genes","pathways"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search Enrichr in Duaer', zh: '在 Duaer 里检索 Enrichr' },
+		lede: { en: 'In Duaer, search Enrichr gene-set libraries by gene symbol or library name. One successful search uses 1 credit.', zh: '在 Duaer 里按基因符号或文库名检索 Enrichr 基因集。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-enrichr',
+			description: 'Search Enrichr gene-set libraries by gene symbol or library name through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Enrichr',
+			call: 'GET https://api.duaer.com/v1/data/enrichr?words=TP53&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as TP53.","`id` — optional. Id such as TP53.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'unpaywall',
+		related: ["papers","europe-pmc"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search Unpaywall in Duaer', zh: '在 Duaer 里检索 Unpaywall' },
+		lede: { en: 'In Duaer, look up open-access status for a DOI in Unpaywall. One successful search uses 1 credit.', zh: '在 Duaer 里用 DOI 在 Unpaywall 查开放获取状态。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-unpaywall',
+			description: 'Look up open-access status for a DOI in Unpaywall through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Unpaywall',
+			call: 'GET https://api.duaer.com/v1/data/unpaywall?words=10.1038%2Fnature12373&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as 10.1038/nature12373.","`id` — optional. Id such as 10.1038/nature12373.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'datacite',
+		related: ["zenodo","crossref"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search DataCite in Duaer', zh: '在 Duaer 里检索 DataCite' },
+		lede: { en: 'In Duaer, search DataCite DOI metadata for datasets and works. One successful search uses 1 credit.', zh: '在 Duaer 里在 DataCite 检索数据集与作品的 DOI 元数据。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-datacite',
+			description: 'Search DataCite DOI metadata for datasets and works through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer DataCite',
+			call: 'GET https://api.duaer.com/v1/data/datacite?words=crispr&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as crispr.","`id` — optional. Id such as 10.5281/zenodo.22963915.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'cpic',
+		related: ["clinpgx","drug-gene"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search CPIC in Duaer', zh: '在 Duaer 里检索 CPIC' },
+		lede: { en: 'In Duaer, search CPIC pharmacogenomic genes and drugs. One successful search uses 1 credit.', zh: '在 Duaer 里检索 CPIC 药物基因组基因与药物。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-cpic',
+			description: 'Search CPIC pharmacogenomic genes and drugs through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer CPIC',
+			call: 'GET https://api.duaer.com/v1/data/cpic?words=CYP2C19&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as CYP2C19.","`id` — optional. Id such as CYP2C19.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'osf',
+		related: ["zenodo","dryad"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search OSF in Duaer', zh: '在 Duaer 里检索 OSF' },
+		lede: { en: 'In Duaer, search Open Science Framework project nodes. One successful search uses 1 credit.', zh: '在 Duaer 里检索 Open Science Framework 项目节点。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-osf',
+			description: 'Search Open Science Framework project nodes through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer OSF',
+			call: 'GET https://api.duaer.com/v1/data/osf?words=crispr&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as crispr.","`id` — optional. Id such as bdwxr.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'ukri',
+		related: ["nsf-awards","grants"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search UKRI in Duaer', zh: '在 Duaer 里检索 UKRI' },
+		lede: { en: 'In Duaer, search UK Research and Innovation Gateway to Research projects. One successful search uses 1 credit.', zh: '在 Duaer 里检索英国 UKRI Gateway to Research 资助项目。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-ukri',
+			description: 'Search UK Research and Innovation Gateway to Research projects through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer UKRI',
+			call: 'GET https://api.duaer.com/v1/data/ukri?words=crispr&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as crispr.","`id` — optional. Id such as F71A563C-4DDC-4ED3-AAE2-A9D1D19618BE.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'cellosaurus',
+		related: ["cell-lines","clo"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search Cellosaurus in Duaer', zh: '在 Duaer 里检索 Cellosaurus' },
+		lede: { en: 'In Duaer, search the Cellosaurus cell line encyclopedia. One successful search uses 1 credit.', zh: '在 Duaer 里检索 Cellosaurus 细胞系百科。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-cellosaurus',
+			description: 'Search the Cellosaurus cell line encyclopedia through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Cellosaurus',
+			call: 'GET https://api.duaer.com/v1/data/cellosaurus?words=HeLa&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as HeLa.","`id` — optional. Id such as CVCL_0030.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
 ];
 
 export const home = {

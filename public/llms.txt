@@ -218,4 +218,11 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search IAO in Duaer](https://skills.duaer.com/iao.md): In Duaer, search information artifact terms via IAO. One successful search uses 1 credit.
 - [Search SIO in Duaer](https://skills.duaer.com/sio.md): In Duaer, search semantics science terms via SIO. One successful search uses 1 credit.
 - [Search CHEMINF in Duaer](https://skills.duaer.com/cheminf.md): In Duaer, search chemical information terms via CHEMINF. One successful search uses 1 credit.
+- [Search Enrichr in Duaer](https://skills.duaer.com/enrichr.md): In Duaer, search Enrichr gene-set libraries by gene symbol or library name. One successful search uses 1 credit.
+- [Search Unpaywall in Duaer](https://skills.duaer.com/unpaywall.md): In Duaer, look up open-access status for a DOI in Unpaywall. One successful search uses 1 credit.
+- [Search DataCite in Duaer](https://skills.duaer.com/datacite.md): In Duaer, search DataCite DOI metadata for datasets and works. One successful search uses 1 credit.
+- [Search CPIC in Duaer](https://skills.duaer.com/cpic.md): In Duaer, search CPIC pharmacogenomic genes and drugs. One successful search uses 1 credit.
+- [Search OSF in Duaer](https://skills.duaer.com/osf.md): In Duaer, search Open Science Framework project nodes. One successful search uses 1 credit.
+- [Search UKRI in Duaer](https://skills.duaer.com/ukri.md): In Duaer, search UK Research and Innovation Gateway to Research projects. One successful search uses 1 credit.
+- [Search Cellosaurus in Duaer](https://skills.duaer.com/cellosaurus.md): In Duaer, search the Cellosaurus cell line encyclopedia. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
