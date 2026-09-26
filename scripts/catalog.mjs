@@ -4380,6 +4380,134 @@ export const skills = [
 		}),
 	},
 
+	{
+		slug: 'bindingdb',
+		related: ["compounds","targets","ligands"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search BindingDB in Duaer', zh: '在 Duaer 里检索 BindingDB' },
+		lede: { en: 'In Duaer, search BindingDB ligand affinities by UniProt accession. One successful search uses 1 credit.', zh: '在 Duaer 里按 UniProt 登录号检索 BindingDB 配体亲和力。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-bindingdb',
+			description: 'Search BindingDB ligand affinities by UniProt accession through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer BindingDB',
+			call: 'GET https://api.duaer.com/v1/data/bindingdb?words=P00533&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as P00533.","`id` — optional. Id such as P00533.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'iedb',
+		related: ["proteins","assays"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search IEDB in Duaer', zh: '在 Duaer 里检索 IEDB' },
+		lede: { en: 'In Duaer, search IEDB immune epitopes by peptide sequence. One successful search uses 1 credit.', zh: '在 Duaer 里按肽段序列检索 IEDB 免疫表位。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-iedb',
+			description: 'Search IEDB immune epitopes by peptide sequence through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer IEDB',
+			call: 'GET https://api.duaer.com/v1/data/iedb?words=SIINFEKL&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as SIINFEKL.","`id` — optional. Id such as 58560.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'maxo',
+		related: ["phenotypes","mpath","obi"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search MAXO in Duaer', zh: '在 Duaer 里检索 MAXO' },
+		lede: { en: 'In Duaer, search Medical Action Ontology terms in OLS. One successful search uses 1 credit.', zh: '在 Duaer 里在 OLS 检索医学行动本体（MAXO）术语。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-maxo',
+			description: 'Search Medical Action Ontology terms in OLS through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer MAXO',
+			call: 'GET https://api.duaer.com/v1/data/maxo?words=chemotherapy&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as chemotherapy.","`id` — optional. Id such as MAXO:0000647.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'eco',
+		related: ["gene-ontology","obi"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search ECO in Duaer', zh: '在 Duaer 里检索 ECO' },
+		lede: { en: 'In Duaer, search Evidence and Conclusion Ontology terms in OLS. One successful search uses 1 credit.', zh: '在 Duaer 里在 OLS 检索证据与结论本体（ECO）术语。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-eco',
+			description: 'Search Evidence and Conclusion Ontology terms in OLS through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer ECO',
+			call: 'GET https://api.duaer.com/v1/data/eco?words=electrophysiology&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as electrophysiology.","`id` — optional. Id such as ECO:0000164.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'rfam',
+		related: ["rnacentral","genes"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search Rfam in Duaer', zh: '在 Duaer 里检索 Rfam' },
+		lede: { en: 'In Duaer, search Rfam RNA families by name or accession. One successful search uses 1 credit.', zh: '在 Duaer 里按名称或登录号检索 Rfam RNA 家族。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-rfam',
+			description: 'Search Rfam RNA families by name or accession through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Rfam',
+			call: 'GET https://api.duaer.com/v1/data/rfam?words=tRNA&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as tRNA.","`id` — optional. Id such as RF00005.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'checklistbank',
+		related: ["organisms","ncbi-taxon","gbif"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search ChecklistBank in Duaer', zh: '在 Duaer 里检索 ChecklistBank' },
+		lede: { en: 'In Duaer, search Catalogue of Life names in ChecklistBank. One successful search uses 1 credit.', zh: '在 Duaer 里在 ChecklistBank 检索名录生命（Catalogue of Life）名称。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-checklistbank',
+			description: 'Search Catalogue of Life names in ChecklistBank through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer ChecklistBank',
+			call: 'GET https://api.duaer.com/v1/data/checklistbank?words=Homo%20sapiens&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as Homo sapiens.","`id` — optional. Id such as 636X2.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'togovar',
+		related: ["variants","dbsnp","clinvar"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search TogoVar in Duaer', zh: '在 Duaer 里检索 TogoVar' },
+		lede: { en: 'In Duaer, search TogoVar Japanese genome variants by rsID or gene. One successful search uses 1 credit.', zh: '在 Duaer 里按 rsID 或基因检索 TogoVar 日本基因组变异。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-togovar',
+			description: 'Search TogoVar Japanese genome variants by rsID or gene through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer TogoVar',
+			call: 'GET https://api.duaer.com/v1/data/togovar?words=rs671&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as rs671.","`id` — optional. Id such as tgv47264307.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
+	{
+		slug: 'pubmed',
+		related: ["papers","europe-pmc","preprints"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search PubMed in Duaer', zh: '在 Duaer 里检索 PubMed' },
+		lede: { en: 'In Duaer, search PubMed literature via NCBI E-utilities. One successful search uses 1 credit.', zh: '在 Duaer 里通过 NCBI E-utilities 检索 PubMed 文献。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-pubmed',
+			description: 'Search PubMed literature via NCBI E-utilities through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer PubMed',
+			call: 'GET https://api.duaer.com/v1/data/pubmed?words=BRCA1%20breast%20cancer&limit=10',
+			fields: ["Provide `words` or `id`.","`words` — search words, such as BRCA1 breast cancer.","`id` — optional. Id such as 23193287.","`limit` — optional. From 1 to 20. Default 10."],
+		}),
+	},
+
 ];
 
 export const home = {

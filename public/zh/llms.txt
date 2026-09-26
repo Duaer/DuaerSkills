@@ -225,4 +225,12 @@
 - [在 Duaer 里检索 OSF](https://skills.duaer.com/zh/osf.md): 在 Duaer 里检索 Open Science Framework 项目节点。一次成功查询用 1 额度。
 - [在 Duaer 里检索 UKRI](https://skills.duaer.com/zh/ukri.md): 在 Duaer 里检索英国 UKRI Gateway to Research 资助项目。一次成功查询用 1 额度。
 - [在 Duaer 里检索 Cellosaurus](https://skills.duaer.com/zh/cellosaurus.md): 在 Duaer 里检索 Cellosaurus 细胞系百科。一次成功查询用 1 额度。
+- [在 Duaer 里检索 BindingDB](https://skills.duaer.com/zh/bindingdb.md): 在 Duaer 里按 UniProt 登录号检索 BindingDB 配体亲和力。一次成功查询用 1 额度。
+- [在 Duaer 里检索 IEDB](https://skills.duaer.com/zh/iedb.md): 在 Duaer 里按肽段序列检索 IEDB 免疫表位。一次成功查询用 1 额度。
+- [在 Duaer 里检索 MAXO](https://skills.duaer.com/zh/maxo.md): 在 Duaer 里在 OLS 检索医学行动本体（MAXO）术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 ECO](https://skills.duaer.com/zh/eco.md): 在 Duaer 里在 OLS 检索证据与结论本体（ECO）术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Rfam](https://skills.duaer.com/zh/rfam.md): 在 Duaer 里按名称或登录号检索 Rfam RNA 家族。一次成功查询用 1 额度。
+- [在 Duaer 里检索 ChecklistBank](https://skills.duaer.com/zh/checklistbank.md): 在 Duaer 里在 ChecklistBank 检索名录生命（Catalogue of Life）名称。一次成功查询用 1 额度。
+- [在 Duaer 里检索 TogoVar](https://skills.duaer.com/zh/togovar.md): 在 Duaer 里按 rsID 或基因检索 TogoVar 日本基因组变异。一次成功查询用 1 额度。
+- [在 Duaer 里检索 PubMed](https://skills.duaer.com/zh/pubmed.md): 在 Duaer 里通过 NCBI E-utilities 检索 PubMed 文献。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。

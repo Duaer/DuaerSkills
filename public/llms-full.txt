@@ -225,6 +225,14 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search OSF in Duaer](https://skills.duaer.com/osf.md): In Duaer, search Open Science Framework project nodes. One successful search uses 1 credit.
 - [Search UKRI in Duaer](https://skills.duaer.com/ukri.md): In Duaer, search UK Research and Innovation Gateway to Research projects. One successful search uses 1 credit.
 - [Search Cellosaurus in Duaer](https://skills.duaer.com/cellosaurus.md): In Duaer, search the Cellosaurus cell line encyclopedia. One successful search uses 1 credit.
+- [Search BindingDB in Duaer](https://skills.duaer.com/bindingdb.md): In Duaer, search BindingDB ligand affinities by UniProt accession. One successful search uses 1 credit.
+- [Search IEDB in Duaer](https://skills.duaer.com/iedb.md): In Duaer, search IEDB immune epitopes by peptide sequence. One successful search uses 1 credit.
+- [Search MAXO in Duaer](https://skills.duaer.com/maxo.md): In Duaer, search Medical Action Ontology terms in OLS. One successful search uses 1 credit.
+- [Search ECO in Duaer](https://skills.duaer.com/eco.md): In Duaer, search Evidence and Conclusion Ontology terms in OLS. One successful search uses 1 credit.
+- [Search Rfam in Duaer](https://skills.duaer.com/rfam.md): In Duaer, search Rfam RNA families by name or accession. One successful search uses 1 credit.
+- [Search ChecklistBank in Duaer](https://skills.duaer.com/checklistbank.md): In Duaer, search Catalogue of Life names in ChecklistBank. One successful search uses 1 credit.
+- [Search TogoVar in Duaer](https://skills.duaer.com/togovar.md): In Duaer, search TogoVar Japanese genome variants by rsID or gene. One successful search uses 1 credit.
+- [Search PubMed in Duaer](https://skills.duaer.com/pubmed.md): In Duaer, search PubMed literature via NCBI E-utilities. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -454,6 +462,14 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索 OSF](https://skills.duaer.com/zh/osf.md): 在 Duaer 里检索 Open Science Framework 项目节点。一次成功查询用 1 额度。
 - [在 Duaer 里检索 UKRI](https://skills.duaer.com/zh/ukri.md): 在 Duaer 里检索英国 UKRI Gateway to Research 资助项目。一次成功查询用 1 额度。
 - [在 Duaer 里检索 Cellosaurus](https://skills.duaer.com/zh/cellosaurus.md): 在 Duaer 里检索 Cellosaurus 细胞系百科。一次成功查询用 1 额度。
+- [在 Duaer 里检索 BindingDB](https://skills.duaer.com/zh/bindingdb.md): 在 Duaer 里按 UniProt 登录号检索 BindingDB 配体亲和力。一次成功查询用 1 额度。
+- [在 Duaer 里检索 IEDB](https://skills.duaer.com/zh/iedb.md): 在 Duaer 里按肽段序列检索 IEDB 免疫表位。一次成功查询用 1 额度。
+- [在 Duaer 里检索 MAXO](https://skills.duaer.com/zh/maxo.md): 在 Duaer 里在 OLS 检索医学行动本体（MAXO）术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 ECO](https://skills.duaer.com/zh/eco.md): 在 Duaer 里在 OLS 检索证据与结论本体（ECO）术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Rfam](https://skills.duaer.com/zh/rfam.md): 在 Duaer 里按名称或登录号检索 Rfam RNA 家族。一次成功查询用 1 额度。
+- [在 Duaer 里检索 ChecklistBank](https://skills.duaer.com/zh/checklistbank.md): 在 Duaer 里在 ChecklistBank 检索名录生命（Catalogue of Life）名称。一次成功查询用 1 额度。
+- [在 Duaer 里检索 TogoVar](https://skills.duaer.com/zh/togovar.md): 在 Duaer 里按 rsID 或基因检索 TogoVar 日本基因组变异。一次成功查询用 1 额度。
+- [在 Duaer 里检索 PubMed](https://skills.duaer.com/zh/pubmed.md): 在 Duaer 里通过 NCBI E-utilities 检索 PubMed 文献。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -8450,6 +8466,294 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - Provide `words` or `id`.
 - `words` — search words, such as HeLa.
 - `id` — optional. Id such as CVCL_0030.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-bindingdb
+description: >-
+  Search BindingDB ligand affinities by UniProt accession through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer BindingDB
+
+Search BindingDB ligand affinities by UniProt accession through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/bindingdb?words=P00533&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as P00533.
+- `id` — optional. Id such as P00533.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-iedb
+description: >-
+  Search IEDB immune epitopes by peptide sequence through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer IEDB
+
+Search IEDB immune epitopes by peptide sequence through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/iedb?words=SIINFEKL&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as SIINFEKL.
+- `id` — optional. Id such as 58560.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-maxo
+description: >-
+  Search Medical Action Ontology terms in OLS through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer MAXO
+
+Search Medical Action Ontology terms in OLS through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/maxo?words=chemotherapy&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as chemotherapy.
+- `id` — optional. Id such as MAXO:0000647.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-eco
+description: >-
+  Search Evidence and Conclusion Ontology terms in OLS through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer ECO
+
+Search Evidence and Conclusion Ontology terms in OLS through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/eco?words=electrophysiology&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as electrophysiology.
+- `id` — optional. Id such as ECO:0000164.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-rfam
+description: >-
+  Search Rfam RNA families by name or accession through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer Rfam
+
+Search Rfam RNA families by name or accession through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/rfam?words=tRNA&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as tRNA.
+- `id` — optional. Id such as RF00005.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-checklistbank
+description: >-
+  Search Catalogue of Life names in ChecklistBank through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer ChecklistBank
+
+Search Catalogue of Life names in ChecklistBank through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/checklistbank?words=Homo%20sapiens&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as Homo sapiens.
+- `id` — optional. Id such as 636X2.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-togovar
+description: >-
+  Search TogoVar Japanese genome variants by rsID or gene through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer TogoVar
+
+Search TogoVar Japanese genome variants by rsID or gene through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/togovar?words=rs671&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as rs671.
+- `id` — optional. Id such as tgv47264307.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-pubmed
+description: >-
+  Search PubMed literature via NCBI E-utilities through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer PubMed
+
+Search PubMed literature via NCBI E-utilities through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/pubmed?words=BRCA1%20breast%20cancer&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as BRCA1 breast cancer.
+- `id` — optional. Id such as 23193287.
 - `limit` — optional. From 1 to 20. Default 10.
 
 ## Result
