@@ -243,4 +243,9 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search CORE in Duaer](https://skills.duaer.com/core.md): In Duaer, search open-access research works in CORE. One successful search uses 1 credit.
 - [Search Open Tree in Duaer](https://skills.duaer.com/opentree.md): In Duaer, match scientific names in Open Tree of Life. One successful search uses 1 credit.
 - [Search Europe PMC Annotations in Duaer](https://skills.duaer.com/europe-pmc-annotations.md): In Duaer, fetch Europe PMC text-mined annotations for a PubMed or PMC article. One successful search uses 1 credit.
+- [Search BiGG in Duaer](https://skills.duaer.com/bigg.md): In Duaer, search BiGG Models metabolites, genes, and genome-scale models. One successful search uses 1 credit.
+- [Search gnomAD in Duaer](https://skills.duaer.com/gnomad.md): In Duaer, look up a gene symbol in gnomAD (GRCh38). One successful search uses 1 credit.
+- [Search miRNA in Duaer](https://skills.duaer.com/mirna.md): In Duaer, search microRNA entries in RNAcentral. One successful search uses 1 credit.
+- [Search HumanMine in Duaer](https://skills.duaer.com/humanmine.md): In Duaer, search human genes and related entities in HumanMine. One successful search uses 1 credit.
+- [Search RegulomeDB in Duaer](https://skills.duaer.com/regulomedb.md): In Duaer, score regulatory evidence for a variant in RegulomeDB. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.

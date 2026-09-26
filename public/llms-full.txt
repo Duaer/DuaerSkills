@@ -243,6 +243,11 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search CORE in Duaer](https://skills.duaer.com/core.md): In Duaer, search open-access research works in CORE. One successful search uses 1 credit.
 - [Search Open Tree in Duaer](https://skills.duaer.com/opentree.md): In Duaer, match scientific names in Open Tree of Life. One successful search uses 1 credit.
 - [Search Europe PMC Annotations in Duaer](https://skills.duaer.com/europe-pmc-annotations.md): In Duaer, fetch Europe PMC text-mined annotations for a PubMed or PMC article. One successful search uses 1 credit.
+- [Search BiGG in Duaer](https://skills.duaer.com/bigg.md): In Duaer, search BiGG Models metabolites, genes, and genome-scale models. One successful search uses 1 credit.
+- [Search gnomAD in Duaer](https://skills.duaer.com/gnomad.md): In Duaer, look up a gene symbol in gnomAD (GRCh38). One successful search uses 1 credit.
+- [Search miRNA in Duaer](https://skills.duaer.com/mirna.md): In Duaer, search microRNA entries in RNAcentral. One successful search uses 1 credit.
+- [Search HumanMine in Duaer](https://skills.duaer.com/humanmine.md): In Duaer, search human genes and related entities in HumanMine. One successful search uses 1 credit.
+- [Search RegulomeDB in Duaer](https://skills.duaer.com/regulomedb.md): In Duaer, score regulatory evidence for a variant in RegulomeDB. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -490,6 +495,11 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索 CORE](https://skills.duaer.com/zh/core.md): 在 Duaer 里在 CORE 检索开放获取研究文献。一次成功查询用 1 额度。
 - [在 Duaer 里检索 Open Tree](https://skills.duaer.com/zh/opentree.md): 在 Duaer 里在 Open Tree of Life 匹配学名。一次成功查询用 1 额度。
 - [在 Duaer 里检索 Europe PMC Annotations](https://skills.duaer.com/zh/europe-pmc-annotations.md): 在 Duaer 里按 PubMed/PMC 文章编号取 Europe PMC 文本挖掘标注。一次成功查询用 1 额度。
+- [在 Duaer 里检索 BiGG](https://skills.duaer.com/zh/bigg.md): 在 Duaer 里在 BiGG Models 检索代谢物、基因与基因组规模模型。一次成功查询用 1 额度。
+- [在 Duaer 里检索 gnomAD](https://skills.duaer.com/zh/gnomad.md): 在 Duaer 里在 gnomAD（GRCh38）按基因符号查询。一次成功查询用 1 额度。
+- [在 Duaer 里检索 miRNA](https://skills.duaer.com/zh/mirna.md): 在 Duaer 里在 RNAcentral 检索 microRNA 条目。一次成功查询用 1 额度。
+- [在 Duaer 里检索 HumanMine](https://skills.duaer.com/zh/humanmine.md): 在 Duaer 里在 HumanMine 检索人类基因及相关实体。一次成功查询用 1 额度。
+- [在 Duaer 里检索 RegulomeDB](https://skills.duaer.com/zh/regulomedb.md): 在 Duaer 里在 RegulomeDB 评分变异的调控证据。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -9134,6 +9144,186 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - Provide `words` or `id`.
 - `words` — search words, such as 23193287.
 - `id` — optional. Id such as PMC3531190.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-bigg
+description: >-
+  Search BiGG Models metabolites, genes, and genome-scale models through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer BiGG
+
+Search BiGG Models metabolites, genes, and genome-scale models through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/bigg?words=glucose&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as glucose.
+- `id` — optional. Id such as glc__D.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-gnomad
+description: >-
+  Look up a gene symbol in gnomAD (GRCh38) through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer gnomAD
+
+Look up a gene symbol in gnomAD (GRCh38) through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/gnomad?words=PCSK9&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as PCSK9.
+- `id` — optional. Id such as BRCA1.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-mirna
+description: >-
+  Search microRNA entries in RNAcentral through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer miRNA
+
+Search microRNA entries in RNAcentral through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/mirna?words=hsa-miR-21&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as hsa-miR-21.
+- `id` — optional. Id such as URS000075C808.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-humanmine
+description: >-
+  Search human genes and related entities in HumanMine through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer HumanMine
+
+Search human genes and related entities in HumanMine through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/humanmine?words=BRCA1&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as BRCA1.
+- `id` — optional. Id such as 1205471.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-regulomedb
+description: >-
+  Score regulatory evidence for a variant in RegulomeDB through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer RegulomeDB
+
+Score regulatory evidence for a variant in RegulomeDB through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/regulomedb?words=rs33980857&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as rs33980857.
+- `id` — optional. Id such as chr1:1000205-1000205.
 - `limit` — optional. From 1 to 20. Default 10.
 
 ## Result
