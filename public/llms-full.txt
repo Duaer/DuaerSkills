@@ -82,6 +82,9 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search DOID in Duaer](https://skills.duaer.com/doid.md): In Duaer, search disease terms via DOID. One successful search uses 1 credit.
 - [Search NCBI Taxonomy in Duaer](https://skills.duaer.com/ncbi-taxon.md): In Duaer, search taxa via NCBI Taxonomy ontology. One successful search uses 1 credit.
 - [Search GlyGen in Duaer](https://skills.duaer.com/glygen.md): In Duaer, look up glycans in GlyGen by GlyTouCan id. One successful search uses 1 credit.
+- [Search ChEBI in Duaer](https://skills.duaer.com/chebi.md): In Duaer, search chemical entities via ChEBI. One successful search uses 1 credit.
+- [Search NCIt in Duaer](https://skills.duaer.com/ncit.md): In Duaer, search clinical terms via NCI Thesaurus. One successful search uses 1 credit.
+- [Search Pfam in Duaer](https://skills.duaer.com/pfam.md): In Duaer, search Pfam protein families. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -168,6 +171,9 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索 DOID](https://skills.duaer.com/zh/doid.md): 在 Duaer 里经 DOID 检索疾病术语。一次成功查询用 1 额度。
 - [在 Duaer 里检索 NCBI Taxonomy](https://skills.duaer.com/zh/ncbi-taxon.md): 在 Duaer 里经 NCBI Taxonomy 本体检索物种。一次成功查询用 1 额度。
 - [在 Duaer 里检索 GlyGen](https://skills.duaer.com/zh/glygen.md): 在 Duaer 里经 GlyGen 按 GlyTouCan 编号查阅糖链。一次成功查询用 1 额度。
+- [在 Duaer 里检索 ChEBI](https://skills.duaer.com/zh/chebi.md): 在 Duaer 里经 ChEBI 检索化学实体。一次成功查询用 1 额度。
+- [在 Duaer 里检索 NCIt](https://skills.duaer.com/zh/ncit.md): 在 Duaer 里经 NCI Thesaurus 检索临床术语。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Pfam](https://skills.duaer.com/zh/pfam.md): 在 Duaer 里检索 Pfam 蛋白家族。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -3016,6 +3022,114 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - Provide `words` or `id`.
 - `words` — GlyTouCan accession, such as G00054MO.
 - `id` — optional. GlyTouCan accession such as G00054MO.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-chebi
+description: >-
+  Search chemical entities via ChEBI through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer ChEBI
+
+Search chemical entities via ChEBI through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/chebi?words=aspirin&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as aspirin.
+- `id` — optional. Id such as CHEBI:15365.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-ncit
+description: >-
+  Search clinical terms via NCI Thesaurus through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer NCIt
+
+Search clinical terms via NCI Thesaurus through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/ncit?words=melanoma&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as melanoma.
+- `id` — optional. Id such as NCIT:C3224.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-pfam
+description: >-
+  Search Pfam protein families through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer Pfam
+
+Search Pfam protein families through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/pfam?words=kinase&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — search words, such as kinase.
+- `id` — optional. Id such as PF00069.
 - `limit` — optional. From 1 to 20. Default 10.
 
 ## Result
