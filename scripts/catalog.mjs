@@ -2077,6 +2077,69 @@ export const skills = [
 		}),
 	},
 
+	{
+		slug: 'chebi',
+		related: ["compounds","chembl","metabolites"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search ChEBI in Duaer', zh: '在 Duaer 里检索 ChEBI' },
+		lede: { en: 'In Duaer, search chemical entities via ChEBI. One successful search uses 1 credit.', zh: '在 Duaer 里经 ChEBI 检索化学实体。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-chebi',
+			description: 'Search chemical entities via ChEBI through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer ChEBI',
+			call: 'GET https://api.duaer.com/v1/data/chebi?words=aspirin&limit=10',
+			fields: [
+						"Provide `words` or `id`.",
+						"`words` — search words, such as aspirin.",
+						"`id` — optional. Id such as CHEBI:15365.",
+						"`limit` — optional. From 1 to 20. Default 10."
+			],
+		}),
+	},
+
+	{
+		slug: 'ncit',
+		related: ["mondo","doid","orphanet"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search NCIt in Duaer', zh: '在 Duaer 里检索 NCIt' },
+		lede: { en: 'In Duaer, search clinical terms via NCI Thesaurus. One successful search uses 1 credit.', zh: '在 Duaer 里经 NCI Thesaurus 检索临床术语。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-ncit',
+			description: 'Search clinical terms via NCI Thesaurus through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer NCIt',
+			call: 'GET https://api.duaer.com/v1/data/ncit?words=melanoma&limit=10',
+			fields: [
+						"Provide `words` or `id`.",
+						"`words` — search words, such as melanoma.",
+						"`id` — optional. Id such as NCIT:C3224.",
+						"`limit` — optional. From 1 to 20. Default 10."
+			],
+		}),
+	},
+
+	{
+		slug: 'pfam',
+		related: ["domains","proteins","gene-ontology"],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search Pfam in Duaer', zh: '在 Duaer 里检索 Pfam' },
+		lede: { en: 'In Duaer, search Pfam protein families. One successful search uses 1 credit.', zh: '在 Duaer 里检索 Pfam 蛋白家族。一次成功查询用 1 额度。' },
+		returns: { en: 'Each row has an id, label, and description when present.', zh: '每条结果有编号、名称与描述。' },
+		skill: skill({
+			name: 'duaer-pfam',
+			description: 'Search Pfam protein families through Duaer. One successful search uses 1 Duaer credit.',
+			title: 'Duaer Pfam',
+			call: 'GET https://api.duaer.com/v1/data/pfam?words=kinase&limit=10',
+			fields: [
+						"Provide `words` or `id`.",
+						"`words` — search words, such as kinase.",
+						"`id` — optional. Id such as PF00069.",
+						"`limit` — optional. From 1 to 20. Default 10."
+			],
+		}),
+	},
+
 ];
 
 export const home = {

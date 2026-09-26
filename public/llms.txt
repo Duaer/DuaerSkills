@@ -82,4 +82,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search DOID in Duaer](https://skills.duaer.com/doid.md): In Duaer, search disease terms via DOID. One successful search uses 1 credit.
 - [Search NCBI Taxonomy in Duaer](https://skills.duaer.com/ncbi-taxon.md): In Duaer, search taxa via NCBI Taxonomy ontology. One successful search uses 1 credit.
 - [Search GlyGen in Duaer](https://skills.duaer.com/glygen.md): In Duaer, look up glycans in GlyGen by GlyTouCan id. One successful search uses 1 credit.
+- [Search ChEBI in Duaer](https://skills.duaer.com/chebi.md): In Duaer, search chemical entities via ChEBI. One successful search uses 1 credit.
+- [Search NCIt in Duaer](https://skills.duaer.com/ncit.md): In Duaer, search clinical terms via NCI Thesaurus. One successful search uses 1 credit.
+- [Search Pfam in Duaer](https://skills.duaer.com/pfam.md): In Duaer, search Pfam protein families. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
