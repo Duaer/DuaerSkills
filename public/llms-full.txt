@@ -270,6 +270,10 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search USDA FoodData Central in Duaer](https://skills.duaer.com/usda-fdc.md): In Duaer, search foods in USDA FoodData Central. One successful search uses 1 credit.
 - [Search AlphaFill in Duaer](https://skills.duaer.com/alphafill.md): In Duaer, list AlphaFill ligand transplants for a UniProt accession. One successful search uses 1 credit.
 - [Search PDBe in Duaer](https://skills.duaer.com/pdbe.md): In Duaer, search structures in PDBe. One successful search uses 1 credit.
+- [Search MetaCyc in Duaer](https://skills.duaer.com/metacyc.md): In Duaer, search pathways in MetaCyc. One successful search uses 1 credit.
+- [Search STRING enrichment in Duaer](https://skills.duaer.com/string-enrichment.md): In Duaer, run STRING functional enrichment for gene symbols. One successful search uses 1 credit.
+- [Search Foldseek in Duaer](https://skills.duaer.com/foldseek.md): In Duaer, list Foldseek searchable structure databases. One successful search uses 1 credit.
+- [Search Ensembl homology in Duaer](https://skills.duaer.com/ensembl-homology.md): In Duaer, list Ensembl compara orthologues for a gene symbol. One successful search uses 1 credit.
 - [Search Open Food Facts in Duaer](https://skills.duaer.com/open-food-facts.md): In Duaer, search products in Open Food Facts. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
@@ -545,6 +549,10 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里检索 USDA FoodData Central](https://skills.duaer.com/zh/usda-fdc.md): 在 Duaer 里在 USDA FoodData Central 搜索食品。一次成功查询用 1 额度。
 - [在 Duaer 里检索 AlphaFill](https://skills.duaer.com/zh/alphafill.md): 在 Duaer 里按 UniProt 登录号列出 AlphaFill 配体移植。一次成功查询用 1 额度。
 - [在 Duaer 里检索 PDBe](https://skills.duaer.com/zh/pdbe.md): 在 Duaer 里在 PDBe 搜索结构。一次成功查询用 1 额度。
+- [在 Duaer 里检索 MetaCyc](https://skills.duaer.com/zh/metacyc.md): 在 Duaer 里在 MetaCyc 搜索通路。一次成功查询用 1 额度。
+- [在 Duaer 里检索 STRING enrichment](https://skills.duaer.com/zh/string-enrichment.md): 在 Duaer 里对基因符号运行 STRING 功能富集。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Foldseek](https://skills.duaer.com/zh/foldseek.md): 在 Duaer 里列出 Foldseek 可检索结构库。一次成功查询用 1 额度。
+- [在 Duaer 里检索 Ensembl homology](https://skills.duaer.com/zh/ensembl-homology.md): 在 Duaer 里按基因符号列出 Ensembl 同源基因。一次成功查询用 1 额度。
 - [在 Duaer 里检索 Open Food Facts](https://skills.duaer.com/zh/open-food-facts.md): 在 Duaer 里在 Open Food Facts 搜索食品。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
@@ -10166,6 +10174,150 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - Provide `words` or `id`.
 - `words` — search words, such as BRCA1.
 - `id` — optional. PDB id such as 1tup.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-metacyc
+description: >-
+  Search pathways in MetaCyc through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer MetaCyc
+
+Search pathways in MetaCyc through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/metacyc?words=P04637&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — UniProt accession or pathway id, such as P04637 or META:GLYCOLYSIS.
+- `id` — optional. Pathway id such as META:GLYCOLYSIS.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-string-enrichment
+description: >-
+  Run STRING functional enrichment for gene symbols through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer STRING enrichment
+
+Run STRING functional enrichment for gene symbols through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/string-enrichment?words=BRCA1%20TP53&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — gene symbols separated by space, such as BRCA1 TP53.
+- `id` — optional. Gene symbols separated by space.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-foldseek
+description: >-
+  List Foldseek searchable structure databases through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer Foldseek
+
+List Foldseek searchable structure databases through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/foldseek?words=AlphaFold&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — database name filter, such as AlphaFold.
+- `id` — optional. Database name such as ESM30.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+
+## Credits
+
+One successful search uses 1 credit.
+An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+---
+name: duaer-ensembl-homology
+description: >-
+  List Ensembl compara orthologues for a gene symbol through Duaer. One successful search uses 1 Duaer credit.
+---
+
+# Duaer Ensembl homology
+
+List Ensembl compara orthologues for a gene symbol through Duaer. One successful search uses 1 Duaer credit.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/ensembl-homology?words=BRCA1&limit=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+- Provide `words` or `id`.
+- `words` — gene symbol, such as BRCA1.
+- `id` — optional. Gene symbol such as BRCA1.
 - `limit` — optional. From 1 to 20. Default 10.
 
 ## Result
