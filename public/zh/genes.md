@@ -50,3 +50,4 @@ A missing key returns 401.
 - [在 Duaer 里检索组织图谱](https://skills.duaer.com/zh/atlas.md)
 - [在 Duaer 里检索 GEO](https://skills.duaer.com/zh/geo.md)
 - [在 Duaer 里检索药–基因互作](https://skills.duaer.com/zh/drug-gene.md)
+- [Duaer 生命科学文献简报员工](https://skills.duaer.com/zh/life-research-brief.md)

@@ -6,6 +6,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 
 ## Skills
 
+- [Life research brief employee in Duaer](https://skills.duaer.com/life-research-brief.md): In Duaer, hire the Life research brief digital employee: papers, genes, and variants into one acceptable brief.
 - [Search papers in Duaer](https://skills.duaer.com/papers.md): In Duaer, search published papers. One successful search uses 1 credit.
 - [Search proteins in Duaer](https://skills.duaer.com/proteins.md): In Duaer, search genes and proteins. One successful search uses 1 credit.
 - [Search clinical trials in Duaer](https://skills.duaer.com/trials.md): In Duaer, search clinical trials. One successful search uses 1 credit.
@@ -258,6 +259,7 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 
 ## 技能
 
+- [Duaer 生命科学文献简报员工](https://skills.duaer.com/zh/life-research-brief.md): 在 Duaer 里雇佣生命科学文献简报数字员工：论文、基因与变异合成一份可验收简报。
 - [在 Duaer 里检索论文](https://skills.duaer.com/zh/papers.md): 在 Duaer 里检索已发表论文。一次成功查询用 1 额度。
 - [在 Duaer 里检索基因和蛋白](https://skills.duaer.com/zh/proteins.md): 在 Duaer 里检索基因和蛋白。一次成功查询用 1 额度。
 - [在 Duaer 里检索临床试验](https://skills.duaer.com/zh/trials.md): 在 Duaer 里检索临床试验。一次成功查询用 1 额度。
@@ -531,6 +533,48 @@ Opening the Duaer skill catalog does not search and does not use credits.
 管理员也可以在 [管理里的 API 密钥](https://www.duaer.com/admin/api) 生成账号密钥。
 
 打开 Duaer 技能目录不检索，也不扣额度。
+
+---
+name: duaer-life-research-brief
+description: >-
+  Operate the Duaer Life research brief digital employee. Use when hiring or
+  calling that employee for papers + genes/variants briefs, or accepting the
+  deliverable in the Duaer data pool.
+---
+
+# Digital employee: Life research brief
+
+You are driving **this** Duaer digital employee (template slug `duaer-life-research`), not a generic API catalog.
+
+## Role
+
+1. Search **Duaer Data papers** for the topic.
+2. Search **Duaer Data genes** for candidate symbols / targets.
+3. Optionally search **Duaer Data variants** for rs ids or gene-linked hits.
+4. Return a structured brief with `kind: "delivery"`, topic, papers, genes, variants, and open_questions.
+5. Cite tool results only. Do not invent DOIs, gene ids, or rs ids.
+
+## How to call
+
+1. In Duaer Templates, open **Life research brief** and publish.
+2. Prefer the **production chat URL** from Skill when published; use test URLs / Open chat while editing.
+3. Optional: webhook or MCP surfaces from the same Skill panel.
+4. Copy the live Skill.md for agents.
+
+Each successful Duaer Data search uses **1 credit**.
+
+## Accept
+
+After a production chat succeeds, open **Data pool** in Duaer. The brief is **pending**. Accept it, or reject with a short note.
+
+How-to: https://doc.duaer.com/getting-started/life-research-brief/
+Acceptance: https://doc.duaer.com/getting-started/accept-deliverables/
+
+## Related data skills
+
+- https://skills.duaer.com/papers.md
+- https://skills.duaer.com/genes.md
+- https://skills.duaer.com/variants.md
 
 ---
 name: duaer-papers

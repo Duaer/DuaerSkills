@@ -45,3 +45,4 @@ A missing key returns 401.
 - [Search genes in Duaer](https://skills.duaer.com/genes.md)
 - [Search diseases in Duaer](https://skills.duaer.com/diseases.md)
 - [Search proteins in Duaer](https://skills.duaer.com/proteins.md)
+- [Life research brief employee in Duaer](https://skills.duaer.com/life-research-brief.md)
