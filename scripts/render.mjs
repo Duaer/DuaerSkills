@@ -144,9 +144,15 @@ function homeBody(locale) {
 		)
 		.join('\n');
 	const keyLabel = copy ? '获取密钥' : 'Get a key';
+	const clarify = home.clarify;
 	return `<p class="how-kicker">Skills</p>
 <h1>${esc(home.title[locale])}</h1>
 <p class="lede">${esc(home.lede[locale])}</p>
+<aside class="clarify">
+<h2>${esc(clarify.title[locale])}</h2>
+<p>${esc(clarify.body[locale])}</p>
+<a class="primary-link" href="${esc(clarify.href)}">${esc(clarify.cta[locale])}</a>
+</aside>
 <p><a href="${href('/keys/', locale)}">${keyLabel}</a></p>
 <div class="cards">${cards}</div>`;
 }

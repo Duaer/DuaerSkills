@@ -5589,6 +5589,18 @@ export const home = {
 		en: 'Call skills for Duaer data. Copy one into an agent. Opening this catalog does not search and does not use credits.',
 		zh: 'Duaer 数据的调用技能。复制一条给智能体即可。打开这个目录不会检索，也不扣额度。',
 	},
+	clarify: {
+		title: {
+			en: 'Skills that call digital employees',
+			zh: '用来调用数字员工的 Skills',
+		},
+		body: {
+			en: 'These skills invoke Duaer digital employees and data workflows — so delivery stays acceptable and reviewable.',
+			zh: '这里是自家 Skill 主场：调用数字员工与数据工作流，交付可验收。',
+		},
+		cta: { en: 'Back to product', zh: '回到产品' },
+		href: 'https://www.duaer.com',
+	},
 };
 
 export const keys = {
