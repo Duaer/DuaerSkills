@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>在 Duaer 里查 JARVIS-DFT · Duaer</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<meta name="description" content="在 Duaer 里：NIST JARVIS-DFT 计算材料数据，含带隙、形成能、凸包以上能量、空间群以及二维/三维维度。一次成功查询用 1 额度。"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://skills.duaer.com/zh/jarvis/"/>
+<link rel="alternate" hreflang="zh-CN" href="https://skills.duaer.com/zh/jarvis/"/>
+<link rel="alternate" hreflang="en" href="https://skills.duaer.com/jarvis/"/>
+<link rel="alternate" hreflang="x-default" href="https://skills.duaer.com/jarvis/"/>
+<link rel="alternate" type="text/plain" href="https://skills.duaer.com/llms.txt" title="LLMs"/>
+<link rel="alternate" type="text/markdown" href="https://skills.duaer.com/zh/jarvis.md" title="Markdown"/>
+<meta property="og:site_name" content="Duaer"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="zh_CN"/>
+<meta property="og:url" content="https://skills.duaer.com/zh/jarvis/"/>
+<meta property="og:title" content="在 Duaer 里查 JARVIS-DFT · Duaer"/>
+<meta property="og:description" content="在 Duaer 里：NIST JARVIS-DFT 计算材料数据，含带隙、形成能、凸包以上能量、空间群以及二维/三维维度。一次成功查询用 1 额度。"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="在 Duaer 里查 JARVIS-DFT · Duaer"/>
+<meta name="twitter:description" content="在 Duaer 里：NIST JARVIS-DFT 计算材料数据，含带隙、形成能、凸包以上能量、空间群以及二维/三维维度。一次成功查询用 1 额度。"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.duaer.com/#organization","name":"Duaer","url":"https://www.duaer.com/"},{"@type":"TechArticle","headline":"在 Duaer 里查 JARVIS-DFT","description":"在 Duaer 里：NIST JARVIS-DFT 计算材料数据，含带隙、形成能、凸包以上能量、空间群以及二维/三维维度。一次成功查询用 1 额度。","inLanguage":"zh-CN","url":"https://skills.duaer.com/zh/jarvis/","author":{"@id":"https://www.duaer.com/#organization"},"publisher":{"@id":"https://www.duaer.com/#organization"},"isRelatedTo":[{"@type":"TechArticle","headline":"在 Duaer 里查 Materials Project","url":"https://skills.duaer.com/zh/materials-project/"},{"@type":"TechArticle","headline":"在 Duaer 里查 NOMAD","url":"https://skills.duaer.com/zh/nomad/"},{"@type":"TechArticle","headline":"在 Duaer 里查晶体结构（COD）","url":"https://skills.duaer.com/zh/cod/"}]}]}</script>
+<link rel="stylesheet" href="/site.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"/>
+</head>
+<body>
+<div class="duaer-auth">
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="shell">
+<header class="topbar">
+<a class="brand" href="https://www.duaer.com/"><svg class="brand-mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#15181b"/><path fill="#eff2f1" fill-rule="evenodd" d="M9.4 7.8h6.35c5.45 0 8.85 3.35 8.85 8.2s-3.4 8.2-8.85 8.2H9.4V7.8Zm3.45 3.25v9.9h2.95c3.2 0 5.15-1.95 5.15-4.95s-1.95-4.95-5.15-4.95h-2.95Z"/><path d="M12.5 16.5h7.2" stroke="#e14a0e" stroke-width="1.8" stroke-linecap="round"/></svg><span class="brand-name">Duaer</span></a>
+<nav class="top-nav" aria-label="Duaer">
+<a class="nav-link" href="https://www.duaer.com/about">About</a>
+<a class="nav-link" href="https://www.duaer.com/pricing">Pricing</a>
+<a class="nav-link" href="https://doc.duaer.com/">Docs</a>
+<a class="nav-link is-current" href="/zh/" aria-current="page">Skills</a>
+<span class="lang"><a href="/jarvis/" hreflang="en">EN</a><a class="active" href="/zh/jarvis/" hreflang="zh-CN">中文</a></span>
+<a class="nav-link" href="https://www.duaer.com/signin">Sign in</a>
+</nav>
+</header>
+<main class="stage article">
+<p class="how-kicker">Skills</p>
+<h1>在 Duaer 里查 JARVIS-DFT</h1>
+<p class="lede">在 Duaer 里：NIST JARVIS-DFT 计算材料数据，含带隙、形成能、凸包以上能量、空间群以及二维/三维维度。一次成功查询用 1 额度。</p>
+<h2>能拿到什么</h2>
+<p>每条结果含 jarvisId、formula, elements、spaceGroup, crystalSystem, dimensionality、bandGapEv, mbjBandGapEv 等字段，并附来源链接。</p>
+<h2>密钥</h2>
+<p>调用前先<a href="/zh/keys/">获取 Duaer 密钥</a>.</p>
+<h2>调用技能</h2>
+<p>下面这段是给智能体复制的英文技能，和数据市场里的复制内容相同。</p>
+<pre><code>---
+name: duaer-jarvis
+description: &gt;-
+  Duaer JARVIS-DFT. NIST JARVIS-DFT computed materials with band gap, formation energy, energy above hull, space group, and 2D or 3D dimensionality.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer JARVIS-DFT
+
+Duaer JARVIS-DFT searches the NIST JARVIS-DFT database, which includes many 2D materials. Rows carry key computed properties directly, so an agent can compare candidates without opening each page.
+
+## When to use
+
+- Compare band gaps and stability of candidate semiconductors or 2D materials.
+- Screen a composition for the most stable phase (lowest energy above hull).
+
+## When not to use
+
+- Measured crystal data. Use https://skills.duaer.com/cod.md.
+- Exact experimental band gaps. DFT (OptB88vdW) tends to underestimate them; mbjBandGapEv is closer when present.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/jarvis?formula=MoS2`
+
+Header: `Authorization: Bearer &lt;Duaer key&gt;`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `formula` or `elements`.
+
+- `formula` — Formula such as MoS2. Matches the reduced formula.
+- `elements` — Optional. Materials that contain all of these, such as Mo,S.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/jarvis?formula=MoS2` — MoS2 phases, bulk and 2D.
+- `GET https://api.duaer.com/v1/data/jarvis?elements=Ga,N` — gallium nitride and related entries.
+
+## Result
+
+The response is `{ &quot;items&quot;: [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `jarvisId` — JARVIS id, such as JVASP-664.
+- `formula`, `elements` — composition.
+- `spaceGroup`, `crystalSystem`, `dimensionality` — symmetry and 3D or 2D.
+- `bandGapEv`, `mbjBandGapEv` — OptB88vdW and TBmBJ band gaps in eV.
+- `formationEnergyEvPerAtom`, `energyAboveHullEv` — stability in eV per atom.
+- `bulkModulusGpa`, `densityGcm3`, `sites` — other properties when computed.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/materials-project.md — Duaer Materials Project
+- https://skills.duaer.com/nomad.md — Duaer NOMAD
+- https://skills.duaer.com/cod.md — Duaer Crystal structures (COD)
+</code></pre>
+<h2>相关技能</h2>
+<div class="cards"><a class="card" href="/zh/materials-project/">
+<span class="card-type">数据</span>
+<h3>在 Duaer 里查 Materials Project</h3>
+<p>在 Duaer 里：按化学式或所含元素检索 Materials Project 的计算无机材料，返回材料编号、化学式、元素与原子位点数。一次成功查询用 1 额度。</p>
+</a>
+<a class="card" href="/zh/nomad/">
+<span class="card-type">数据</span>
+<h3>在 Duaer 里查 NOMAD</h3>
+<p>在 Duaer 里：按化学式、元素和模拟程序检索 NOMAD 仓库中的材料模拟条目：计算方法、流程、程序、作者与上传日期。一次成功查询用 1 额度。</p>
+</a>
+<a class="card" href="/zh/cod/">
+<span class="card-type">数据</span>
+<h3>在 Duaer 里查晶体结构（COD）</h3>
+<p>在 Duaer 里：按化学式、矿物名或关键词检索晶体学开放数据库（COD）的实验晶体结构：空间群、晶胞参数、年份、文献与 CIF 下载。一次成功查询用 1 额度。</p>
+</a></div>
+</main>
+</div>
+<footer class="site-footer"><div class="shell"><a href="https://www.duaer.com/">Duaer</a><a href="https://skills.duaer.com/llms.txt">llms.txt</a></div></footer>
+</div>
+</body>
+</html>
