@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>在 Duaer 里查法人机构识别码（LEI） · Duaer</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<meta name="description" content="在 Duaer 里：在 GLEIF 全球法人登记库中查公司：法定名称、20 位 LEI、注册司法辖区、注册城市与国家、实体与登记状态。一次成功查询用 1 额度。"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://skills.duaer.com/zh/lei/"/>
+<link rel="alternate" hreflang="zh-CN" href="https://skills.duaer.com/zh/lei/"/>
+<link rel="alternate" hreflang="en" href="https://skills.duaer.com/lei/"/>
+<link rel="alternate" hreflang="x-default" href="https://skills.duaer.com/lei/"/>
+<link rel="alternate" type="text/plain" href="https://skills.duaer.com/llms.txt" title="LLMs"/>
+<link rel="alternate" type="text/markdown" href="https://skills.duaer.com/zh/lei.md" title="Markdown"/>
+<meta property="og:site_name" content="Duaer"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="zh_CN"/>
+<meta property="og:url" content="https://skills.duaer.com/zh/lei/"/>
+<meta property="og:title" content="在 Duaer 里查法人机构识别码（LEI） · Duaer"/>
+<meta property="og:description" content="在 Duaer 里：在 GLEIF 全球法人登记库中查公司：法定名称、20 位 LEI、注册司法辖区、注册城市与国家、实体与登记状态。一次成功查询用 1 额度。"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="在 Duaer 里查法人机构识别码（LEI） · Duaer"/>
+<meta name="twitter:description" content="在 Duaer 里：在 GLEIF 全球法人登记库中查公司：法定名称、20 位 LEI、注册司法辖区、注册城市与国家、实体与登记状态。一次成功查询用 1 额度。"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.duaer.com/#organization","name":"Duaer","url":"https://www.duaer.com/"},{"@type":"TechArticle","headline":"在 Duaer 里查法人机构识别码（LEI）","description":"在 Duaer 里：在 GLEIF 全球法人登记库中查公司：法定名称、20 位 LEI、注册司法辖区、注册城市与国家、实体与登记状态。一次成功查询用 1 额度。","inLanguage":"zh-CN","url":"https://skills.duaer.com/zh/lei/","author":{"@id":"https://www.duaer.com/#organization"},"publisher":{"@id":"https://www.duaer.com/#organization"},"isRelatedTo":[{"@type":"TechArticle","headline":"在 Duaer 里查 SEC 公司公告","url":"https://skills.duaer.com/zh/sec-filings/"},{"@type":"TechArticle","headline":"在 Duaer 里检索 ROR","url":"https://skills.duaer.com/zh/ror/"}]}]}</script>
+<link rel="stylesheet" href="/site.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"/>
+</head>
+<body>
+<div class="duaer-auth">
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="shell">
+<header class="topbar">
+<a class="brand" href="https://www.duaer.com/"><svg class="brand-mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#15181b"/><path fill="#eff2f1" fill-rule="evenodd" d="M9.4 7.8h6.35c5.45 0 8.85 3.35 8.85 8.2s-3.4 8.2-8.85 8.2H9.4V7.8Zm3.45 3.25v9.9h2.95c3.2 0 5.15-1.95 5.15-4.95s-1.95-4.95-5.15-4.95h-2.95Z"/><path d="M12.5 16.5h7.2" stroke="#e14a0e" stroke-width="1.8" stroke-linecap="round"/></svg><span class="brand-name">Duaer</span></a>
+<nav class="top-nav" aria-label="Duaer">
+<a class="nav-link" href="https://www.duaer.com/about">About</a>
+<a class="nav-link" href="https://www.duaer.com/pricing">Pricing</a>
+<a class="nav-link" href="https://doc.duaer.com/">Docs</a>
+<a class="nav-link is-current" href="/zh/" aria-current="page">Skills</a>
+<span class="lang"><a href="/lei/" hreflang="en">EN</a><a class="active" href="/zh/lei/" hreflang="zh-CN">中文</a></span>
+<a class="nav-link" href="https://www.duaer.com/signin">Sign in</a>
+</nav>
+</header>
+<main class="stage article">
+<p class="how-kicker">Skills</p>
+<h1>在 Duaer 里查法人机构识别码（LEI）</h1>
+<p class="lede">在 Duaer 里：在 GLEIF 全球法人登记库中查公司：法定名称、20 位 LEI、注册司法辖区、注册城市与国家、实体与登记状态。一次成功查询用 1 额度。</p>
+<h2>能拿到什么</h2>
+<p>每条结果含 lei, legalName、jurisdiction, city, country、entityStatus, category、registrationStatus, nextRenewal 等字段，并附来源链接。</p>
+<h2>密钥</h2>
+<p>调用前先<a href="/zh/keys/">获取 Duaer 密钥</a>.</p>
+<h2>调用技能</h2>
+<p>下面这段是给智能体复制的英文技能，和数据市场里的复制内容相同。</p>
+<pre><code>---
+name: duaer-lei
+description: &gt;-
+  Duaer Legal entities (LEI). Look up companies worldwide in the GLEIF register: legal name, 20-character LEI, jurisdiction, registered city and country, and entity and registration status.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Legal entities (LEI)
+
+Duaer Legal entities searches the Global LEI Index by GLEIF. An LEI identifies one legal entity in financial reporting, so it helps tell apart companies with similar names.
+
+## When to use
+
+- Confirm the exact legal name and country of a counterparty or supplier.
+- Find the LEI to join company records across systems.
+
+## When not to use
+
+- Filings and financial reports. Use https://skills.duaer.com/sec-filings.md.
+- Ownership trees or beneficial owners. This search returns the entity record only.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/lei?words=Tencent&amp;country=CN`
+
+Header: `Authorization: Bearer &lt;Duaer key&gt;`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `words` or `lei`.
+
+- `words` — Company name or words in it, such as Tencent.
+- `lei` — Optional. A 20-character LEI to open one record.
+- `country` — Optional. Two-letter ISO code of the legal address, such as CN.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/lei?words=Tencent&amp;country=CN` — Tencent entities with a legal address in China.
+- `GET https://api.duaer.com/v1/data/lei?lei=254900R2298R0IPO6I46` — one record by LEI.
+
+## Result
+
+The response is `{ &quot;items&quot;: [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `lei`, `legalName` — identifier and legal name.
+- `jurisdiction`, `city`, `country` — where the entity is registered.
+- `entityStatus`, `category` — ACTIVE or INACTIVE, and entity category.
+- `registrationStatus`, `nextRenewal` — LEI status such as ISSUED or LAPSED, and renewal date.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/sec-filings.md — Duaer SEC filings
+- https://skills.duaer.com/ror.md
+</code></pre>
+<h2>相关技能</h2>
+<div class="cards"><a class="card" href="/zh/sec-filings/">
+<span class="card-type">数据</span>
+<h3>在 Duaer 里查 SEC 公司公告</h3>
+<p>在 Duaer 里：按股票代码、公司名或 CIK 查美国上市公司在 SEC EDGAR 的最新公告：10-K、10-Q、8-K、内部人 Form 4 等，附原文链接。一次成功查询用 1 额度。</p>
+</a>
+<a class="card" href="/zh/ror/">
+<span class="card-type">数据</span>
+<h3>在 Duaer 里检索 ROR</h3>
+<p>在 Duaer 里在 ROR 检索研究机构。一次成功查询用 1 额度。</p>
+</a></div>
+</main>
+</div>
+<footer class="site-footer"><div class="shell"><a href="https://www.duaer.com/">Duaer</a><a href="https://skills.duaer.com/llms.txt">llms.txt</a></div></footer>
+</div>
+</body>
+</html>
