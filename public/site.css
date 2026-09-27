@@ -251,6 +251,48 @@ body {
 
 .lang a { color: var(--dim); text-decoration: none; font-size: 0.75rem; font-weight: 500; }
 .lang a.active, .lang a:hover { color: var(--ink); }
+.acceptance-entry {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1.25rem 2rem;
+	margin: 0 0 3rem;
+	padding: 1.35rem 1.4rem 1.35rem 1.25rem;
+	border: 1px solid var(--line-hi);
+	border-left: 3px solid #e14a0e;
+	border-radius: 12px;
+	background: #f8faf9;
+}
+.acceptance-copy h2 {
+	margin: 0;
+	font-family: var(--font-display);
+	font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+	font-weight: 500;
+	letter-spacing: -0.02em;
+	line-height: 1.2;
+}
+.acceptance-copy p {
+	margin: 0.5rem 0 0;
+	max-width: 40rem;
+	color: var(--muted);
+	font-size: 0.9375rem;
+	line-height: 1.6;
+}
+.acceptance-cta {
+	flex: none;
+	display: inline-block;
+	padding: 0.7rem 1.1rem;
+	border-radius: 999px;
+	background: var(--ink);
+	color: var(--paper);
+	text-decoration: none;
+	font-size: 0.875rem;
+	font-weight: 500;
+}
+.acceptance-cta:hover { background: #e14a0e; }
+@media (max-width: 720px) {
+	.acceptance-entry { flex-direction: column; align-items: flex-start; }
+}
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); gap: 14px; margin-top: 2rem; }
 .card { display: block; min-height: 7.5rem; padding: 1.15rem 1.25rem 1.2rem; border: 1px solid var(--line-hi); border-radius: 12px; background: #f8faf9; text-decoration: none; color: inherit; }
 .card:hover { border-color: var(--ink); }

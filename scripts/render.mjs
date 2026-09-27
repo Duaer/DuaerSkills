@@ -132,6 +132,24 @@ ${body}
 `;
 }
 
+const skillmdAcceptance = 'https://skillmd.ai/skills/duaer-acceptance/';
+
+function acceptanceEntry(locale) {
+	const copy = locale === 'zh';
+	const title = copy ? '在找 duaer-acceptance？' : 'Looking for duaer-acceptance?';
+	const body = copy
+		? 'Agent 交付验收 Skill 在 SkillMD：Brief → 证据自检 → 请求方验收。'
+		: 'The agent delivery skill lives on SkillMD — Brief, evidence check, requester accept.';
+	const cta = copy ? '打开 duaer-acceptance' : 'Open duaer-acceptance';
+	return `<section class="acceptance-entry" aria-labelledby="acceptance-entry-title">
+<div class="acceptance-copy">
+<h2 id="acceptance-entry-title">${esc(title)}</h2>
+<p>${esc(body)}</p>
+</div>
+<a class="acceptance-cta" href="${skillmdAcceptance}">${esc(cta)}</a>
+</section>`;
+}
+
 function homeBody(locale) {
 	const copy = locale === 'zh';
 	const cards = skills
@@ -144,7 +162,8 @@ function homeBody(locale) {
 		)
 		.join('\n');
 	const keyLabel = copy ? '获取密钥' : 'Get a key';
-	return `<p class="how-kicker">Skills</p>
+	return `${acceptanceEntry(locale)}
+<p class="how-kicker">Skills</p>
 <h1>${esc(home.title[locale])}</h1>
 <p class="lede">${esc(home.lede[locale])}</p>
 <p><a href="${href('/keys/', locale)}">${keyLabel}</a></p>
