@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>US court opinions in Duaer · Duaer</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<meta name="description" content="In Duaer: CourtListener: US federal and state court opinions by words, court, and filing date, with citations and a snippet. One successful search uses 1 credit."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://skills.duaer.com/court-opinions/"/>
+<link rel="alternate" hreflang="zh-CN" href="https://skills.duaer.com/zh/court-opinions/"/>
+<link rel="alternate" hreflang="en" href="https://skills.duaer.com/court-opinions/"/>
+<link rel="alternate" hreflang="x-default" href="https://skills.duaer.com/court-opinions/"/>
+<link rel="alternate" type="text/plain" href="https://skills.duaer.com/llms.txt" title="LLMs"/>
+<link rel="alternate" type="text/markdown" href="https://skills.duaer.com/court-opinions.md" title="Markdown"/>
+<meta property="og:site_name" content="Duaer"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://skills.duaer.com/court-opinions/"/>
+<meta property="og:title" content="US court opinions in Duaer · Duaer"/>
+<meta property="og:description" content="In Duaer: CourtListener: US federal and state court opinions by words, court, and filing date, with citations and a snippet. One successful search uses 1 credit."/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="US court opinions in Duaer · Duaer"/>
+<meta name="twitter:description" content="In Duaer: CourtListener: US federal and state court opinions by words, court, and filing date, with citations and a snippet. One successful search uses 1 credit."/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.duaer.com/#organization","name":"Duaer","url":"https://www.duaer.com/"},{"@type":"TechArticle","headline":"US court opinions in Duaer","description":"In Duaer: CourtListener: US federal and state court opinions by words, court, and filing date, with citations and a snippet. One successful search uses 1 credit.","inLanguage":"en","url":"https://skills.duaer.com/court-opinions/","author":{"@id":"https://www.duaer.com/#organization"},"publisher":{"@id":"https://www.duaer.com/#organization"},"isRelatedTo":[{"@type":"TechArticle","headline":"US Congress bills in Duaer","url":"https://skills.duaer.com/congress-bills/"},{"@type":"TechArticle","headline":"US Federal Register in Duaer","url":"https://skills.duaer.com/federal-register/"}]}]}</script>
+<link rel="stylesheet" href="/site.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"/>
+</head>
+<body>
+<div class="duaer-auth">
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="shell">
+<header class="topbar">
+<a class="brand" href="https://www.duaer.com/"><svg class="brand-mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#15181b"/><path fill="#eff2f1" fill-rule="evenodd" d="M9.4 7.8h6.35c5.45 0 8.85 3.35 8.85 8.2s-3.4 8.2-8.85 8.2H9.4V7.8Zm3.45 3.25v9.9h2.95c3.2 0 5.15-1.95 5.15-4.95s-1.95-4.95-5.15-4.95h-2.95Z"/><path d="M12.5 16.5h7.2" stroke="#e14a0e" stroke-width="1.8" stroke-linecap="round"/></svg><span class="brand-name">Duaer</span></a>
+<nav class="top-nav" aria-label="Duaer">
+<a class="nav-link" href="https://www.duaer.com/about">About</a>
+<a class="nav-link" href="https://www.duaer.com/pricing">Pricing</a>
+<a class="nav-link" href="https://doc.duaer.com/">Docs</a>
+<a class="nav-link is-current" href="/" aria-current="page">Skills</a>
+<span class="lang"><a href="/zh/court-opinions/" hreflang="zh-CN">中文</a><a class="active" href="/court-opinions/" hreflang="en">EN</a></span>
+<a class="nav-link" href="https://www.duaer.com/signin">Sign in</a>
+</nav>
+</header>
+<main class="stage article">
+<p class="how-kicker">Skills</p>
+<h1>US court opinions in Duaer</h1>
+<p class="lede">In Duaer: CourtListener: US federal and state court opinions by words, court, and filing date, with citations and a snippet. One successful search uses 1 credit.</p>
+<h2>What Duaer returns</h2>
+<p>Each row has caseName, court, courtId, dateFiled, docketNumber, citations, citedBy, status, and more, with a source link.</p>
+<h2>Key</h2>
+<p>Before you call, <a href="/keys/">get a Duaer key</a>.</p>
+<h2>Call skill</h2>
+<p>Paste this English skill into an agent. It matches Copy skill in the Duaer data market.</p>
+<pre><code>---
+name: duaer-court-opinions
+description: &gt;-
+  Duaer US court opinions. CourtListener: US federal and state court opinions by words, court, and filing date, with citations and a snippet.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer US court opinions
+
+Duaer US court opinions searches the full text of US federal and state court opinions on CourtListener. Filter by court and filing date, and sort by relevance or newest first.
+
+## When to use
+
+- Find recent Supreme Court opinions that mention privacy.
+- Collect Ninth Circuit copyright opinions filed since 2025.
+
+## When not to use
+
+- Bills and laws in Congress. Use https://skills.duaer.com/congress-bills.md.
+- Federal agency rules. Use https://skills.duaer.com/regulations.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/court-opinions?words=fourth%20amendment%20cell%20phone`
+
+Header: `Authorization: Bearer &lt;Duaer key&gt;`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `words` or `court`.
+
+- `words` — Words to search in opinions, such as fourth amendment cell phone.
+- `court` — Optional. CourtListener court ids such as `scotus`, `ca9`, or `cadc`, separated by spaces.
+- `filedAfter` — Optional. Earliest filing date as YYYY-MM-DD.
+- `sort` — Optional. `relevance` or `newest`. Default `relevance`.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/court-opinions?words=privacy&amp;court=scotus&amp;sort=newest` — the newest Supreme Court opinions about privacy.
+- `GET https://api.duaer.com/v1/data/court-opinions?words=copyright&amp;court=ca9&amp;filedAfter=2025-01-01` — Ninth Circuit copyright opinions since 2025.
+
+## Result
+
+The response is `{ &quot;items&quot;: [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `caseName`, `court`, `courtId` — case and court.
+- `dateFiled`, `docketNumber`, `citations` — filing date, docket, and reporter citations.
+- `citedBy`, `status`, `judge` — how often other opinions cite it, publication status, and judge.
+- `snippet` — the start of the opinion text.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/congress-bills.md — Duaer US Congress bills
+- https://skills.duaer.com/federal-register.md — Duaer US Federal Register
+</code></pre>
+<h2>Related skills</h2>
+<div class="cards"><a class="card" href="/congress-bills/">
+<span class="card-type">Data</span>
+<h3>US Congress bills in Duaer</h3>
+<p>In Duaer: Congress.gov: US bills, resolutions, and public laws with their sponsor chamber and latest action. One successful search uses 1 credit.</p>
+</a>
+<a class="card" href="/federal-register/">
+<span class="card-type">Data</span>
+<h3>US Federal Register in Duaer</h3>
+<p>In Duaer: US federal rules, proposed rules, notices, and presidential documents, newest first, with agencies, abstract, and PDF. One successful search uses 1 credit.</p>
+</a></div>
+</main>
+</div>
+<footer class="site-footer"><div class="shell"><a href="https://www.duaer.com/">Duaer</a><a href="https://skills.duaer.com/llms.txt">llms.txt</a></div></footer>
+</div>
+</body>
+</html>

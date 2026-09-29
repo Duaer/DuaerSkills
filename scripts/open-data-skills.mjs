@@ -7029,4 +7029,946 @@ A missing key returns 401.
 - https://skills.duaer.com/smithsonian.md — Duaer Smithsonian collections
 - https://skills.duaer.com/met-museum.md — Duaer The Met collection
 `,
+	'court-opinions': `---
+name: duaer-court-opinions
+description: >-
+  Duaer US court opinions. CourtListener: US federal and state court opinions by words, court, and filing date, with citations and a snippet.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer US court opinions
+
+Duaer US court opinions searches the full text of US federal and state court opinions on CourtListener. Filter by court and filing date, and sort by relevance or newest first.
+
+## When to use
+
+- Find recent Supreme Court opinions that mention privacy.
+- Collect Ninth Circuit copyright opinions filed since 2025.
+
+## When not to use
+
+- Bills and laws in Congress. Use https://skills.duaer.com/congress-bills.md.
+- Federal agency rules. Use https://skills.duaer.com/regulations.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/court-opinions?words=fourth%20amendment%20cell%20phone\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`words\` or \`court\`.
+
+- \`words\` — Words to search in opinions, such as fourth amendment cell phone.
+- \`court\` — Optional. CourtListener court ids such as \`scotus\`, \`ca9\`, or \`cadc\`, separated by spaces.
+- \`filedAfter\` — Optional. Earliest filing date as YYYY-MM-DD.
+- \`sort\` — Optional. \`relevance\` or \`newest\`. Default \`relevance\`.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/court-opinions?words=privacy&court=scotus&sort=newest\` — the newest Supreme Court opinions about privacy.
+- \`GET https://api.duaer.com/v1/data/court-opinions?words=copyright&court=ca9&filedAfter=2025-01-01\` — Ninth Circuit copyright opinions since 2025.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`caseName\`, \`court\`, \`courtId\` — case and court.
+- \`dateFiled\`, \`docketNumber\`, \`citations\` — filing date, docket, and reporter citations.
+- \`citedBy\`, \`status\`, \`judge\` — how often other opinions cite it, publication status, and judge.
+- \`snippet\` — the start of the opinion text.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/congress-bills.md — Duaer US Congress bills
+- https://skills.duaer.com/federal-register.md — Duaer US Federal Register
+`,
+	'uk-bills': `---
+name: duaer-uk-bills
+description: >-
+  Duaer UK Parliament bills. UK Parliament: bills by title words and house, newest update first, with the current stage and next sitting.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer UK Parliament bills
+
+Duaer UK Parliament bills lists bills from the UK Parliament Bills API, most recently updated first. Each row says whether the bill is in progress, an Act, defeated, or withdrawn, with its current stage.
+
+## When to use
+
+- Follow energy bills moving through the House of Commons.
+- See which bills the House of Lords is working on now.
+
+## When not to use
+
+- US bills. Use https://skills.duaer.com/congress-bills.md.
+- Members of Parliament. Use https://skills.duaer.com/uk-mps.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/uk-bills?words=energy\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`words\` or \`house\`.
+
+- \`words\` — Words in the bill title, such as energy.
+- \`house\` — Optional. \`commons\` or \`lords\`: the house the bill is in now.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/uk-bills?words=energy\` — recently updated bills about energy.
+- \`GET https://api.duaer.com/v1/data/uk-bills?house=lords\` — bills now in the House of Lords.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`billId\`, \`status\` — bill number and In progress, Act, Defeated, or Withdrawn.
+- \`stage\`, \`stageHouse\`, \`nextSitting\` — current stage, its house, and the next sitting date.
+- \`currentHouse\`, \`originatingHouse\`, \`lastUpdate\` — where the bill is, where it started, and the last change.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/uk-mps.md — Duaer UK Parliament members
+- https://skills.duaer.com/congress-bills.md — Duaer US Congress bills
+`,
+	'uk-mps': `---
+name: duaer-uk-mps
+description: >-
+  Duaer UK Parliament members. UK Parliament: current MPs and peers by name and house, with party, constituency or peerage, and start date.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer UK Parliament members
+
+Duaer UK Parliament members looks up current Members of Parliament and members of the House of Lords by name. Commons rows carry the constituency; Lords rows carry the peerage type.
+
+## When to use
+
+- Find the constituency and party of an MP by surname.
+- List current members of the House of Lords with a given name.
+
+## When not to use
+
+- US Congress members. Use https://skills.duaer.com/congress-members.md.
+- UK bills. Use https://skills.duaer.com/uk-bills.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/uk-mps?name=Smith\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`name\` or \`house\`.
+
+- \`name\` — Words in the member name, such as Smith.
+- \`house\` — Optional. \`commons\` or \`lords\`.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/uk-mps?name=Smith\` — current MPs and peers named Smith.
+- \`GET https://api.duaer.com/v1/data/uk-mps?name=Badenoch&house=commons\` — one MP in the House of Commons.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`memberId\`, \`name\`, \`party\`, \`house\` — who, which party, Commons or Lords.
+- \`constituency\` or \`peerage\` — the seat for an MP, or the peerage type for a peer.
+- \`memberSince\`, \`portrait\` — start of the current membership and a portrait link.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/uk-bills.md — Duaer UK Parliament bills
+- https://skills.duaer.com/congress-members.md — Duaer US Congress members
+`,
+	'nonprofits': `---
+name: duaer-nonprofits
+description: >-
+  Duaer US nonprofits. ProPublica Nonprofit Explorer: US tax-exempt organisations by name and state, with EIN and NTEE code.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer US nonprofits
+
+Duaer US nonprofits searches IRS tax-exempt organisations through ProPublica Nonprofit Explorer. Each row links to the ProPublica page with filings and financials.
+
+## When to use
+
+- Find the EIN of a food bank in New York.
+- List charities with a word in their name in one state.
+
+## When not to use
+
+- Federal grants and contracts. Use https://skills.duaer.com/usaspending.md.
+- Company identifiers worldwide. Use https://skills.duaer.com/lei.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/nonprofits?words=food%20bank\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`words\`.
+
+- \`words\` — Words in the organisation name, such as food bank.
+- \`state\` — Optional. Two-letter US state such as NY.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/nonprofits?words=food%20bank&state=NY\` — food banks registered in New York.
+- \`GET https://api.duaer.com/v1/data/nonprofits?words=red%20cross\` — organisations named Red Cross.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`name\`, \`ein\` — organisation name and Employer Identification Number.
+- \`city\`, \`state\` — where it is registered.
+- \`nteeCode\`, \`subsection\` — NTEE activity code and IRS 501(c) subsection.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/usaspending.md — Duaer US federal agency budgets
+- https://skills.duaer.com/lei.md — Duaer Legal entities (LEI)
+`,
+	'uk-street-crime': `---
+name: duaer-uk-street-crime
+description: >-
+  Duaer UK street crime. data.police.uk: street-level crimes within a mile of a point in England, Wales, or Northern Ireland, by category and month.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer UK street crime
+
+Duaer UK street crime reads police-reported street-level crimes within about a mile of a point. Without a category it counts each category; with one it lists the crimes with street and outcome.
+
+## When to use
+
+- Compare crime categories around an address in London.
+- List burglaries near a Birmingham street last month.
+
+## When not to use
+
+- US crime rates. Use https://skills.duaer.com/fbi-crime.md.
+- Finding coordinates for a postcode. Use https://skills.duaer.com/postal-codes.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/uk-street-crime?latitude=51.5074&longitude=-0.1278\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`latitude\` and \`longitude\`.
+
+- \`latitude\`, \`longitude\` — A point in England, Wales, or Northern Ireland.
+- \`month\` — Optional. YYYY-MM. Default the latest published month.
+- \`category\` — Optional. \`anti-social-behaviour\`, \`bicycle-theft\`, \`burglary\`, \`criminal-damage-arson\`, \`drugs\`, \`other-theft\`, \`possession-of-weapons\`, \`public-order\`, \`robbery\`, \`shoplifting\`, \`theft-from-the-person\`, \`vehicle-crime\`, \`violent-crime\`, or \`other-crime\`.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/uk-street-crime?latitude=51.5074&longitude=-0.1278\` — crime counts by category around Charing Cross.
+- \`GET https://api.duaer.com/v1/data/uk-street-crime?latitude=52.4862&longitude=-1.8904&category=burglary\` — burglaries near central Birmingham.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`category\`, \`categoryName\`, \`count\`, \`total\`, \`month\` — without a category: one row per category.
+- \`street\`, \`outcome\`, \`latitude\`, \`longitude\`, \`crimeId\` — with a category: one row per crime.
+
+Police publish a month about two months later. Some forces do not publish street-level data, so an area can return no rows.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/fbi-crime.md — Duaer FBI crime statistics
+- https://skills.duaer.com/postal-codes.md — Duaer Postal codes
+`,
+	'sg-forecast': `---
+name: duaer-sg-forecast
+description: >-
+  Duaer Singapore two-hour forecast. data.gov.sg: the NEA two-hour weather forecast for each Singapore area, with the valid period.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Singapore two-hour forecast
+
+Duaer Singapore two-hour forecast returns the latest NEA nowcast for each of about 47 Singapore areas, such as Partly Cloudy or Thundery Showers.
+
+## When to use
+
+- Check whether Tampines expects showers in the next two hours.
+- List the current forecast for every Singapore area.
+
+## When not to use
+
+- Multi-day forecasts worldwide. Use https://skills.duaer.com/weather.md.
+- Hong Kong weather. Use https://skills.duaer.com/hk-weather.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/sg-forecast?area=tampines\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`area\`.
+
+- \`area\` — Words in the area name such as Tampines, or \`all\` for every area.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/sg-forecast?area=tampines\` — the two-hour forecast for Tampines.
+- \`GET https://api.duaer.com/v1/data/sg-forecast?area=all&limit=20\` — the forecast for 20 areas.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`area\`, \`forecast\` — area name and forecast text.
+- \`validFrom\`, \`validTo\`, \`issuedAt\` — the two-hour window and when NEA issued it.
+- \`latitude\`, \`longitude\` — the area label point.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/weather.md — Duaer Weather forecast
+- https://skills.duaer.com/hk-weather.md — Duaer Hong Kong weather
+`,
+	'sg-carparks': `---
+name: duaer-sg-carparks
+description: >-
+  Duaer Singapore HDB car parks. data.gov.sg: HDB car parks by address with live car lots available, total lots, and free or night parking.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Singapore HDB car parks
+
+Duaer Singapore HDB car parks finds HDB car parks whose address has every word you give, then adds the live count of free car lots.
+
+## When to use
+
+- Find free lots at car parks along Tampines Avenue 9.
+- Check which Ang Mo Kio car parks allow night parking.
+
+## When not to use
+
+- Available taxis. Use https://skills.duaer.com/sg-taxis.md.
+- Parking outside HDB estates. Use https://skills.duaer.com/places-nearby.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/sg-carparks?address=Tampines%20Avenue%209\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`address\`.
+
+- \`address\` — Words in the car park address, such as Tampines Avenue 9. Every word must match; Ave, St, Rd, Dr, Cres, Lor, and Ctrl are spelled out.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/sg-carparks?address=Tampines%20Avenue%209\` — car parks on Tampines Avenue 9.
+- \`GET https://api.duaer.com/v1/data/sg-carparks?address=Ang%20Mo%20Kio%20Ave%203\` — car parks on Ang Mo Kio Avenue 3.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`carparkNumber\`, \`address\` — HDB car park code and address.
+- \`lotsAvailable\`, \`totalLots\`, \`updatedAt\` — live car lots.
+- \`carparkType\`, \`parkingSystem\`, \`shortTermParking\`, \`freeParking\`, \`nightParking\`, \`gantryHeight\` — car park details.
+
+A car park without a live feed keeps its details but has no lot counts.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/sg-taxis.md — Duaer Singapore taxis nearby
+- https://skills.duaer.com/places-nearby.md — Duaer Places nearby
+`,
+	'sg-taxis': `---
+name: duaer-sg-taxis
+description: >-
+  Duaer Singapore taxis nearby. data.gov.sg: available taxis near a point in Singapore, nearest first, with distance and the count in the radius.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Singapore taxis nearby
+
+Duaer Singapore taxis nearby reads the live positions of available taxis across Singapore and returns the ones within a radius of your point, nearest first.
+
+## When to use
+
+- See how many taxis are free near Raffles Place.
+- Find the nearest available taxis around Changi Airport.
+
+## When not to use
+
+- Car park lots. Use https://skills.duaer.com/sg-carparks.md.
+- Driving time between two points. Use https://skills.duaer.com/driving-route.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/sg-taxis?latitude=1.2839&longitude=103.8515\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`latitude\` and \`longitude\`.
+
+- \`latitude\`, \`longitude\` — A point in Singapore, such as 1.2839 and 103.8515.
+- \`radius\` — Optional. Meters, 50 to 5000. Default 500.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/sg-taxis?latitude=1.2839&longitude=103.8515\` — free taxis within 500 m of Raffles Place.
+- \`GET https://api.duaer.com/v1/data/sg-taxis?latitude=1.3644&longitude=103.9915&radius=2000\` — free taxis within 2 km of Changi Airport.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`rank\`, \`distanceMeters\` — order and distance from your point.
+- \`latitude\`, \`longitude\` — taxi position.
+- \`withinRadius\`, \`observedAt\` — free taxis in the radius and when the positions were taken.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/sg-carparks.md — Duaer Singapore HDB car parks
+- https://skills.duaer.com/driving-route.md — Duaer Driving route
+`,
+	'space-news': `---
+name: duaer-space-news
+description: >-
+  Duaer Space news. Spaceflight News API: space industry news, blogs, and reports from dozens of sites, newest first.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Space news
+
+Duaer Space news searches the Spaceflight News API, which gathers space industry articles, blogs, and mission reports from NASA, ESA, SpaceX, and news sites.
+
+## When to use
+
+- Follow the latest Starship coverage.
+- Read recent mission reports from space agencies.
+
+## When not to use
+
+- Technology discussion threads. Use https://skills.duaer.com/hacker-news.md.
+- NASA picture of the day. Use https://skills.duaer.com/apod.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/space-news?words=Starship\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`words\` or \`kind\`.
+
+- \`words\` — Words to search, such as Starship.
+- \`kind\` — Optional. \`articles\`, \`blogs\`, or \`reports\`. Default \`articles\`.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/space-news?words=Starship\` — the newest articles about Starship.
+- \`GET https://api.duaer.com/v1/data/space-news?kind=reports\` — the newest mission reports.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`headline\`, \`newsSite\`, \`authors\` — article title, site, and authors.
+- \`publishedAt\`, \`text\`, \`image\` — publish time, summary, and image link.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/hacker-news.md — Duaer Hacker News
+- https://skills.duaer.com/apod.md — Duaer NASA Astronomy Picture of the Day
+`,
+	'tv-shows': `---
+name: duaer-tv-shows
+description: >-
+  Duaer TV shows. TVmaze: TV and streaming shows by name, with network, status, genres, rating, and summary.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer TV shows
+
+Duaer TV shows searches TVmaze for TV and streaming series by name and returns the network or streaming service, status, genres, rating, and summary.
+
+## When to use
+
+- Check whether a series is still running and where it streams.
+- Compare ratings of shows with the same title.
+
+## When not to use
+
+- Podcasts, apps, and music. Use https://skills.duaer.com/apple-search.md.
+- Background on a show or actor. Use https://skills.duaer.com/wikipedia.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/tv-shows?words=the%20office\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`words\`.
+
+- \`words\` — Words in the show name, such as the office.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/tv-shows?words=the%20office\` — the US and UK versions of The Office.
+- \`GET https://api.duaer.com/v1/data/tv-shows?words=dark\` — shows named Dark.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`name\`, \`type\`, \`language\`, \`genres\` — show identity.
+- \`status\`, \`premiered\`, \`ended\`, \`network\` — whether it runs and where.
+- \`rating\`, \`text\`, \`image\`, \`officialSite\` — TVmaze rating, summary, poster, and site.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/apple-search.md — Duaer Apple catalog search
+- https://skills.duaer.com/wikipedia.md — Duaer Wikipedia
+`,
+	'apple-search': `---
+name: duaer-apple-search
+description: >-
+  Duaer Apple catalog search. Apple iTunes Search: podcasts, music, apps, books, movies, and TV in any store country, with genre, price, and link.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Apple catalog search
+
+Duaer Apple catalog search looks up the Apple store catalog. Pick the media type and store country; rows link to Apple Podcasts, Apple Music, or the App Store.
+
+## When to use
+
+- Find popular history podcasts and their feed links.
+- Compare note-taking apps and ratings in the Japanese App Store.
+
+## When not to use
+
+- TV series details. Use https://skills.duaer.com/tv-shows.md.
+- Music metadata such as recordings and releases. Use https://skills.duaer.com/musicbrainz.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/apple-search?words=history\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`words\`.
+
+- \`words\` — Words to search, such as history.
+- \`media\` — Optional. \`podcast\`, \`music\`, \`software\`, \`audiobook\`, \`ebook\`, \`movie\`, or \`tvShow\`. Default \`podcast\`.
+- \`country\` — Optional. Two-letter store country such as US, GB, or JP. Default US.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/apple-search?words=history\` — history podcasts in the US store.
+- \`GET https://api.duaer.com/v1/data/apple-search?words=notes&media=software&country=JP\` — note apps in the Japanese App Store.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`name\`, \`artist\`, \`kind\`, \`genre\` — item, creator or seller, type, and genre.
+- \`price\`, \`rating\`, \`ratingCount\`, \`releaseDate\` — price, average rating, rating count, and release date.
+- \`episodes\`, \`feedUrl\`, \`artwork\`, \`country\` — podcast episodes and feed, artwork, and store.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/tv-shows.md — Duaer TV shows
+- https://skills.duaer.com/musicbrainz.md — Duaer MusicBrainz music
+`,
+	'f1-results': `---
+name: duaer-f1-results
+description: >-
+  Duaer Formula 1 results. Jolpica (Ergast): Formula 1 race results by season and round since 1950, the latest race by default.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Formula 1 results
+
+Duaer Formula 1 results returns the finishing order of a Formula 1 race: driver, team, grid, laps, time or status, and points. Leave the season as latest for the most recent race.
+
+## When to use
+
+- Get the podium of the latest Grand Prix.
+- Look up the results of a historic race.
+
+## When not to use
+
+- Race coverage and background. Use https://skills.duaer.com/wikipedia.md.
+- How much attention a race gets. Use https://skills.duaer.com/wiki-pageviews.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/f1-results?season=latest\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`season\`.
+
+- \`season\` — Four-digit season from 1950, or \`latest\` for the last race.
+- \`round\` — Optional. Round number in the season, 1 to 30. Default the last round.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/f1-results?season=latest\` — the most recent race.
+- \`GET https://api.duaer.com/v1/data/f1-results?season=1988&round=1\` — the 1988 Brazilian Grand Prix.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`season\`, \`round\`, \`race\`, \`date\`, \`circuit\`, \`country\` — which race.
+- \`position\`, \`driver\`, \`driverCode\`, \`team\` — finishing order.
+- \`grid\`, \`laps\`, \`status\`, \`time\`, \`points\`, \`fastestLap\` — start position, laps, result, and points.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/wikipedia.md — Duaer Wikipedia
+- https://skills.duaer.com/wiki-pageviews.md — Duaer Wikipedia pageviews
+`,
+	'public-holidays': `---
+name: duaer-public-holidays
+description: >-
+  Duaer Public holidays. Nager.Date: public holidays of a country for a year, with local names, types, and regions.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Public holidays
+
+Duaer Public holidays lists the public holidays of about 120 countries for a year, with the local name, the English name, the holiday type, and the regions where it applies.
+
+## When to use
+
+- Plan a delivery schedule around Singapore holidays.
+- List next year's Chinese public holidays.
+
+## When not to use
+
+- Sunrise and sunset times. Use https://skills.duaer.com/sunrise.md.
+- Weather on a date. Use https://skills.duaer.com/weather.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/public-holidays?country=SG\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`country\`.
+
+- \`country\` — Two-letter country code such as CN, US, DE, or SG.
+- \`year\` — Optional. Four-digit year. Default this year.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/public-holidays?country=SG\` — Singapore public holidays this year.
+- \`GET https://api.duaer.com/v1/data/public-holidays?country=CN&year=2027&limit=20\` — Chinese public holidays in 2027.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`date\`, \`name\`, \`localName\` — date, English name, and local name.
+- \`types\`, \`regions\`, \`nationwide\`, \`country\` — holiday type, regions where it applies, and whether it is nationwide.
+
+Make-up working days are not included.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/sunrise.md — Duaer Sunrise and sunset
+- https://skills.duaer.com/weather.md — Duaer Weather forecast
+`,
+	'word-finder': `---
+name: duaer-word-finder
+description: >-
+  Duaer Word finder. Datamuse: English words that mean, sound like, are spelled like, rhyme with, relate to, or oppose your words.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Word finder
+
+Duaer Word finder uses Datamuse to find English words by meaning, sound, spelling pattern, rhyme, association, or opposite, with parts of speech and short definitions.
+
+## When to use
+
+- Find synonyms for happy in a product description.
+- Find words that rhyme with a slogan word.
+
+## When not to use
+
+- Encyclopedia articles. Use https://skills.duaer.com/wikipedia.md.
+- Books by title or author. Use https://skills.duaer.com/open-library.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/word-finder?words=happy\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`words\`.
+
+- \`words\` — A word or phrase, such as happy. With \`spelled\`, a pattern such as t??k or bl*.
+- \`relation\` — Optional. \`means\`, \`sounds\`, \`spelled\`, \`rhymes\`, \`related\`, or \`opposite\`. Default \`means\`.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/word-finder?words=happy\` — words that mean happy.
+- \`GET https://api.duaer.com/v1/data/word-finder?words=hot&relation=opposite\` — opposites of hot.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`word\`, \`partsOfSpeech\` — the word and whether it is a noun, verb, adjective, or adverb.
+- \`definitions\`, \`score\` — up to three short definitions and the Datamuse match score.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/wikipedia.md — Duaer Wikipedia
+- https://skills.duaer.com/open-library.md — Duaer Open Library
+`,
 };
