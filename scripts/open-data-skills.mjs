@@ -5165,4 +5165,1868 @@ A missing key returns 401.
 - https://skills.duaer.com/eia-electricity.md — Duaer EIA electricity prices
 - https://skills.duaer.com/treasury.md — Duaer US Treasury fiscal data
 `,
+	'congress-bills': `---
+name: duaer-congress-bills
+description: >-
+  Duaer US Congress bills. Congress.gov: US bills, resolutions, and public laws with their sponsor chamber and latest action.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer US Congress bills
+
+Duaer US Congress bills lists bills from Congress.gov, most recently updated first, with the latest action. Filter by Congress, bill type, or title words, or keep only bills that became law. Duaer holds the upstream API key; you only send your Duaer key.
+
+## When to use
+
+- Follow new energy or tax bills in the current Congress.
+- List the public laws passed by the 118th Congress.
+
+## When not to use
+
+- Federal agency rules. Use https://skills.duaer.com/regulations.md.
+- Daily Federal Register notices. Use https://skills.duaer.com/federal-register.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/congress-bills?words=energy\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`congress\`, \`billType\`, \`lawsOnly\`, or \`words\`.
+
+- \`congress\` — Optional. Congress number such as 118. Default is the current Congress.
+- \`billType\` — Optional. \`hr\`, \`s\`, \`hjres\`, \`sjres\`, \`hconres\`, \`sconres\`, \`hres\`, or \`sres\`.
+- \`lawsOnly\` — Optional. \`yes\` to list only bills that became law.
+- \`words\` — Optional. Words in the bill title, such as energy.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/congress-bills?words=energy\` — recently updated bills about energy.
+- \`GET https://api.duaer.com/v1/data/congress-bills?congress=118&lawsOnly=yes\` — public laws of the 118th Congress.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`congress\`, \`billType\`, \`number\` — bill identity, such as 119 HR 9340.
+- \`billTitle\`, \`originChamber\`, \`introducedDate\` — title, House or Senate, and date.
+- \`latestActionDate\`, \`latestAction\` — the newest step, such as a vote or a referral.
+- \`updateDate\` — when Congress.gov last changed the bill.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/congress-members.md — Duaer US Congress members
+- https://skills.duaer.com/regulations.md — Duaer Regulations.gov documents
+`,
+	'congress-members': `---
+name: duaer-congress-members
+description: >-
+  Duaer US Congress members. Congress.gov: current US senators and representatives for a state or House district, with party and start year.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer US Congress members
+
+Duaer US Congress members lists the current members of Congress for a state, senators first, then representatives by district. Duaer holds the upstream API key; you only send your Duaer key.
+
+## When to use
+
+- Find the senators and representatives for a state.
+- Look up who represents one House district.
+
+## When not to use
+
+- Bills and laws. Use https://skills.duaer.com/congress-bills.md.
+- Federal spending by recipient. Use https://skills.duaer.com/usaspending.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/congress-members?state=CA\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`state\`.
+
+- \`state\` — Two-letter code such as CA.
+- \`district\` — Optional. House district number, such as 12.
+- \`words\` — Optional. Words in the member name.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/congress-members?state=CA\` — both California senators and its representatives.
+- \`GET https://api.duaer.com/v1/data/congress-members?state=NY&district=12\` — the representative for New York district 12.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`bioguideId\`, \`name\` — Congress member ID and name.
+- \`party\`, \`state\`, \`district\` — party, state, and House district.
+- \`chamber\`, \`startYear\` — Senate or House and the start of the current term run.
+- \`imageUrl\` — official portrait when available.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/congress-bills.md — Duaer US Congress bills
+- https://skills.duaer.com/census.md — Duaer US Census ACS
+`,
+	'regulations': `---
+name: duaer-regulations
+description: >-
+  Duaer Regulations.gov documents. Regulations.gov: US federal rules, proposed rules, and notices, with agency, docket, and comment deadline.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Regulations.gov documents
+
+Duaer Regulations.gov documents searches federal rulemaking documents, newest first. Filter by agency and document type, or keep only documents still open for public comment. Duaer holds the upstream API key; you only send your Duaer key.
+
+## When to use
+
+- Find EPA proposed rules still open for comment.
+- Track new FDA rules on a topic.
+
+## When not to use
+
+- Bills in Congress. Use https://skills.duaer.com/congress-bills.md.
+- The daily Federal Register issue. Use https://skills.duaer.com/federal-register.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/regulations?words=drinking%20water\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`words\` or \`agency\`.
+
+- \`words\` — Words in the document, such as drinking water.
+- \`agency\` — Optional. Agency acronym such as EPA, FDA, or DOT.
+- \`documentType\` — Optional. \`rule\`, \`proposed-rule\`, \`notice\`, \`supporting\`, or \`other\`.
+- \`openForComment\` — Optional. \`yes\` to keep documents still taking public comments.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/regulations?words=drinking%20water\` — recent documents about drinking water.
+- \`GET https://api.duaer.com/v1/data/regulations?agency=EPA&documentType=proposed-rule&openForComment=yes\` — EPA proposed rules open for comment.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`documentId\`, \`docketId\` — Regulations.gov document and docket.
+- \`agency\`, \`documentType\`, \`subtype\` — agency and kind, such as Proposed Rule.
+- \`postedDate\` — when the document was posted.
+- \`openForComment\` — whether public comments are still accepted.
+
+The summary shows the comment deadline when there is one.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/federal-register.md — Duaer US Federal Register
+- https://skills.duaer.com/congress-bills.md — Duaer US Congress bills
+`,
+	'fbi-crime': `---
+name: duaer-fbi-crime
+description: >-
+  Duaer FBI crime statistics. FBI Crime Data Explorer: monthly rates and counts of violent and property crime for the US or a state.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer FBI crime statistics
+
+Duaer FBI crime statistics returns monthly offense rates per 100,000 people and counts from the FBI Crime Data Explorer, newest month first. A state row also shows the US rate for comparison. Duaer holds the upstream API key; you only send your Duaer key.
+
+## When to use
+
+- Compare the burglary rate in California with the US.
+- Chart monthly violent crime for last year.
+
+## When not to use
+
+- Population and income. Use https://skills.duaer.com/census.md.
+- Global health indicators. Use https://skills.duaer.com/who-gho.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/fbi-crime?offense=violent-crime\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`offense\` or \`state\`.
+
+- \`offense\` — \`violent-crime\`, \`property-crime\`, \`homicide\`, \`rape\`, \`robbery\`, \`aggravated-assault\`, \`burglary\`, \`larceny\`, \`motor-vehicle-theft\`, or \`arson\`. Default violent-crime.
+- \`state\` — Optional. Two-letter code such as CA. Default is the whole US.
+- \`year\` — Optional. Four-digit year. Default is last year.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/fbi-crime?offense=violent-crime\` — monthly US violent crime for last year.
+- \`GET https://api.duaer.com/v1/data/fbi-crime?offense=burglary&state=CA&year=2023\` — California burglary by month in 2023.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`place\`, \`offense\`, \`month\` — area, offense, and YYYY-MM.
+- \`ratePer100k\`, \`offenses\` — rate per 100,000 people and reported count.
+- \`clearances\` — offenses cleared by arrest or other means, when reported.
+- \`population\` — population covered by reporting agencies.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/census.md — Duaer US Census ACS
+- https://skills.duaer.com/congress-members.md — Duaer US Congress members
+`,
+	'college-scorecard': `---
+name: duaer-college-scorecard
+description: >-
+  Duaer US College Scorecard. US Department of Education: college admission rate, tuition, size, completion rate, and graduate earnings.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer US College Scorecard
+
+Duaer US College Scorecard searches US colleges by name or state, largest first, with cost and outcome figures from the Department of Education. Duaer holds the upstream API key; you only send your Duaer key.
+
+## When to use
+
+- Compare admission rate and tuition of two universities.
+- List the largest colleges in a state.
+
+## When not to use
+
+- Research grants. Use https://skills.duaer.com/nih-reporter.md.
+- Books and authors. Use https://skills.duaer.com/open-library.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/college-scorecard?words=Stanford\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`words\` or \`state\`.
+
+- \`words\` — Words in the school name, such as Stanford.
+- \`state\` — Optional. Two-letter code such as CA.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/college-scorecard?words=Stanford\` — Stanford University figures.
+- \`GET https://api.duaer.com/v1/data/college-scorecard?state=CA\` — the largest colleges in California.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`schoolId\`, \`name\`, \`city\`, \`state\`, \`website\` — school identity.
+- \`admissionRatePct\`, \`students\` — admission rate and undergraduate size.
+- \`tuitionInState\`, \`tuitionOutOfState\` — yearly tuition in USD.
+- \`completionRatePct\`, \`medianEarnings10yr\` — completion rate and median earnings 10 years after entry.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/census.md — Duaer US Census ACS
+- https://skills.duaer.com/nih-reporter.md — Duaer NIH RePORTER grants
+`,
+	'smithsonian': `---
+name: duaer-smithsonian
+description: >-
+  Duaer Smithsonian collections. Smithsonian Open Access: objects, specimens, and archives from Smithsonian museums, with images and 3D models.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Smithsonian collections
+
+Duaer Smithsonian collections searches Smithsonian Open Access records across its museums, libraries, and archives. Keep only objects with images when you need pictures. Duaer holds the upstream API key; you only send your Duaer key.
+
+## When to use
+
+- Find Apollo 11 objects at the Air and Space Museum.
+- Collect CC0 images of historic quilts.
+
+## When not to use
+
+- The Met collection. Use https://skills.duaer.com/met-museum.md.
+- Design objects at the V&A. Use https://skills.duaer.com/vam-museum.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/smithsonian?words=Apollo%2011\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`words\`.
+
+- \`words\` — Object, person, or subject such as Apollo 11.
+- \`withMedia\` — Optional. \`yes\` to keep objects with images.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/smithsonian?words=Apollo%2011\` — Apollo 11 objects and publications.
+- \`GET https://api.duaer.com/v1/data/smithsonian?words=quilt&withMedia=yes\` — quilts with images.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`recordId\`, \`unit\` — Smithsonian record and museum or archive.
+- \`objectType\`, \`maker\`, \`date\`, \`place\` — what, who, when, and where.
+- \`image\`, \`mediaType\`, \`usage\` — image link, media kind, and reuse terms such as CC0.
+- \`recordLink\` — the record link Smithsonian publishes.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/met-museum.md — Duaer The Met collection
+- https://skills.duaer.com/vam-museum.md — Duaer V&A collections
+`,
+	'ev-stations': `---
+name: duaer-ev-stations
+description: >-
+  Duaer EV charging and fuel stations. NREL Alternative Fuels Data Center: public EV chargers and hydrogen, CNG, and other fuel stations in the US.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer EV charging and fuel stations
+
+Duaer EV charging and fuel stations lists open public stations from the NREL Alternative Fuels Data Center for a state or ZIP code, with ports, network, and hours. Duaer holds the upstream API key; you only send your Duaer key.
+
+## When to use
+
+- Find public EV chargers near a ZIP code.
+- List hydrogen stations in California.
+
+## When not to use
+
+- Any kind of place near a point, worldwide. Use https://skills.duaer.com/places-nearby.md.
+- Electricity prices. Use https://skills.duaer.com/eia-electricity.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/ev-stations?zip=94105\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`state\` or \`zip\`.
+
+- \`state\` — Two-letter code such as CA.
+- \`zip\` — Optional. Five-digit ZIP code such as 94105.
+- \`fuel\` — Optional. \`ELEC\`, \`CNG\`, \`LNG\`, \`LPG\`, \`E85\`, \`BD\`, \`HY\`, or \`RD\`. Default ELEC.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/ev-stations?zip=94105\` — public EV chargers in ZIP 94105.
+- \`GET https://api.duaer.com/v1/data/ev-stations?state=CA&fuel=HY\` — hydrogen stations in California.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`stationId\`, \`name\`, \`fuel\` — station and fuel code.
+- \`address\`, \`city\`, \`state\`, \`zip\`, \`latitude\`, \`longitude\` — location.
+- \`network\`, \`level2Ports\`, \`connectors\`, \`pricing\` — charging details when EV.
+- \`accessHours\`, \`facilityType\`, \`phone\`, \`lastConfirmed\` — hours, site, contact, and last check.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/places-nearby.md — Duaer Places nearby
+- https://skills.duaer.com/solar-estimate.md — Duaer Solar power estimate
+`,
+	'solar-estimate': `---
+name: duaer-solar-estimate
+description: >-
+  Duaer Solar power estimate. NREL PVWatts: yearly and monthly electricity a rooftop solar system would make at a location.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Solar power estimate
+
+Duaer Solar power estimate runs NREL PVWatts for a location and returns the yearly total first, then one row per month. Set the system size, tilt, and facing to match a roof. Duaer holds the upstream API key; you only send your Duaer key.
+
+## When to use
+
+- Estimate how much a 6 kW roof system would make in Denver.
+- Compare summer and winter solar output.
+
+## When not to use
+
+- Daily sunshine and weather history. Use https://skills.duaer.com/nasa-power.md.
+- Sunrise and sunset times. Use https://skills.duaer.com/sunrise.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/solar-estimate?latitude=40.0&longitude=-105.2\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`latitude\` and \`longitude\`.
+
+- \`latitude\`, \`longitude\` — Decimal degrees, such as 40.0 and -105.2.
+- \`systemKw\` — Optional. DC size in kW. Default 4.
+- \`tilt\` — Optional. Panel tilt in degrees, 0 to 90. Default 20.
+- \`azimuth\` — Optional. Compass direction the panels face; 180 is south. Default 180.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/solar-estimate?latitude=40.0&longitude=-105.2\` — a 4 kW system near Boulder.
+- \`GET https://api.duaer.com/v1/data/solar-estimate?latitude=33.45&longitude=-112.07&systemKw=6&tilt=30\` — a 6 kW system in Phoenix.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`period\` — \`year\` or a month name.
+- \`acKwh\` — AC electricity in kWh.
+- \`sunKwhPerM2Day\`, \`capacityFactorPct\` — sunshine on the panels and capacity factor.
+- \`systemKw\`, \`tilt\`, \`azimuth\`, \`weatherSite\` — inputs used and the weather station.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/nasa-power.md — Duaer Solar and climate (NASA POWER)
+- https://skills.duaer.com/ev-stations.md — Duaer EV charging and fuel stations
+`,
+	'crypto-prices': `---
+name: duaer-crypto-prices
+description: >-
+  Duaer Crypto prices. Kraken: live prices of Bitcoin, Ether, and other cryptocurrencies with today’s change, 24-hour range, and volume.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Crypto prices
+
+Duaer Crypto prices reads the Kraken public ticker for up to 10 symbols in one quote currency. Change is measured from the 00:00 UTC open.
+
+## When to use
+
+- Show BTC, ETH, and SOL prices in a dashboard.
+- Alert when Bitcoin moves more than 5% today.
+
+## When not to use
+
+- Currency exchange rates. Use https://skills.duaer.com/exchange-rates.md.
+- Company results. Use https://skills.duaer.com/company-financials.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/crypto-prices?symbols=BTC,ETH,SOL\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`symbols\`.
+
+- \`symbols\` — Up to 10 symbols separated by commas, such as BTC,ETH,SOL.
+- \`quote\` — Optional. \`USD\`, \`EUR\`, \`GBP\`, \`CAD\`, \`JPY\`, \`AUD\`, \`CHF\`, \`USDT\`, or \`USDC\`. Default USD.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/crypto-prices?symbols=BTC,ETH,SOL\` — three prices in US dollars.
+- \`GET https://api.duaer.com/v1/data/crypto-prices?symbols=DOGE,XRP&quote=EUR\` — two prices in euros.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`symbol\`, \`quote\` — pair, such as BTC and USD.
+- \`last\`, \`bid\`, \`ask\` — last trade and best prices.
+- \`openToday\`, \`changeTodayPct\` — 00:00 UTC open and change since then.
+- \`high24h\`, \`low24h\`, \`volume24h\`, \`vwap24h\`, \`trades24h\` — 24-hour range and activity.
+
+A symbol Kraken does not list in that currency returns 400.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/exchange-rates.md — Duaer Exchange rates
+- https://skills.duaer.com/company-financials.md — Duaer Company financials (SEC)
+`,
+	'company-financials': `---
+name: duaer-company-financials
+description: >-
+  Duaer Company financials (SEC). SEC EDGAR XBRL: yearly or quarterly revenue, net income, EPS, assets, and cash of a US-listed company.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Company financials (SEC)
+
+Duaer Company financials (SEC) looks up a ticker in SEC EDGAR and returns one metric from the company’s 10-K (or 10-Q) filings, newest period first.
+
+## When to use
+
+- Get Apple revenue for the last five fiscal years.
+- Track Microsoft quarterly net income.
+
+## When not to use
+
+- Ranking many companies. Use https://skills.duaer.com/sec-frames.md.
+- Crypto prices. Use https://skills.duaer.com/crypto-prices.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/company-financials?ticker=AAPL\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`ticker\`.
+
+- \`ticker\` — US stock ticker such as AAPL.
+- \`metric\` — \`revenue\`, \`netIncome\`, \`operatingIncome\`, \`eps\`, \`assets\`, \`liabilities\`, \`equity\`, or \`cash\`. Default revenue.
+- \`quarterly\` — Optional. \`yes\` for 10-Q quarters instead of 10-K years.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/company-financials?ticker=AAPL\` — Apple yearly revenue.
+- \`GET https://api.duaer.com/v1/data/company-financials?ticker=MSFT&metric=netIncome&quarterly=yes\` — Microsoft quarterly net income.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`company\`, \`ticker\`, \`cik\` — company and SEC ID.
+- \`metric\`, \`concept\` — metric asked and the US-GAAP concept used.
+- \`value\`, \`unit\` — figure, such as USD or USD per share.
+- \`periodStart\`, \`periodEnd\`, \`form\`, \`filed\` — period, filing form, and filing date.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/sec-frames.md — Duaer Company rankings (SEC)
+- https://skills.duaer.com/treasury.md — Duaer US Treasury fiscal data
+`,
+	'sec-frames': `---
+name: duaer-sec-frames
+description: >-
+  Duaer Company rankings (SEC). SEC EDGAR XBRL: US-listed companies ranked by revenue, net income, assets, or cash for one calendar year.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Company rankings (SEC)
+
+Duaer Company rankings (SEC) ranks every company that reported a metric to SEC EDGAR for a calendar year, largest first. Balance sheet metrics use the year-end value.
+
+## When to use
+
+- List the largest US companies by 2024 revenue.
+- Rank banks by total assets.
+
+## When not to use
+
+- Several years of one company. Use https://skills.duaer.com/company-financials.md.
+- Country economic data. Use https://skills.duaer.com/world-bank.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/sec-frames?metric=revenue&year=2024\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`metric\` or \`year\`.
+
+- \`metric\` — \`revenue\`, \`netIncome\`, \`operatingIncome\`, \`eps\`, \`assets\`, \`liabilities\`, \`equity\`, or \`cash\`. Default revenue.
+- \`year\` — Optional. Calendar year from 2009. Default is last year.
+- \`words\` — Optional. Words in the company name, such as bank.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/sec-frames?metric=revenue&year=2024\` — the top companies by 2024 revenue.
+- \`GET https://api.duaer.com/v1/data/sec-frames?metric=assets&words=bank\` — banks ranked by total assets.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`rank\`, \`company\`, \`cik\` — position and company.
+- \`metric\`, \`value\`, \`unit\` — figure and unit.
+- \`periodStart\`, \`periodEnd\` — reporting period, or the balance sheet date.
+- \`location\` — state or country code the company reports.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/company-financials.md — Duaer Company financials (SEC)
+- https://skills.duaer.com/world-bank.md — Duaer World Bank indicators
+`,
+	'places-nearby': `---
+name: duaer-places-nearby
+description: >-
+  Duaer Places nearby. OpenStreetMap: cafes, pharmacies, hospitals, chargers, and other places near a point, nearest first.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Places nearby
+
+Duaer Places nearby asks OpenStreetMap for one category of place around a point and returns the nearest first, with address and opening hours when mapped.
+
+## When to use
+
+- Find the nearest pharmacy to a hotel.
+- List cafes within 500 m of an office.
+
+## When not to use
+
+- Turning an address into coordinates. Use https://skills.duaer.com/geocoding.md.
+- US EV charger details. Use https://skills.duaer.com/ev-stations.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/places-nearby?latitude=51.5007&longitude=-0.1246&category=pharmacy\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`latitude\` and \`longitude\`.
+
+- \`latitude\`, \`longitude\` — Decimal degrees, such as 51.5007 and -0.1246.
+- \`category\` — \`cafe\`, \`restaurant\`, \`hospital\`, \`pharmacy\`, \`school\`, \`fuel\`, \`charging\`, \`parking\`, \`atm\`, \`bank\`, \`toilets\`, \`hotel\`, \`museum\`, \`park\`, or \`supermarket\`. Default cafe.
+- \`radius\` — Optional. Search radius in meters, 50 to 3000. Default 500.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/places-nearby?latitude=51.5007&longitude=-0.1246&category=pharmacy&radius=1000\` — pharmacies within 1 km of Westminster.
+- \`GET https://api.duaer.com/v1/data/places-nearby?latitude=1.2834&longitude=103.8607\` — cafes near Marina Bay.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`name\`, \`category\`, \`distanceM\` — place, kind, and meters away.
+- \`latitude\`, \`longitude\`, \`address\` — location.
+- \`openingHours\`, \`phone\`, \`website\`, \`wheelchair\` — details when mapped.
+- \`osmType\`, \`osmId\` — OpenStreetMap element.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/geocoding.md — Duaer Place lookup
+- https://skills.duaer.com/driving-route.md — Duaer Driving route
+`,
+	'driving-route': `---
+name: duaer-driving-route
+description: >-
+  Duaer Driving route. OSRM on OpenStreetMap: driving distance, time, and main roads between two points, with alternatives.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Driving route
+
+Duaer Driving route asks the public OSRM router for the fastest car route between two points, plus alternatives. Times assume free-flowing traffic.
+
+## When to use
+
+- Estimate the drive time between two sites.
+- Compare route distances for a delivery plan.
+
+## When not to use
+
+- Places around a point. Use https://skills.duaer.com/places-nearby.md.
+- Addresses to coordinates. Use https://skills.duaer.com/geocoding.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/driving-route?from=51.5007,-0.1246&to=51.5081,-0.0759\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`from\` and \`to\`.
+
+- \`from\` — Start as latitude,longitude such as 51.5007,-0.1246.
+- \`to\` — End as latitude,longitude such as 51.5081,-0.0759.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/driving-route?from=51.5007,-0.1246&to=51.5081,-0.0759\` — Westminster to the Tower of London.
+- \`GET https://api.duaer.com/v1/data/driving-route?from=40.7580,-73.9855&to=40.6413,-73.7781\` — Times Square to JFK airport.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`route\` — fastest or alternative number.
+- \`distanceKm\`, \`durationMin\` — driving distance and time.
+- \`via\` — main roads on the route.
+
+No drivable route returns no rows.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/places-nearby.md — Duaer Places nearby
+- https://skills.duaer.com/geocoding.md — Duaer Place lookup
+`,
+	'live-flights': `---
+name: duaer-live-flights
+description: >-
+  Duaer Live flights. OpenSky Network: aircraft in the air now over an area, with callsign, position, altitude, and speed.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Live flights
+
+Duaer Live flights reads OpenSky Network state vectors for a box of up to 30 degrees on each side. Filter by callsign to follow one airline.
+
+## When to use
+
+- Count aircraft over Switzerland right now.
+- Find British Airways flights over the UK.
+
+## When not to use
+
+- Satellites and space weather. Use https://skills.duaer.com/space-weather.md.
+- Weather at an airport. Use https://skills.duaer.com/weather.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/live-flights?area=45.8,5.9,47.8,10.5\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`area\`.
+
+- \`area\` — south,west,north,east in degrees, such as 45.8,5.9,47.8,10.5 for Switzerland.
+- \`callsign\` — Optional. Callsign or its start, such as BAW for British Airways.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/live-flights?area=45.8,5.9,47.8,10.5\` — aircraft over Switzerland.
+- \`GET https://api.duaer.com/v1/data/live-flights?area=49,-6,56,2&callsign=BAW\` — British Airways flights over the UK.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`icao24\`, \`callsign\`, \`originCountry\` — aircraft address, flight, and registration country.
+- \`latitude\`, \`longitude\`, \`altitudeM\`, \`onGround\` — position.
+- \`speedKmh\`, \`headingDeg\`, \`verticalRateMs\` — motion.
+- \`squawk\`, \`lastContact\` — transponder code and last signal time.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/weather.md — Duaer Weather forecast
+- https://skills.duaer.com/places-nearby.md — Duaer Places nearby
+`,
+	'vehicle-recalls': `---
+name: duaer-vehicle-recalls
+description: >-
+  Duaer Vehicle recalls. US NHTSA: safety recalls for a vehicle make, model, and model year, with the defect, risk, and remedy.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Vehicle recalls
+
+Duaer Vehicle recalls lists NHTSA safety recall campaigns for one make, model, and model year, newest first, with park-it warnings.
+
+## When to use
+
+- Check a used car for open recall campaigns.
+- List airbag recalls for a fleet model.
+
+## When not to use
+
+- Decoding a VIN. Use https://skills.duaer.com/vin-decode.md.
+- Drug or device safety. Use https://skills.duaer.com/cdc-data.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/vehicle-recalls?make=Honda&model=Accord&year=2018\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`make\`, \`model\`, and \`year\`.
+
+- \`make\` — Vehicle make such as Honda.
+- \`model\` — Model such as Accord.
+- \`year\` — Four-digit model year.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/vehicle-recalls?make=Honda&model=Accord&year=2018\` — recalls for the 2018 Honda Accord.
+- \`GET https://api.duaer.com/v1/data/vehicle-recalls?make=Tesla&model=Model%203&year=2021\` — recalls for the 2021 Tesla Model 3.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`campaign\`, \`reportDate\`, \`manufacturer\` — NHTSA campaign and date.
+- \`component\` — affected system, such as AIR BAGS.
+- \`description\`, \`consequence\`, \`remedy\` — defect, risk, and fix.
+- \`parkIt\`, \`parkOutside\` — warnings not to drive or to park outdoors.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/vin-decode.md — Duaer VIN decoder
+- https://skills.duaer.com/places-nearby.md — Duaer Places nearby
+`,
+	'vin-decode': `---
+name: duaer-vin-decode
+description: >-
+  Duaer VIN decoder. US NHTSA vPIC: make, model, year, body, engine, fuel, and plant from a 17-character VIN.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer VIN decoder
+
+Duaer VIN decoder decodes one vehicle identification number with NHTSA vPIC and returns one row of vehicle facts.
+
+## When to use
+
+- Fill in make, model, and year from a VIN on a form.
+- Check the engine and fuel type of a used car.
+
+## When not to use
+
+- Safety recalls. Use https://skills.duaer.com/vehicle-recalls.md.
+- Fuel prices. Use https://skills.duaer.com/eia-petroleum.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/vin-decode?vin=1HGCM82633A004352\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`vin\`.
+
+- \`vin\` — 17-character vehicle identification number.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/vin-decode?vin=1HGCM82633A004352\` — a 2003 Honda Accord.
+- \`GET https://api.duaer.com/v1/data/vin-decode?vin=5YJ3E1EA7KF317000\` — a Tesla Model 3.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`vin\`, \`make\`, \`model\`, \`modelYear\`, \`trim\` — vehicle identity.
+- \`bodyClass\`, \`vehicleType\`, \`doors\` — body.
+- \`fuel\`, \`engineCylinders\`, \`displacementL\`, \`engineHp\`, \`transmission\` — drivetrain.
+- \`manufacturer\`, \`plantCountry\`, \`plantCity\`, \`decodeNote\` — maker, plant, and any decode warning.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/vehicle-recalls.md — Duaer Vehicle recalls
+- https://skills.duaer.com/eia-petroleum.md — Duaer EIA fuel spot prices
+`,
+	'postal-codes': `---
+name: duaer-postal-codes
+description: >-
+  Duaer Postal codes. Zippopotam.us: the places for a postal code, or the postal codes of a city, in about 60 countries.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Postal codes
+
+Duaer Postal codes turns a postal code into places with coordinates, or lists the postal codes of a city when you give a state and city.
+
+## When to use
+
+- Check which city a ZIP code belongs to.
+- List all postal codes in Beverly Hills.
+
+## When not to use
+
+- Full street addresses. Use https://skills.duaer.com/geocoding.md.
+- Places around a point. Use https://skills.duaer.com/places-nearby.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/postal-codes?country=US&postalCode=90210\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`postalCode\`, or \`state\` and \`city\`.
+
+- \`country\` — Optional. Two-letter code such as US, DE, or FR. Default US.
+- \`postalCode\` — Postal code such as 90210.
+- \`state\` — Optional. State code such as CA, used with \`city\` instead of a postal code.
+- \`city\` — Optional. City name, used with \`state\`.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/postal-codes?country=US&postalCode=90210\` — the place for ZIP 90210.
+- \`GET https://api.duaer.com/v1/data/postal-codes?country=US&state=CA&city=Beverly%20Hills\` — the ZIP codes of Beverly Hills.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`postalCode\`, \`place\` — code and place name.
+- \`state\`, \`stateCode\`, \`country\`, \`countryCode\` — region and country.
+- \`latitude\`, \`longitude\` — approximate center.
+
+An unknown code returns no rows.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/geocoding.md — Duaer Place lookup
+- https://skills.duaer.com/places-nearby.md — Duaer Places nearby
+`,
+	'wiki-pageviews': `---
+name: duaer-wiki-pageviews
+description: >-
+  Duaer Wikipedia pageviews. Wikimedia: daily views of a Wikipedia article, or the most read articles of yesterday, in any language.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Wikipedia pageviews
+
+Duaer Wikipedia pageviews returns daily human views of one article up to yesterday, newest first. Leave the article empty to get yesterday’s most read articles.
+
+## When to use
+
+- See what people read most on Wikipedia yesterday.
+- Measure interest in a person or topic over a month.
+
+## When not to use
+
+- Article text. Use https://skills.duaer.com/wikipedia.md.
+- Tech news discussion. Use https://skills.duaer.com/hacker-news.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/wiki-pageviews?article=Albert%20Einstein\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`article\` or \`language\`.
+
+- \`article\` — Optional. Article title such as Albert Einstein. Empty lists yesterday’s top articles.
+- \`language\` — Optional. Wikipedia code such as en, de, ja, or zh. Default en.
+- \`days\` — Optional. Days up to yesterday, 1 to 90. Default 30.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/wiki-pageviews?article=Albert%20Einstein&days=7\` — daily views for the last week.
+- \`GET https://api.duaer.com/v1/data/wiki-pageviews?language=de\` — yesterday’s most read German articles.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`article\`, \`language\`, \`date\` — article, wiki, and day.
+- \`views\` — views that day.
+- \`rank\` — position in the most read list.
+
+The summary of an article row also shows the total over the days asked.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/wikipedia.md — Duaer Wikipedia
+- https://skills.duaer.com/hacker-news.md — Duaer Hacker News
+`,
+	'hacker-news': `---
+name: duaer-hacker-news
+description: >-
+  Duaer Hacker News. Hacker News via Algolia: stories, Ask HN, Show HN, and comments by words, by relevance or newest.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Hacker News
+
+Duaer Hacker News searches Hacker News through its Algolia index, with points, comments, and the discussion link.
+
+## When to use
+
+- See what developers said about a new database.
+- List today’s Show HN launches.
+
+## When not to use
+
+- Code repositories. Use https://skills.duaer.com/github-repos.md.
+- Package versions. Use https://skills.duaer.com/npm.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/hacker-news?words=rust%20database\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`words\`, or \`type\` with \`sort=date\`.
+
+- \`words\` — Words to search, such as rust database.
+- \`type\` — Optional. \`story\`, \`ask\`, \`show\`, or \`comment\`. Default story.
+- \`sort\` — Optional. \`relevance\` or \`date\`. Default relevance.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/hacker-news?words=rust%20database\` — the most relevant stories.
+- \`GET https://api.duaer.com/v1/data/hacker-news?type=show&sort=date\` — the newest Show HN posts.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`itemId\`, \`author\`, \`createdAt\` — post and time.
+- \`points\`, \`comments\` — score and comment count.
+- \`link\` — the linked article, when there is one.
+
+\`url\` is the Hacker News discussion page.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/github-repos.md — Duaer GitHub repositories
+- https://skills.duaer.com/wiki-pageviews.md — Duaer Wikipedia pageviews
+`,
+	'github-repos': `---
+name: duaer-github-repos
+description: >-
+  Duaer GitHub repositories. GitHub: public repositories by words and language, most starred or most recently updated.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer GitHub repositories
+
+Duaer GitHub repositories searches public GitHub repositories and returns stars, forks, license, and the last push.
+
+## When to use
+
+- Find the most starred vector database projects in Python.
+- Spot recently updated LLM tools.
+
+## When not to use
+
+- Security advisories. Use https://skills.duaer.com/osv.md.
+- Published packages. Use https://skills.duaer.com/pypi.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/github-repos?words=vector%20database\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`words\` or \`language\`.
+
+- \`words\` — Words to search, such as vector database.
+- \`language\` — Optional. Programming language such as Python.
+- \`sort\` — Optional. \`stars\` or \`updated\`. Default stars.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/github-repos?words=vector%20database&language=Python\` — top Python vector database projects.
+- \`GET https://api.duaer.com/v1/data/github-repos?words=llm&sort=updated\` — recently updated LLM repositories.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`repository\`, \`description\`, \`homepage\` — owner/name and about.
+- \`stars\`, \`forks\`, \`openIssues\` — popularity and activity.
+- \`language\`, \`topics\`, \`license\` — stack, tags, and SPDX license.
+- \`pushedAt\`, \`archived\` — last push and whether it is archived.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/hacker-news.md — Duaer Hacker News
+- https://skills.duaer.com/npm.md — Duaer npm packages
+`,
+	'grid-carbon': `---
+name: duaer-grid-carbon
+description: >-
+  Duaer GB grid carbon intensity. National Grid ESO: carbon intensity of Great Britain electricity now or for the next 24 hours, by region and fuel mix.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer GB grid carbon intensity
+
+Duaer GB grid carbon intensity reads the Carbon Intensity API for Great Britain. Give an outward postcode for the regional value and fuel mix.
+
+## When to use
+
+- Run a heavy job when the grid is greenest.
+- Show the fuel mix for a region now.
+
+## When not to use
+
+- US electricity prices. Use https://skills.duaer.com/eia-electricity.md.
+- Greenhouse gas levels in the air. Use https://skills.duaer.com/greenhouse-gases.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/grid-carbon?view=now\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`view\` or \`postcode\`.
+
+- \`view\` — \`now\` or \`forecast\` (next 24 hours in half-hour slots). Default now.
+- \`postcode\` — Optional. First part of a GB postcode such as RG10 for its region and fuel mix.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/grid-carbon?view=now\` — the national value now.
+- \`GET https://api.duaer.com/v1/data/grid-carbon?view=forecast&postcode=RG10\` — the next 24 hours for the RG10 region.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`place\`, \`from\`, \`to\` — area and half-hour slot.
+- \`gramsCo2PerKwh\`, \`index\` — intensity and band, such as low or high.
+- \`forecast\`, \`actual\` — national forecast and measured values.
+- \`<fuel>Pct\` — regional fuel mix in percent, such as \`gasPct\` and \`windPct\`.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/eia-electricity.md — Duaer EIA electricity prices
+- https://skills.duaer.com/greenhouse-gases.md — Duaer Greenhouse gas levels
+`,
+	'epa-facilities': `---
+name: duaer-epa-facilities
+description: >-
+  Duaer EPA facility compliance. US EPA ECHO: regulated facilities with compliance status, significant violations, and inspections.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer EPA facility compliance
+
+Duaer EPA facility compliance searches active facilities in EPA ECHO by state, city, ZIP, or name, most violations first.
+
+## When to use
+
+- List facilities with significant violations in a city.
+- Check the compliance record of a refinery.
+
+## When not to use
+
+- Air quality and weather. Use https://skills.duaer.com/weather.md.
+- Federal rules. Use https://skills.duaer.com/regulations.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/epa-facilities?state=CA&city=Oakland\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`state\` or \`zip\`.
+
+- \`state\` — Two-letter code such as CA.
+- \`city\` — Optional. City name such as Oakland.
+- \`zip\` — Optional. Five-digit ZIP code instead of or with the state.
+- \`name\` — Optional. Words in the facility name.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/epa-facilities?state=CA&city=Oakland\` — Oakland facilities, most violations first.
+- \`GET https://api.duaer.com/v1/data/epa-facilities?state=TX&name=refinery\` — Texas refineries.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`registryId\`, \`name\`, \`street\`, \`city\`, \`state\`, \`zip\` — facility.
+- \`complianceStatus\`, \`significantViolation\` — current status.
+- \`quartersInNonCompliance\`, \`inspections\`, \`lastInspection\` — record over three years.
+- \`programs\`, \`latitude\`, \`longitude\` — EPA programs and location.
+
+A broad state search can take several seconds.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/regulations.md — Duaer Regulations.gov documents
+- https://skills.duaer.com/greenhouse-gases.md — Duaer Greenhouse gas levels
+`,
+	'greenhouse-gases': `---
+name: duaer-greenhouse-gases
+description: >-
+  Duaer Greenhouse gas levels. NOAA GML: monthly CO2 at Mauna Loa and global CO2, methane, and nitrous oxide, with the change on a year earlier.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Greenhouse gas levels
+
+Duaer Greenhouse gas levels reads the NOAA Global Monitoring Laboratory monthly series, newest month first, with the trend and the change on a year earlier.
+
+## When to use
+
+- Report the latest CO2 reading at Mauna Loa.
+- Chart the rise of methane over a year.
+
+## When not to use
+
+- Future climate projections. Use https://skills.duaer.com/climate-projection.md.
+- Grid carbon intensity. Use https://skills.duaer.com/grid-carbon.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/greenhouse-gases?gas=co2\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`gas\`.
+
+- \`gas\` — \`co2\` (Mauna Loa), \`co2-global\`, \`ch4\`, or \`n2o\`. Default co2.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/greenhouse-gases?gas=co2\` — monthly CO2 at Mauna Loa.
+- \`GET https://api.duaer.com/v1/data/greenhouse-gases?gas=ch4\` — global methane.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`gas\`, \`month\` — series and YYYY-MM.
+- \`value\`, \`unit\` — monthly mean, in ppm or ppb.
+- \`trend\` — seasonally adjusted value.
+- \`changeOnYear\` — change on the same month a year earlier.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/climate-projection.md — Duaer Climate projection
+- https://skills.duaer.com/grid-carbon.md — Duaer GB grid carbon intensity
+`,
+	'ocean-datasets': `---
+name: duaer-ocean-datasets
+description: >-
+  Duaer Ocean datasets (NOAA). NOAA CoastWatch ERDDAP: ocean and climate datasets such as sea surface temperature, chlorophyll, and winds.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Ocean datasets (NOAA)
+
+Duaer Ocean datasets (NOAA) searches the NOAA CoastWatch ERDDAP catalog and returns datasets with their data and graph links.
+
+## When to use
+
+- Find a daily sea surface temperature dataset.
+- Locate chlorophyll data for an ocean study.
+
+## When not to use
+
+- Tide times. Use https://skills.duaer.com/tides.md.
+- Marine weather forecasts. Use https://skills.duaer.com/marine.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/ocean-datasets?words=chlorophyll\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`words\`.
+
+- \`words\` — Words such as sea surface temperature or chlorophyll.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/ocean-datasets?words=chlorophyll\` — chlorophyll datasets.
+- \`GET https://api.duaer.com/v1/data/ocean-datasets?words=sea%20surface%20temperature\` — sea surface temperature datasets.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`datasetId\`, \`institution\` — ERDDAP dataset and provider.
+- \`kind\`, \`dataUrl\` — grid or table and the data access link.
+- \`graphUrl\`, \`background\` — graph builder and background page.
+- \`description\` — dataset summary.
+
+No match returns no rows.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/marine.md — Duaer Marine forecast
+- https://skills.duaer.com/tides.md — Duaer US tide predictions
+`,
+	'hk-weather': `---
+name: duaer-hk-weather
+description: >-
+  Duaer Hong Kong weather. Hong Kong Observatory: current temperatures and warnings across Hong Kong, or the 9-day forecast.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Hong Kong weather
+
+Duaer Hong Kong weather reads Hong Kong Observatory open data in English, Simplified Chinese, or Traditional Chinese.
+
+## When to use
+
+- Show current Hong Kong temperatures and warnings.
+- Plan an outdoor event with the 9-day forecast.
+
+## When not to use
+
+- Weather anywhere else. Use https://skills.duaer.com/weather.md.
+- Past weather. Use https://skills.duaer.com/weather-history.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/hk-weather?view=current\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`view\`.
+
+- \`view\` — \`current\` or \`forecast\`. Default current.
+- \`language\` — Optional. \`en\`, \`zh-Hans\`, or \`zh-Hant\`. Default en.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/hk-weather?view=current\` — temperatures now, the Observatory first.
+- \`GET https://api.duaer.com/v1/data/hk-weather?view=forecast&language=zh-Hans\` — the 9-day forecast in Simplified Chinese.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`place\`, \`temperatureC\`, \`updated\` — station, temperature, and observation time.
+- \`humidityPct\`, \`uvIndex\`, \`warnings\` — on the Observatory row.
+- \`date\`, \`weekday\`, \`minTempC\`, \`maxTempC\`, \`weather\`, \`wind\`, \`rainChance\` — on forecast rows.
+- \`outlook\` — the general situation, on the first forecast row.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/weather.md — Duaer Weather forecast
+- https://skills.duaer.com/marine.md — Duaer Marine forecast
+`,
+	'musicbrainz': `---
+name: duaer-musicbrainz
+description: >-
+  Duaer MusicBrainz music. MusicBrainz: artists, albums and releases, and recordings with dates, countries, labels, and tags.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer MusicBrainz music
+
+Duaer MusicBrainz music searches the open MusicBrainz database for artists, releases, or recordings, best match first.
+
+## When to use
+
+- Get an artist’s country, start year, and genres.
+- List the editions of an album with labels.
+
+## When not to use
+
+- Books. Use https://skills.duaer.com/open-library.md.
+- Museum objects. Use https://skills.duaer.com/vam-museum.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/musicbrainz?words=Radiohead\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`words\`.
+
+- \`words\` — Artist, album, or song such as Radiohead.
+- \`type\` — Optional. \`artist\`, \`release\`, or \`recording\`. Default artist.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/musicbrainz?words=Radiohead\` — the band and similar names.
+- \`GET https://api.duaer.com/v1/data/musicbrainz?words=OK%20Computer&type=release\` — releases of OK Computer.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`mbid\`, \`name\`, \`type\`, \`score\` — MusicBrainz ID, name, kind, and match score.
+- \`country\`, \`area\`, \`begin\`, \`end\`, \`tags\` — for artists.
+- \`release\`, \`artist\`, \`date\`, \`label\`, \`tracks\`, \`status\`, \`releaseType\` — for releases.
+- \`recording\`, \`artist\`, \`lengthSec\`, \`firstReleaseDate\`, \`release\` — for recordings.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/open-library.md — Duaer Open Library
+- https://skills.duaer.com/wikipedia.md — Duaer Wikipedia
+`,
+	'vam-museum': `---
+name: duaer-vam-museum
+description: >-
+  Duaer V&A collections. Victoria and Albert Museum: design and decorative art objects with maker, date, gallery, and image.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer V&A collections
+
+Duaer V&A collections searches the Victoria and Albert Museum collection, best match first, with IIIF image links and whether the object is on display.
+
+## When to use
+
+- Find William Morris textiles with images.
+- Check which teapots are on display at the V&A.
+
+## When not to use
+
+- Smithsonian objects. Use https://skills.duaer.com/smithsonian.md.
+- Paintings at the Met. Use https://skills.duaer.com/met-museum.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/vam-museum?words=William%20Morris\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`words\`.
+
+- \`words\` — Object, maker, or style such as William Morris.
+- \`withImages\` — Optional. \`yes\` to keep objects with images.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/vam-museum?words=William%20Morris\` — William Morris designs.
+- \`GET https://api.duaer.com/v1/data/vam-museum?words=teapot&withImages=yes\` — teapots with images.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`systemNumber\`, \`accessionNumber\` — V&A identifiers.
+- \`objectType\`, \`maker\`, \`date\`, \`place\` — what, who, when, and where.
+- \`onDisplay\`, \`gallery\` — whether and where it is shown.
+- \`image\`, \`thumbnail\` — IIIF image links.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/smithsonian.md — Duaer Smithsonian collections
+- https://skills.duaer.com/met-museum.md — Duaer The Met collection
+`,
 };

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EPA facility compliance in Duaer · Duaer</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<meta name="description" content="In Duaer: US EPA ECHO: regulated facilities with compliance status, significant violations, and inspections. One successful search uses 1 credit."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://skills.duaer.com/epa-facilities/"/>
+<link rel="alternate" hreflang="zh-CN" href="https://skills.duaer.com/zh/epa-facilities/"/>
+<link rel="alternate" hreflang="en" href="https://skills.duaer.com/epa-facilities/"/>
+<link rel="alternate" hreflang="x-default" href="https://skills.duaer.com/epa-facilities/"/>
+<link rel="alternate" type="text/plain" href="https://skills.duaer.com/llms.txt" title="LLMs"/>
+<link rel="alternate" type="text/markdown" href="https://skills.duaer.com/epa-facilities.md" title="Markdown"/>
+<meta property="og:site_name" content="Duaer"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://skills.duaer.com/epa-facilities/"/>
+<meta property="og:title" content="EPA facility compliance in Duaer · Duaer"/>
+<meta property="og:description" content="In Duaer: US EPA ECHO: regulated facilities with compliance status, significant violations, and inspections. One successful search uses 1 credit."/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="EPA facility compliance in Duaer · Duaer"/>
+<meta name="twitter:description" content="In Duaer: US EPA ECHO: regulated facilities with compliance status, significant violations, and inspections. One successful search uses 1 credit."/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.duaer.com/#organization","name":"Duaer","url":"https://www.duaer.com/"},{"@type":"TechArticle","headline":"EPA facility compliance in Duaer","description":"In Duaer: US EPA ECHO: regulated facilities with compliance status, significant violations, and inspections. One successful search uses 1 credit.","inLanguage":"en","url":"https://skills.duaer.com/epa-facilities/","author":{"@id":"https://www.duaer.com/#organization"},"publisher":{"@id":"https://www.duaer.com/#organization"},"isRelatedTo":[{"@type":"TechArticle","headline":"Regulations.gov documents in Duaer","url":"https://skills.duaer.com/regulations/"},{"@type":"TechArticle","headline":"Greenhouse gas levels in Duaer","url":"https://skills.duaer.com/greenhouse-gases/"}]}]}</script>
+<link rel="stylesheet" href="/site.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"/>
+</head>
+<body>
+<div class="duaer-auth">
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="shell">
+<header class="topbar">
+<a class="brand" href="https://www.duaer.com/"><svg class="brand-mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#15181b"/><path fill="#eff2f1" fill-rule="evenodd" d="M9.4 7.8h6.35c5.45 0 8.85 3.35 8.85 8.2s-3.4 8.2-8.85 8.2H9.4V7.8Zm3.45 3.25v9.9h2.95c3.2 0 5.15-1.95 5.15-4.95s-1.95-4.95-5.15-4.95h-2.95Z"/><path d="M12.5 16.5h7.2" stroke="#e14a0e" stroke-width="1.8" stroke-linecap="round"/></svg><span class="brand-name">Duaer</span></a>
+<nav class="top-nav" aria-label="Duaer">
+<a class="nav-link" href="https://www.duaer.com/about">About</a>
+<a class="nav-link" href="https://www.duaer.com/pricing">Pricing</a>
+<a class="nav-link" href="https://doc.duaer.com/">Docs</a>
+<a class="nav-link is-current" href="/" aria-current="page">Skills</a>
+<span class="lang"><a href="/zh/epa-facilities/" hreflang="zh-CN">中文</a><a class="active" href="/epa-facilities/" hreflang="en">EN</a></span>
+<a class="nav-link" href="https://www.duaer.com/signin">Sign in</a>
+</nav>
+</header>
+<main class="stage article">
+<p class="how-kicker">Skills</p>
+<h1>EPA facility compliance in Duaer</h1>
+<p class="lede">In Duaer: US EPA ECHO: regulated facilities with compliance status, significant violations, and inspections. One successful search uses 1 credit.</p>
+<h2>What Duaer returns</h2>
+<p>Each row has registryId, name, street, city, state, zip, complianceStatus, significantViolation, and more, with a source link.</p>
+<h2>Key</h2>
+<p>Before you call, <a href="/keys/">get a Duaer key</a>.</p>
+<h2>Call skill</h2>
+<p>Paste this English skill into an agent. It matches Copy skill in the Duaer data market.</p>
+<pre><code>---
+name: duaer-epa-facilities
+description: &gt;-
+  Duaer EPA facility compliance. US EPA ECHO: regulated facilities with compliance status, significant violations, and inspections.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer EPA facility compliance
+
+Duaer EPA facility compliance searches active facilities in EPA ECHO by state, city, ZIP, or name, most violations first.
+
+## When to use
+
+- List facilities with significant violations in a city.
+- Check the compliance record of a refinery.
+
+## When not to use
+
+- Air quality and weather. Use https://skills.duaer.com/weather.md.
+- Federal rules. Use https://skills.duaer.com/regulations.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/epa-facilities?state=CA&amp;city=Oakland`
+
+Header: `Authorization: Bearer &lt;Duaer key&gt;`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `state` or `zip`.
+
+- `state` — Two-letter code such as CA.
+- `city` — Optional. City name such as Oakland.
+- `zip` — Optional. Five-digit ZIP code instead of or with the state.
+- `name` — Optional. Words in the facility name.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/epa-facilities?state=CA&amp;city=Oakland` — Oakland facilities, most violations first.
+- `GET https://api.duaer.com/v1/data/epa-facilities?state=TX&amp;name=refinery` — Texas refineries.
+
+## Result
+
+The response is `{ &quot;items&quot;: [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `registryId`, `name`, `street`, `city`, `state`, `zip` — facility.
+- `complianceStatus`, `significantViolation` — current status.
+- `quartersInNonCompliance`, `inspections`, `lastInspection` — record over three years.
+- `programs`, `latitude`, `longitude` — EPA programs and location.
+
+A broad state search can take several seconds.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/regulations.md — Duaer Regulations.gov documents
+- https://skills.duaer.com/greenhouse-gases.md — Duaer Greenhouse gas levels
+</code></pre>
+<h2>Related skills</h2>
+<div class="cards"><a class="card" href="/regulations/">
+<span class="card-type">Data</span>
+<h3>Regulations.gov documents in Duaer</h3>
+<p>In Duaer: Regulations.gov: US federal rules, proposed rules, and notices, with agency, docket, and comment deadline. One successful search uses 1 credit.</p>
+</a>
+<a class="card" href="/greenhouse-gases/">
+<span class="card-type">Data</span>
+<h3>Greenhouse gas levels in Duaer</h3>
+<p>In Duaer: NOAA GML: monthly CO2 at Mauna Loa and global CO2, methane, and nitrous oxide, with the change on a year earlier. One successful search uses 1 credit.</p>
+</a></div>
+</main>
+</div>
+<footer class="site-footer"><div class="shell"><a href="https://www.duaer.com/">Duaer</a><a href="https://skills.duaer.com/llms.txt">llms.txt</a></div></footer>
+</div>
+</body>
+</html>
