@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>在 Duaer 里用 MASST 搜谱图 · Duaer</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<meta name="description" content="在 Duaer 里用 GNPS2 MASST 查 MS/MS 谱图出现在哪些公开代谢组数据中。一次成功查询用 1 额度。"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://skills.duaer.com/zh/masst/"/>
+<link rel="alternate" hreflang="zh-CN" href="https://skills.duaer.com/zh/masst/"/>
+<link rel="alternate" hreflang="en" href="https://skills.duaer.com/masst/"/>
+<link rel="alternate" hreflang="x-default" href="https://skills.duaer.com/masst/"/>
+<link rel="alternate" type="text/plain" href="https://skills.duaer.com/llms.txt" title="LLMs"/>
+<link rel="alternate" type="text/markdown" href="https://skills.duaer.com/zh/masst.md" title="Markdown"/>
+<meta property="og:site_name" content="Duaer"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="zh_CN"/>
+<meta property="og:url" content="https://skills.duaer.com/zh/masst/"/>
+<meta property="og:title" content="在 Duaer 里用 MASST 搜谱图 · Duaer"/>
+<meta property="og:description" content="在 Duaer 里用 GNPS2 MASST 查 MS/MS 谱图出现在哪些公开代谢组数据中。一次成功查询用 1 额度。"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="在 Duaer 里用 MASST 搜谱图 · Duaer"/>
+<meta name="twitter:description" content="在 Duaer 里用 GNPS2 MASST 查 MS/MS 谱图出现在哪些公开代谢组数据中。一次成功查询用 1 额度。"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.duaer.com/#organization","name":"Duaer","url":"https://www.duaer.com/"},{"@type":"TechArticle","headline":"在 Duaer 里用 MASST 搜谱图","description":"在 Duaer 里用 GNPS2 MASST 查 MS/MS 谱图出现在哪些公开代谢组数据中。一次成功查询用 1 额度。","inLanguage":"zh-CN","url":"https://skills.duaer.com/zh/masst/","author":{"@id":"https://www.duaer.com/#organization"},"publisher":{"@id":"https://www.duaer.com/#organization"},"isRelatedTo":[{"@type":"TechArticle","headline":"用 Duaer 注释未知特征（代谢暗物质）","url":"https://skills.duaer.com/zh/metabolic-dark-matter/"},{"@type":"TechArticle","headline":"在 Duaer 里按 USI 取谱","url":"https://skills.duaer.com/zh/spectrum/"},{"@type":"TechArticle","headline":"在 Duaer 里匹配 MassBank 谱图","url":"https://skills.duaer.com/zh/massbank/"}]}]}</script>
+<link rel="stylesheet" href="/site.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"/>
+</head>
+<body>
+<div class="duaer-auth">
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="shell">
+<header class="topbar">
+<a class="brand" href="https://www.duaer.com/"><svg class="brand-mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#15181b"/><path fill="#eff2f1" fill-rule="evenodd" d="M9.4 7.8h6.35c5.45 0 8.85 3.35 8.85 8.2s-3.4 8.2-8.85 8.2H9.4V7.8Zm3.45 3.25v9.9h2.95c3.2 0 5.15-1.95 5.15-4.95s-1.95-4.95-5.15-4.95h-2.95Z"/><path d="M12.5 16.5h7.2" stroke="#e14a0e" stroke-width="1.8" stroke-linecap="round"/></svg><span class="brand-name">Duaer</span></a>
+<nav class="top-nav" aria-label="Duaer">
+<a class="nav-link" href="https://www.duaer.com/about">About</a>
+<a class="nav-link" href="https://www.duaer.com/pricing">Pricing</a>
+<a class="nav-link" href="https://doc.duaer.com/">Docs</a>
+<a class="nav-link is-current" href="/zh/" aria-current="page">Skills</a>
+<span class="lang"><a href="/masst/" hreflang="en">EN</a><a class="active" href="/zh/masst/" hreflang="zh-CN">中文</a></span>
+<a class="nav-link" href="https://www.duaer.com/signin">Sign in</a>
+</nav>
+</header>
+<main class="stage article">
+<p class="how-kicker">Skills</p>
+<h1>在 Duaer 里用 MASST 搜谱图</h1>
+<p class="lede">在 Duaer 里用 GNPS2 MASST 查 MS/MS 谱图出现在哪些公开代谢组数据中。一次成功查询用 1 额度。</p>
+<h2>能拿到什么</h2>
+<p>每个匹配有 USI、数据集、GNPS 谱库编号（如有）、余弦、匹配峰数与质量差。</p>
+<h2>密钥</h2>
+<p>调用前先<a href="/zh/keys/">获取 Duaer 密钥</a>.</p>
+<h2>调用技能</h2>
+<p>下面这段是给智能体复制的英文技能，和数据市场里的复制内容相同。</p>
+<pre><code>---
+name: duaer-masst
+description: &gt;-
+  Find where an MS/MS spectrum appears in public metabolomics data with GNPS2 MASST through Duaer.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer MASST
+
+Search an MS/MS spectrum across public metabolomics datasets or the GNPS library with GNPS2 fast MASST through Duaer with a Duaer key.
+The call waits up to 45 seconds for the search to finish.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/masst?usi=mzspec:GNPS:GNPS-LIBRARY:accession:CCMSLIB00005435737&amp;library=public&amp;limit=10`
+
+Header: `Authorization: Bearer &lt;Duaer key&gt;`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+Provide `usi`, or `peaks` with `precursorMz`.
+
+- `usi` — spectrum to search, such as a https://skills.duaer.com/spectrum.md result.
+- `peaks` — MS/MS peaks as `mz:intensity` pairs separated by spaces, used when `usi` is empty.
+- `precursorMz` — precursor m/z, required with `peaks`.
+- `charge` — optional. Precursor charge. Default 1.
+- `library` — optional. `public` (public datasets, default), `gnpsData` (GNPS and MassIVE data), or `gnpsLibrary` (GNPS reference library).
+- `cosine` — optional. Minimum cosine similarity from 0 to 1. Default 0.7.
+- `limit` — optional. From 1 to 20. Default 10.
+
+## Result
+
+Each item has `source`, `title`, `url` (spectrum viewer), `summary`, `usi`, `dataset`, `libraryAccession` (GNPS library matches), `cosine`, `matchingPeaks`, and `deltaMass`.
+Datasets tell you in which studies, samples, or organisms the unknown spectrum was seen.
+A search that does not finish in 45 seconds returns 503 and uses 0 credits.
+To work an unannotated feature step by step, follow https://skills.duaer.com/metabolic-dark-matter.md.
+
+## Credits
+
+One successful search uses 1 credit, including a search that finds no match.
+Empty input, a failed source, or no remaining credits uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+</code></pre>
+<h2>相关技能</h2>
+<div class="cards"><a class="card" href="/zh/metabolic-dark-matter/">
+<span class="card-type">指南</span>
+<h3>用 Duaer 注释未知特征（代谢暗物质）</h3>
+<p>在 Duaer 里逐步处理谱库认不出的质谱特征：谱库匹配、质量候选、参考谱图与 MASST，每步一次 Duaer Data 调用。</p>
+</a>
+<a class="card" href="/zh/spectrum/">
+<span class="card-type">数据</span>
+<h3>在 Duaer 里按 USI 取谱</h3>
+<p>在 Duaer 里按 USI 取公开质谱的峰列表。一次成功查询用 1 额度。</p>
+</a>
+<a class="card" href="/zh/massbank/">
+<span class="card-type">数据</span>
+<h3>在 Duaer 里匹配 MassBank 谱图</h3>
+<p>在 Duaer 里用 MS/MS 峰、精确质量或 InChIKey 匹配 MassBank。一次成功查询用 1 额度。</p>
+</a></div>
+</main>
+</div>
+<footer class="site-footer"><div class="shell"><a href="https://www.duaer.com/">Duaer</a><a href="https://skills.duaer.com/llms.txt">llms.txt</a></div></footer>
+</div>
+</body>
+</html>

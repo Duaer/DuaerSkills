@@ -161,6 +161,12 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Search iNaturalist in Duaer](https://skills.duaer.com/inaturalist.md): In Duaer, search taxa in iNaturalist. One successful search uses 1 credit.
 - [Search DisProt in Duaer](https://skills.duaer.com/disprot.md): In Duaer, search intrinsically disordered proteins in DisProt. One successful search uses 1 credit.
 - [Search LOTUS in Duaer](https://skills.duaer.com/lotus.md): In Duaer, search natural products in LOTUS. One successful search uses 1 credit.
+- [Annotate an unknown feature with Duaer](https://skills.duaer.com/metabolic-dark-matter.md): In Duaer, work an MS feature that no library identified: library match, mass candidates, reference spectra, and MASST, one Duaer Data call per step.
+- [Match spectra in MassBank with Duaer](https://skills.duaer.com/massbank.md): In Duaer, match MS/MS peaks, an exact mass, or an InChIKey against MassBank. One successful search uses 1 credit.
+- [Find MoNA reference spectra with Duaer](https://skills.duaer.com/mona.md): In Duaer, find reference MS/MS spectra in MoNA by InChIKey or compound name. One successful search uses 1 credit.
+- [List mass candidates in Duaer](https://skills.duaer.com/mass-candidates.md): In Duaer, list PubChem compounds that fit an observed m/z and adduct. One successful search uses 1 credit.
+- [Fetch a spectrum by USI in Duaer](https://skills.duaer.com/spectrum.md): In Duaer, fetch the peaks of a public mass spectrum by its USI. One successful search uses 1 credit.
+- [Search a spectrum with MASST in Duaer](https://skills.duaer.com/masst.md): In Duaer, find where an MS/MS spectrum appears in public metabolomics data with GNPS2 MASST. One successful search uses 1 credit.
 - [Search LINCS in Duaer](https://skills.duaer.com/lincs.md): In Duaer, search LINCS portal datasets. One successful search uses 1 credit.
 - [Search CELLxGENE in Duaer](https://skills.duaer.com/cellxgene.md): In Duaer, search CELLxGENE collections. One successful search uses 1 credit.
 - [Search MG-RAST in Duaer](https://skills.duaer.com/mgrast.md): In Duaer, search MG-RAST metagenome projects. One successful search uses 1 credit.

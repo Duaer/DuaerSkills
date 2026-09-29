@@ -42,3 +42,4 @@ A missing key returns 401.
 - [Search reactions in Duaer](https://skills.duaer.com/reactions.md)
 - [Search pathways in Duaer](https://skills.duaer.com/pathways.md)
 - [Search drug labels in Duaer](https://skills.duaer.com/drug-labels.md)
+- [Annotate an unknown feature with Duaer](https://skills.duaer.com/metabolic-dark-matter.md)
