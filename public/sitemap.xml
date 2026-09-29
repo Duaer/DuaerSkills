@@ -626,4 +626,28 @@
   <url><loc>https://skills.duaer.com/zh/pgs-catalog/</loc></url>
   <url><loc>https://skills.duaer.com/who-gho/</loc></url>
   <url><loc>https://skills.duaer.com/zh/who-gho/</loc></url>
+  <url><loc>https://skills.duaer.com/geocoding/</loc></url>
+  <url><loc>https://skills.duaer.com/zh/geocoding/</loc></url>
+  <url><loc>https://skills.duaer.com/elevation/</loc></url>
+  <url><loc>https://skills.duaer.com/zh/elevation/</loc></url>
+  <url><loc>https://skills.duaer.com/nasa-power/</loc></url>
+  <url><loc>https://skills.duaer.com/zh/nasa-power/</loc></url>
+  <url><loc>https://skills.duaer.com/weather-alerts/</loc></url>
+  <url><loc>https://skills.duaer.com/zh/weather-alerts/</loc></url>
+  <url><loc>https://skills.duaer.com/eurostat/</loc></url>
+  <url><loc>https://skills.duaer.com/zh/eurostat/</loc></url>
+  <url><loc>https://skills.duaer.com/federal-register/</loc></url>
+  <url><loc>https://skills.duaer.com/zh/federal-register/</loc></url>
+  <url><loc>https://skills.duaer.com/un-sdg/</loc></url>
+  <url><loc>https://skills.duaer.com/zh/un-sdg/</loc></url>
+  <url><loc>https://skills.duaer.com/usaspending/</loc></url>
+  <url><loc>https://skills.duaer.com/zh/usaspending/</loc></url>
+  <url><loc>https://skills.duaer.com/aflow/</loc></url>
+  <url><loc>https://skills.duaer.com/zh/aflow/</loc></url>
+  <url><loc>https://skills.duaer.com/alexandria/</loc></url>
+  <url><loc>https://skills.duaer.com/zh/alexandria/</loc></url>
+  <url><loc>https://skills.duaer.com/npi/</loc></url>
+  <url><loc>https://skills.duaer.com/zh/npi/</loc></url>
+  <url><loc>https://skills.duaer.com/cms-hospitals/</loc></url>
+  <url><loc>https://skills.duaer.com/zh/cms-hospitals/</loc></url>
 </urlset>
