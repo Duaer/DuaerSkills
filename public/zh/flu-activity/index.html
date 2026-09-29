@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>在 Duaer 里查美国流感活动 · Duaer</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<meta name="description" content="在 Duaer 里：Delphi Epidata FluView：CDC ILINet 每周流感样病例比例，可按美国地区或州查询。一次成功查询用 1 额度。"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://skills.duaer.com/zh/flu-activity/"/>
+<link rel="alternate" hreflang="zh-CN" href="https://skills.duaer.com/zh/flu-activity/"/>
+<link rel="alternate" hreflang="en" href="https://skills.duaer.com/flu-activity/"/>
+<link rel="alternate" hreflang="x-default" href="https://skills.duaer.com/flu-activity/"/>
+<link rel="alternate" type="text/plain" href="https://skills.duaer.com/llms.txt" title="LLMs"/>
+<link rel="alternate" type="text/markdown" href="https://skills.duaer.com/zh/flu-activity.md" title="Markdown"/>
+<meta property="og:site_name" content="Duaer"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="zh_CN"/>
+<meta property="og:url" content="https://skills.duaer.com/zh/flu-activity/"/>
+<meta property="og:title" content="在 Duaer 里查美国流感活动 · Duaer"/>
+<meta property="og:description" content="在 Duaer 里：Delphi Epidata FluView：CDC ILINet 每周流感样病例比例，可按美国地区或州查询。一次成功查询用 1 额度。"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="在 Duaer 里查美国流感活动 · Duaer"/>
+<meta name="twitter:description" content="在 Duaer 里：Delphi Epidata FluView：CDC ILINet 每周流感样病例比例，可按美国地区或州查询。一次成功查询用 1 额度。"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.duaer.com/#organization","name":"Duaer","url":"https://www.duaer.com/"},{"@type":"TechArticle","headline":"在 Duaer 里查美国流感活动","description":"在 Duaer 里：Delphi Epidata FluView：CDC ILINet 每周流感样病例比例，可按美国地区或州查询。一次成功查询用 1 额度。","inLanguage":"zh-CN","url":"https://skills.duaer.com/zh/flu-activity/","author":{"@id":"https://www.duaer.com/#organization"},"publisher":{"@id":"https://www.duaer.com/#organization"},"isRelatedTo":[{"@type":"TechArticle","headline":"在 Duaer 里查美国疾控中心开放数据","url":"https://skills.duaer.com/zh/cdc-data/"},{"@type":"TechArticle","headline":"在 Duaer 里查 WHO 卫生统计","url":"https://skills.duaer.com/zh/who-gho/"}]}]}</script>
+<link rel="stylesheet" href="/site.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"/>
+</head>
+<body>
+<div class="duaer-auth">
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="shell">
+<header class="topbar">
+<a class="brand" href="https://www.duaer.com/"><svg class="brand-mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#15181b"/><path fill="#eff2f1" fill-rule="evenodd" d="M9.4 7.8h6.35c5.45 0 8.85 3.35 8.85 8.2s-3.4 8.2-8.85 8.2H9.4V7.8Zm3.45 3.25v9.9h2.95c3.2 0 5.15-1.95 5.15-4.95s-1.95-4.95-5.15-4.95h-2.95Z"/><path d="M12.5 16.5h7.2" stroke="#e14a0e" stroke-width="1.8" stroke-linecap="round"/></svg><span class="brand-name">Duaer</span></a>
+<nav class="top-nav" aria-label="Duaer">
+<a class="nav-link" href="https://www.duaer.com/about">About</a>
+<a class="nav-link" href="https://www.duaer.com/pricing">Pricing</a>
+<a class="nav-link" href="https://doc.duaer.com/">Docs</a>
+<a class="nav-link is-current" href="/zh/" aria-current="page">Skills</a>
+<span class="lang"><a href="/flu-activity/" hreflang="en">EN</a><a class="active" href="/zh/flu-activity/" hreflang="zh-CN">中文</a></span>
+<a class="nav-link" href="https://www.duaer.com/signin">Sign in</a>
+</nav>
+</header>
+<main class="stage article">
+<p class="how-kicker">Skills</p>
+<h1>在 Duaer 里查美国流感活动</h1>
+<p class="lede">在 Duaer 里：Delphi Epidata FluView：CDC ILINet 每周流感样病例比例，可按美国地区或州查询。一次成功查询用 1 额度。</p>
+<h2>能拿到什么</h2>
+<p>每条结果含 region、regionName、epiweek、weightedIliPct、iliPct、iliVisits、patients、providers 等字段，并附来源链接。</p>
+<h2>密钥</h2>
+<p>调用前先<a href="/zh/keys/">获取 Duaer 密钥</a>.</p>
+<h2>调用技能</h2>
+<p>下面这段是给智能体复制的英文技能，和数据市场里的复制内容相同。</p>
+<pre><code>---
+name: duaer-flu-activity
+description: &gt;-
+  Duaer US flu activity. Delphi Epidata FluView: weekly influenza-like illness rates from CDC ILINet by US region or state.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer US flu activity
+
+Duaer US flu activity returns weekly influenza-like illness (ILI) rates from CDC ILINet through Delphi Epidata, newest week first.
+
+## When to use
+
+- Track national flu activity this season.
+- Compare a state week by week.
+
+## When not to use
+
+- Other CDC datasets. Use https://skills.duaer.com/cdc-data.md.
+- Global health indicators. Use https://skills.duaer.com/who-gho.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/flu-activity?region=nat`
+
+Header: `Authorization: Bearer &lt;Duaer key&gt;`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `region` or `weeks`.
+
+- `region` — Optional. `nat`, `hhs1` to `hhs10`, `cen1` to `cen9`, or a state code such as `ca`. Default `nat`.
+- `weeks` — Optional. Newest weeks to return, 1 to 20. Default 8.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/flu-activity?region=nat` — the last 8 weeks nationally.
+- `GET https://api.duaer.com/v1/data/flu-activity?region=ca&amp;weeks=12` — the last 12 weeks in California.
+
+## Result
+
+The response is `{ &quot;items&quot;: [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `region`, `regionName`, `epiweek` — region and epidemiological week such as 2026-W37.
+- `weightedIliPct`, `iliPct` — weighted and unweighted share of visits for influenza-like illness.
+- `iliVisits`, `patients`, `providers`, `issue`, `releaseDate` — counts and the report issue.
+
+Recent weeks are revised as late reports arrive.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/cdc-data.md — Duaer CDC open data
+- https://skills.duaer.com/who-gho.md — Duaer WHO health statistics
+</code></pre>
+<h2>相关技能</h2>
+<div class="cards"><a class="card" href="/zh/cdc-data/">
+<span class="card-type">数据</span>
+<h3>在 Duaer 里查美国疾控中心开放数据</h3>
+<p>在 Duaer 里：data.cdc.gov 上的 CDC 开放数据集：先按关键词查找数据集，再读取某个数据集的行，如流感死亡或疫苗接种率。一次成功查询用 1 额度。</p>
+</a>
+<a class="card" href="/zh/who-gho/">
+<span class="card-type">数据</span>
+<h3>在 Duaer 里查 WHO 卫生统计</h3>
+<p>在 Duaer 里：世界卫生组织全球卫生观察站的各国卫生统计：期望寿命、死亡率、疾病负担、危险因素与卫生体系，可按年份与性别查看。一次成功查询用 1 额度。</p>
+</a></div>
+</main>
+</div>
+<footer class="site-footer"><div class="shell"><a href="https://www.duaer.com/">Duaer</a><a href="https://skills.duaer.com/llms.txt">llms.txt</a></div></footer>
+</div>
+</body>
+</html>
