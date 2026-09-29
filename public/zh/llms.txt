@@ -404,4 +404,23 @@
 - [在 Duaer 里查F1 比赛成绩](https://skills.duaer.com/zh/f1-results.md): 在 Duaer 里：Jolpica（Ergast）：1950 年以来按赛季与轮次查询 F1 正赛成绩，默认最近一场。一次成功查询用 1 额度。
 - [在 Duaer 里查公共假期](https://skills.duaer.com/zh/public-holidays.md): 在 Duaer 里：Nager.Date：某国某年的公共假期，含当地名称、假期类型与适用地区。一次成功查询用 1 额度。
 - [在 Duaer 里查英文找词](https://skills.duaer.com/zh/word-finder.md): 在 Duaer 里：Datamuse：查找与给定词意思相近、读音相近、拼写匹配、押韵、相关或反义的英文单词。一次成功查询用 1 额度。
+- [在 Duaer 里查词语释义](https://skills.duaer.com/zh/word-definitions.md): 在 Duaer 里：Wiktionary：单词在英文、中文等多种语言中的释义、词性与例句。一次成功查询用 1 额度。
+- [在 Duaer 里查中国节假日与调休](https://skills.duaer.com/zh/cn-holidays.md): 在 Duaer 里：国务院办公厅安排：某年每个法定节假日的放假日期与调休上班日。一次成功查询用 1 额度。
+- [在 Duaer 里查香港九巴到站](https://skills.duaer.com/zh/hk-bus-eta.md): 在 Duaer 里：九巴：香港某条路线每个车站的下一班车，含分钟数与到站时间。一次成功查询用 1 额度。
+- [在 Duaer 里查香港港铁下一班车](https://skills.duaer.com/zh/hk-mtr.md): 在 Duaer 里：港铁：香港某车站的下一班列车，含线路、终点站、月台与分钟数。一次成功查询用 1 额度。
+- [在 Duaer 里查香港银行同业利率](https://skills.duaer.com/zh/hk-interbank.md): 在 Duaer 里：香港金管局：每日隔夜与一个月 HIBOR、基本利率与银行体系结余，最新在前。一次成功查询用 1 额度。
+- [在 Duaer 里查维基共享资源素材](https://skills.duaer.com/zh/commons-media.md): 在 Duaer 里：维基共享资源：可自由使用的图片、音频与视频，含文件链接、许可与作者。一次成功查询用 1 额度。
+- [在 Duaer 里查图标](https://skills.duaer.com/zh/icons.md): 在 Duaer 里：Iconify：200 多套开源图标，含 SVG 链接、许可与作者。一次成功查询用 1 额度。
+- [在 Duaer 里查Pexels 图片与视频](https://skills.duaer.com/zh/pexels.md): 在 Duaer 里：Pexels：免费商用图片与视频，含摄影师署名与文件链接。一次成功查询用 1 额度。
+- [在 Duaer 里查Pixabay 图片与视频](https://skills.duaer.com/zh/pixabay.md): 在 Duaer 里：Pixabay：免费照片、插画、矢量图与视频，含标签与文件链接。一次成功查询用 1 额度。
+- [在 Duaer 里查Freesound 音效](https://skills.duaer.com/zh/freesound.md): 在 Duaer 里：Freesound：知识共享许可的音效与现场录音，含 MP3 试听与许可。一次成功查询用 1 额度。
+- [在 Duaer 里查Jamendo 音乐](https://skills.duaer.com/zh/jamendo.md): 在 Duaer 里：Jamendo：知识共享许可的音乐曲目，含音频链接、曲风与许可。一次成功查询用 1 额度。
+- [在 Duaer 里查美国竞选候选人资金](https://skills.duaer.com/zh/fec-candidates.md): 在 Duaer 里：OpenFEC：美国联邦候选人的募款、支出与现金结余，可按姓名、年份、职位或州查询。一次成功查询用 1 额度。
+- [在 Duaer 里查美国 GovInfo 文献](https://skills.duaer.com/zh/govinfo.md): 在 Duaer 里：GovInfo：美国法案、联邦公报、联邦法规汇编、法院意见等官方出版物。一次成功查询用 1 额度。
+- [在 Duaer 里查美国国家公园](https://skills.duaer.com/zh/national-parks.md): 在 Duaer 里：美国国家公园管理局：国家公园、纪念地与历史遗址，含位置、门票与活动。一次成功查询用 1 额度。
+- [在 Duaer 里查美国流感活动](https://skills.duaer.com/zh/flu-activity.md): 在 Duaer 里：Delphi Epidata FluView：CDC ILINet 每周流感样病例比例，可按美国地区或州查询。一次成功查询用 1 额度。
+- [在 Duaer 里查高德地点搜索](https://skills.duaer.com/zh/amap-poi.md): 在 Duaer 里：高德地图：按关键词与城市搜索中国境内的商铺、餐厅等地点，含地址与电话。一次成功查询用 1 额度。
+- [在 Duaer 里查高德地理编码](https://skills.duaer.com/zh/amap-geocode.md): 在 Duaer 里：高德地图：中国地址对应的经纬度与行政区划代码。一次成功查询用 1 额度。
+- [在 Duaer 里查高德路线规划](https://skills.duaer.com/zh/amap-route.md): 在 Duaer 里：高德地图：中国境内的驾车或步行路线，含距离、时间、过路费与步骤。一次成功查询用 1 额度。
+- [在 Duaer 里查高德天气](https://skills.duaer.com/zh/amap-weather.md): 在 Duaer 里：高德地图：中国城市的实时天气或未来 4 天预报。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
