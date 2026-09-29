@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Live flights in Duaer · Duaer</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<meta name="description" content="In Duaer: OpenSky Network: aircraft in the air now over an area, with callsign, position, altitude, and speed. One successful search uses 1 credit."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://skills.duaer.com/live-flights/"/>
+<link rel="alternate" hreflang="zh-CN" href="https://skills.duaer.com/zh/live-flights/"/>
+<link rel="alternate" hreflang="en" href="https://skills.duaer.com/live-flights/"/>
+<link rel="alternate" hreflang="x-default" href="https://skills.duaer.com/live-flights/"/>
+<link rel="alternate" type="text/plain" href="https://skills.duaer.com/llms.txt" title="LLMs"/>
+<link rel="alternate" type="text/markdown" href="https://skills.duaer.com/live-flights.md" title="Markdown"/>
+<meta property="og:site_name" content="Duaer"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://skills.duaer.com/live-flights/"/>
+<meta property="og:title" content="Live flights in Duaer · Duaer"/>
+<meta property="og:description" content="In Duaer: OpenSky Network: aircraft in the air now over an area, with callsign, position, altitude, and speed. One successful search uses 1 credit."/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Live flights in Duaer · Duaer"/>
+<meta name="twitter:description" content="In Duaer: OpenSky Network: aircraft in the air now over an area, with callsign, position, altitude, and speed. One successful search uses 1 credit."/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.duaer.com/#organization","name":"Duaer","url":"https://www.duaer.com/"},{"@type":"TechArticle","headline":"Live flights in Duaer","description":"In Duaer: OpenSky Network: aircraft in the air now over an area, with callsign, position, altitude, and speed. One successful search uses 1 credit.","inLanguage":"en","url":"https://skills.duaer.com/live-flights/","author":{"@id":"https://www.duaer.com/#organization"},"publisher":{"@id":"https://www.duaer.com/#organization"},"isRelatedTo":[{"@type":"TechArticle","headline":"Weather forecast in Duaer","url":"https://skills.duaer.com/weather/"},{"@type":"TechArticle","headline":"Places nearby in Duaer","url":"https://skills.duaer.com/places-nearby/"}]}]}</script>
+<link rel="stylesheet" href="/site.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"/>
+</head>
+<body>
+<div class="duaer-auth">
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="shell">
+<header class="topbar">
+<a class="brand" href="https://www.duaer.com/"><svg class="brand-mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#15181b"/><path fill="#eff2f1" fill-rule="evenodd" d="M9.4 7.8h6.35c5.45 0 8.85 3.35 8.85 8.2s-3.4 8.2-8.85 8.2H9.4V7.8Zm3.45 3.25v9.9h2.95c3.2 0 5.15-1.95 5.15-4.95s-1.95-4.95-5.15-4.95h-2.95Z"/><path d="M12.5 16.5h7.2" stroke="#e14a0e" stroke-width="1.8" stroke-linecap="round"/></svg><span class="brand-name">Duaer</span></a>
+<nav class="top-nav" aria-label="Duaer">
+<a class="nav-link" href="https://www.duaer.com/about">About</a>
+<a class="nav-link" href="https://www.duaer.com/pricing">Pricing</a>
+<a class="nav-link" href="https://doc.duaer.com/">Docs</a>
+<a class="nav-link is-current" href="/" aria-current="page">Skills</a>
+<span class="lang"><a href="/zh/live-flights/" hreflang="zh-CN">中文</a><a class="active" href="/live-flights/" hreflang="en">EN</a></span>
+<a class="nav-link" href="https://www.duaer.com/signin">Sign in</a>
+</nav>
+</header>
+<main class="stage article">
+<p class="how-kicker">Skills</p>
+<h1>Live flights in Duaer</h1>
+<p class="lede">In Duaer: OpenSky Network: aircraft in the air now over an area, with callsign, position, altitude, and speed. One successful search uses 1 credit.</p>
+<h2>What Duaer returns</h2>
+<p>Each row has icao24, callsign, originCountry, latitude, longitude, altitudeM, onGround, speedKmh, and more, with a source link.</p>
+<h2>Key</h2>
+<p>Before you call, <a href="/keys/">get a Duaer key</a>.</p>
+<h2>Call skill</h2>
+<p>Paste this English skill into an agent. It matches Copy skill in the Duaer data market.</p>
+<pre><code>---
+name: duaer-live-flights
+description: &gt;-
+  Duaer Live flights. OpenSky Network: aircraft in the air now over an area, with callsign, position, altitude, and speed.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Live flights
+
+Duaer Live flights reads OpenSky Network state vectors for a box of up to 30 degrees on each side. Filter by callsign to follow one airline.
+
+## When to use
+
+- Count aircraft over Switzerland right now.
+- Find British Airways flights over the UK.
+
+## When not to use
+
+- Satellites and space weather. Use https://skills.duaer.com/space-weather.md.
+- Weather at an airport. Use https://skills.duaer.com/weather.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/live-flights?area=45.8,5.9,47.8,10.5`
+
+Header: `Authorization: Bearer &lt;Duaer key&gt;`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `area`.
+
+- `area` — south,west,north,east in degrees, such as 45.8,5.9,47.8,10.5 for Switzerland.
+- `callsign` — Optional. Callsign or its start, such as BAW for British Airways.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/live-flights?area=45.8,5.9,47.8,10.5` — aircraft over Switzerland.
+- `GET https://api.duaer.com/v1/data/live-flights?area=49,-6,56,2&amp;callsign=BAW` — British Airways flights over the UK.
+
+## Result
+
+The response is `{ &quot;items&quot;: [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `icao24`, `callsign`, `originCountry` — aircraft address, flight, and registration country.
+- `latitude`, `longitude`, `altitudeM`, `onGround` — position.
+- `speedKmh`, `headingDeg`, `verticalRateMs` — motion.
+- `squawk`, `lastContact` — transponder code and last signal time.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/weather.md — Duaer Weather forecast
+- https://skills.duaer.com/places-nearby.md — Duaer Places nearby
+</code></pre>
+<h2>Related skills</h2>
+<div class="cards"><a class="card" href="/weather/">
+<span class="card-type">Data</span>
+<h3>Weather forecast in Duaer</h3>
+<p>In Duaer: Daily forecast for any city or coordinates, up to 16 days: conditions, high and low, rain amount and chance, and peak wind, from Open-Meteo. One successful search uses 1 credit.</p>
+</a>
+<a class="card" href="/places-nearby/">
+<span class="card-type">Data</span>
+<h3>Places nearby in Duaer</h3>
+<p>In Duaer: OpenStreetMap: cafes, pharmacies, hospitals, chargers, and other places near a point, nearest first. One successful search uses 1 credit.</p>
+</a></div>
+</main>
+</div>
+<footer class="site-footer"><div class="shell"><a href="https://www.duaer.com/">Duaer</a><a href="https://skills.duaer.com/llms.txt">llms.txt</a></div></footer>
+</div>
+</body>
+</html>
