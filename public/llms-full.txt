@@ -329,6 +329,35 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [Alexandria in Duaer](https://skills.duaer.com/alexandria.md): In Duaer: Millions of DFT structures in the Alexandria PBE database by formula or elements: band gap, formation energy, and distance to the hull. One successful search uses 1 credit.
 - [US provider registry (NPI) in Duaer](https://skills.duaer.com/npi.md): In Duaer: US doctors, nurses, clinics, and hospitals in the NPPES NPI registry by name, specialty, and state, with address and license. One successful search uses 1 credit.
 - [US hospitals (CMS) in Duaer](https://skills.duaer.com/cms-hospitals.md): In Duaer: Medicare-certified US hospitals from CMS Care Compare: type, ownership, emergency services, and overall star rating. One successful search uses 1 credit.
+- [Materials Cloud MC3D in Duaer](https://skills.duaer.com/materials-cloud.md): In Duaer: Relaxed 3D crystal structures computed with PBE in Materials Cloud MC3D, by formula or elements, with cell volume, energy, and source database. One successful search uses 1 credit.
+- [2DMatpedia in Duaer](https://skills.duaer.com/matpedia-2d.md): In Duaer: Computed two-dimensional materials in 2DMatpedia by formula or elements, with band gap and chemical system. One successful search uses 1 credit.
+- [MPDD in Duaer](https://skills.duaer.com/mpdd.md): In Duaer: Structures in the Material-Property-Descriptor Database by formula or elements, with space group, crystal system, density, and machine-learned formation energy. One successful search uses 1 credit.
+- [Open Materials Database in Duaer](https://skills.duaer.com/omdb.md): In Duaer: Crystal structures in the Open Materials Database by formula or elements, with cell formula, sites, and periodicity. One successful search uses 1 credit.
+- [OSV vulnerabilities in Duaer](https://skills.duaer.com/osv.md): In Duaer: Known vulnerabilities in an open-source package or version from OSV, across npm, PyPI, Go, Maven, crates.io, and more, with severity and fixed versions. One successful search uses 1 credit.
+- [NVD CVE records in Duaer](https://skills.duaer.com/nvd.md): In Duaer: CVE records from the US National Vulnerability Database by keyword or CVE id, newest first, with CVSS score, weakness, and known-exploited date. One successful search uses 1 credit.
+- [CISA known exploited vulnerabilities in Duaer](https://skills.duaer.com/cisa-kev.md): In Duaer: CVEs that CISA confirms are exploited in the wild, by vendor, words, or date added, with required action and remediation due date. One successful search uses 1 credit.
+- [npm packages in Duaer](https://skills.duaer.com/npm.md): In Duaer: JavaScript packages in the npm registry by name or keywords, with latest version, license, and weekly downloads. One successful search uses 1 credit.
+- [PyPI package in Duaer](https://skills.duaer.com/pypi.md): In Duaer: One Python package from PyPI with latest version, license, supported Python versions, links, and known vulnerabilities. One successful search uses 1 credit.
+- [Domain registration (RDAP) in Duaer](https://skills.duaer.com/rdap.md): In Duaer: Registration record of a domain over RDAP: registrar, registration and expiry dates, status codes, name servers, and DNSSEC. One successful search uses 1 credit.
+- [US Treasury fiscal data in Duaer](https://skills.duaer.com/treasury.md): In Duaer: US Treasury Fiscal Data: daily total public debt, average interest rates on Treasury securities, and Treasury reporting exchange rates. One successful search uses 1 credit.
+- [ECB statistics in Duaer](https://skills.duaer.com/ecb.md): In Duaer: European Central Bank series by dataflow and key: euro reference exchange rates, interest rates, inflation, and money statistics. One successful search uses 1 credit.
+- [BIS statistics in Duaer](https://skills.duaer.com/bis.md): In Duaer: Bank for International Settlements series by dataflow and key: central bank policy rates, credit, property prices, and exchange rates by country. One successful search uses 1 credit.
+- [Our World in Data in Duaer](https://skills.duaer.com/owid.md): In Duaer: Country time series behind any Our World in Data chart, such as life expectancy or CO2 per capita, or find charts by words. One successful search uses 1 credit.
+- [US tide predictions in Duaer](https://skills.duaer.com/tides.md): In Duaer: High and low tide times and heights from NOAA for a US coastal station or the nearest station to a place. One successful search uses 1 credit.
+- [Sunrise and sunset in Duaer](https://skills.duaer.com/sunrise.md): In Duaer: Sunrise, sunset, solar noon, civil twilight, and day length for a place and up to seven consecutive days. One successful search uses 1 credit.
+- [Climate projection in Duaer](https://skills.duaer.com/climate-projection.md): In Duaer: High-resolution CMIP6 climate model projections to 2050 for a place: mean temperature and yearly rainfall by year or decade. One successful search uses 1 credit.
+- [Asteroids and comets (JPL) in Duaer](https://skills.duaer.com/small-bodies.md): In Duaer: One asteroid or comet from the NASA JPL Small-Body Database: orbit, size, rotation, albedo, and near-Earth and hazard flags. One successful search uses 1 credit.
+- [Asteroid close approaches in Duaer](https://skills.duaer.com/close-approaches.md): In Duaer: Upcoming asteroid and comet close approaches to Earth from NASA JPL, with date, distance in lunar distances, speed, and size. One successful search uses 1 credit.
+- [Exoplanets in Duaer](https://skills.duaer.com/exoplanets.md): In Duaer: Confirmed exoplanets from the NASA Exoplanet Archive by planet or star name, discovery method, or year, with size, mass, orbit, and distance. One successful search uses 1 credit.
+- [Space weather alerts in Duaer](https://skills.duaer.com/space-weather.md): In Duaer: Alerts, watches, and warnings from the NOAA Space Weather Prediction Center: geomagnetic storms, solar radiation, and radio blackouts. One successful search uses 1 credit.
+- [Planetary Kp index in Duaer](https://skills.duaer.com/kp-index.md): In Duaer: NOAA planetary Kp index in three-hour steps: recent observed geomagnetic activity or the three-day forecast, with storm level. One successful search uses 1 credit.
+- [The Met collection in Duaer](https://skills.duaer.com/met-museum.md): In Duaer: Artworks at The Metropolitan Museum of Art by artist, title, or subject, with date, medium, department, gallery, and public-domain image. One successful search uses 1 credit.
+- [Art Institute of Chicago in Duaer](https://skills.duaer.com/art-institute.md): In Duaer: Artworks at the Art Institute of Chicago by artist, title, or subject, with date, medium, department, and IIIF image. One successful search uses 1 credit.
+- [Cleveland Museum of Art in Duaer](https://skills.duaer.com/cleveland-art.md): In Duaer: Open access artworks at the Cleveland Museum of Art by artist, title, or subject, with creator, technique, gallery, and CC0 image. One successful search uses 1 credit.
+- [US nursing homes (CMS) in Duaer](https://skills.duaer.com/cms-nursing-homes.md): In Duaer: Medicare nursing homes from CMS Care Compare: beds, ownership, and star ratings for overall, inspections, staffing, and quality. One successful search uses 1 credit.
+- [US clinicians (CMS) in Duaer](https://skills.duaer.com/cms-clinicians.md): In Duaer: Medicare doctors and clinicians from CMS Care Compare by name, specialty, or place, with practice, medical school, and Medicare assignment. One successful search uses 1 credit.
+- [CDC open data in Duaer](https://skills.duaer.com/cdc-data.md): In Duaer: CDC open datasets on data.cdc.gov: find datasets by words, then read rows from one dataset, such as influenza deaths or vaccination coverage. One successful search uses 1 credit.
+- [NIH RePORTER grants in Duaer](https://skills.duaer.com/nih-reporter.md): In Duaer: NIH-funded research projects from NIH RePORTER by words, fiscal year, and institution, with investigators, institute, and award amount. One successful search uses 1 credit.
 - [Get a Duaer key](https://skills.duaer.com/keys.md): A Duaer key authorizes calls to the Duaer data API. Create it after you sign in. The full value is shown once.
 
 # Duaer
@@ -662,6 +691,35 @@ Chinese index: [llms.txt](https://skills.duaer.com/zh/llms.txt).
 - [在 Duaer 里查Alexandria](https://skills.duaer.com/zh/alexandria.md): 在 Duaer 里：按化学式或元素检索 Alexandria PBE 数据库的数百万 DFT 结构：带隙、形成能与凸包距离。一次成功查询用 1 额度。
 - [在 Duaer 里查美国医疗服务者登记（NPI）](https://skills.duaer.com/zh/npi.md): 在 Duaer 里：按姓名、专科与州检索 NPPES NPI 登记中的美国医生、护士、诊所与医院，含地址与执业许可。一次成功查询用 1 额度。
 - [在 Duaer 里查美国医院（CMS）](https://skills.duaer.com/zh/cms-hospitals.md): 在 Duaer 里：CMS Care Compare 收录的 Medicare 认证美国医院：类型、所有制、急诊服务与总体星级。一次成功查询用 1 额度。
+- [在 Duaer 里查Materials Cloud MC3D](https://skills.duaer.com/zh/materials-cloud.md): 在 Duaer 里：按化学式或元素检索 Materials Cloud MC3D 中以 PBE 弛豫的三维晶体结构，含晶胞体积、总能与来源数据库。一次成功查询用 1 额度。
+- [在 Duaer 里查2DMatpedia 二维材料](https://skills.duaer.com/zh/matpedia-2d.md): 在 Duaer 里：按化学式或元素检索 2DMatpedia 中计算得到的二维材料，含带隙与化学体系。一次成功查询用 1 额度。
+- [在 Duaer 里查MPDD 材料描述符数据库](https://skills.duaer.com/zh/mpdd.md): 在 Duaer 里：按化学式或元素检索 Material-Property-Descriptor Database 中的结构，含空间群、晶系、密度与机器学习预测的形成能。一次成功查询用 1 额度。
+- [在 Duaer 里查Open Materials Database](https://skills.duaer.com/zh/omdb.md): 在 Duaer 里：按化学式或元素检索 Open Materials Database 中的晶体结构，含晶胞化学式、原子位点数与周期性维度。一次成功查询用 1 额度。
+- [在 Duaer 里查OSV 开源漏洞](https://skills.duaer.com/zh/osv.md): 在 Duaer 里：查询 OSV 中开源软件包或某版本的已知漏洞，覆盖 npm、PyPI、Go、Maven、crates.io 等生态，含严重程度与修复版本。一次成功查询用 1 额度。
+- [在 Duaer 里查NVD 漏洞库](https://skills.duaer.com/zh/nvd.md): 在 Duaer 里：按关键词或 CVE 编号检索美国国家漏洞库（NVD）的 CVE 记录，按时间倒序，含 CVSS 评分、弱点类型与已被利用日期。一次成功查询用 1 额度。
+- [在 Duaer 里查CISA 已被利用漏洞](https://skills.duaer.com/zh/cisa-kev.md): 在 Duaer 里：CISA 确认已在野利用的 CVE，可按厂商、关键词或加入日期筛选，含处置要求与整改截止日期。一次成功查询用 1 额度。
+- [在 Duaer 里查npm 软件包](https://skills.duaer.com/zh/npm.md): 在 Duaer 里：按名称或关键词检索 npm 注册表中的 JavaScript 软件包，含最新版本、许可证与周下载量。一次成功查询用 1 额度。
+- [在 Duaer 里查PyPI 软件包](https://skills.duaer.com/zh/pypi.md): 在 Duaer 里：查询 PyPI 上某个 Python 软件包的最新版本、许可证、支持的 Python 版本、链接与已知漏洞数。一次成功查询用 1 额度。
+- [在 Duaer 里查域名注册信息（RDAP）](https://skills.duaer.com/zh/rdap.md): 在 Duaer 里：通过 RDAP 查询域名注册记录：注册商、注册与到期日期、状态码、域名服务器与 DNSSEC。一次成功查询用 1 额度。
+- [在 Duaer 里查美国财政部财政数据](https://skills.duaer.com/zh/treasury.md): 在 Duaer 里：美国财政部 Fiscal Data：每日公共债务总额、国债平均利率与财政部报告汇率。一次成功查询用 1 额度。
+- [在 Duaer 里查欧洲央行统计](https://skills.duaer.com/zh/ecb.md): 在 Duaer 里：按数据流与序列键查询欧洲央行统计：欧元参考汇率、利率、通胀与货币统计。一次成功查询用 1 额度。
+- [在 Duaer 里查国际清算银行统计](https://skills.duaer.com/zh/bis.md): 在 Duaer 里：按数据流与序列键查询国际清算银行统计：各国央行政策利率、信贷、房价与汇率。一次成功查询用 1 额度。
+- [在 Duaer 里查Our World in Data](https://skills.duaer.com/zh/owid.md): 在 Duaer 里：读取 Our World in Data 任意图表背后的国家时间序列，如预期寿命、人均二氧化碳排放，也可按关键词查找图表。一次成功查询用 1 额度。
+- [在 Duaer 里查美国潮汐预报](https://skills.duaer.com/zh/tides.md): 在 Duaer 里：NOAA 提供的美国沿海潮位站高潮与低潮时间及潮高，可按站号或地名查找最近的潮位站。一次成功查询用 1 额度。
+- [在 Duaer 里查日出日落](https://skills.duaer.com/zh/sunrise.md): 在 Duaer 里：查询某地连续最多七天的日出、日落、正午、民用晨昏蒙影与白昼时长。一次成功查询用 1 额度。
+- [在 Duaer 里查气候预估](https://skills.duaer.com/zh/climate-projection.md): 在 Duaer 里：某地至 2050 年的高分辨率 CMIP6 气候模式预估：按年或按十年给出平均气温与年降水量。一次成功查询用 1 额度。
+- [在 Duaer 里查小行星与彗星（JPL）](https://skills.duaer.com/zh/small-bodies.md): 在 Duaer 里：查询 NASA JPL 小天体数据库中的某颗小行星或彗星：轨道、尺寸、自转、反照率以及近地与潜在危险标记。一次成功查询用 1 额度。
+- [在 Duaer 里查小行星近地掠过](https://skills.duaer.com/zh/close-approaches.md): 在 Duaer 里：NASA JPL 提供的即将发生的小行星与彗星近地掠过事件，含日期、以月地距离计的距离、相对速度与尺寸。一次成功查询用 1 额度。
+- [在 Duaer 里查系外行星](https://skills.duaer.com/zh/exoplanets.md): 在 Duaer 里：按行星或恒星名称、发现方法或年份检索 NASA 系外行星档案中的已确认行星，含半径、质量、轨道周期与距离。一次成功查询用 1 额度。
+- [在 Duaer 里查空间天气预警](https://skills.duaer.com/zh/space-weather.md): 在 Duaer 里：NOAA 空间天气预报中心发布的警报、关注与预警：地磁暴、太阳辐射事件与无线电中断。一次成功查询用 1 额度。
+- [在 Duaer 里查全球地磁 Kp 指数](https://skills.duaer.com/zh/kp-index.md): 在 Duaer 里：NOAA 每三小时一次的全球 Kp 指数：近期观测的地磁活动或未来三天预报，并标注地磁暴等级。一次成功查询用 1 额度。
+- [在 Duaer 里查大都会艺术博物馆藏品](https://skills.duaer.com/zh/met-museum.md): 在 Duaer 里：按艺术家、标题或主题检索大都会艺术博物馆藏品，含年代、材质、部门、展厅与公有领域图片。一次成功查询用 1 额度。
+- [在 Duaer 里查芝加哥艺术博物馆藏品](https://skills.duaer.com/zh/art-institute.md): 在 Duaer 里：按艺术家、标题或主题检索芝加哥艺术博物馆藏品，含年代、材质、部门与 IIIF 图片。一次成功查询用 1 额度。
+- [在 Duaer 里查克利夫兰艺术博物馆藏品](https://skills.duaer.com/zh/cleveland-art.md): 在 Duaer 里：按艺术家、标题或主题检索克利夫兰艺术博物馆开放藏品，含作者、技法、展厅与 CC0 图片。一次成功查询用 1 额度。
+- [在 Duaer 里查美国护理院（CMS）](https://skills.duaer.com/zh/cms-nursing-homes.md): 在 Duaer 里：CMS Care Compare 收录的 Medicare 护理院：床位、所有制，以及总体、检查、人员配置与质量星级。一次成功查询用 1 额度。
+- [在 Duaer 里查美国临床医生（CMS）](https://skills.duaer.com/zh/cms-clinicians.md): 在 Duaer 里：按姓名、专科或地点检索 CMS Care Compare 中的 Medicare 医生与临床人员，含执业机构、毕业院校与是否接受 Medicare 定价。一次成功查询用 1 额度。
+- [在 Duaer 里查美国疾控中心开放数据](https://skills.duaer.com/zh/cdc-data.md): 在 Duaer 里：data.cdc.gov 上的 CDC 开放数据集：先按关键词查找数据集，再读取某个数据集的行，如流感死亡或疫苗接种率。一次成功查询用 1 额度。
+- [在 Duaer 里查NIH RePORTER 科研资助](https://skills.duaer.com/zh/nih-reporter.md): 在 Duaer 里：按关键词、财年与机构检索 NIH RePORTER 中的 NIH 资助项目，含负责人、资助研究所与资助金额。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
 
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This page as Markdown: https://skills.duaer.com/keys.md
@@ -13867,4 +13925,1995 @@ A missing key returns 401.
 
 - https://skills.duaer.com/npi.md — Duaer US provider registry (NPI)
 - https://skills.duaer.com/who-gho.md — Duaer WHO health statistics
+
+---
+name: duaer-materials-cloud
+description: >-
+  Duaer Materials Cloud MC3D. Relaxed 3D crystal structures computed with PBE in Materials Cloud MC3D, by formula or elements, with cell volume, energy, and source database.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Materials Cloud MC3D
+
+Duaer Materials Cloud MC3D searches the MC3D database of experimentally known 3D crystals relaxed with DFT (PBE) by the Materials Cloud team. Each row names the experimental database the structure came from.
+
+## When to use
+
+- Get a DFT-relaxed version of a known experimental crystal.
+- Compare cell volume and magnetization across polymorphs.
+
+## When not to use
+
+- Band gaps and hull stability. Use https://skills.duaer.com/materials-project.md.
+- Raw experimental CIFs. Use https://skills.duaer.com/cod.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/materials-cloud?formula=SiO2`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `formula` or `elements`.
+
+- `formula` — Formula such as SiO2. Matches the reduced formula.
+- `elements` — Optional. Materials that contain all of these, such as Si,O.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/materials-cloud?formula=SiO2` — relaxed silica polymorphs.
+- `GET https://api.duaer.com/v1/data/materials-cloud?elements=Li,Co,O&limit=5` — lithium cobalt oxides.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `structureId` — provider id.
+- `formula`, `formulaCell`, `elements`, `sites` — reduced formula, cell formula, elements, and atoms in the cell.
+- `mc3dId`, `sourceDatabase`, `sourceId` — MC3D id and the experimental source (such as mpds or cod).
+- `totalEnergyEv`, `cellVolumeA3`, `totalMagnetization` — DFT energy, cell volume in Å³, and magnetization.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/materials-project.md — Duaer Materials Project
+- https://skills.duaer.com/alexandria.md — Duaer Alexandria
+
+---
+name: duaer-matpedia-2d
+description: >-
+  Duaer 2DMatpedia. Computed two-dimensional materials in 2DMatpedia by formula or elements, with band gap and chemical system.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer 2DMatpedia
+
+Duaer 2DMatpedia searches an open database of single-layer (2D) materials obtained by exfoliating layered bulk crystals and by substitution, with DFT band gaps.
+
+## When to use
+
+- Find monolayer candidates such as MoS2 or graphene analogues.
+- Screen 2D materials by band gap for electronics.
+
+## When not to use
+
+- Bulk 3D crystals. Use https://skills.duaer.com/materials-project.md.
+- Experimental structures. Use https://skills.duaer.com/cod.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/matpedia-2d?formula=MoS2`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `formula` or `elements`.
+
+- `formula` — Formula such as MoS2. Matches the reduced formula.
+- `elements` — Optional. Materials that contain all of these, such as Mo,S.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/matpedia-2d?formula=MoS2` — MoS2 monolayers with band gaps.
+- `GET https://api.duaer.com/v1/data/matpedia-2d?elements=W,Se&limit=5` — tungsten selenide layers.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `structureId` — provider id.
+- `formula`, `formulaCell`, `elements`, `sites` — reduced formula, cell formula, elements, and atoms in the cell.
+- `bandGapEv` — DFT band gap in eV.
+- `chemicalSystem` — elements joined by dashes, such as Mo-S.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/materials-cloud.md — Duaer Materials Cloud MC3D
+- https://skills.duaer.com/jarvis.md — Duaer JARVIS-DFT
+
+---
+name: duaer-mpdd
+description: >-
+  Duaer MPDD. Structures in the Material-Property-Descriptor Database by formula or elements, with space group, crystal system, density, and machine-learned formation energy.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer MPDD
+
+Duaer MPDD searches the Material-Property-Descriptor Database, millions of structures with symmetry, density, and a machine-learned (SIPFENN) formation energy for fast screening.
+
+## When to use
+
+- Screen many structures of a composition by predicted formation energy.
+- Get space group and density for a formula.
+
+## When not to use
+
+- DFT-computed stability. Use https://skills.duaer.com/alexandria.md.
+- Experimental structures. Use https://skills.duaer.com/cod.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/mpdd?formula=Fe2O3`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `formula` or `elements`.
+
+- `formula` — Formula such as Fe2O3. Matches the reduced formula.
+- `elements` — Optional. Materials that contain all of these, such as Fe,O.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/mpdd?formula=Fe2O3` — iron oxide structures with symmetry and density.
+- `GET https://api.duaer.com/v1/data/mpdd?elements=Mg,Al,O&limit=5` — magnesium aluminium oxides.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `structureId` — provider id.
+- `formula`, `formulaCell`, `elements`, `sites` — reduced formula, cell formula, elements, and atoms in the cell.
+- `spaceGroup`, `spaceGroupNumber`, `crystalSystem` — symmetry.
+- `densityGcm3`, `volumeA3` — density in g/cm³ and cell volume in Å³.
+- `predictedFormationEnergyEvPerAtom` — machine-learned formation energy, not DFT.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/alexandria.md — Duaer Alexandria
+- https://skills.duaer.com/materials-project.md — Duaer Materials Project
+
+---
+name: duaer-omdb
+description: >-
+  Duaer Open Materials Database. Crystal structures in the Open Materials Database by formula or elements, with cell formula, sites, and periodicity.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Open Materials Database
+
+Duaer Open Materials Database searches the openmaterialsdb.se structure collection over OPTIMADE. It returns standard structure fields only.
+
+## When to use
+
+- Cross-check a structure against another open database.
+- List structures that contain a set of elements.
+
+## When not to use
+
+- Band gaps or energies. Use https://skills.duaer.com/materials-project.md.
+- 2D layers. Use https://skills.duaer.com/matpedia-2d.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/omdb?formula=CaMgO6Si2`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `formula` or `elements`.
+
+- `formula` — Formula such as CaMgO6Si2. Matches the reduced formula.
+- `elements` — Optional. Materials that contain all of these, such as Ca,Mg.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/omdb?formula=CaMgO6Si2` — diopside structures.
+- `GET https://api.duaer.com/v1/data/omdb?elements=Ca,Mg&limit=5` — structures with calcium and magnesium.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `structureId` — provider id.
+- `formula`, `formulaCell`, `elements`, `sites` — reduced formula, cell formula, elements, and atoms in the cell.
+- `periodicDimensions` — 3 for bulk crystals.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/materials-cloud.md — Duaer Materials Cloud MC3D
+- https://skills.duaer.com/cod.md — Duaer Crystal structures (COD)
+
+---
+name: duaer-osv
+description: >-
+  Duaer OSV vulnerabilities. Known vulnerabilities in an open-source package or version from OSV, across npm, PyPI, Go, Maven, crates.io, and more, with severity and fixed versions.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer OSV vulnerabilities
+
+Duaer OSV vulnerabilities queries the OSV database that aggregates GitHub advisories, PyPA, Go, RustSec, and other feeds. Give a package, optionally a version, or one vulnerability id.
+
+## When to use
+
+- Check whether a dependency version has known vulnerabilities.
+- Find the version that fixes an advisory.
+
+## When not to use
+
+- CVSS details for one CVE. Use https://skills.duaer.com/nvd.md.
+- Vulnerabilities attacked in the wild. Use https://skills.duaer.com/cisa-kev.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/osv?package=lodash&version=4.17.15`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `package`, or `id`.
+
+- `package` — Package name, such as lodash or requests.
+- `ecosystem` — Optional. npm, PyPI, Go, Maven, crates.io, NuGet, RubyGems, Packagist, Pub, Hex, Hackage, SwiftURL, Debian, Alpine, or Ubuntu. Default npm.
+- `version` — Optional. Only vulnerabilities that affect this version.
+- `id` — Optional. One entry such as GHSA-29mw-wpgm-hmr9 or CVE-2021-44228.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/osv?package=lodash&version=4.17.15` — vulnerabilities in lodash 4.17.15.
+- `GET https://api.duaer.com/v1/data/osv?package=django&ecosystem=PyPI&limit=5` — recent Django advisories.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `vulnerabilityId`, `aliases` — OSV id and CVE or GHSA aliases.
+- `severity`, `cvss`, `cwe` — severity label, CVSS vector, and weakness ids.
+- `fixedVersions` — versions that fix it for this package.
+- `published`, `modified` — dates.
+
+Rows are newest first.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/nvd.md — Duaer NVD CVE records
+- https://skills.duaer.com/npm.md — Duaer npm packages
+
+---
+name: duaer-nvd
+description: >-
+  Duaer NVD CVE records. CVE records from the US National Vulnerability Database by keyword or CVE id, newest first, with CVSS score, weakness, and known-exploited date.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer NVD CVE records
+
+Duaer NVD CVE records searches the US National Vulnerability Database. It returns the newest matching CVEs first, with the CVSS score NVD or the vendor assigned.
+
+## When to use
+
+- Get the CVSS score and description of a CVE.
+- List recent CVEs for a product such as openssl.
+
+## When not to use
+
+- Affected package versions. Use https://skills.duaer.com/osv.md.
+- Only CVEs attacked in the wild. Use https://skills.duaer.com/cisa-kev.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/nvd?words=openssl`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `words` or `cve`.
+
+- `words` — Keywords, such as openssl or log4j.
+- `cve` — Optional. One record such as CVE-2021-44228.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/nvd?words=openssl` — the newest OpenSSL CVEs.
+- `GET https://api.duaer.com/v1/data/nvd?cve=CVE-2021-44228` — the Log4Shell record.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `cveId`, `description` — id and English description.
+- `cvssScore`, `cvssSeverity`, `cvssVector`, `cvssVersion` — best available CVSS (4.0, 3.1, 3.0, then 2).
+- `cwe`, `status` — weakness ids and NVD analysis status.
+- `knownExploitedSince` — date CISA listed it as exploited, when it is.
+- `published`, `lastModified` — dates.
+
+NVD allows few anonymous calls; a busy period can return 503 at 0 credits.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/osv.md — Duaer OSV vulnerabilities
+- https://skills.duaer.com/cisa-kev.md — Duaer CISA known exploited vulnerabilities
+
+---
+name: duaer-cisa-kev
+description: >-
+  Duaer CISA known exploited vulnerabilities. CVEs that CISA confirms are exploited in the wild, by vendor, words, or date added, with required action and remediation due date.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer CISA known exploited vulnerabilities
+
+Duaer CISA known exploited vulnerabilities reads the CISA KEV catalog: CVEs with confirmed exploitation that US federal agencies must fix by a due date. Newest additions come first.
+
+## When to use
+
+- Prioritize patches that attackers already use.
+- List new exploited CVEs for a vendor this month.
+
+## When not to use
+
+- Any CVE, exploited or not. Use https://skills.duaer.com/nvd.md.
+- Package-level advisories. Use https://skills.duaer.com/osv.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/cisa-kev?days=30`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `words`, `vendor`, or `days`.
+
+- `words` — Words in the CVE, product, or description, such as remote code execution.
+- `vendor` — Optional. Vendor, such as Microsoft or Cisco.
+- `days` — Optional. Only entries added in the last N days, 1 to 3650.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/cisa-kev?days=30` — entries added in the last 30 days.
+- `GET https://api.duaer.com/v1/data/cisa-kev?vendor=Microsoft&days=90` — Microsoft CVEs exploited this quarter.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `cveId`, `vendor`, `product` — the vulnerability and affected product.
+- `description`, `requiredAction` — what it is and what to do.
+- `dateAdded`, `dueDate` — catalog date and remediation deadline.
+- `ransomwareUse`, `cwe` — Known when used in ransomware campaigns; weakness ids.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/nvd.md — Duaer NVD CVE records
+- https://skills.duaer.com/osv.md — Duaer OSV vulnerabilities
+
+---
+name: duaer-npm
+description: >-
+  Duaer npm packages. JavaScript packages in the npm registry by name or keywords, with latest version, license, and weekly downloads.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer npm packages
+
+Duaer npm packages searches the public npm registry and ranks results by npm relevance, including popularity.
+
+## When to use
+
+- Find a JavaScript library for a task and compare downloads.
+- Get the latest version and license of a package.
+
+## When not to use
+
+- Python packages. Use https://skills.duaer.com/pypi.md.
+- Vulnerabilities in a package. Use https://skills.duaer.com/osv.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/npm?words=date%20picker`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `words`.
+
+- `words` — Package name or keywords, such as date picker.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/npm?words=date%20picker` — date picker libraries.
+- `GET https://api.duaer.com/v1/data/npm?words=react&limit=3` — the top React packages.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `package`, `version`, `description`, `license` — package facts.
+- `weeklyDownloads`, `monthlyDownloads`, `dependents` — popularity.
+- `keywords`, `repository`, `published` — tags, source repository, and release date.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/pypi.md — Duaer PyPI package
+- https://skills.duaer.com/osv.md — Duaer OSV vulnerabilities
+
+---
+name: duaer-pypi
+description: >-
+  Duaer PyPI package. One Python package from PyPI with latest version, license, supported Python versions, links, and known vulnerabilities.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer PyPI package
+
+Duaer PyPI package reads one project from the Python Package Index by its exact name.
+
+## When to use
+
+- Check the latest version and Python support of a dependency.
+- See whether PyPI lists known vulnerabilities for the latest release.
+
+## When not to use
+
+- Searching by keyword. Use https://skills.duaer.com/npm.md for JavaScript; PyPI has no search API.
+- Vulnerabilities in older versions. Use https://skills.duaer.com/osv.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/pypi?package=requests`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `package`.
+
+- `package` — Exact package name, such as requests or numpy.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/pypi?package=requests` — the requests package.
+- `GET https://api.duaer.com/v1/data/pypi?package=numpy` — the numpy package.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `package`, `version`, `description`, `license` — package facts.
+- `requiresPython`, `dependencies` — Python range and number of declared dependencies.
+- `author`, `homepage`, `documentation` — people and links.
+- `knownVulnerabilities`, `released` — vulnerabilities PyPI lists for this release, and its upload time.
+
+The search returns one row, or none when the name does not exist.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/osv.md — Duaer OSV vulnerabilities
+- https://skills.duaer.com/npm.md — Duaer npm packages
+
+---
+name: duaer-rdap
+description: >-
+  Duaer Domain registration (RDAP). Registration record of a domain over RDAP: registrar, registration and expiry dates, status codes, name servers, and DNSSEC.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Domain registration (RDAP)
+
+Duaer Domain registration (RDAP) looks up a domain in the registry that runs its top-level domain, through the rdap.org bootstrap. RDAP is the structured successor to WHOIS.
+
+## When to use
+
+- Check who registered a domain and when it expires.
+- Verify name servers and lock status before a migration.
+
+## When not to use
+
+- Company records. Use https://skills.duaer.com/npi.md for US clinicians or a company registry.
+- Security advisories. Use https://skills.duaer.com/nvd.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/rdap?domain=github.com`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `domain`.
+
+- `domain` — Registered domain such as github.com. A URL is trimmed to its host.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/rdap?domain=github.com` — the github.com record.
+- `GET https://api.duaer.com/v1/data/rdap?domain=wikipedia.org` — the wikipedia.org record.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `domain`, `registrar` — domain and registrar name.
+- `registered`, `expires`, `lastChanged` — dates, YYYY-MM-DD.
+- `status`, `nameservers`, `dnssec` — EPP status codes, name servers, and whether DNSSEC is signed.
+
+The search returns one row. Some country-code domains have no RDAP service and return none.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/nvd.md — Duaer NVD CVE records
+- https://skills.duaer.com/cisa-kev.md — Duaer CISA known exploited vulnerabilities
+
+---
+name: duaer-treasury
+description: >-
+  Duaer US Treasury fiscal data. US Treasury Fiscal Data: daily total public debt, average interest rates on Treasury securities, and Treasury reporting exchange rates.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer US Treasury fiscal data
+
+Duaer US Treasury fiscal data reads three official US Treasury datasets, newest first: debt to the penny, average interest rates by security, and quarterly reporting exchange rates.
+
+## When to use
+
+- Get the latest US total public debt.
+- Look up the rate the US Treasury uses to convert a foreign currency.
+
+## When not to use
+
+- Market exchange rates. Use https://skills.duaer.com/exchange-rates.md.
+- Agency budgets. Use https://skills.duaer.com/usaspending.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/treasury?dataset=debt`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `dataset`.
+
+- `dataset` — `debt` (debt to the penny), `interest` (average rates by security), or `exchange` (rates per US dollar).
+- `words` — Optional. Filter rows, such as Treasury Bills or China.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/treasury?dataset=debt&limit=5` — the last five days of total public debt.
+- `GET https://api.duaer.com/v1/data/treasury?dataset=exchange&words=China` — Treasury rates for the renminbi.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `date` — record date.
+- Debt: `totalDebtUsd`, `debtHeldByPublicUsd`, `intragovernmentalUsd`.
+- Interest: `security`, `securityType`, `averageRatePercent`.
+- Exchange: `country`, `currency`, `perUsd`, `effectiveDate`.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/usaspending.md — Duaer US federal agency budgets
+- https://skills.duaer.com/exchange-rates.md — Duaer Exchange rates
+
+---
+name: duaer-ecb
+description: >-
+  Duaer ECB statistics. European Central Bank series by dataflow and key: euro reference exchange rates, interest rates, inflation, and money statistics.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer ECB statistics
+
+Duaer ECB statistics reads series from the ECB Data Portal. A series is a dataflow plus a dotted key; use + to ask for several values in one position.
+
+## When to use
+
+- Get monthly euro reference rates for several currencies.
+- Pull euro area inflation or policy rates into a table.
+
+## When not to use
+
+- Daily market rates for any pair. Use https://skills.duaer.com/exchange-rates.md.
+- Central bank rates outside the euro area. Use https://skills.duaer.com/bis.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/ecb?dataflow=EXR&key=M.USD%2BJPY.EUR.SP00.A`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `dataflow` and `key`.
+
+- `dataflow` — Dataflow such as EXR (exchange rates), FM (financial markets), or ICP (inflation).
+- `key` — Series key with + for several values, such as M.USD+JPY.EUR.SP00.A. Encode + as %2B in a URL.
+- `observations` — Optional. Latest periods per series, 1 to 60. Default 5.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+Common keys: `EXR` `D.USD.EUR.SP00.A` daily dollar rate; `ICP` `M.U2.N.000000.4.ANR` euro area inflation; `FM` `D.U2.EUR.4F.KR.DFR.LEV` deposit facility rate.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/ecb?dataflow=EXR&key=M.USD%2BJPY.EUR.SP00.A` — monthly dollar and yen rates against the euro.
+- `GET https://api.duaer.com/v1/data/ecb?dataflow=ICP&key=M.U2.N.000000.4.ANR&observations=12` — euro area inflation for a year.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `series`, `seriesTitle` — series key and ECB title.
+- `period`, `value` — time period and figure, newest first.
+- One field per key dimension, such as `CURRENCY`.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/bis.md — Duaer BIS statistics
+- https://skills.duaer.com/eurostat.md — Duaer Eurostat statistics
+
+---
+name: duaer-bis
+description: >-
+  Duaer BIS statistics. Bank for International Settlements series by dataflow and key: central bank policy rates, credit, property prices, and exchange rates by country.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer BIS statistics
+
+Duaer BIS statistics reads series from the BIS Data Portal, which compiles central bank data for about 60 economies. Use + in the key to compare countries.
+
+## When to use
+
+- Compare central bank policy rates across countries.
+- Track residential property prices or credit to GDP.
+
+## When not to use
+
+- Euro area only. Use https://skills.duaer.com/ecb.md.
+- Broad development indicators. Use https://skills.duaer.com/world-bank.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/bis?dataflow=WS_CBPOL&key=M.US%2BGB%2BCN`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `dataflow` and `key`.
+
+- `dataflow` — Dataflow such as WS_CBPOL (policy rates), WS_SPP (property prices), or WS_XRU (exchange rates).
+- `key` — Series key with + for several countries, such as M.US+GB+CN. Encode + as %2B in a URL.
+- `observations` — Optional. Latest periods per series, 1 to 60. Default 5.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/bis?dataflow=WS_CBPOL&key=M.US%2BGB%2BCN` — policy rates of the US, UK, and China.
+- `GET https://api.duaer.com/v1/data/bis?dataflow=WS_CBPOL&key=M.JP&observations=24` — two years of Japan policy rates.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `series`, `seriesTitle` — series key and BIS title.
+- `period`, `value`, `unit` — time period, figure, and unit, newest first.
+- One field per key dimension, such as `REF_AREA`.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/ecb.md — Duaer ECB statistics
+- https://skills.duaer.com/imf.md — Duaer IMF indicators
+
+---
+name: duaer-owid
+description: >-
+  Duaer Our World in Data. Country time series behind any Our World in Data chart, such as life expectancy or CO2 per capita, or find charts by words.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Our World in Data
+
+Duaer Our World in Data reads the data behind an Our World in Data chart for chosen countries, newest year first. Without a chart, it finds charts that match your words.
+
+## When to use
+
+- Compare countries on a long-run indicator such as life expectancy.
+- Find which chart covers a topic, then read its data.
+
+## When not to use
+
+- Official national accounts. Use https://skills.duaer.com/world-bank.md.
+- SDG series by code. Use https://skills.duaer.com/un-sdg.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/owid?chart=life-expectancy&countries=CHN,USA`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `chart`, or `words` to find charts.
+
+- `chart` — Chart slug from the chart URL, such as life-expectancy or co2-emissions-per-capita.
+- `countries` — Optional. ISO codes such as CHN,USA; OWID_WRL is the world. Default CHN,USA.
+- `words` — Optional. With no chart, list charts that match, such as electricity from solar.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/owid?chart=life-expectancy&countries=CHN,USA` — life expectancy in China and the US.
+- `GET https://api.duaer.com/v1/data/owid?words=electricity%20from%20solar` — charts about solar electricity.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- Chart data: `chart`, `entity`, `code`, `year`, `unit`, plus one field per chart column.
+- Chart search: `chart` slug and `countries` covered.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/world-bank.md — Duaer World Bank indicators
+- https://skills.duaer.com/un-sdg.md — Duaer UN SDG indicators
+
+---
+name: duaer-tides
+description: >-
+  Duaer US tide predictions. High and low tide times and heights from NOAA for a US coastal station or the nearest station to a place.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer US tide predictions
+
+Duaer US tide predictions returns NOAA high and low water predictions in metres above mean lower low water, in station local time. It covers US coasts and territories.
+
+## When to use
+
+- Plan a beach walk, launch, or survey around low tide.
+- List the tides for the next few days at a harbour.
+
+## When not to use
+
+- Waves and swell. Use https://skills.duaer.com/marine.md.
+- Coasts outside the US. NOAA has no stations there.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/tides?place=Seattle&days=2`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `station`, `place`, or `latitude` and `longitude`.
+
+- `station` — Seven-digit NOAA station id, such as 9414290 (San Francisco).
+- `place` — Place name, such as Seattle. Duaer uses the nearest station.
+- `latitude`, `longitude` — Optional. Coordinates instead of a place name.
+- `date` — Optional. Start date, YYYY-MM-DD. Default today.
+- `days` — Optional. 1 to 7. Default 2.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/tides?place=Seattle&days=2` — two days of tides in Seattle.
+- `GET https://api.duaer.com/v1/data/tides?station=9414290&date=2026-10-01` — San Francisco tides from October 1.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `stationId`, `station`, `state` — the station used.
+- `time`, `tide`, `heightM` — local time, high or low, and height in metres.
+
+A place with no US station nearby returns no rows.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/marine.md — Duaer Marine forecast
+- https://skills.duaer.com/sunrise.md — Duaer Sunrise and sunset
+
+---
+name: duaer-sunrise
+description: >-
+  Duaer Sunrise and sunset. Sunrise, sunset, solar noon, civil twilight, and day length for a place and up to seven consecutive days.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Sunrise and sunset
+
+Duaer Sunrise and sunset calculates sun times for a place in its local time zone, one row per day.
+
+## When to use
+
+- Plan photography or fieldwork around daylight.
+- Compare day length across seasons or latitudes.
+
+## When not to use
+
+- Weather. Use https://skills.duaer.com/weather.md.
+- Solar energy estimates. Use https://skills.duaer.com/nasa-power.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/sunrise?place=Reykjavik&date=2026-12-21`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `place`, or `latitude` and `longitude`.
+
+- `place` — Place name, such as Seattle. Duaer looks up its coordinates.
+- `latitude`, `longitude` — Optional. Coordinates instead of a place name.
+- `date` — Optional. YYYY-MM-DD. Default today.
+- `days` — Optional. Consecutive days, 1 to 7. Default 1.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/sunrise?place=Reykjavik&date=2026-12-21` — the shortest day in Reykjavik.
+- `GET https://api.duaer.com/v1/data/sunrise?place=Shanghai&days=7` — a week of sun times in Shanghai.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `place`, `latitude`, `longitude`, `timezone` — the point and its time zone.
+- `date`, `sunrise`, `sunset`, `solarNoon` — ISO times with offset.
+- `dayLengthSeconds`, `civilTwilightBegin`, `civilTwilightEnd` — daylight and twilight.
+
+During polar day or night, `sunrise` and `sunset` are left out and the summary says so.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/tides.md — Duaer US tide predictions
+- https://skills.duaer.com/weather.md — Duaer Weather forecast
+
+---
+name: duaer-climate-projection
+description: >-
+  Duaer Climate projection. High-resolution CMIP6 climate model projections to 2050 for a place: mean temperature and yearly rainfall by year or decade.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Climate projection
+
+Duaer Climate projection aggregates daily output of HighResMIP CMIP6 climate models (through Open-Meteo) for one point, from 1950 to 2050. Compare models to see the spread.
+
+## When to use
+
+- Estimate how warm a city may be in the 2040s.
+- Compare rainfall trends between climate models.
+
+## When not to use
+
+- Past observations. Use https://skills.duaer.com/weather-history.md.
+- Next week. Use https://skills.duaer.com/weather.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/climate-projection?place=Shanghai`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `place`, or `latitude` and `longitude`.
+
+- `place` — Place name, such as Seattle. Duaer looks up its coordinates.
+- `latitude`, `longitude` — Optional. Coordinates instead of a place name.
+- `from`, `to` — Optional. Years from 1950 to 2050. Default 2021 to 2050.
+- `step` — Optional. `year` or `decade`. Default `decade`.
+- `models` — Optional. Up to 3 of EC_Earth3P_HR, MRI_AGCM3_2_S, CMCC_CM2_VHR4, FGOALS_f3_H, HiRAM_SIT_HR, MPI_ESM1_2_XR, NICAM16_8S. Default EC_Earth3P_HR.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/climate-projection?place=Shanghai` — Shanghai by decade to 2050.
+- `GET https://api.duaer.com/v1/data/climate-projection?place=Madrid&step=year&from=2040&models=EC_Earth3P_HR,MRI_AGCM3_2_S` — yearly values from two models.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `place`, `latitude`, `longitude` — the point.
+- `period`, `model` — year or decade, and the climate model.
+- `meanTemperatureC`, `precipitationMmPerYear`, `years` — averages and years in the period.
+
+These are model projections, not forecasts; single years vary a lot between models.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/weather-history.md — Duaer Weather history
+- https://skills.duaer.com/nasa-power.md — Duaer Solar and climate (NASA POWER)
+
+---
+name: duaer-small-bodies
+description: >-
+  Duaer Asteroids and comets (JPL). One asteroid or comet from the NASA JPL Small-Body Database: orbit, size, rotation, albedo, and near-Earth and hazard flags.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Asteroids and comets (JPL)
+
+Duaer Asteroids and comets (JPL) looks up one small body by name, number, or designation. When a name matches several objects, it lists them so you can pick one.
+
+## When to use
+
+- Get the size and orbit of an asteroid such as Apophis.
+- Check whether an object is near-Earth or potentially hazardous.
+
+## When not to use
+
+- Upcoming close approaches. Use https://skills.duaer.com/close-approaches.md.
+- Planets around other stars. Use https://skills.duaer.com/exoplanets.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/small-bodies?object=Apophis`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `object`.
+
+- `object` — Name, number, or designation, such as Eros, 433, Apophis, or 1P.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/small-bodies?object=Apophis` — asteroid Apophis.
+- `GET https://api.duaer.com/v1/data/small-bodies?object=1P` — comet Halley.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `designation`, `fullName`, `kind`, `orbitClass` — identity and orbit class.
+- `nearEarthObject`, `potentiallyHazardous`, `earthMoidAu` — Earth risk flags and minimum orbit distance.
+- `diameterKm`, `albedo`, `rotationHours`, `absoluteMagnitude`, `spectralType` — physical data, when measured.
+- `semiMajorAxisAu`, `eccentricity`, `inclinationDeg`, `perihelionAu`, `aphelionAu`, `orbitalPeriodDays` — orbit.
+
+Several matches return one row each with `designation` only; call again with that designation.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/close-approaches.md — Duaer Asteroid close approaches
+- https://skills.duaer.com/exoplanets.md — Duaer Exoplanets
+
+---
+name: duaer-close-approaches
+description: >-
+  Duaer Asteroid close approaches. Upcoming asteroid and comet close approaches to Earth from NASA JPL, with date, distance in lunar distances, speed, and size.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Asteroid close approaches
+
+Duaer Asteroid close approaches lists objects that will pass near Earth, soonest first, from the NASA JPL close-approach data.
+
+## When to use
+
+- See which asteroids pass within ten lunar distances this month.
+- Report the closest upcoming flyby.
+
+## When not to use
+
+- Orbit and size of one object. Use https://skills.duaer.com/small-bodies.md.
+- Space weather. Use https://skills.duaer.com/space-weather.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/close-approaches?days=60&lunarDistances=10`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `days` or `lunarDistances`.
+
+- `days` — Optional. From now through this many days, 1 to 365. Default 60.
+- `lunarDistances` — Optional. Only approaches within this many Moon distances, 0.1 to 100. Default 10.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/close-approaches?days=60&lunarDistances=10` — flybys within ten lunar distances in 60 days.
+- `GET https://api.duaer.com/v1/data/close-approaches?days=365&lunarDistances=1` — objects passing closer than the Moon this year.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `designation`, `fullName` — object.
+- `closeApproachUtc` — time of closest approach.
+- `distanceAu`, `distanceKm`, `distanceLunar` — nominal distance.
+- `relativeSpeedKms`, `absoluteMagnitude`, `diameterKm` — speed, brightness, and size when known.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/small-bodies.md — Duaer Asteroids and comets (JPL)
+- https://skills.duaer.com/space-weather.md — Duaer Space weather alerts
+
+---
+name: duaer-exoplanets
+description: >-
+  Duaer Exoplanets. Confirmed exoplanets from the NASA Exoplanet Archive by planet or star name, discovery method, or year, with size, mass, orbit, and distance.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Exoplanets
+
+Duaer Exoplanets searches the NASA Exoplanet Archive composite table of confirmed planets, newest discoveries first.
+
+## When to use
+
+- List planets in a system such as TRAPPIST-1.
+- Find planets found by direct imaging since 2024.
+
+## When not to use
+
+- Asteroids and comets. Use https://skills.duaer.com/small-bodies.md.
+- Papers about a planet. Use https://skills.duaer.com/inspire-hep.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/exoplanets?words=TRAPPIST`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `words`, `method`, or `since`.
+
+- `words` — Part of a planet or host star name, such as TRAPPIST or Kepler-452.
+- `method` — Optional. Transit, Radial Velocity, Microlensing, Imaging, Astrometry, and other archive methods.
+- `since` — Optional. Discovered in or after this year, such as 2024.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/exoplanets?words=TRAPPIST` — the TRAPPIST-1 planets.
+- `GET https://api.duaer.com/v1/data/exoplanets?method=Imaging&since=2024` — recent directly imaged planets.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `planet`, `hostStar` — names.
+- `discoveryYear`, `discoveryMethod`, `discoveryFacility` — discovery.
+- `radiusEarth`, `massEarth`, `orbitalPeriodDays`, `equilibriumTempK` — planet properties.
+- `distanceParsec` — distance to the system.
+
+The archive can take several seconds to answer.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/small-bodies.md — Duaer Asteroids and comets (JPL)
+- https://skills.duaer.com/kp-index.md — Duaer Planetary Kp index
+
+---
+name: duaer-space-weather
+description: >-
+  Duaer Space weather alerts. Alerts, watches, and warnings from the NOAA Space Weather Prediction Center: geomagnetic storms, solar radiation, and radio blackouts.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Space weather alerts
+
+Duaer Space weather alerts lists the messages NOAA SWPC issued recently, newest first, with the headline and full text.
+
+## When to use
+
+- Check for geomagnetic storm warnings before an aurora trip.
+- Monitor radiation or radio blackout alerts for operations.
+
+## When not to use
+
+- The Kp index values. Use https://skills.duaer.com/kp-index.md.
+- Weather on Earth. Use https://skills.duaer.com/weather.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/space-weather?days=3`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `days` or `words`.
+
+- `days` — Optional. Alerts issued in the last N days, 1 to 30. Default 3.
+- `words` — Optional. Words in the alert, such as geomagnetic or radio blackout.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/space-weather?days=3` — alerts from the last three days.
+- `GET https://api.duaer.com/v1/data/space-weather?days=7&words=geomagnetic` — geomagnetic messages this week.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `messageCode`, `productId` — SWPC message code, such as WARK05.
+- `headline`, `message` — first alert line and full text.
+- `issuedUtc` — issue time.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/kp-index.md — Duaer Planetary Kp index
+- https://skills.duaer.com/close-approaches.md — Duaer Asteroid close approaches
+
+---
+name: duaer-kp-index
+description: >-
+  Duaer Planetary Kp index. NOAA planetary Kp index in three-hour steps: recent observed geomagnetic activity or the three-day forecast, with storm level.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Planetary Kp index
+
+Duaer Planetary Kp index returns the Kp index from 0 to 9 in three-hour steps. Kp 5 and above is a geomagnetic storm, rated G1 to G5.
+
+## When to use
+
+- Judge aurora chances from the forecast.
+- Check whether a recent storm reached G3.
+
+## When not to use
+
+- Alert texts. Use https://skills.duaer.com/space-weather.md.
+- Solar energy at a site. Use https://skills.duaer.com/nasa-power.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/kp-index?view=forecast`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `view`.
+
+- `view` — `recent` (observed, newest first) or `forecast` (next three days).
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/kp-index?view=forecast` — the three-day Kp forecast.
+- `GET https://api.duaer.com/v1/data/kp-index?view=recent&limit=8` — the last 24 hours.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `timeUtc`, `kp` — start of the three-hour step and the index.
+- `status` — observed, estimated, or predicted.
+- `stormScale` — G1 to G5 when Kp is 5 or more.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/space-weather.md — Duaer Space weather alerts
+- https://skills.duaer.com/close-approaches.md — Duaer Asteroid close approaches
+
+---
+name: duaer-met-museum
+description: >-
+  Duaer The Met collection. Artworks at The Metropolitan Museum of Art by artist, title, or subject, with date, medium, department, gallery, and public-domain image.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer The Met collection
+
+Duaer The Met collection searches the open access collection of The Metropolitan Museum of Art in New York. Works with images come first.
+
+## When to use
+
+- Find works by an artist or on a subject.
+- Get reusable public-domain images with credit lines.
+
+## When not to use
+
+- Chicago collection. Use https://skills.duaer.com/art-institute.md.
+- Books. Use https://skills.duaer.com/open-library.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/met-museum?words=sunflowers`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `words`.
+
+- `words` — Artist, title, or subject, such as sunflowers.
+- `publicDomain` — Optional. `yes` to keep only works free to reuse.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/met-museum?words=sunflowers` — works about sunflowers.
+- `GET https://api.duaer.com/v1/data/met-museum?words=Hokusai&publicDomain=yes` — public-domain Hokusai prints.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `objectId`, `artist`, `date`, `culture` — work and maker.
+- `medium`, `classification`, `department`, `dimensions` — object facts.
+- `publicDomain`, `image`, `creditLine`, `onView` — reuse status, image link, credit, and gallery.
+
+The Met loads each object separately, so large limits take longer.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/art-institute.md — Duaer Art Institute of Chicago
+- https://skills.duaer.com/cleveland-art.md — Duaer Cleveland Museum of Art
+
+---
+name: duaer-art-institute
+description: >-
+  Duaer Art Institute of Chicago. Artworks at the Art Institute of Chicago by artist, title, or subject, with date, medium, department, and IIIF image.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Art Institute of Chicago
+
+Duaer Art Institute of Chicago searches the museum collection API, ranked by relevance, with IIIF image links.
+
+## When to use
+
+- Find paintings by an artist in Chicago.
+- Get image links for public-domain works.
+
+## When not to use
+
+- The Met collection. Use https://skills.duaer.com/met-museum.md.
+- Encyclopedia articles. Use https://skills.duaer.com/wikipedia.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/art-institute?words=water%20lilies`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `words`.
+
+- `words` — Artist, title, or subject, such as water lilies.
+- `publicDomain` — Optional. `yes` to keep only works free to reuse.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/art-institute?words=water%20lilies` — water lily paintings.
+- `GET https://api.duaer.com/v1/data/art-institute?words=Hopper&publicDomain=yes` — public-domain works related to Hopper.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `artworkId`, `artist`, `date`, `placeOfOrigin` — work and maker.
+- `medium`, `department` — object facts.
+- `publicDomain`, `image` — reuse status and IIIF image link.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/met-museum.md — Duaer The Met collection
+- https://skills.duaer.com/cleveland-art.md — Duaer Cleveland Museum of Art
+
+---
+name: duaer-cleveland-art
+description: >-
+  Duaer Cleveland Museum of Art. Open access artworks at the Cleveland Museum of Art by artist, title, or subject, with creator, technique, gallery, and CC0 image.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Cleveland Museum of Art
+
+Duaer Cleveland Museum of Art searches the museum open access API. Most works with images are CC0.
+
+## When to use
+
+- Find works on view in a gallery.
+- Get CC0 images for reuse.
+
+## When not to use
+
+- The Met collection. Use https://skills.duaer.com/met-museum.md.
+- Chicago collection. Use https://skills.duaer.com/art-institute.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/cleveland-art?words=monet`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `words`.
+
+- `words` — Artist, title, or subject, such as monet.
+- `publicDomain` — Optional. `yes` to keep only works free to reuse.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/cleveland-art?words=monet` — works by Monet.
+- `GET https://api.duaer.com/v1/data/cleveland-art?words=armor&publicDomain=yes` — CC0 armor.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `artworkId`, `accessionNumber`, `artist`, `date`, `culture` — work and maker.
+- `technique`, `type`, `department`, `onView` — object facts and gallery.
+- `publicDomain`, `image` — CC0 status and web image.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/met-museum.md — Duaer The Met collection
+- https://skills.duaer.com/art-institute.md — Duaer Art Institute of Chicago
+
+---
+name: duaer-cms-nursing-homes
+description: >-
+  Duaer US nursing homes (CMS). Medicare nursing homes from CMS Care Compare: beds, ownership, and star ratings for overall, inspections, staffing, and quality.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer US nursing homes (CMS)
+
+Duaer US nursing homes (CMS) searches the CMS list of Medicare and Medicaid nursing homes with their five-star ratings.
+
+## When to use
+
+- Find highly rated nursing homes in a city.
+- Compare staffing and inspection ratings.
+
+## When not to use
+
+- Hospitals. Use https://skills.duaer.com/cms-hospitals.md.
+- Individual clinicians. Use https://skills.duaer.com/cms-clinicians.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/cms-nursing-homes?city=Boston&state=MA&minRating=4`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `name`, `city`, `state`, `zip`, or `minRating`.
+
+- `name` — Optional. Words in the name, such as care.
+- `city` — Optional. City, such as Boston.
+- `state` — Optional. Two-letter state code, such as MA.
+- `zip` — Optional. Five-digit ZIP code, such as 02114.
+- `minRating` — Optional. Overall rating from 1 to 5.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/cms-nursing-homes?city=Boston&state=MA&minRating=4` — four- and five-star homes in Boston.
+- `GET https://api.duaer.com/v1/data/cms-nursing-homes?zip=10025` — homes in one ZIP code.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `ccn`, `name`, `address`, `city`, `state`, `zip`, `phone` — facility.
+- `ownership`, `chain`, `certifiedBeds`, `residentsPerDay` — size and owner.
+- `overallRating`, `healthInspectionRating`, `staffingRating`, `qualityRating` — 1 to 5 stars.
+- `abuseCitation` — CMS abuse icon.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/cms-hospitals.md — Duaer US hospitals (CMS)
+- https://skills.duaer.com/cms-clinicians.md — Duaer US clinicians (CMS)
+
+---
+name: duaer-cms-clinicians
+description: >-
+  Duaer US clinicians (CMS). Medicare doctors and clinicians from CMS Care Compare by name, specialty, or place, with practice, medical school, and Medicare assignment.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer US clinicians (CMS)
+
+Duaer US clinicians (CMS) searches the CMS doctors and clinicians file of providers who bill Medicare, with practice address and specialty.
+
+## When to use
+
+- Find cardiologists in a state who accept Medicare assignment.
+- Look up where a clinician practises and trained.
+
+## When not to use
+
+- Every US provider, including non-Medicare. Use https://skills.duaer.com/npi.md.
+- Hospitals. Use https://skills.duaer.com/cms-hospitals.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/cms-clinicians?specialty=cardiology&state=MA`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `lastName`, `specialty`, `city`, `state`, or `zip`.
+
+- `lastName` — Optional. Exact last name, such as Smith.
+- `specialty` — Words in the primary specialty, such as cardiology.
+- `city` — Optional. City, such as Boston.
+- `state` — Optional. Two-letter state code, such as MA.
+- `zip` — Optional. Five-digit ZIP code, such as 02114.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/cms-clinicians?specialty=cardiology&state=MA` — cardiologists in Massachusetts.
+- `GET https://api.duaer.com/v1/data/cms-clinicians?lastName=Smith&city=Boston` — clinicians named Smith in Boston.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `npi`, `name`, `credential`, `gender` — clinician.
+- `primarySpecialty`, `otherSpecialties`, `medicalSchool`, `graduationYear` — training.
+- `practice`, `address`, `city`, `state`, `zip`, `phone` — practice location.
+- `acceptsMedicareAssignment` — accepts the Medicare-approved amount.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/npi.md — Duaer US provider registry (NPI)
+- https://skills.duaer.com/cms-nursing-homes.md — Duaer US nursing homes (CMS)
+
+---
+name: duaer-cdc-data
+description: >-
+  Duaer CDC open data. CDC open datasets on data.cdc.gov: find datasets by words, then read rows from one dataset, such as influenza deaths or vaccination coverage.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer CDC open data
+
+Duaer CDC open data works in two steps: search the data.cdc.gov catalog for datasets, then read rows from one dataset by its id.
+
+## When to use
+
+- Find the CDC dataset for a disease or indicator.
+- Pull the first rows of a CDC dataset into a table.
+
+## When not to use
+
+- Global health statistics. Use https://skills.duaer.com/who-gho.md.
+- Hospitals and clinicians. Use https://skills.duaer.com/cms-hospitals.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/cdc-data?words=influenza`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `words`, or `dataset`.
+
+- `words` — Words such as influenza deaths or vaccination coverage.
+- `dataset` — Optional. Dataset id such as ynw2-4viq to read its rows instead.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/cdc-data?words=influenza` — CDC datasets about influenza.
+- `GET https://api.duaer.com/v1/data/cdc-data?dataset=ynw2-4viq&limit=5` — rows of the provisional flu, pneumonia, and COVID-19 deaths dataset.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- Dataset search: `dataset`, `description`, `publisher`, `category`, `columns`, `dataUpdated`, `downloads`.
+- Dataset rows: `dataset` plus the dataset columns as fields.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/who-gho.md — Duaer WHO health statistics
+- https://skills.duaer.com/cms-hospitals.md — Duaer US hospitals (CMS)
+
+---
+name: duaer-nih-reporter
+description: >-
+  Duaer NIH RePORTER grants. NIH-funded research projects from NIH RePORTER by words, fiscal year, and institution, with investigators, institute, and award amount.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer NIH RePORTER grants
+
+Duaer NIH RePORTER grants searches NIH-funded projects by title and terms, newest fiscal year first.
+
+## When to use
+
+- Find who NIH funds to work on a topic.
+- List an institution’s NIH projects in a year range.
+
+## When not to use
+
+- Papers. Use https://skills.duaer.com/inspire-hep.md for physics or a literature source.
+- US federal budgets. Use https://skills.duaer.com/usaspending.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/nih-reporter?words=CRISPR%20sickle%20cell`
+
+Header: `Authorization: Bearer <Duaer key>`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `words`.
+
+- `words` — Words in the title or terms, such as CRISPR sickle cell.
+- `fromYear`, `toYear` — Optional. Fiscal years, at most 30 years apart.
+- `organization` — Optional. Institution name as NIH lists it, such as STANFORD UNIVERSITY.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/nih-reporter?words=CRISPR%20sickle%20cell` — NIH projects on CRISPR for sickle cell.
+- `GET https://api.duaer.com/v1/data/nih-reporter?words=Alzheimer&fromYear=2024&toYear=2025&organization=STANFORD%20UNIVERSITY` — Stanford Alzheimer projects.
+
+## Result
+
+The response is `{ "items": [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `applicationId`, `projectNumber`, `activityCode` — NIH ids.
+- `fiscalYear`, `awardUsd`, `institute` — funding.
+- `organization`, `investigators` — institution and principal investigators.
+- `startDate`, `endDate`, `abstract` — project period and abstract.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/usaspending.md — Duaer US federal agency budgets
+- https://skills.duaer.com/wikipedia.md — Duaer Wikipedia
 
