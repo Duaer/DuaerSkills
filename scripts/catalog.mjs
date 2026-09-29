@@ -1,5 +1,6 @@
 /** Skill catalog for https://skills.duaer.com. Add a row, then run `node scripts/render.mjs`. */
 
+import { DARK_MATTER_CHAIN_SKILL, DARK_MATTER_SKILLS } from './dark-matter-skills.mjs';
 import { OPEN_DATA_SKILLS } from './open-data-skills.mjs';
 
 export const KEY_URL = 'https://skills.duaer.com/keys.md';
@@ -1064,7 +1065,7 @@ Acceptance: https://doc.duaer.com/getting-started/accept-deliverables/
 
 	{
 		slug: 'metabolites',
-		related: ['compounds', 'reactions', 'pathways', 'drug-labels'],
+		related: ['compounds', 'reactions', 'pathways', 'drug-labels', 'metabolic-dark-matter'],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search metabolites in Duaer', zh: '在 Duaer 里检索代谢物' },
 		lede: {
@@ -3402,6 +3403,105 @@ Acceptance: https://doc.duaer.com/getting-started/accept-deliverables/
 	},
 
 	{
+		slug: 'metabolic-dark-matter',
+		related: ['spectrum', 'massbank', 'mass-candidates', 'mona', 'masst', 'refmet'],
+		type: { en: 'Guide', zh: '指南' },
+		title: {
+			en: 'Annotate an unknown feature with Duaer',
+			zh: '用 Duaer 注释未知特征（代谢暗物质）',
+		},
+		lede: {
+			en: 'In Duaer, work an MS feature that no library identified: library match, mass candidates, reference spectra, and MASST, one Duaer Data call per step.',
+			zh: '在 Duaer 里逐步处理谱库认不出的质谱特征：谱库匹配、质量候选、参考谱图与 MASST，每步一次 Duaer Data 调用。',
+		},
+		returns: {
+			en: 'A per-feature report: the result or unknown, evidence from each call, and a confidence level.',
+			zh: '每个特征一份报告：结果或未知、每次调用的证据与置信等级。',
+		},
+		skill: DARK_MATTER_CHAIN_SKILL,
+	},
+
+	{
+		slug: 'massbank',
+		related: ['metabolic-dark-matter', 'mona', 'mass-candidates', 'spectrum'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Match spectra in MassBank with Duaer', zh: '在 Duaer 里匹配 MassBank 谱图' },
+		lede: {
+			en: 'In Duaer, match MS/MS peaks, an exact mass, or an InChIKey against MassBank. One successful search uses 1 credit.',
+			zh: '在 Duaer 里用 MS/MS 峰、精确质量或 InChIKey 匹配 MassBank。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each record has an accession, compound, formula, mass, InChIKey, ion mode, instrument, and cosine score for peak searches.',
+			zh: '每条记录有编号、化合物、分子式、质量、InChIKey、离子模式、仪器，峰检索还有余弦相似度。',
+		},
+		skill: DARK_MATTER_SKILLS['massbank'],
+	},
+
+	{
+		slug: 'mona',
+		related: ['metabolic-dark-matter', 'massbank', 'mass-candidates'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Find MoNA reference spectra with Duaer', zh: '在 Duaer 里查 MoNA 参考谱图' },
+		lede: {
+			en: 'In Duaer, find reference MS/MS spectra in MoNA by InChIKey or compound name. One successful search uses 1 credit.',
+			zh: '在 Duaer 里按 InChIKey 或化合物名查 MoNA 参考 MS/MS 谱图。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each spectrum has an id, compound, formula, InChIKey, MS level, ion mode, precursor type and m/z, and peaks.',
+			zh: '每张谱图有编号、化合物、分子式、InChIKey、MS 级别、离子模式、前体类型与 m/z，以及峰列表。',
+		},
+		skill: DARK_MATTER_SKILLS['mona'],
+	},
+
+	{
+		slug: 'mass-candidates',
+		related: ['metabolic-dark-matter', 'mona', 'massbank', 'compounds'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'List mass candidates in Duaer', zh: '在 Duaer 里列出质量候选物' },
+		lede: {
+			en: 'In Duaer, list PubChem compounds that fit an observed m/z and adduct. One successful search uses 1 credit.',
+			zh: '在 Duaer 里按观测 m/z 与加合离子列出 PubChem 候选化合物。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each candidate has a PubChem CID, name, formula, monoisotopic mass, ppm error, and InChIKey.',
+			zh: '每个候选物有 PubChem CID、名称、分子式、单同位素质量、ppm 误差与 InChIKey。',
+		},
+		skill: DARK_MATTER_SKILLS['mass-candidates'],
+	},
+
+	{
+		slug: 'spectrum',
+		related: ['metabolic-dark-matter', 'massbank', 'masst'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Fetch a spectrum by USI in Duaer', zh: '在 Duaer 里按 USI 取谱' },
+		lede: {
+			en: 'In Duaer, fetch the peaks of a public mass spectrum by its USI. One successful search uses 1 credit.',
+			zh: '在 Duaer 里按 USI 取公开质谱的峰列表。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'One item with the precursor m/z, charge, peak count, and peaks as mz:intensity pairs.',
+			zh: '一条结果：前体 m/z、电荷、峰数与 mz:intensity 峰列表。',
+		},
+		skill: DARK_MATTER_SKILLS['spectrum'],
+	},
+
+	{
+		slug: 'masst',
+		related: ['metabolic-dark-matter', 'spectrum', 'massbank'],
+		type: { en: 'Data', zh: '数据' },
+		title: { en: 'Search a spectrum with MASST in Duaer', zh: '在 Duaer 里用 MASST 搜谱图' },
+		lede: {
+			en: 'In Duaer, find where an MS/MS spectrum appears in public metabolomics data with GNPS2 MASST. One successful search uses 1 credit.',
+			zh: '在 Duaer 里用 GNPS2 MASST 查 MS/MS 谱图出现在哪些公开代谢组数据中。一次成功查询用 1 额度。',
+		},
+		returns: {
+			en: 'Each match has a USI, dataset, GNPS library accession when present, cosine, matching peaks, and delta mass.',
+			zh: '每个匹配有 USI、数据集、GNPS 谱库编号（如有）、余弦、匹配峰数与质量差。',
+		},
+		skill: DARK_MATTER_SKILLS['masst'],
+	},
+
+	{
 		slug: 'lincs',
 		related: ["expression"],
 		type: { en: 'Data', zh: '数据' },
@@ -5211,7 +5311,7 @@ Acceptance: https://doc.duaer.com/getting-started/accept-deliverables/
 	},
 	{
 		slug: 'refmet',
-		related: ["metabolites","metabolights","chebi"],
+		related: ["metabolites","metabolights","chebi","metabolic-dark-matter"],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search RefMet in Duaer', zh: '在 Duaer 里检索 RefMet' },
 		lede: { en: 'In Duaer, search metabolites in Metabolomics Workbench RefMet. One successful search uses 1 credit.', zh: '在 Duaer 里在 Metabolomics Workbench RefMet 搜索代谢物。一次成功查询用 1 额度。' },
