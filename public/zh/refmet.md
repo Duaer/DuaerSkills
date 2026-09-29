@@ -41,3 +41,4 @@ A missing key returns 401.
 - [在 Duaer 里检索代谢物](https://skills.duaer.com/zh/metabolites.md)
 - [在 Duaer 里检索 MetaboLights](https://skills.duaer.com/zh/metabolights.md)
 - [在 Duaer 里检索 ChEBI](https://skills.duaer.com/zh/chebi.md)
+- [用 Duaer 注释未知特征（代谢暗物质）](https://skills.duaer.com/zh/metabolic-dark-matter.md)

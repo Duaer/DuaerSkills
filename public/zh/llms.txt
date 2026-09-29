@@ -161,6 +161,12 @@
 - [在 Duaer 里检索 iNaturalist](https://skills.duaer.com/zh/inaturalist.md): 在 Duaer 里在 iNaturalist 检索分类单元。一次成功查询用 1 额度。
 - [在 Duaer 里检索 DisProt](https://skills.duaer.com/zh/disprot.md): 在 Duaer 里在 DisProt 检索内禀无序蛋白。一次成功查询用 1 额度。
 - [在 Duaer 里检索 LOTUS](https://skills.duaer.com/zh/lotus.md): 在 Duaer 里在 LOTUS 检索天然产物。一次成功查询用 1 额度。
+- [用 Duaer 注释未知特征（代谢暗物质）](https://skills.duaer.com/zh/metabolic-dark-matter.md): 在 Duaer 里逐步处理谱库认不出的质谱特征：谱库匹配、质量候选、参考谱图与 MASST，每步一次 Duaer Data 调用。
+- [在 Duaer 里匹配 MassBank 谱图](https://skills.duaer.com/zh/massbank.md): 在 Duaer 里用 MS/MS 峰、精确质量或 InChIKey 匹配 MassBank。一次成功查询用 1 额度。
+- [在 Duaer 里查 MoNA 参考谱图](https://skills.duaer.com/zh/mona.md): 在 Duaer 里按 InChIKey 或化合物名查 MoNA 参考 MS/MS 谱图。一次成功查询用 1 额度。
+- [在 Duaer 里列出质量候选物](https://skills.duaer.com/zh/mass-candidates.md): 在 Duaer 里按观测 m/z 与加合离子列出 PubChem 候选化合物。一次成功查询用 1 额度。
+- [在 Duaer 里按 USI 取谱](https://skills.duaer.com/zh/spectrum.md): 在 Duaer 里按 USI 取公开质谱的峰列表。一次成功查询用 1 额度。
+- [在 Duaer 里用 MASST 搜谱图](https://skills.duaer.com/zh/masst.md): 在 Duaer 里用 GNPS2 MASST 查 MS/MS 谱图出现在哪些公开代谢组数据中。一次成功查询用 1 额度。
 - [在 Duaer 里检索 LINCS](https://skills.duaer.com/zh/lincs.md): 在 Duaer 里检索 LINCS 门户数据集。一次成功查询用 1 额度。
 - [在 Duaer 里检索 CELLxGENE](https://skills.duaer.com/zh/cellxgene.md): 在 Duaer 里检索 CELLxGENE 集合。一次成功查询用 1 额度。
 - [在 Duaer 里检索 MG-RAST](https://skills.duaer.com/zh/mgrast.md): 在 Duaer 里检索 MG-RAST 宏基因组项目。一次成功查询用 1 额度。

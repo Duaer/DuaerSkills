@@ -41,3 +41,4 @@ A missing key returns 401.
 - [Search metabolites in Duaer](https://skills.duaer.com/metabolites.md)
 - [Search MetaboLights in Duaer](https://skills.duaer.com/metabolights.md)
 - [Search ChEBI in Duaer](https://skills.duaer.com/chebi.md)
+- [Annotate an unknown feature with Duaer](https://skills.duaer.com/metabolic-dark-matter.md)
