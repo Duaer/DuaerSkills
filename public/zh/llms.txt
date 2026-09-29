@@ -358,4 +358,9 @@
 - [在 Duaer 里查美国临床医生（CMS）](https://skills.duaer.com/zh/cms-clinicians.md): 在 Duaer 里：按姓名、专科或地点检索 CMS Care Compare 中的 Medicare 医生与临床人员，含执业机构、毕业院校与是否接受 Medicare 定价。一次成功查询用 1 额度。
 - [在 Duaer 里查美国疾控中心开放数据](https://skills.duaer.com/zh/cdc-data.md): 在 Duaer 里：data.cdc.gov 上的 CDC 开放数据集：先按关键词查找数据集，再读取某个数据集的行，如流感死亡或疫苗接种率。一次成功查询用 1 额度。
 - [在 Duaer 里查NIH RePORTER 科研资助](https://skills.duaer.com/zh/nih-reporter.md): 在 Duaer 里：按关键词、财年与机构检索 NIH RePORTER 中的 NIH 资助项目，含负责人、资助研究所与资助金额。一次成功查询用 1 额度。
+- [在 Duaer 里查NASA 每日天文图](https://skills.duaer.com/zh/apod.md): 在 Duaer 里：NASA 每日天文图（APOD）：某一天或连续多天的天文图片或视频及其讲解。一次成功查询用 1 额度。
+- [在 Duaer 里查NASA 太阳耀斑](https://skills.duaer.com/zh/solar-flares.md): 在 Duaer 里：NASA DONKI：近期太阳耀斑的等级、峰值时间、日面位置与活动区编号。一次成功查询用 1 额度。
+- [在 Duaer 里查美国人口普查 ACS](https://skills.duaer.com/zh/census.md): 在 Duaer 里：美国人口普查局 ACS 五年数据：按州或县查人口、家庭收入、年龄、房价、房租与贫困率。一次成功查询用 1 额度。
+- [在 Duaer 里查美国电价（EIA）](https://skills.duaer.com/zh/eia-electricity.md): 在 Duaer 里：美国能源信息署：按州与用户类别的月度平均零售电价、售电量与用户数。一次成功查询用 1 额度。
+- [在 Duaer 里查原油与燃油现货价（EIA）](https://skills.duaer.com/zh/eia-petroleum.md): 在 Duaer 里：美国能源信息署：WTI 与布伦特原油、汽油、柴油、取暖油、航空煤油与丙烷的现货价格。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
