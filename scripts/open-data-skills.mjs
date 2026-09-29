@@ -7971,4 +7971,1305 @@ A missing key returns 401.
 - https://skills.duaer.com/wikipedia.md — Duaer Wikipedia
 - https://skills.duaer.com/open-library.md — Duaer Open Library
 `,
+	'word-definitions': `---
+name: duaer-word-definitions
+description: >-
+  Duaer Word definitions. Wiktionary: definitions, parts of speech, and examples for a word in English, Chinese, and many other languages.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Word definitions
+
+Duaer Word definitions reads Wiktionary and returns one row per definition of a word, with the part of speech and an example sentence.
+
+## When to use
+
+- Define an unfamiliar English word in a reading app.
+- Look up the meanings of a Chinese or French word.
+
+## When not to use
+
+- Synonyms, rhymes, or related words. Use https://skills.duaer.com/word-finder.md.
+- Encyclopedia articles. Use https://skills.duaer.com/wikipedia.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/word-definitions?word=serendipity\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`word\`.
+
+- \`word\` — A word or short phrase, such as serendipity. URL-encode non-Latin text.
+- \`language\` — Optional. Language code such as \`en\`, \`zh\`, or \`fr\`, or \`all\`. Default \`en\`.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/word-definitions?word=serendipity\` — English definitions of serendipity.
+- \`GET https://api.duaer.com/v1/data/word-definitions?word=%E5%92%96%E5%95%A1&language=zh\` — Chinese definitions of the word for coffee.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`word\`, \`language\`, \`languageCode\` — the word and the language of the entry.
+- \`partOfSpeech\`, \`definition\`, \`example\` — part of speech, the definition, and one example.
+
+A word Wiktionary does not have finds nothing and uses 0 credits.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/word-finder.md — Duaer Word finder
+- https://skills.duaer.com/wikipedia.md — Duaer Wikipedia
+`,
+	'cn-holidays': `---
+name: duaer-cn-holidays
+description: >-
+  Duaer China holidays and make-up workdays. State Council schedule: each Chinese public holiday of a year with its days off and make-up working days.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer China holidays and make-up workdays
+
+Duaer China holidays and make-up workdays returns one row per Chinese public holiday of a year, with the days off, the date range, and the weekend days that become working days, linked to the State Council notice.
+
+## When to use
+
+- Plan shipping or staffing around Spring Festival and National Day.
+- Check whether a Saturday is a make-up working day in China.
+
+## When not to use
+
+- Holidays in other countries. Use https://skills.duaer.com/public-holidays.md.
+- Weather on a date. Use https://skills.duaer.com/weather.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/cn-holidays?year=current\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`year\`.
+
+- \`year\` — Four-digit year from 2007, or \`current\`. Default \`current\`.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/cn-holidays?year=current\` — this year in China.
+- \`GET https://api.duaer.com/v1/data/cn-holidays?year=2027\` — the 2027 schedule once it is published.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`name\`, \`nameZh\`, \`year\` — English and Chinese holiday names and the year.
+- \`start\`, \`end\`, \`daysOff\`, \`offDays\` — first and last day off, the count, and every day off.
+- \`makeupWorkdays\`, \`notice\` — weekend days that become working days, and the State Council notice.
+
+The schedule for next year usually appears in November or December; before that the year finds nothing.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/public-holidays.md — Duaer Public holidays
+- https://skills.duaer.com/amap-weather.md — Duaer Amap weather in China
+`,
+	'hk-bus-eta': `---
+name: duaer-hk-bus-eta
+description: >-
+  Duaer Hong Kong KMB bus arrivals. KMB: the next buses at each stop of a Hong Kong route, in minutes and clock times.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Hong Kong KMB bus arrivals
+
+Duaer Hong Kong KMB bus arrivals returns one row per stop of a KMB route in route order, with the next buses in minutes and their clock times.
+
+## When to use
+
+- Show when the next 1A bus reaches a stop.
+- List every stop of a route with live arrivals.
+
+## When not to use
+
+- MTR trains. Use https://skills.duaer.com/hk-mtr.md.
+- Hong Kong weather. Use https://skills.duaer.com/hk-weather.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/hk-bus-eta?route=1A\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`route\`.
+
+- \`route\` — KMB route such as 1A or 960.
+- \`direction\` — Optional. \`outbound\` or \`inbound\`. Default \`outbound\`.
+- \`stop\` — Optional. Words in the stop name, in English or Chinese.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/hk-bus-eta?route=1A\` — next buses at every outbound stop of route 1A.
+- \`GET https://api.duaer.com/v1/data/hk-bus-eta?route=960&direction=inbound&stop=tuen%20mun\` — inbound 960 stops in Tuen Mun.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`route\`, \`direction\`, \`stopSeq\`, \`stopId\` — route, direction, stop order, and KMB stop id.
+- \`stopName\`, \`stopNameZh\`, \`destination\`, \`destinationZh\` — stop and destination in English and Chinese.
+- \`nextMinutes\`, \`nextEta\`, \`etas\`, \`remark\` — minutes to the next bus, its time, the next few times, and the KMB remark.
+- \`latitude\`, \`longitude\` — stop location.
+
+A stop with no bus scheduled still appears, without \`nextMinutes\`.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/hk-mtr.md — Duaer Hong Kong MTR next trains
+- https://skills.duaer.com/hk-weather.md — Duaer Hong Kong weather
+`,
+	'hk-mtr': `---
+name: duaer-hk-mtr
+description: >-
+  Duaer Hong Kong MTR next trains. MTR: the next trains at a Hong Kong station with line, destination, platform, and minutes.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Hong Kong MTR next trains
+
+Duaer Hong Kong MTR next trains returns the next trains at one MTR station on every line that stops there, soonest first.
+
+## When to use
+
+- Show the next trains at Admiralty.
+- Check the platform for the next train to LOHAS Park.
+
+## When not to use
+
+- KMB buses. Use https://skills.duaer.com/hk-bus-eta.md.
+- Singapore transport. Use https://skills.duaer.com/sg-taxis.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/hk-mtr?station=Tseung%20Kwan%20O\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`station\`.
+
+- \`station\` — MTR station in English or Chinese, or its code, such as Tseung Kwan O or TKO.
+- \`line\` — Optional. Line code: AEL, TCL, TML, TKL, EAL, SIL, TWL, ISL, KTL, or DRL.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/hk-mtr?station=Tseung%20Kwan%20O\` — next trains at Tseung Kwan O.
+- \`GET https://api.duaer.com/v1/data/hk-mtr?station=ADM&line=ISL\` — Island Line trains at Admiralty.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`line\`, \`lineName\`, \`station\`, \`stationName\`, \`stationNameZh\` — line and station.
+- \`direction\`, \`destination\`, \`destinationName\`, \`destinationNameZh\` — up or down and the terminus.
+- \`platform\`, \`minutes\`, \`time\`, \`delayed\` — platform, minutes to departure, departure time, and whether MTR reports a delay.
+
+A partial name that fits several stations returns 400 listing them.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/hk-bus-eta.md — Duaer Hong Kong KMB bus arrivals
+- https://skills.duaer.com/hk-weather.md — Duaer Hong Kong weather
+`,
+	'hk-interbank': `---
+name: duaer-hk-interbank
+description: >-
+  Duaer Hong Kong interbank rates. HKMA: daily HIBOR overnight and 1-month, the base rate, and the aggregate balance, newest first.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Hong Kong interbank rates
+
+Duaer Hong Kong interbank rates returns HKMA daily interbank liquidity figures, newest day first.
+
+## When to use
+
+- Track HIBOR for a Hong Kong mortgage report.
+- Watch the aggregate balance and the base rate.
+
+## When not to use
+
+- Currency exchange rates. Use https://skills.duaer.com/exchange-rates.md.
+- Central bank series from other economies. Use https://skills.duaer.com/bis.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/hk-interbank?days=5\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`days\`.
+
+- \`days\` — Days to return, newest first, 1 to 20. Default 5.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/hk-interbank?days=5\` — the last five business days.
+- \`GET https://api.duaer.com/v1/data/hk-interbank?days=20\` — about the last month.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`date\`, \`hiborOvernightPct\`, \`hibor1mPct\`, \`baseRatePct\` — day, HIBOR overnight and 1-month, and the base rate.
+- \`openingBalanceHkdMn\`, \`closingBalanceHkdMn\` — aggregate balance in HK$ million.
+- \`tradeWeightedIndex\`, \`weakSideCu\`, \`strongSideCu\` — effective exchange rate index and the convertibility undertakings.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/exchange-rates.md — Duaer Exchange rates
+- https://skills.duaer.com/bis.md — Duaer BIS statistics
+`,
+	'commons-media': `---
+name: duaer-commons-media
+description: >-
+  Duaer Wikimedia Commons media. Wikimedia Commons: free images, audio, and video with file links, license, and author.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Wikimedia Commons media
+
+Duaer Wikimedia Commons media searches Wikimedia Commons for freely licensed images, audio, and video, with the file link, license, and author for attribution.
+
+## When to use
+
+- Find a freely licensed photo for an article.
+- Find a public-domain audio clip.
+
+## When not to use
+
+- Stock photos with a single simple license. Use https://skills.duaer.com/pexels.md.
+- Icons. Use https://skills.duaer.com/icons.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/commons-media?words=coffee%20beans\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`words\`.
+
+- \`words\` — Words describing the file, such as coffee beans.
+- \`type\` — Optional. \`image\`, \`audio\`, or \`video\`. Default \`image\`.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/commons-media?words=coffee%20beans\` — photos of coffee beans.
+- \`GET https://api.duaer.com/v1/data/commons-media?words=rain&type=audio\` — audio recordings of rain.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`fileUrl\`, \`thumbnailUrl\`, \`mime\` — file, 640-pixel thumbnail, and media type.
+- \`width\`, \`height\`, \`durationSeconds\`, \`sizeBytes\` — size, and length for audio and video.
+- \`license\`, \`licenseUrl\`, \`artist\`, \`description\` — license and attribution.
+
+Follow each file license; many require crediting the artist.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/pexels.md — Duaer Pexels photos and videos
+- https://skills.duaer.com/icons.md — Duaer Icons
+`,
+	'icons': `---
+name: duaer-icons
+description: >-
+  Duaer Icons. Iconify: open-source icons from 200+ icon sets with SVG links, license, and author.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Icons
+
+Duaer Icons searches Iconify across more than 200 open-source icon sets and returns SVG links with the set license.
+
+## When to use
+
+- Find a coffee icon for an app menu.
+- List shopping cart icons from one icon set.
+
+## When not to use
+
+- Photos. Use https://skills.duaer.com/pexels.md.
+- Freely licensed images. Use https://skills.duaer.com/commons-media.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/icons?words=coffee\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`words\`.
+
+- \`words\` — Icon name words such as coffee or shopping cart.
+- \`collection\` — Optional. Icon set prefix such as \`mdi\`, \`tabler\`, or \`lucide\`.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/icons?words=coffee\` — coffee icons from every set.
+- \`GET https://api.duaer.com/v1/data/icons?words=cart&collection=lucide\` — cart icons from Lucide.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`icon\`, \`name\`, \`svgUrl\` — Iconify id, icon name, and SVG link.
+- \`collection\`, \`collectionPrefix\` — icon set.
+- \`license\`, \`licenseSpdx\`, \`licenseUrl\`, \`author\` — set license and author.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/commons-media.md — Duaer Wikimedia Commons media
+- https://skills.duaer.com/pixabay.md — Duaer Pixabay images and videos
+`,
+	'pexels': `---
+name: duaer-pexels
+description: >-
+  Duaer Pexels photos and videos. Pexels: free stock photos and videos with photographer credit and file links.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Pexels photos and videos
+
+Duaer Pexels photos and videos searches Pexels stock photos or videos and returns file links with the photographer. Duaer holds the upstream API key; you only send your Duaer key.
+
+## When to use
+
+- Find a hero photo for a landing page.
+- Find a portrait stock video for a short.
+
+## When not to use
+
+- Illustrations and vectors. Use https://skills.duaer.com/pixabay.md.
+- Sound effects. Use https://skills.duaer.com/freesound.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/pexels?words=coffee%20shop\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`words\`.
+
+- \`words\` — Words describing the photo or video, such as coffee shop.
+- \`type\` — Optional. \`photo\` or \`video\`. Default \`photo\`.
+- \`orientation\` — Optional. \`landscape\`, \`portrait\`, or \`square\`.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/pexels?words=coffee%20shop\` — coffee shop photos.
+- \`GET https://api.duaer.com/v1/data/pexels?words=ocean&type=video&orientation=portrait\` — portrait ocean videos.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`mediaType\`, \`pexelsId\`, \`width\`, \`height\`, \`durationSeconds\` — photo or video and its size.
+- \`imageUrl\`, \`originalUrl\`, \`thumbnailUrl\`, \`videoUrl\` — file links; videos pick an MP4 up to 1920 pixels wide.
+- \`author\`, \`authorUrl\`, \`averageColor\`, \`license\` — photographer or author and the Pexels License.
+
+Pexels asks you to credit the photographer and Pexels where you can.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/pixabay.md — Duaer Pixabay images and videos
+- https://skills.duaer.com/commons-media.md — Duaer Wikimedia Commons media
+`,
+	'pixabay': `---
+name: duaer-pixabay
+description: >-
+  Duaer Pixabay images and videos. Pixabay: free photos, illustrations, vectors, and videos with tags and file links.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Pixabay images and videos
+
+Duaer Pixabay images and videos searches Pixabay photos, illustrations, vectors, or videos and returns file links with tags and counts. Duaer holds the upstream API key; you only send your Duaer key.
+
+## When to use
+
+- Find a vector illustration for a slide.
+- Find a short background video.
+
+## When not to use
+
+- Freely licensed images with full attribution data. Use https://skills.duaer.com/commons-media.md.
+- Music. Use https://skills.duaer.com/jamendo.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/pixabay?words=mountain%20lake\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`words\`.
+
+- \`words\` — Words describing the image or video, at most 100 characters.
+- \`type\` — Optional. \`photo\`, \`illustration\`, \`vector\`, or \`video\`. Default \`photo\`.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/pixabay?words=mountain%20lake\` — mountain lake photos.
+- \`GET https://api.duaer.com/v1/data/pixabay?words=rocket&type=vector\` — rocket vector graphics.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`mediaType\`, \`pixabayId\`, \`tags\`, \`width\`, \`height\`, \`durationSeconds\` — type, tags, and size.
+- \`imageUrl\`, \`previewUrl\`, \`videoUrl\`, \`thumbnailUrl\` — file links.
+- \`author\`, \`views\`, \`downloads\`, \`likes\`, \`license\` — author, counts, and the Pixabay Content License.
+
+Pixabay file links are for display; download the file to keep it.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/pexels.md — Duaer Pexels photos and videos
+- https://skills.duaer.com/icons.md — Duaer Icons
+`,
+	'freesound': `---
+name: duaer-freesound
+description: >-
+  Duaer Freesound sound effects. Freesound: Creative Commons sound effects and field recordings with MP3 previews and license.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Freesound sound effects
+
+Duaer Freesound sound effects searches Freesound for Creative Commons sounds and returns MP3 previews with the license and author. Duaer holds the upstream API key; you only send your Duaer key.
+
+## When to use
+
+- Find a door knock sound for a video.
+- Find short ambient rain loops.
+
+## When not to use
+
+- Music tracks. Use https://skills.duaer.com/jamendo.md.
+- Audio from Wikimedia Commons. Use https://skills.duaer.com/commons-media.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/freesound?words=rain\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`words\`.
+
+- \`words\` — Words describing the sound, such as rain on window.
+- \`maxSeconds\` — Optional. Longest duration in seconds, 1 to 3600.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/freesound?words=rain\` — rain sounds.
+- \`GET https://api.duaer.com/v1/data/freesound?words=door%20knock&maxSeconds=5\` — door knocks up to 5 seconds.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`freesoundId\`, \`name\`, \`author\`, \`durationSeconds\` — sound, author, and length.
+- \`previewUrl\`, \`tags\`, \`description\` — high-quality MP3 preview, tags, and description.
+- \`license\`, \`licenseUrl\`, \`downloads\`, \`rating\` — Creative Commons license and popularity.
+
+Credit the author when the license is CC BY or CC BY-NC.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/jamendo.md — Duaer Jamendo music
+- https://skills.duaer.com/commons-media.md — Duaer Wikimedia Commons media
+`,
+	'jamendo': `---
+name: duaer-jamendo
+description: >-
+  Duaer Jamendo music. Jamendo: Creative Commons music tracks with audio links, genres, and license.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Jamendo music
+
+Duaer Jamendo music searches Jamendo for Creative Commons tracks by words or tag and returns streaming links with the license. Duaer holds the upstream API key; you only send your Duaer key.
+
+## When to use
+
+- Find background music for a video.
+- List popular piano tracks.
+
+## When not to use
+
+- Sound effects. Use https://skills.duaer.com/freesound.md.
+- Music metadata from other catalogs. Use https://skills.duaer.com/musicbrainz.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/jamendo?words=summer\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`words\` or \`tag\`.
+
+- \`words\` — Words in the track, artist, or album, such as summer.
+- \`tag\` — Optional. Genre or mood tag such as rock, piano, or relaxing. Several tags separated by spaces must all match.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/jamendo?words=summer\` — tracks matching summer.
+- \`GET https://api.duaer.com/v1/data/jamendo?tag=piano\` — the most popular piano tracks.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`jamendoId\`, \`name\`, \`artist\`, \`album\`, \`durationSeconds\`, \`releaseDate\` — track details.
+- \`audioUrl\`, \`downloadUrl\`, \`imageUrl\`, \`genres\` — MP3 stream, download when allowed, cover, and genres.
+- \`license\`, \`licenseUrl\` — Creative Commons license.
+
+Commercial use of many Jamendo tracks needs a Jamendo Licensing agreement; check the license.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/freesound.md — Duaer Freesound sound effects
+- https://skills.duaer.com/musicbrainz.md — Duaer MusicBrainz music
+`,
+	'fec-candidates': `---
+name: duaer-fec-candidates
+description: >-
+  Duaer US election candidates money. OpenFEC: money raised, spent, and on hand by US federal candidates, by name, year, office, or state.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer US election candidates money
+
+Duaer US election candidates money returns OpenFEC totals for US House, Senate, and presidential candidates, most money raised first. Duaer holds the upstream API key; you only send your Duaer key.
+
+## When to use
+
+- Rank 2024 Senate candidates in a state by money raised.
+- Look up a candidate cash on hand.
+
+## When not to use
+
+- Bills and laws. Use https://skills.duaer.com/congress-bills.md.
+- Members of Congress. Use https://skills.duaer.com/congress-members.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/fec-candidates?electionYear=2024&office=senate&state=PA\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide at least one of \`name\`, \`electionYear\`, \`office\`, or \`state\`.
+
+- \`name\` — Optional. Candidate name words such as smith.
+- \`electionYear\` — Optional. Even election year such as 2024.
+- \`office\` — Optional. \`house\`, \`senate\`, or \`president\`.
+- \`state\` — Optional. Two-letter state code such as CA.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/fec-candidates?electionYear=2024&office=senate&state=PA\` — 2024 Pennsylvania Senate candidates.
+- \`GET https://api.duaer.com/v1/data/fec-candidates?name=smith&office=house\` — House candidates named Smith.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`candidateId\`, \`name\`, \`party\`, \`office\`, \`state\`, \`district\`, \`incumbency\` — candidate.
+- \`electionYear\`, \`cycle\`, \`coverageEndDate\` — election and reporting period.
+- \`receiptsUsd\`, \`disbursementsUsd\`, \`cashOnHandUsd\` — money raised, spent, and on hand.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/congress-members.md — Duaer US Congress members
+- https://skills.duaer.com/govinfo.md — Duaer US GovInfo documents
+`,
+	'govinfo': `---
+name: duaer-govinfo
+description: >-
+  Duaer US GovInfo documents. GovInfo: US bills, Federal Register, CFR, court opinions, and other official publications.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer US GovInfo documents
+
+Duaer US GovInfo documents searches GovInfo, the official source of US federal publications, and links each result to its govinfo.gov page. Duaer holds the upstream API key; you only send your Duaer key.
+
+## When to use
+
+- Find Federal Register notices about data privacy.
+- Find the newest bill texts that mention a topic.
+
+## When not to use
+
+- Bill status and actions. Use https://skills.duaer.com/congress-bills.md.
+- Federal Register documents with agency details. Use https://skills.duaer.com/federal-register.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/govinfo?words=data%20privacy\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`words\`.
+
+- \`words\` — Words to search, such as data privacy.
+- \`collection\` — Optional. Collection code such as BILLS, FR, CFR, USCOURTS, or CREC.
+- \`sort\` — Optional. \`relevance\` or \`newest\`. Default \`relevance\`.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/govinfo?words=data%20privacy\` — publications about data privacy.
+- \`GET https://api.duaer.com/v1/data/govinfo?words=privacy&collection=BILLS&sort=newest\` — the newest bill texts about privacy.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`packageId\`, \`granuleId\`, \`collection\` — GovInfo ids and collection.
+- \`dateIssued\`, \`authors\`, \`lastModified\` — issue date, government authors, and last update.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/congress-bills.md — Duaer US Congress bills
+- https://skills.duaer.com/federal-register.md — Duaer US Federal Register
+`,
+	'national-parks': `---
+name: duaer-national-parks
+description: >-
+  Duaer US national parks. National Park Service: parks, monuments, and historic sites with location, fees, and activities.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer US national parks
+
+Duaer US national parks searches National Park Service sites by words or state, with location, entrance fee, activities, and an image. Duaer holds the upstream API key; you only send your Duaer key.
+
+## When to use
+
+- Plan a trip to parks in Utah.
+- Show the entrance fee and activities of Yosemite.
+
+## When not to use
+
+- Weather at a park. Use https://skills.duaer.com/weather.md.
+- Places nearby on a map. Use https://skills.duaer.com/places-nearby.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/national-parks?words=yosemite\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`words\` or \`state\`.
+
+- \`words\` — Optional. Words such as yosemite or canyon.
+- \`state\` — Optional. Two-letter state code such as UT.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/national-parks?words=yosemite\` — sites matching Yosemite.
+- \`GET https://api.duaer.com/v1/data/national-parks?state=UT\` — National Park Service sites in Utah.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`parkCode\`, \`name\`, \`designation\`, \`states\` — site and type.
+- \`latitude\`, \`longitude\`, \`description\` — location and description.
+- \`entranceFeeUsd\`, \`entranceFee\`, \`activities\`, \`imageUrl\`, \`imageAlt\` — first fee, up to eight activities, and an image.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/weather.md — Duaer Weather forecast
+- https://skills.duaer.com/places-nearby.md — Duaer Places nearby
+`,
+	'flu-activity': `---
+name: duaer-flu-activity
+description: >-
+  Duaer US flu activity. Delphi Epidata FluView: weekly influenza-like illness rates from CDC ILINet by US region or state.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer US flu activity
+
+Duaer US flu activity returns weekly influenza-like illness (ILI) rates from CDC ILINet through Delphi Epidata, newest week first.
+
+## When to use
+
+- Track national flu activity this season.
+- Compare a state week by week.
+
+## When not to use
+
+- Other CDC datasets. Use https://skills.duaer.com/cdc-data.md.
+- Global health indicators. Use https://skills.duaer.com/who-gho.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/flu-activity?region=nat\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`region\` or \`weeks\`.
+
+- \`region\` — Optional. \`nat\`, \`hhs1\` to \`hhs10\`, \`cen1\` to \`cen9\`, or a state code such as \`ca\`. Default \`nat\`.
+- \`weeks\` — Optional. Newest weeks to return, 1 to 20. Default 8.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/flu-activity?region=nat\` — the last 8 weeks nationally.
+- \`GET https://api.duaer.com/v1/data/flu-activity?region=ca&weeks=12\` — the last 12 weeks in California.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`region\`, \`regionName\`, \`epiweek\` — region and epidemiological week such as 2026-W37.
+- \`weightedIliPct\`, \`iliPct\` — weighted and unweighted share of visits for influenza-like illness.
+- \`iliVisits\`, \`patients\`, \`providers\`, \`issue\`, \`releaseDate\` — counts and the report issue.
+
+Recent weeks are revised as late reports arrive.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/cdc-data.md — Duaer CDC open data
+- https://skills.duaer.com/who-gho.md — Duaer WHO health statistics
+`,
+	'amap-poi': `---
+name: duaer-amap-poi
+description: >-
+  Duaer Amap places in China. Amap: shops, restaurants, and other places in China by keyword and city, with address and phone.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Amap places in China
+
+Duaer Amap places in China searches Amap (Gaode) for places in mainland China by keyword, optionally inside one city. Duaer holds the upstream API key; you only send your Duaer key.
+
+## When to use
+
+- Find coffee shops in Shanghai.
+- Get the address and phone of a store in China.
+
+## When not to use
+
+- Places outside China. Use https://skills.duaer.com/places-nearby.md.
+- Coordinates of a full address. Use https://skills.duaer.com/amap-geocode.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/amap-poi?words=Starbucks&city=shanghai\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`words\`.
+
+- \`words\` — Place words in Chinese or English. URL-encode Chinese text.
+- \`city\` — Optional. City name in Chinese or pinyin, or adcode, such as shanghai or 310000.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/amap-poi?words=Starbucks&city=shanghai\` — Starbucks stores in Shanghai.
+- \`GET https://api.duaer.com/v1/data/amap-poi?words=%E5%92%96%E5%95%A1&city=330100\` — coffee shops in Hangzhou.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`poiId\`, \`name\`, \`category\` — Amap place id, name, and category path.
+- \`address\`, \`province\`, \`city\`, \`district\`, \`phone\` — address and phone.
+- \`longitude\`, \`latitude\` — GCJ-02 coordinates used by Amap.
+
+Amap coordinates use the GCJ-02 system used on maps in China.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/amap-geocode.md — Duaer Amap geocoding in China
+- https://skills.duaer.com/amap-route.md — Duaer Amap routes in China
+`,
+	'amap-geocode': `---
+name: duaer-amap-geocode
+description: >-
+  Duaer Amap geocoding in China. Amap: longitude, latitude, and adcode for a Chinese address.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Amap geocoding in China
+
+Duaer Amap geocoding in China turns a mainland China address into Amap coordinates and its administrative codes. Duaer holds the upstream API key; you only send your Duaer key.
+
+## When to use
+
+- Get coordinates for a delivery address in Beijing.
+- Find the adcode of a district.
+
+## When not to use
+
+- Places worldwide. Use https://skills.duaer.com/geocoding.md.
+- Shops by keyword. Use https://skills.duaer.com/amap-poi.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/amap-geocode?address=%E5%8C%97%E4%BA%AC%E5%B8%82%E6%9C%9D%E9%98%B3%E5%8C%BA%E9%98%9C%E9%80%9A%E4%B8%9C%E5%A4%A7%E8%A1%976%E5%8F%B7\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`address\`.
+
+- \`address\` — Address in China, URL-encoded.
+- \`city\` — Optional. City name or adcode to narrow the address.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/amap-geocode?address=%E5%8C%97%E4%BA%AC%E5%B8%82%E6%9C%9D%E9%98%B3%E5%8C%BA%E9%98%9C%E9%80%9A%E4%B8%9C%E5%A4%A7%E8%A1%976%E5%8F%B7\` — a street address in Chaoyang, Beijing.
+- \`GET https://api.duaer.com/v1/data/amap-geocode?address=%E8%A5%BF%E6%B9%96&city=hangzhou\` — West Lake in Hangzhou.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`formattedAddress\`, \`province\`, \`city\`, \`district\` — address as Amap understands it.
+- \`adcode\`, \`level\` — administrative code and match level.
+- \`longitude\`, \`latitude\` — GCJ-02 coordinates.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/amap-poi.md — Duaer Amap places in China
+- https://skills.duaer.com/amap-weather.md — Duaer Amap weather in China
+`,
+	'amap-route': `---
+name: duaer-amap-route
+description: >-
+  Duaer Amap routes in China. Amap: driving or walking routes in China with distance, time, tolls, and steps.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Amap routes in China
+
+Duaer Amap routes in China plans driving or walking routes in mainland China between two coordinates or addresses. Duaer holds the upstream API key; you only send your Duaer key.
+
+## When to use
+
+- Estimate the drive from a station to an airport.
+- Get walking steps between two points.
+
+## When not to use
+
+- Driving routes outside China. Use https://skills.duaer.com/driving-route.md.
+- Coordinates only. Use https://skills.duaer.com/amap-geocode.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/amap-route?origin=116.378888,39.865243&destination=116.397477,39.908692\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`origin\` and \`destination\`.
+
+- \`origin\` — Longitude,latitude such as 116.481028,39.989643, or a URL-encoded address.
+- \`destination\` — Longitude,latitude or a URL-encoded address.
+- \`mode\` — Optional. \`driving\` or \`walking\`. Default \`driving\`.
+- \`city\` — Optional. City name or adcode used to find addresses.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/amap-route?origin=116.378888,39.865243&destination=116.397477,39.908692\` — drive from Beijing South Station to Tiananmen.
+- \`GET https://api.duaer.com/v1/data/amap-route?origin=120.155,30.274&destination=120.148,30.259&mode=walking\` — a walk in Hangzhou.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`mode\`, \`rank\`, \`distanceMeters\`, \`durationMinutes\`, \`strategy\` — route and Amap strategy.
+- \`tollsYuan\`, \`tollDistanceMeters\`, \`trafficLights\`, \`taxiCostYuan\` — tolls, traffic lights, and estimated taxi fare.
+- \`origin\`, \`destination\`, \`steps\` — coordinates used and turn-by-turn steps.
+
+Driving returns up to three routes; an address is geocoded first in the same search.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/amap-geocode.md — Duaer Amap geocoding in China
+- https://skills.duaer.com/amap-poi.md — Duaer Amap places in China
+`,
+	'amap-weather': `---
+name: duaer-amap-weather
+description: >-
+  Duaer Amap weather in China. Amap: current weather or the 4-day forecast for a Chinese city.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Amap weather in China
+
+Duaer Amap weather in China returns current weather or the 4-day forecast for a city or district in mainland China. Duaer holds the upstream API key; you only send your Duaer key.
+
+## When to use
+
+- Show today in Hangzhou on a dashboard.
+- Plan an outdoor event with the 4-day forecast.
+
+## When not to use
+
+- Weather outside China. Use https://skills.duaer.com/weather.md.
+- Hong Kong weather. Use https://skills.duaer.com/hk-weather.md.
+
+## Call
+
+\`GET https://api.duaer.com/v1/data/amap-weather?city=330100\`
+
+Header: \`Authorization: Bearer <Duaer key>\`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide \`city\`.
+
+- \`city\` — Six-digit adcode such as 330100, or a URL-encoded city or district name.
+- \`view\` — Optional. \`current\` or \`forecast\`. Default \`current\`.
+- \`limit\` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- \`GET https://api.duaer.com/v1/data/amap-weather?city=330100\` — current weather in Hangzhou.
+- \`GET https://api.duaer.com/v1/data/amap-weather?city=110000&view=forecast\` — the 4-day forecast for Beijing.
+
+## Result
+
+The response is \`{ "items": [...] }\`. Each item has \`source\`, \`title\`, \`url\`, and \`summary\`, plus:
+
+- \`province\`, \`city\`, \`adcode\`, \`reportTime\` — place and report time.
+- \`weather\`, \`temperatureC\`, \`humidityPct\`, \`windDirection\`, \`windPower\` — current conditions.
+- \`date\`, \`weekday\`, \`dayWeather\`, \`nightWeather\`, \`maxTempC\`, \`minTempC\` — forecast days.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/amap-geocode.md — Duaer Amap geocoding in China
+- https://skills.duaer.com/weather.md — Duaer Weather forecast
+`,
 };
