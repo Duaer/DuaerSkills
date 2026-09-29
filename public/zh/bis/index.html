@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>在 Duaer 里查国际清算银行统计 · Duaer</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<meta name="description" content="在 Duaer 里：按数据流与序列键查询国际清算银行统计：各国央行政策利率、信贷、房价与汇率。一次成功查询用 1 额度。"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://skills.duaer.com/zh/bis/"/>
+<link rel="alternate" hreflang="zh-CN" href="https://skills.duaer.com/zh/bis/"/>
+<link rel="alternate" hreflang="en" href="https://skills.duaer.com/bis/"/>
+<link rel="alternate" hreflang="x-default" href="https://skills.duaer.com/bis/"/>
+<link rel="alternate" type="text/plain" href="https://skills.duaer.com/llms.txt" title="LLMs"/>
+<link rel="alternate" type="text/markdown" href="https://skills.duaer.com/zh/bis.md" title="Markdown"/>
+<meta property="og:site_name" content="Duaer"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="zh_CN"/>
+<meta property="og:url" content="https://skills.duaer.com/zh/bis/"/>
+<meta property="og:title" content="在 Duaer 里查国际清算银行统计 · Duaer"/>
+<meta property="og:description" content="在 Duaer 里：按数据流与序列键查询国际清算银行统计：各国央行政策利率、信贷、房价与汇率。一次成功查询用 1 额度。"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="在 Duaer 里查国际清算银行统计 · Duaer"/>
+<meta name="twitter:description" content="在 Duaer 里：按数据流与序列键查询国际清算银行统计：各国央行政策利率、信贷、房价与汇率。一次成功查询用 1 额度。"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.duaer.com/#organization","name":"Duaer","url":"https://www.duaer.com/"},{"@type":"TechArticle","headline":"在 Duaer 里查国际清算银行统计","description":"在 Duaer 里：按数据流与序列键查询国际清算银行统计：各国央行政策利率、信贷、房价与汇率。一次成功查询用 1 额度。","inLanguage":"zh-CN","url":"https://skills.duaer.com/zh/bis/","author":{"@id":"https://www.duaer.com/#organization"},"publisher":{"@id":"https://www.duaer.com/#organization"},"isRelatedTo":[{"@type":"TechArticle","headline":"在 Duaer 里查欧洲央行统计","url":"https://skills.duaer.com/zh/ecb/"},{"@type":"TechArticle","headline":"在 Duaer 里查 IMF 经济指标","url":"https://skills.duaer.com/zh/imf/"}]}]}</script>
+<link rel="stylesheet" href="/site.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"/>
+</head>
+<body>
+<div class="duaer-auth">
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="shell">
+<header class="topbar">
+<a class="brand" href="https://www.duaer.com/"><svg class="brand-mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#15181b"/><path fill="#eff2f1" fill-rule="evenodd" d="M9.4 7.8h6.35c5.45 0 8.85 3.35 8.85 8.2s-3.4 8.2-8.85 8.2H9.4V7.8Zm3.45 3.25v9.9h2.95c3.2 0 5.15-1.95 5.15-4.95s-1.95-4.95-5.15-4.95h-2.95Z"/><path d="M12.5 16.5h7.2" stroke="#e14a0e" stroke-width="1.8" stroke-linecap="round"/></svg><span class="brand-name">Duaer</span></a>
+<nav class="top-nav" aria-label="Duaer">
+<a class="nav-link" href="https://www.duaer.com/about">About</a>
+<a class="nav-link" href="https://www.duaer.com/pricing">Pricing</a>
+<a class="nav-link" href="https://doc.duaer.com/">Docs</a>
+<a class="nav-link is-current" href="/zh/" aria-current="page">Skills</a>
+<span class="lang"><a href="/bis/" hreflang="en">EN</a><a class="active" href="/zh/bis/" hreflang="zh-CN">中文</a></span>
+<a class="nav-link" href="https://www.duaer.com/signin">Sign in</a>
+</nav>
+</header>
+<main class="stage article">
+<p class="how-kicker">Skills</p>
+<h1>在 Duaer 里查国际清算银行统计</h1>
+<p class="lede">在 Duaer 里：按数据流与序列键查询国际清算银行统计：各国央行政策利率、信贷、房价与汇率。一次成功查询用 1 额度。</p>
+<h2>能拿到什么</h2>
+<p>每条结果含 series、seriesTitle、period、value、unit、REF_AREA 等字段，并附来源链接。</p>
+<h2>密钥</h2>
+<p>调用前先<a href="/zh/keys/">获取 Duaer 密钥</a>.</p>
+<h2>调用技能</h2>
+<p>下面这段是给智能体复制的英文技能，和数据市场里的复制内容相同。</p>
+<pre><code>---
+name: duaer-bis
+description: &gt;-
+  Duaer BIS statistics. Bank for International Settlements series by dataflow and key: central bank policy rates, credit, property prices, and exchange rates by country.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer BIS statistics
+
+Duaer BIS statistics reads series from the BIS Data Portal, which compiles central bank data for about 60 economies. Use + in the key to compare countries.
+
+## When to use
+
+- Compare central bank policy rates across countries.
+- Track residential property prices or credit to GDP.
+
+## When not to use
+
+- Euro area only. Use https://skills.duaer.com/ecb.md.
+- Broad development indicators. Use https://skills.duaer.com/world-bank.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/bis?dataflow=WS_CBPOL&amp;key=M.US%2BGB%2BCN`
+
+Header: `Authorization: Bearer &lt;Duaer key&gt;`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `dataflow` and `key`.
+
+- `dataflow` — Dataflow such as WS_CBPOL (policy rates), WS_SPP (property prices), or WS_XRU (exchange rates).
+- `key` — Series key with + for several countries, such as M.US+GB+CN. Encode + as %2B in a URL.
+- `observations` — Optional. Latest periods per series, 1 to 60. Default 5.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/bis?dataflow=WS_CBPOL&amp;key=M.US%2BGB%2BCN` — policy rates of the US, UK, and China.
+- `GET https://api.duaer.com/v1/data/bis?dataflow=WS_CBPOL&amp;key=M.JP&amp;observations=24` — two years of Japan policy rates.
+
+## Result
+
+The response is `{ &quot;items&quot;: [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `series`, `seriesTitle` — series key and BIS title.
+- `period`, `value`, `unit` — time period, figure, and unit, newest first.
+- One field per key dimension, such as `REF_AREA`.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/ecb.md — Duaer ECB statistics
+- https://skills.duaer.com/imf.md — Duaer IMF indicators
+</code></pre>
+<h2>相关技能</h2>
+<div class="cards"><a class="card" href="/zh/ecb/">
+<span class="card-type">数据</span>
+<h3>在 Duaer 里查欧洲央行统计</h3>
+<p>在 Duaer 里：按数据流与序列键查询欧洲央行统计：欧元参考汇率、利率、通胀与货币统计。一次成功查询用 1 额度。</p>
+</a>
+<a class="card" href="/zh/imf/">
+<span class="card-type">数据</span>
+<h3>在 Duaer 里查 IMF 经济指标</h3>
+<p>在 Duaer 里：IMF《世界经济展望》各国数据（含预测）：GDP 增长、通胀、失业、债务、经常账户等；也可按关键词查找指标代码。一次成功查询用 1 额度。</p>
+</a></div>
+</main>
+</div>
+<footer class="site-footer"><div class="shell"><a href="https://www.duaer.com/">Duaer</a><a href="https://skills.duaer.com/llms.txt">llms.txt</a></div></footer>
+</div>
+</body>
+</html>
