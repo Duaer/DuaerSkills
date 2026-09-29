@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Eurostat statistics in Duaer · Duaer</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<meta name="description" content="In Duaer: Official EU statistics by Eurostat dataset code: GDP, prices, jobs, trade, energy, and population, by country and period. One successful search uses 1 credit."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://skills.duaer.com/eurostat/"/>
+<link rel="alternate" hreflang="zh-CN" href="https://skills.duaer.com/zh/eurostat/"/>
+<link rel="alternate" hreflang="en" href="https://skills.duaer.com/eurostat/"/>
+<link rel="alternate" hreflang="x-default" href="https://skills.duaer.com/eurostat/"/>
+<link rel="alternate" type="text/plain" href="https://skills.duaer.com/llms.txt" title="LLMs"/>
+<link rel="alternate" type="text/markdown" href="https://skills.duaer.com/eurostat.md" title="Markdown"/>
+<meta property="og:site_name" content="Duaer"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://skills.duaer.com/eurostat/"/>
+<meta property="og:title" content="Eurostat statistics in Duaer · Duaer"/>
+<meta property="og:description" content="In Duaer: Official EU statistics by Eurostat dataset code: GDP, prices, jobs, trade, energy, and population, by country and period. One successful search uses 1 credit."/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Eurostat statistics in Duaer · Duaer"/>
+<meta name="twitter:description" content="In Duaer: Official EU statistics by Eurostat dataset code: GDP, prices, jobs, trade, energy, and population, by country and period. One successful search uses 1 credit."/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.duaer.com/#organization","name":"Duaer","url":"https://www.duaer.com/"},{"@type":"TechArticle","headline":"Eurostat statistics in Duaer","description":"In Duaer: Official EU statistics by Eurostat dataset code: GDP, prices, jobs, trade, energy, and population, by country and period. One successful search uses 1 credit.","inLanguage":"en","url":"https://skills.duaer.com/eurostat/","author":{"@id":"https://www.duaer.com/#organization"},"publisher":{"@id":"https://www.duaer.com/#organization"},"isRelatedTo":[{"@type":"TechArticle","headline":"EU open data in Duaer","url":"https://skills.duaer.com/eu-open-data/"},{"@type":"TechArticle","headline":"World Bank indicators in Duaer","url":"https://skills.duaer.com/world-bank/"}]}]}</script>
+<link rel="stylesheet" href="/site.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"/>
+</head>
+<body>
+<div class="duaer-auth">
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="shell">
+<header class="topbar">
+<a class="brand" href="https://www.duaer.com/"><svg class="brand-mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#15181b"/><path fill="#eff2f1" fill-rule="evenodd" d="M9.4 7.8h6.35c5.45 0 8.85 3.35 8.85 8.2s-3.4 8.2-8.85 8.2H9.4V7.8Zm3.45 3.25v9.9h2.95c3.2 0 5.15-1.95 5.15-4.95s-1.95-4.95-5.15-4.95h-2.95Z"/><path d="M12.5 16.5h7.2" stroke="#e14a0e" stroke-width="1.8" stroke-linecap="round"/></svg><span class="brand-name">Duaer</span></a>
+<nav class="top-nav" aria-label="Duaer">
+<a class="nav-link" href="https://www.duaer.com/about">About</a>
+<a class="nav-link" href="https://www.duaer.com/pricing">Pricing</a>
+<a class="nav-link" href="https://doc.duaer.com/">Docs</a>
+<a class="nav-link is-current" href="/" aria-current="page">Skills</a>
+<span class="lang"><a href="/zh/eurostat/" hreflang="zh-CN">中文</a><a class="active" href="/eurostat/" hreflang="en">EN</a></span>
+<a class="nav-link" href="https://www.duaer.com/signin">Sign in</a>
+</nav>
+</header>
+<main class="stage article">
+<p class="how-kicker">Skills</p>
+<h1>Eurostat statistics in Duaer</h1>
+<p class="lede">In Duaer: Official EU statistics by Eurostat dataset code: GDP, prices, jobs, trade, energy, and population, by country and period. One successful search uses 1 credit.</p>
+<h2>What Duaer returns</h2>
+<p>Each row has dataset, datasetLabel, country, countryName, period, value, unit, breakdown, and more, with a source link.</p>
+<h2>Key</h2>
+<p>Before you call, <a href="/keys/">get a Duaer key</a>.</p>
+<h2>Call skill</h2>
+<p>Paste this English skill into an agent. It matches Copy skill in the Duaer data market.</p>
+<pre><code>---
+name: duaer-eurostat
+description: &gt;-
+  Duaer Eurostat statistics. Official EU statistics by Eurostat dataset code: GDP, prices, jobs, trade, energy, and population, by country and period.
+  One successful search uses 1 Duaer credit.
+---
+
+# Duaer Eurostat statistics
+
+Duaer Eurostat statistics reads a Eurostat dataset and returns one row per value, newest period first. Narrow it with country codes and dimension filters so each row is a single figure.
+
+## When to use
+
+- Compare GDP, inflation, or unemployment across EU countries.
+- Pull an official EU time series into a table.
+
+## When not to use
+
+- Finding datasets by topic. Use https://skills.duaer.com/eu-open-data.md.
+- Countries worldwide. Use https://skills.duaer.com/world-bank.md.
+
+## Call
+
+`GET https://api.duaer.com/v1/data/eurostat?dataset=nama_10_gdp&amp;country=DE,FR&amp;filters=unit=CP_MEUR,na_item=B1GQ&amp;from=2019`
+
+Header: `Authorization: Bearer &lt;Duaer key&gt;`
+
+Use an account key or a model API key.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Parameters
+
+Provide `dataset`.
+
+- `dataset` — Eurostat dataset code, such as nama_10_gdp (GDP) or prc_hicp_manr (inflation).
+- `country` — Optional. Eurostat geo codes joined by commas, such as DE,FR. EU27_2020 is the EU.
+- `filters` — Optional. dimension=code pairs joined by commas, such as unit=CP_MEUR,na_item=B1GQ.
+- `from` — Optional. First period, such as 2019, 2025-06, or 2025-Q1.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+Common datasets: `nama_10_gdp` GDP, `prc_hicp_manr` inflation, `une_rt_m` unemployment, `demo_pjan` population, `nrg_bal_c` energy balance.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/eurostat?dataset=nama_10_gdp&amp;country=DE,FR&amp;filters=unit=CP_MEUR,na_item=B1GQ&amp;from=2019` — GDP of Germany and France since 2019.
+- `GET https://api.duaer.com/v1/data/eurostat?dataset=prc_hicp_manr&amp;country=EU27_2020&amp;filters=coicop=CP00&amp;from=2025-01` — EU inflation this year.
+
+## Result
+
+The response is `{ &quot;items&quot;: [...] }`. Each item has `source`, `title`, `url`, and `summary`, plus:
+
+- `dataset`, `datasetLabel` — code and title.
+- `country`, `countryName`, `period` — geo code, name, and period.
+- `value`, `unit` — the figure and its unit.
+- `breakdown`, `filters` — dimensions that vary between rows, and all dimension codes.
+- `status` — Eurostat flag, such as p for provisional.
+
+Fields without a value are left out.
+
+## Credits
+
+A search that returns at least one row uses 1 credit.
+An empty search, a search that finds nothing, or a failed search uses 0.
+Wrong input returns 400 with a message and uses 0.
+No remaining credits returns 402 and does not search.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/eu-open-data.md — Duaer EU open data
+- https://skills.duaer.com/world-bank.md — Duaer World Bank indicators
+</code></pre>
+<h2>Related skills</h2>
+<div class="cards"><a class="card" href="/eu-open-data/">
+<span class="card-type">Data</span>
+<h3>EU open data in Duaer</h3>
+<p>In Duaer: Find public datasets from EU institutions and national portals on data.europa.eu: title, publisher, country, file formats, and last update. One successful search uses 1 credit.</p>
+</a>
+<a class="card" href="/world-bank/">
+<span class="card-type">Data</span>
+<h3>World Bank indicators in Duaer</h3>
+<p>In Duaer: Yearly development data for any country from the World Bank: GDP, population, inflation, trade, health, education, and 1,000+ other indicators by code. One successful search uses 1 credit.</p>
+</a></div>
+</main>
+</div>
+<footer class="site-footer"><div class="shell"><a href="https://www.duaer.com/">Duaer</a><a href="https://skills.duaer.com/llms.txt">llms.txt</a></div></footer>
+</div>
+</body>
+</html>

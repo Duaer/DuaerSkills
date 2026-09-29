@@ -317,4 +317,16 @@
 - [在 Duaer 里查 SIGNOR 信号通路](https://skills.duaer.com/zh/signor.md): 在 Duaer 里：SIGNOR 因果信号关系：哪些分子激活、抑制或磷酸化某蛋白，含作用机制、修饰位点、PubMed 证据与置信分。一次成功查询用 1 额度。
 - [在 Duaer 里查 PGS 多基因评分](https://skills.duaer.com/zh/pgs-catalog.md): 在 Duaer 里：PGS Catalog 中针对某疾病或性状已发表的多基因风险评分：评分编号、报告性状、变异数、文献与评分文件下载。一次成功查询用 1 额度。
 - [在 Duaer 里查 WHO 卫生统计](https://skills.duaer.com/zh/who-gho.md): 在 Duaer 里：世界卫生组织全球卫生观察站的各国卫生统计：期望寿命、死亡率、疾病负担、危险因素与卫生体系，可按年份与性别查看。一次成功查询用 1 额度。
+- [在 Duaer 里查地名查询](https://skills.duaer.com/zh/geocoding.md): 在 Duaer 里：把地名转换为坐标、国家、行政区、时区、人口与海拔，数据来自 GeoNames 地名库（经 Open-Meteo）。一次成功查询用 1 额度。
+- [在 Duaer 里查海拔高程](https://skills.duaer.com/zh/elevation.md): 在 Duaer 里：按地名或坐标查询地面海拔，数据来自哥白尼 90 米数字高程模型。一次成功查询用 1 额度。
+- [在 Duaer 里查太阳辐射与气候（NASA POWER）](https://skills.duaer.com/zh/nasa-power.md): 在 Duaer 里：NASA POWER 提供的任意地点自 1981 年起的逐日或逐月太阳辐射、气温、降水、风速与湿度。一次成功查询用 1 额度。
+- [在 Duaer 里查美国天气预警](https://skills.duaer.com/zh/weather-alerts.md): 在 Duaer 里：美国国家气象局当前生效的警报、预警与提示，可按州或坐标查询，含严重程度、影响区域与失效时间。一次成功查询用 1 额度。
+- [在 Duaer 里查欧盟统计局数据](https://skills.duaer.com/zh/eurostat.md): 在 Duaer 里：按数据集代码查询欧盟统计局官方统计：GDP、物价、就业、贸易、能源与人口，可按国家与期间查看。一次成功查询用 1 额度。
+- [在 Duaer 里查美国联邦公报](https://skills.duaer.com/zh/federal-register.md): 在 Duaer 里：美国联邦法规、拟议规则、公告与总统文件，按发布时间倒序，含发布机构、摘要与 PDF。一次成功查询用 1 额度。
+- [在 Duaer 里查联合国可持续发展目标指标](https://skills.duaer.com/zh/un-sdg.md): 在 Duaer 里：按指标序列与国家查询联合国可持续发展目标统计，如贫困、健康、能源与教育，按年份排列。一次成功查询用 1 额度。
+- [在 Duaer 里查美国联邦机构预算](https://skills.duaer.com/zh/usaspending.md): 在 Duaer 里：USAspending 提供的美国联邦各机构当前财年预算授权、已承付金额与实际支出。一次成功查询用 1 额度。
+- [在 Duaer 里查AFLOW](https://skills.duaer.com/zh/aflow.md): 在 Duaer 里：按化学式或元素检索 AFLOW 计算材料：带隙、形成焓、空间群与 Pearson 符号。一次成功查询用 1 额度。
+- [在 Duaer 里查Alexandria](https://skills.duaer.com/zh/alexandria.md): 在 Duaer 里：按化学式或元素检索 Alexandria PBE 数据库的数百万 DFT 结构：带隙、形成能与凸包距离。一次成功查询用 1 额度。
+- [在 Duaer 里查美国医疗服务者登记（NPI）](https://skills.duaer.com/zh/npi.md): 在 Duaer 里：按姓名、专科与州检索 NPPES NPI 登记中的美国医生、护士、诊所与医院，含地址与执业许可。一次成功查询用 1 额度。
+- [在 Duaer 里查美国医院（CMS）](https://skills.duaer.com/zh/cms-hospitals.md): 在 Duaer 里：CMS Care Compare 收录的 Medicare 认证美国医院：类型、所有制、急诊服务与总体星级。一次成功查询用 1 额度。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。
