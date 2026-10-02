@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>在 Duaer 里把图片变成三维文件 · Duaer</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<meta name="description" content="在 Duaer 里把一张图变成 GLB 文件。完成的任务按输出 token 计费，不是按一张图。"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://skills.duaer.com/zh/image-mesh/"/>
+<link rel="alternate" hreflang="zh-CN" href="https://skills.duaer.com/zh/image-mesh/"/>
+<link rel="alternate" hreflang="en" href="https://skills.duaer.com/image-mesh/"/>
+<link rel="alternate" hreflang="x-default" href="https://skills.duaer.com/image-mesh/"/>
+<link rel="alternate" type="text/plain" href="https://skills.duaer.com/llms.txt" title="LLMs"/>
+<link rel="alternate" type="text/markdown" href="https://skills.duaer.com/zh/image-mesh.md" title="Markdown"/>
+<meta property="og:site_name" content="Duaer"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="zh_CN"/>
+<meta property="og:url" content="https://skills.duaer.com/zh/image-mesh/"/>
+<meta property="og:title" content="在 Duaer 里把图片变成三维文件 · Duaer"/>
+<meta property="og:description" content="在 Duaer 里把一张图变成 GLB 文件。完成的任务按输出 token 计费，不是按一张图。"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="在 Duaer 里把图片变成三维文件 · Duaer"/>
+<meta name="twitter:description" content="在 Duaer 里把一张图变成 GLB 文件。完成的任务按输出 token 计费，不是按一张图。"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.duaer.com/#organization","name":"Duaer","url":"https://www.duaer.com/"},{"@type":"TechArticle","headline":"在 Duaer 里把图片变成三维文件","description":"在 Duaer 里把一张图变成 GLB 文件。完成的任务按输出 token 计费，不是按一张图。","inLanguage":"zh-CN","url":"https://skills.duaer.com/zh/image-mesh/","author":{"@id":"https://www.duaer.com/#organization"},"publisher":{"@id":"https://www.duaer.com/#organization"},"isRelatedTo":[{"@type":"TechArticle","headline":"在 Duaer 里放大图片","url":"https://skills.duaer.com/zh/upscale/"},{"@type":"TechArticle","headline":"在 Duaer 里改图片的一部分","url":"https://skills.duaer.com/zh/edit/"}]}]}</script>
+<link rel="stylesheet" href="/site.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"/>
+</head>
+<body>
+<div class="duaer-auth">
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="shell">
+<header class="topbar">
+<a class="brand" href="https://www.duaer.com/"><svg class="brand-mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#15181b"/><path fill="#eff2f1" fill-rule="evenodd" d="M9.4 7.8h6.35c5.45 0 8.85 3.35 8.85 8.2s-3.4 8.2-8.85 8.2H9.4V7.8Zm3.45 3.25v9.9h2.95c3.2 0 5.15-1.95 5.15-4.95s-1.95-4.95-5.15-4.95h-2.95Z"/><path d="M12.5 16.5h7.2" stroke="#e14a0e" stroke-width="1.8" stroke-linecap="round"/></svg><span class="brand-name">Duaer</span></a>
+<nav class="top-nav" aria-label="Duaer">
+<a class="nav-link" href="https://www.duaer.com/about">About</a>
+<a class="nav-link" href="https://www.duaer.com/pricing">Pricing</a>
+<a class="nav-link" href="https://doc.duaer.com/">Docs</a>
+<a class="nav-link is-current" href="/zh/" aria-current="page">Skills</a>
+<span class="lang"><a href="/image-mesh/" hreflang="en">EN</a><a class="active" href="/zh/image-mesh/" hreflang="zh-CN">中文</a></span>
+<a class="nav-link" href="https://www.duaer.com/signin">Sign in</a>
+</nav>
+</header>
+<main class="stage article">
+<p class="how-kicker">Skills</p>
+<h1>在 Duaer 里把图片变成三维文件</h1>
+<p class="lede">在 Duaer 里把一张图变成 GLB 文件。完成的任务按输出 token 计费，不是按一张图。</p>
+<h2>能拿到什么</h2>
+<p>任务 status 为 succeeded 之后，从 file_url 下载 GLB。</p>
+<h2>密钥</h2>
+<p>调用前先<a href="/zh/keys/">获取 Duaer 密钥</a>.</p>
+<h2>调用技能</h2>
+<p>下面这段是给智能体复制的英文技能，和数据市场里的复制内容相同。</p>
+<pre><code>---
+name: duaer-mesh
+description: &gt;-
+  Turn one image into a GLB file with Duaer. The task is billed from output tokens, not as one image.
+---
+
+# Turn an image into a 3D file with Duaer
+
+Duaer Mesh sends one image to `POST https://api.duaer.com/v1/meshes/generations`, then polls until a GLB URL comes back. The default model is `doubao-seed3d-2-0-260328`. It must be enabled as a mesh model on a standard Ark source.
+
+## When to use
+
+- You need a 3D file from one picture.
+- On the canvas, use the Duaer Mesh node. It reads binary field `data` and writes `duaer-mesh-1.glb`.
+
+## When not to use
+
+- You only need a flat picture. Use https://skills.duaer.com/upscale.md, https://skills.duaer.com/cutout.md, or https://skills.duaer.com/edit.md.
+
+## Call
+
+`POST https://api.duaer.com/v1/meshes/generations`
+
+Header: `Authorization: Bearer &lt;Duaer key&gt;`
+
+```json
+{
+  &quot;model&quot;: &quot;doubao-seed3d-2-0-260328&quot;,
+  &quot;content&quot;: [
+    { &quot;type&quot;: &quot;text&quot;, &quot;text&quot;: &quot;--subdivisionlevel medium --fileformat glb&quot; },
+    { &quot;type&quot;: &quot;image_url&quot;, &quot;image_url&quot;: { &quot;url&quot;: &quot;data:image/png;base64,...&quot; } }
+  ]
+}
+```
+
+The reply is `202` with `id` and `status`. Poll:
+
+`GET https://api.duaer.com/v1/meshes/generations/{id}`
+
+Stop when `status` is `succeeded` or `failed`. On success, download `file_url`. Send the Duaer key only when that URL is on `api.duaer.com`.
+
+Get a Duaer key: https://skills.duaer.com/keys.md
+
+## Result
+
+A GLB file (`model/gltf-binary`).
+
+How-to: https://doc.duaer.com/build/duaer-mesh.md
+
+## Credits
+
+A finished task is billed once from its output tokens.
+Seed3D's published rate is ¥80 per million output tokens. One file is usually several yuan, not one image credit.
+A task that fails is not billed.
+No remaining credits returns 402 and does not start the task.
+A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/upscale.md — Duaer Upscale
+- https://skills.duaer.com/edit.md — Duaer Edit
+</code></pre>
+<h2>相关技能</h2>
+<div class="cards"><a class="card" href="/zh/upscale/">
+<span class="card-type">媒体</span>
+<h3>在 Duaer 里放大图片</h3>
+<p>在 Duaer 里把已有图片放大，主体、构图、颜色和文字保持不变。成功一张按该模型的图片额度计费。</p>
+</a>
+<a class="card" href="/zh/edit/">
+<span class="card-type">媒体</span>
+<h3>在 Duaer 里改图片的一部分</h3>
+<p>在 Duaer 里只改你点名的部分，其余保持原样。可选第二张图标出区域。成功一张按该模型的图片额度计费。</p>
+</a></div>
+</main>
+</div>
+<footer class="site-footer"><div class="shell"><a href="https://www.duaer.com/">Duaer</a><a href="https://skills.duaer.com/llms.txt">llms.txt</a></div></footer>
+</div>
+</body>
+</html>

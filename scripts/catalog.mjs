@@ -1,6 +1,7 @@
 /** Skill catalog for https://skills.duaer.com. Add a row, then run `node scripts/render.mjs`. */
 
 import { DARK_MATTER_CHAIN_SKILL, DARK_MATTER_SKILLS } from './dark-matter-skills.mjs';
+import { IMAGE_SKILLS } from './image-skills.mjs';
 import { OPEN_DATA_SKILLS } from './open-data-skills.mjs';
 
 export const KEY_URL = 'https://skills.duaer.com/keys.md';
@@ -6634,6 +6635,66 @@ Acceptance: https://doc.duaer.com/getting-started/accept-deliverables/
 		lede: { en: "In Duaer: Amap: current weather or the 4-day forecast for a Chinese city. One successful search uses 1 credit.", zh: "在 Duaer 里：高德地图：中国城市的实时天气或未来 4 天预报。一次成功查询用 1 额度。" },
 		returns: { en: "Each row has province, city, adcode, reportTime, weather, temperatureC, humidityPct, windDirection, and more, with a source link.", zh: "每条结果含 province、city、adcode、reportTime、weather、temperatureC、humidityPct、windDirection 等字段，并附来源链接。" },
 		skill: OPEN_DATA_SKILLS["amap-weather"],
+	},
+	{
+		slug: 'upscale',
+		related: ['cutout', 'edit', 'image-mesh'],
+		type: { en: 'Media', zh: '媒体' },
+		title: { en: 'Enlarge an image in Duaer', zh: '在 Duaer 里放大图片' },
+		lede: {
+			en: 'In Duaer, enlarge an existing image and keep the subject, layout, colors, and text. One successful image uses the image credits of that model.',
+			zh: '在 Duaer 里把已有图片放大，主体、构图、颜色和文字保持不变。成功一张按该模型的图片额度计费。',
+		},
+		returns: {
+			en: 'data[0].b64_json is the enlarged image.',
+			zh: 'data[0].b64_json 是放大后的图片。',
+		},
+		skill: IMAGE_SKILLS.upscale,
+	},
+	{
+		slug: 'cutout',
+		related: ['upscale', 'edit'],
+		type: { en: 'Media', zh: '媒体' },
+		title: { en: 'Remove a background in Duaer', zh: '在 Duaer 里去掉背景' },
+		lede: {
+			en: 'In Duaer, keep the subject and put it on a plain white background. One successful image uses the image credits of that model.',
+			zh: '在 Duaer 里保留主体，背景换成纯白。成功一张按该模型的图片额度计费。',
+		},
+		returns: {
+			en: 'data[0].b64_json is the subject on white. The file is not transparent.',
+			zh: 'data[0].b64_json 是白底上的主体，不是透明图。',
+		},
+		skill: IMAGE_SKILLS.cutout,
+	},
+	{
+		slug: 'edit',
+		related: ['upscale', 'cutout'],
+		type: { en: 'Media', zh: '媒体' },
+		title: { en: 'Change part of an image in Duaer', zh: '在 Duaer 里改图片的一部分' },
+		lede: {
+			en: 'In Duaer, change only the part you name and leave the rest. An optional second image marks the region. One successful image uses the image credits of that model.',
+			zh: '在 Duaer 里只改你点名的部分，其余保持原样。可选第二张图标出区域。成功一张按该模型的图片额度计费。',
+		},
+		returns: {
+			en: 'data[0].b64_json is the edited image.',
+			zh: 'data[0].b64_json 是改过的图片。',
+		},
+		skill: IMAGE_SKILLS.edit,
+	},
+	{
+		slug: 'image-mesh',
+		related: ['upscale', 'edit'],
+		type: { en: 'Media', zh: '媒体' },
+		title: { en: 'Turn an image into a 3D file in Duaer', zh: '在 Duaer 里把图片变成三维文件' },
+		lede: {
+			en: 'In Duaer, turn one image into a GLB file. A finished task is billed from output tokens, not as one image.',
+			zh: '在 Duaer 里把一张图变成 GLB 文件。完成的任务按输出 token 计费，不是按一张图。',
+		},
+		returns: {
+			en: 'A GLB file from file_url after the task status is succeeded.',
+			zh: '任务 status 为 succeeded 之后，从 file_url 下载 GLB。',
+		},
+		skill: IMAGE_SKILLS.mesh,
 	},
 ];
 

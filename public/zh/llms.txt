@@ -423,4 +423,8 @@
 - [在 Duaer 里查高德地理编码](https://skills.duaer.com/zh/amap-geocode.md): 在 Duaer 里：高德地图：中国地址对应的经纬度与行政区划代码。一次成功查询用 1 额度。
 - [在 Duaer 里查高德路线规划](https://skills.duaer.com/zh/amap-route.md): 在 Duaer 里：高德地图：中国境内的驾车或步行路线，含距离、时间、过路费与步骤。一次成功查询用 1 额度。
 - [在 Duaer 里查高德天气](https://skills.duaer.com/zh/amap-weather.md): 在 Duaer 里：高德地图：中国城市的实时天气或未来 4 天预报。一次成功查询用 1 额度。
+- [在 Duaer 里放大图片](https://skills.duaer.com/zh/upscale.md): 在 Duaer 里把已有图片放大，主体、构图、颜色和文字保持不变。成功一张按该模型的图片额度计费。
+- [在 Duaer 里去掉背景](https://skills.duaer.com/zh/cutout.md): 在 Duaer 里保留主体，背景换成纯白。成功一张按该模型的图片额度计费。
+- [在 Duaer 里改图片的一部分](https://skills.duaer.com/zh/edit.md): 在 Duaer 里只改你点名的部分，其余保持原样。可选第二张图标出区域。成功一张按该模型的图片额度计费。
+- [在 Duaer 里把图片变成三维文件](https://skills.duaer.com/zh/image-mesh.md): 在 Duaer 里把一张图变成 GLB 文件。完成的任务按输出 token 计费，不是按一张图。
 - [在 Duaer 里获取调用密钥](https://skills.duaer.com/zh/keys.md): Duaer 密钥用来调用 Duaer 数据接口。登录后创建。完整密钥只显示一次。

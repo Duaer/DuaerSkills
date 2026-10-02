@@ -1,0 +1,10 @@
+{
+  "status": "accepted",
+  "spec": "292-image-skills",
+  "verification": [
+    "node scripts/render.mjs rendered 846 pages",
+    "public/mesh.md still describes MeSH",
+    "public/image-mesh.md describes the GLB task"
+  ],
+  "notes": "Local develop only. skills.duaer.com shows the skills after the next skills publish."
+}
