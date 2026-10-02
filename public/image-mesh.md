@@ -1,7 +1,7 @@
 > Index: [llms.txt](https://skills.duaer.com/llms.txt). This skill: https://skills.duaer.com/image-mesh.md
 
 ---
-name: duaer-mesh
+name: duaer-image-mesh
 description: >-
   Turn one image into a GLB file with Duaer. The task is billed from output tokens, not as one image.
 ---

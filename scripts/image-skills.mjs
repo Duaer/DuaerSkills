@@ -179,7 +179,7 @@ A missing key returns 401.
 - https://skills.duaer.com/cutout.md — Duaer Cutout
 `,
 	mesh: `---
-name: duaer-mesh
+name: duaer-image-mesh
 description: >-
   Turn one image into a GLB file with Duaer. The task is billed from output tokens, not as one image.
 ---
