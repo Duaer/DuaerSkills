@@ -2,6 +2,7 @@
 
 import { DARK_MATTER_CHAIN_SKILL, DARK_MATTER_SKILLS } from './dark-matter-skills.mjs';
 import { IMAGE_SKILLS } from './image-skills.mjs';
+import { LIFE_SKILLS } from './life-skills.mjs';
 import { OPEN_DATA_SKILLS } from './open-data-skills.mjs';
 
 export const KEY_URL = 'https://skills.duaer.com/keys.md';
@@ -120,27 +121,7 @@ Acceptance: https://doc.duaer.com/getting-started/accept-deliverables/
 			en: 'Each paper has a title, link, and summary. Search by words, title, abstract, author, year, type, open access, citations, language, DOI, journal, institution, or topic.',
 			zh: '每篇论文有标题、链接和摘要。可按词语、标题、摘要、作者、年份、类型、开放获取、被引次数、语言、DOI、期刊、机构或主题检索。',
 		},
-		skill: skill({
-			name: 'duaer-papers',
-			description: 'Search published papers through Duaer. One successful search uses 1 Duaer credit.',
-			title: 'Duaer papers',
-			call: 'GET https://api.duaer.com/v1/data/papers?title=lithium&author=Zhang&yearFrom=2020&yearTo=2024&limit=10',
-			fields: [
-				'`q` — words in the title, abstract, or full text.',
-				'`title` — words in the title.',
-				'`abstract` — words in the abstract.',
-				'`author` — author name.',
-				'`yearFrom`, `yearTo` — publication year. Leave a year out, or send `0`, for any year. A set year is from 1000 to 2100.',
-				'`type` — work type, such as `article`, `preprint`, or `review`.',
-				'`openAccess` — `yes` or `no`.',
-				'`citationsFrom`, `citationsTo` — citation count. `0` means no bound.',
-				'`language` — code such as `en` or `zh`.',
-				'`doi` — digital object identifier.',
-				'`journal`, `institution`, `topic` — names. Duaer uses the closest match.',
-				'`sort` — `citations` orders by most cited. Omit it for relevance.',
-				'`limit` — optional. From 1 to 20. Default 10.',
-			],
-		}),
+		skill: LIFE_SKILLS.papers,
 	},
 	{
 		slug: 'proteins',
@@ -155,31 +136,7 @@ Acceptance: https://doc.duaer.com/getting-started/accept-deliverables/
 			en: 'Each protein has a name, accession, gene, organism, length, review status, function, disease, and location.',
 			zh: '每条蛋白有名称、编号、基因、物种、长度、是否审核、功能、疾病和定位。',
 		},
-		skill: skill({
-			name: 'duaer-proteins',
-			description: 'Search genes and proteins through Duaer. One successful search uses 1 Duaer credit.',
-			title: 'Duaer proteins',
-			call: 'GET https://api.duaer.com/v1/data/proteins?gene=INS&organism=Homo%20sapiens&reviewed=yes&limit=10',
-			fields: [
-				'At least one search field is required. Fields combine.',
-				'`q` — words in the protein record.',
-				'`gene` — gene symbol. Look up symbols with https://skills.duaer.com/genes.md.',
-				'`name` — protein name.',
-				'`organism` — organism name. Look up formal names with https://skills.duaer.com/organisms.md.',
-				'`accession` — accession.',
-				'`reviewed` — `yes` or `no`.',
-				'`lengthFrom`, `lengthTo` — sequence length. `0` means no bound.',
-				'`disease` — disease name. Look up formal names with https://skills.duaer.com/diseases.md.',
-				'`keyword` — UniProt keyword. Look up formal names with https://skills.duaer.com/keywords.md.',
-				'`location` — subcellular location. Look up formal names with https://skills.duaer.com/locations.md.',
-				'`function` — words in the function text.',
-				'`go` — Gene Ontology term. Look up terms with https://skills.duaer.com/gene-ontology.md.',
-				'`pathway` — Reactome pathway id or words. Look up pathways with https://skills.duaer.com/pathways.md.',
-				'`domain` — InterPro domain id or words. Look up domains with https://skills.duaer.com/domains.md.',
-				'`taxonomyId` — NCBI taxonomy id. Look up ids with https://skills.duaer.com/organisms.md.',
-				'`limit` — optional. From 1 to 20. Default 10.',
-			],
-		}),
+		skill: LIFE_SKILLS.proteins,
 	},
 	{
 		slug: 'trials',
@@ -194,28 +151,7 @@ Acceptance: https://doc.duaer.com/getting-started/accept-deliverables/
 			en: 'Each study has a title, NCT id, status, phase, conditions, interventions, sponsor, and summary.',
 			zh: '每项研究有标题、NCT 编号、状态、分期、疾病、干预、申办方和摘要。',
 		},
-		skill: skill({
-			name: 'duaer-trials',
-			description: 'Search clinical trials through Duaer. One successful search uses 1 Duaer credit.',
-			title: 'Duaer trials',
-			call: 'GET https://api.duaer.com/v1/data/trials?condition=diabetes&intervention=insulin&status=RECRUITING&limit=10',
-			fields: [
-				'At least one search field is required. Sort alone is not a search. Fields combine.',
-				'`condition` — disease or condition.',
-				'`term` — other words.',
-				'`intervention` — drug, device, or other intervention.',
-				'`location` — where the study runs.',
-				'`title` — words in the title.',
-				'`outcome` — words in the outcome.',
-				'`sponsor` — sponsor name.',
-				'`lead` — lead sponsor name.',
-				'`nctId` — study id.',
-				'`status` — recruitment status, such as `RECRUITING` or `COMPLETED`.',
-				'`phase` — `EARLY_PHASE1`, `PHASE1`, `PHASE2`, `PHASE3`, `PHASE4`, or `NA`.',
-				'`sort` — `recent` orders by last update. Omit it for relevance.',
-				'`limit` — optional. From 1 to 20. Default 10.',
-			],
-		}),
+		skill: LIFE_SKILLS.trials,
 	},
 	{
 		slug: 'compounds',
@@ -230,16 +166,7 @@ Acceptance: https://doc.duaer.com/getting-started/accept-deliverables/
 			en: 'Each compound has a name, CID, formula, weight, SMILES, InChIKey, and related properties.',
 			zh: '每条化合物有名称、CID、分子式、分子量、SMILES、InChIKey 和相关性质。',
 		},
-		skill: skill({
-			name: 'duaer-compounds',
-			description: 'Search compounds and drugs through Duaer. One successful search uses 1 Duaer credit.',
-			title: 'Duaer compounds',
-			call: 'GET https://api.duaer.com/v1/data/compounds?name=aspirin&limit=10',
-			fields: [
-				'Send one identifier: `name`, `cid`, `formula`, `smiles`, or `inchikey`.',
-				'`limit` — optional. From 1 to 20. Default 10. A name can return several compounds up to this limit.',
-			],
-		}),
+		skill: LIFE_SKILLS.compounds,
 	},
 	{
 		slug: 'structures',
@@ -467,22 +394,7 @@ Acceptance: https://doc.duaer.com/getting-started/accept-deliverables/
 			en: 'Each gene has a symbol, geneId, name, aliases, Ensembl id, map location, and summary. Use the symbol with proteins.gene.',
 			zh: '每个基因有符号、geneId、名称、别名、Ensembl 编号、定位和摘要。符号可用于蛋白 gene。',
 		},
-		skill: skill({
-			name: 'duaer-genes',
-			description: 'Search genes through Duaer. Use the symbol with proteins.gene. One successful search uses 1 Duaer credit.',
-			title: 'Duaer genes',
-			call: 'GET https://api.duaer.com/v1/data/genes?q=INS&limit=10',
-			fields: [
-								"At least one search field is required. Fields combine.",
-								"Search with `q` or `symbol` first; use `id` only when you already have an NCBI Gene id.",
-								"`q` — words in the gene symbol, name, or summary.",
-								"`symbol` — optional. Official gene symbol, such as `INS`.",
-								"`id` — optional. NCBI Gene id from a result (`geneId`), such as `3630`.",
-								"`species` — optional. Species for words/symbol search. Default `human`.",
-								"`limit` — optional. From 1 to 20. Default 10.",
-								"Use `symbol` as `gene` when searching proteins. Reuse `geneId` in `id` for an exact lookup."
-			],
-		}),
+		skill: LIFE_SKILLS.genes,
 	},
 	{
 		slug: 'variants',
@@ -497,22 +409,7 @@ Acceptance: https://doc.duaer.com/getting-started/accept-deliverables/
 			en: 'Each variant has a variantId, rsid, gene, protein HGVS, clinical significance, chrom, ref, and alt.',
 			zh: '每个变异有 variantId、rsid、基因、蛋白 HGVS、临床意义、染色体、ref 与 alt。',
 		},
-		skill: skill({
-			name: 'duaer-variants',
-			description: 'Search variants through Duaer (ClinVar / dbSNP via MyVariant.info). One successful search uses 1 Duaer credit.',
-			title: 'Duaer variants',
-			call: 'GET https://api.duaer.com/v1/data/variants?q=rs113488022&limit=10',
-			fields: [
-								"At least one search field is required. Fields combine.",
-								"Search with `q`, `rsid`, or `gene` first; use `id` only when you already have an HGVS genomic id from a result.",
-								"`q` — words such as an rs id (`rs113488022`).",
-								"`rsid` — optional. dbSNP rs id, such as `rs113488022`.",
-								"`gene` — optional. Gene symbol with ClinVar annotations, such as `BRAF`. Look up symbols with https://skills.duaer.com/genes.md.",
-								"`id` — optional. HGVS genomic id from a result (`variantId`), such as `chr7:g.140453136A>T`.",
-								"`limit` — optional. From 1 to 20. Default 10.",
-								"Reuse `variantId` in `id` for an exact lookup."
-			],
-		}),
+		skill: LIFE_SKILLS.variants,
 	},
 	{
 		slug: 'domains',
