@@ -3,12 +3,22 @@
 ---
 name: duaer-mesh
 description: >-
-  Look up MeSH subject headings through Duaer (NLM MeSH). One successful search uses 1 Duaer credit.
+  Duaer MeSH. Look up MeSH subject headings (NLM MeSH).
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer MeSH
 
-Look up MeSH subject headings through Duaer (NLM MeSH). One successful search uses 1 Duaer credit.
+Look up MeSH subject headings (NLM MeSH). Data comes from MeSH.
+
+## When to use
+
+- Find the MeSH heading and id for a term.
+- Get controlled vocabulary for PubMed searches.
+
+## When not to use
+
+- Disease ontology terms. Use https://skills.duaer.com/mondo.md.
 
 ## Call
 
@@ -20,19 +30,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id` (or both; id wins).
+## Parameters
+
+Provide `words` or `id` (or both; id wins).
+
 - `words` — MeSH descriptor label.
-- `id` — optional. MeSH unique id (D001241). Overrides words when set.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. MeSH unique id (D001241). Overrides words when set.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/mesh?words=aspirin&limit=10` — MeSH headings for aspirin.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`MeSH`), `title`, `url`, and `summary`, plus:
+
+- `meshId`, `resource`, `synonyms` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

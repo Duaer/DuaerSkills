@@ -3,12 +3,22 @@
 ---
 name: duaer-clinpgx
 description: >-
-  Search pharmacogenomics genes in ClinPGx through Duaer. One successful search uses 1 Duaer credit.
+  Duaer ClinPGx. Search pharmacogenomics genes in ClinPGx.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer ClinPGx
 
-Search pharmacogenomics genes in ClinPGx through Duaer. One successful search uses 1 Duaer credit.
+Search pharmacogenomics genes in ClinPGx. Data comes from ClinPGx.
+
+## When to use
+
+- Find pharmacogenomics genes in ClinPGx.
+- Look up one ClinPGx id.
+
+## When not to use
+
+- CPIC guidelines. Use https://skills.duaer.com/cpic.md.
 
 ## Call
 
@@ -20,19 +30,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`. If you send both, Duaer uses `id`.
+
 - `words` — search words, such as CYP2D6.
-- `id` — optional. Id such as CYP2D6.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. Id such as CYP2D6.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/clinpgx?words=CYP2D6&limit=10` — ClinPGx records for CYP2D6.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`ClinPGx`), `title`, `url`, and `summary`, plus:
+
+- `symbol`, `name` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

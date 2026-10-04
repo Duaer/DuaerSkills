@@ -3,12 +3,22 @@
 ---
 name: duaer-patents
 description: >-
-  Search patents through Duaer via Europe PMC. One successful search uses 1 Duaer credit.
+  Duaer patents. Search patents from Europe PMC.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer patents
 
-Search patents through Duaer via Europe PMC. One successful search uses 1 Duaer credit.
+Search patents from Europe PMC. Data comes from Europe PMC.
+
+## When to use
+
+- Find patents on a topic in a range of years.
+- Filter patents by country.
+
+## When not to use
+
+- Published papers. Use https://skills.duaer.com/papers.md.
 
 ## Call
 
@@ -20,20 +30,32 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- `words` is required.
+## Parameters
+
+`words` is required.
+
 - `words` — words in the patent title or abstract.
-- `yearFrom` / `yearTo` — optional. Publication year range (YYYY).
-- `country` — optional. Country code on the patent id (`US`, `EP`, `WO`, …).
-- `limit` — optional. From 1 to 20. Default 10.
+- `yearFrom` / `yearTo` — Optional. Publication year range (YYYY).
+- `country` — Optional. Country code on the patent id (`US`, `EP`, `WO`, …).
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/patents?words=insulin&yearFrom=2010&yearTo=2020&country=US&limit=10` — US insulin patents from 2010 to 2020.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`Europe PMC`), `title`, `url`, and `summary`, plus:
+
+- `patentId`, `country`, `typeCode`, `pubYear`, `applicationNumber`, `applicationDate`, `assignee`, `authors` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

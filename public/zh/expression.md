@@ -3,12 +3,22 @@
 ---
 name: duaer-expression
 description: >-
-  Search GTEx median tissue expression through Duaer. One successful search uses 1 Duaer credit.
+  Duaer expression. Search GTEx median tissue expression.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer expression
 
-Search GTEx median tissue expression through Duaer. One successful search uses 1 Duaer credit.
+Search GTEx median tissue expression. Data comes from GTEx.
+
+## When to use
+
+- Compare median expression of a gene across human tissues.
+- Check expression in one tissue.
+
+## When not to use
+
+- Protein-level tissue enrichment. Use https://skills.duaer.com/atlas.md.
 
 ## Call
 
@@ -20,20 +30,35 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- At least `gene` or `gencodeId` is required.
+## Parameters
+
+At least `gene` or `gencodeId` is required.
+
 - `gene` — gene symbol. Look up symbols with https://skills.duaer.com/genes.md.
-- `gencodeId` — optional. Ensembl/Gencode id from a result, such as `ENSG00000254647.6`.
-- `tissue` — optional. GTEx tissue id, such as `Pancreas` or `Adipose_Subcutaneous`.
-- `limit` — optional. From 1 to 20. Default 10. Results are sorted by median TPM descending.
+- `gencodeId` — Optional. Ensembl/Gencode id from a result, such as `ENSG00000254647.6`.
+- `tissue` — Optional. GTEx tissue id, such as `Pancreas` or `Adipose_Subcutaneous`.
+- `limit` — Optional. From 1 to 20. Default 10. Results are sorted by median TPM descending.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/expression?gene=INS&limit=10` — insulin expression by tissue.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`GTEx`), `title`, `url`, and `summary`, plus:
+
+- `gene`, `gencodeId`, `tissue`, `tissueLabel` — text.
+- `median` — number.
+- `unit`, `ontologyId`, `dataset` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+If you send a `gene` that GTEx does not know, Duaer returns no items and uses 0.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

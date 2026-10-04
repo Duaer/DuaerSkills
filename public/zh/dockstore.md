@@ -3,12 +3,22 @@
 ---
 name: duaer-dockstore
 description: >-
-  Search workflows in Dockstore through Duaer. One successful search uses 1 Duaer credit.
+  Duaer Dockstore. Search workflows in Dockstore.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer Dockstore
 
-Search workflows in Dockstore through Duaer. One successful search uses 1 Duaer credit.
+Search workflows in Dockstore. Data comes from Dockstore.
+
+## When to use
+
+- Find workflows in Dockstore.
+- Look up one workflow.
+
+## When not to use
+
+- WorkflowHub workflows. Use https://skills.duaer.com/workflowhub.md.
 
 ## Call
 
@@ -20,19 +30,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`. If you send both, Duaer uses `id`.
+
 - `words` — search words, such as rna.
-- `id` — optional. Id such as github.com/org/tool.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. Id such as github.com/org/tool.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/dockstore?words=rna&limit=10` — Dockstore workflows matching rna.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`Dockstore`), `title`, `url`, and `summary`, plus:
+
+- `toolId` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

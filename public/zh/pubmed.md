@@ -3,12 +3,22 @@
 ---
 name: duaer-pubmed
 description: >-
-  Search PubMed literature via NCBI E-utilities through Duaer. One successful search uses 1 Duaer credit.
+  Duaer PubMed. Search PubMed literature from NCBI E-utilities.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer PubMed
 
-Search PubMed literature via NCBI E-utilities through Duaer. One successful search uses 1 Duaer credit.
+Search PubMed literature from NCBI E-utilities. Data comes from PubMed.
+
+## When to use
+
+- Find PubMed articles.
+- Look up one PMID.
+
+## When not to use
+
+- Citation counts and open access filters. Use https://skills.duaer.com/papers.md.
 
 ## Call
 
@@ -20,19 +30,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`. If you send both, Duaer uses `id`.
+
 - `words` — search words, such as BRCA1 breast cancer.
-- `id` — optional. Id such as 23193287.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. Id such as 23193287.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/pubmed?words=BRCA1%20breast%20cancer&limit=10` — PubMed articles on BRCA1 in breast cancer.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`PubMed`), `title`, `url`, and `summary`, plus:
+
+- `pmid`, `journal`, `pubDate`, `authors` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

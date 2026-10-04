@@ -3,12 +3,22 @@
 ---
 name: duaer-ena
 description: >-
-  Search nucleotide sequences in ENA through Duaer. One successful search uses 1 Duaer credit.
+  Duaer ENA. Search nucleotide sequences in ENA.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer ENA
 
-Search nucleotide sequences in ENA through Duaer. One successful search uses 1 Duaer credit.
+Search nucleotide sequences in ENA. Data comes from ENA.
+
+## When to use
+
+- Find nucleotide sequence records in ENA.
+- Look up one ENA accession.
+
+## When not to use
+
+- Sequencing runs in SRA. Use https://skills.duaer.com/ncbi-sra.md.
 
 ## Call
 
@@ -20,19 +30,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`. If you send both, Duaer uses `id`.
+
 - `words` — search words, such as insulin.
-- `id` — optional. Id such as DM015610.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. Id such as DM015610.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/ena?words=insulin&limit=10` — ENA records matching insulin.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`ENA`), `title`, `url`, and `summary`, plus:
+
+- `accession`, `description` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

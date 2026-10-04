@@ -3,12 +3,22 @@
 ---
 name: duaer-indications
 description: >-
-  Search ChEMBL drug indications through Duaer by molecule. One successful search uses 1 Duaer credit.
+  Duaer indications. Search ChEMBL drug indications by molecule.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer indications
 
-Search ChEMBL drug indications through Duaer by molecule. One successful search uses 1 Duaer credit.
+Search ChEMBL drug indications by molecule. Data comes from ChEMBL.
+
+## When to use
+
+- List diseases a drug is approved or tested for.
+- Check the highest trial phase per indication.
+
+## When not to use
+
+- Running clinical trials. Use https://skills.duaer.com/trials.md.
 
 ## Call
 
@@ -20,18 +30,32 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- `molecule` is required.
+## Parameters
+
+`molecule` is required.
+
 - `molecule` — molecule name or ChEMBL id (`CHEMBL25`). Names resolve via ChEMBL search. Look up PubChem names with https://skills.duaer.com/compounds.md.
-- `limit` — optional. From 1 to 20. Default 10. Results prefer higher max phase.
+- `limit` — Optional. From 1 to 20. Default 10. Results prefer higher max phase.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/indications?molecule=aspirin&limit=10` — indications of aspirin.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`ChEMBL`), `title`, `url`, and `summary`, plus:
+
+- `indicationId`, `moleculeChemblId`, `efoId`, `efoTerm`, `meshId`, `meshHeading` — text.
+- `maxPhase` — number.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+If you send a `molecule` that ChEMBL does not know, Duaer returns no items and uses 0.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

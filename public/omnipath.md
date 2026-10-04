@@ -3,12 +3,22 @@
 ---
 name: duaer-omnipath
 description: >-
-  Search molecular interactions in OmniPath through Duaer. One successful search uses 1 Duaer credit.
+  Duaer Omnipath. Search molecular interactions in OmniPath.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer Omnipath
 
-Search molecular interactions in OmniPath through Duaer. One successful search uses 1 Duaer credit.
+Search molecular interactions in OmniPath. Data comes from Omnipath.
+
+## When to use
+
+- Find signaling and regulatory interactions in OmniPath.
+- Look up interactions for one protein.
+
+## When not to use
+
+- STRING partners. Use https://skills.duaer.com/interactions.md.
 
 ## Call
 
@@ -20,19 +30,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`. If you send both, Duaer uses `id`.
+
 - `words` — search words, such as EGFR.
-- `id` — optional. Id such as EGFR.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. Id such as EGFR.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/omnipath?words=EGFR&limit=10` — OmniPath interactions for EGFR.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`Omnipath`), `title`, `url`, and `summary`, plus:
+
+- `partner`, `sourceGene`, `targetGene` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

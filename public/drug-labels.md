@@ -3,12 +3,22 @@
 ---
 name: duaer-drug-labels
 description: >-
-  Search FDA drug labels through Duaer via OpenFDA. One successful search uses 1 Duaer credit.
+  Duaer drug labels. Search FDA drug labels from OpenFDA.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer drug labels
 
-Search FDA drug labels through Duaer via OpenFDA. One successful search uses 1 Duaer credit.
+Search FDA drug labels from OpenFDA. Data comes from OpenFDA.
+
+## When to use
+
+- Read FDA label sections for a drug by brand or generic name.
+- Check indications and warnings on a US label.
+
+## When not to use
+
+- Adverse event reports. Use https://skills.duaer.com/adverse-events.md.
 
 ## Call
 
@@ -20,20 +30,32 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words`, `brand`, or `generic` (or combine; brand/generic narrow when set).
+## Parameters
+
+Provide `words`, `brand`, or `generic` (or combine; brand/generic narrow when set).
+
 - `words` — brand, generic, or substance name.
-- `brand` — optional. OpenFDA brand name.
-- `generic` — optional. OpenFDA generic name.
-- `limit` — optional. From 1 to 20. Default 10.
+- `brand` — Optional. OpenFDA brand name.
+- `generic` — Optional. OpenFDA generic name.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/drug-labels?words=aspirin&limit=10` — labels for aspirin.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`OpenFDA`), `title`, `url`, and `summary`, plus:
+
+- `setId`, `brandNames`, `genericNames`, `manufacturer`, `indications` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

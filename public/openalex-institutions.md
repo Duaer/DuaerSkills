@@ -3,12 +3,22 @@
 ---
 name: duaer-openalex-institutions
 description: >-
-  Search institutions in OpenAlex through Duaer. One successful search uses 1 Duaer credit.
+  Duaer OpenAlex Institutions. Search institutions in OpenAlex.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer OpenAlex Institutions
 
-Search institutions in OpenAlex through Duaer. One successful search uses 1 Duaer credit.
+Search institutions in OpenAlex. Data comes from OpenAlex Institutions.
+
+## When to use
+
+- Find institutions in OpenAlex.
+- Look up one OpenAlex institution id.
+
+## When not to use
+
+- ROR records. Use https://skills.duaer.com/ror.md.
 
 ## Call
 
@@ -20,19 +30,32 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`. If you send both, Duaer uses `id`.
+
 - `words` — search words, such as cambridge.
-- `id` — optional. Id such as I97018004.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. Id such as I97018004.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/openalex-institutions?words=cambridge&limit=10` — institutions matching cambridge.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`OpenAlex Institutions`), `title`, `url`, and `summary`, plus:
+
+- `openAlexId` — text.
+- `worksCount` — number.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

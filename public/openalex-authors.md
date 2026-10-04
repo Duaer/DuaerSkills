@@ -3,12 +3,22 @@
 ---
 name: duaer-openalex-authors
 description: >-
-  Search authors in OpenAlex through Duaer. One successful search uses 1 Duaer credit.
+  Duaer OpenAlex Authors. Search authors in OpenAlex.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer OpenAlex Authors
 
-Search authors in OpenAlex through Duaer. One successful search uses 1 Duaer credit.
+Search authors in OpenAlex. Data comes from OpenAlex Authors.
+
+## When to use
+
+- Find authors in OpenAlex.
+- Look up one OpenAlex author id.
+
+## When not to use
+
+- ORCID records. Use https://skills.duaer.com/orcid.md.
 
 ## Call
 
@@ -20,19 +30,32 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`. If you send both, Duaer uses `id`.
+
 - `words` — search words, such as crick.
-- `id` — optional. Id such as A5023888391.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. Id such as A5023888391.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/openalex-authors?words=crick&limit=10` — OpenAlex authors matching crick.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`OpenAlex Authors`), `title`, `url`, and `summary`, plus:
+
+- `openAlexId` — text.
+- `worksCount` — number.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

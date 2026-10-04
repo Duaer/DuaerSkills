@@ -3,12 +3,22 @@
 ---
 name: duaer-bigg
 description: >-
-  Search BiGG Models metabolites, genes, and genome-scale models through Duaer. One successful search uses 1 Duaer credit.
+  Duaer BiGG. Search BiGG Models metabolites, genes, and genome-scale models.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer BiGG
 
-Search BiGG Models metabolites, genes, and genome-scale models through Duaer. One successful search uses 1 Duaer credit.
+Search BiGG Models metabolites, genes, and genome-scale models. Data comes from BiGG.
+
+## When to use
+
+- Find BiGG metabolites, genes, and genome-scale models.
+- Look up one BiGG id.
+
+## When not to use
+
+- ModelSEED reactions. Use https://skills.duaer.com/modelseed.md.
 
 ## Call
 
@@ -20,19 +30,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`.
+
 - `words` — search words, such as glucose.
-- `id` — optional. Id such as glc__D.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. Id such as glc__D.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/bigg?words=glucose&limit=10` — BiGG entries matching glucose.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`BiGG`), `title`, `url`, and `summary`, plus:
+
+- `biggId`, `kind`, `organism` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

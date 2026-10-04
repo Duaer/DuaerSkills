@@ -3,12 +3,22 @@
 ---
 name: duaer-checklistbank
 description: >-
-  Search Catalogue of Life names in ChecklistBank through Duaer. One successful search uses 1 Duaer credit.
+  Duaer ChecklistBank. Search Catalogue of Life names in ChecklistBank.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer ChecklistBank
 
-Search Catalogue of Life names in ChecklistBank through Duaer. One successful search uses 1 Duaer credit.
+Search Catalogue of Life names in ChecklistBank. Data comes from ChecklistBank.
+
+## When to use
+
+- Find Catalogue of Life names in ChecklistBank.
+- Look up one name id.
+
+## When not to use
+
+- GBIF species. Use https://skills.duaer.com/gbif.md.
 
 ## Call
 
@@ -20,19 +30,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`. If you send both, Duaer uses `id`.
+
 - `words` — search words, such as Homo sapiens.
-- `id` — optional. Id such as 636X2.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. Id such as 636X2.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/checklistbank?words=Homo%20sapiens&limit=10` — ChecklistBank names for Homo sapiens.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`ChecklistBank`), `title`, `url`, and `summary`, plus:
+
+- `usageId`, `rank`, `status` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

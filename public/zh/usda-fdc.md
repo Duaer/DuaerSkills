@@ -3,12 +3,22 @@
 ---
 name: duaer-usda-fdc
 description: >-
-  Search foods in USDA FoodData Central through Duaer. One successful search uses 1 Duaer credit.
+  Duaer USDA FoodData Central. Search foods in USDA FoodData Central.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer USDA FoodData Central
 
-Search foods in USDA FoodData Central through Duaer. One successful search uses 1 Duaer credit.
+Search foods in USDA FoodData Central. Data comes from USDA FoodData Central.
+
+## When to use
+
+- Find foods and nutrients in USDA FoodData Central.
+- Look up one FDC id.
+
+## When not to use
+
+- Packaged products. Use https://skills.duaer.com/open-food-facts.md.
 
 ## Call
 
@@ -20,19 +30,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`.
+
 - `words` — food name, such as apple.
-- `id` — optional. FDC id such as 1750340.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. FDC id such as 1750340.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/usda-fdc?words=apple&limit=10` — foods matching apple.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`USDA FoodData Central`), `title`, `url`, and `summary`, plus:
+
+- `fdcId`, `dataType`, `brandOwner` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

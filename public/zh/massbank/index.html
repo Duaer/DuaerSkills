@@ -54,13 +54,22 @@
 <pre><code>---
 name: duaer-massbank
 description: &gt;-
-  Match MS/MS peaks, an exact mass, or an InChIKey against MassBank spectra through Duaer.
+  Duaer MassBank spectra. Match MS/MS peaks, an exact mass, or an InChIKey against MassBank spectra.
   One successful search uses 1 Duaer credit.
 ---
 
 # Duaer MassBank spectra
 
-Match an MS/MS spectrum against the MassBank Europe reference library through Duaer with a Duaer key.
+Match MS/MS peaks, an exact mass, or an InChIKey against MassBank spectra. Data comes from MassBank.
+
+## When to use
+
+- Match an MS/MS spectrum against MassBank reference spectra.
+- Find reference spectra by exact mass or InChIKey.
+
+## When not to use
+
+- MoNA reference spectra. Use https://skills.duaer.com/mona.md.
 
 ## Call
 
@@ -72,25 +81,35 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
+## Parameters
+
 Provide `peaks`, `mass`, or `inchikey` (used in that order).
 
 - `peaks` — MS/MS peaks as `mz:intensity` pairs separated by spaces. One `mz intensity` pair per line also works.
-- `threshold` — optional. Minimum cosine similarity for `peaks`, from 0 to 1. Default 0.7.
+- `threshold` — Optional. Minimum cosine similarity for `peaks`, from 0 to 1. Default 0.7.
 - `mass` — neutral monoisotopic mass, such as 180.0634.
-- `tolerance` — optional. Mass tolerance in Da for `mass`. Default 0.01.
+- `tolerance` — Optional. Mass tolerance in Da for `mass`. Default 0.01.
 - `inchikey` — reference records for one compound, such as a https://skills.duaer.com/mass-candidates.md result.
-- `ionMode` — optional. `POSITIVE` or `NEGATIVE`.
-- `limit` — optional. From 1 to 20. Default 10.
+- `ionMode` — Optional. `POSITIVE` or `NEGATIVE`.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/massbank?peaks=59.0138:715%2089.0251:999&amp;ionMode=NEGATIVE&amp;limit=10` — negative mode match for two peaks.
 
 ## Result
 
-Each item has `source`, `title`, `url`, `summary`, `accession`, `compound`, `formula`, `mass`, `inchikey`, `ionMode`, `instrument`, and `score` (cosine, peak searches only).
+The response is `{ &quot;items&quot;: [...] }`. Each item has `source`, `title`, `url`, `summary`, `accession`, `compound`, `formula`, `mass`, `inchikey`, `ionMode`, `instrument`, and `score` (cosine, peak searches only).
+
 To work an unannotated feature step by step, follow https://skills.duaer.com/metabolic-dark-matter.md.
+
+Fields without a value are empty strings or left out.
 
 ## Credits
 
-One successful search uses 1 credit, including a search that finds no match.
-Empty input, a failed source, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 </code></pre>

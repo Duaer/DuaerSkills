@@ -3,12 +3,22 @@
 ---
 name: duaer-variant-validator
 description: >-
-  Validate an HGVS description with VariantValidator through Duaer. One successful search uses 1 Duaer credit.
+  Duaer VariantValidator. Validate an HGVS description with VariantValidator.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer VariantValidator
 
-Validate an HGVS description with VariantValidator through Duaer. One successful search uses 1 Duaer credit.
+Validate an HGVS description with VariantValidator. Data comes from VariantValidator.
+
+## When to use
+
+- Validate an HGVS description with VariantValidator.
+- Map a variant between transcript and genome.
+
+## When not to use
+
+- Normalize HGVS syntax. Use https://skills.duaer.com/mutalyzer.md.
 
 ## Call
 
@@ -20,18 +30,30 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`.
+
 - `words` — HGVS description, such as NM_007294.4:c.68_69del.
-- `id` — optional. HGVS description.
+- `id` — Optional. HGVS description.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/variant-validator?words=NM_007294.4:c.68_69del` — VariantValidator check of one BRCA1 HGVS.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`VariantValidator`), `title`, `url`, and `summary`, plus:
+
+- `variantId`, `gene`, `genomicHgvs`, `maneSelect` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

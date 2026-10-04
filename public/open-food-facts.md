@@ -3,12 +3,22 @@
 ---
 name: duaer-open-food-facts
 description: >-
-  Search products in Open Food Facts through Duaer. One successful search uses 1 Duaer credit.
+  Duaer Open Food Facts. Search products in Open Food Facts.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer Open Food Facts
 
-Search products in Open Food Facts through Duaer. One successful search uses 1 Duaer credit.
+Search products in Open Food Facts. Data comes from Open Food Facts.
+
+## When to use
+
+- Find packaged food products in Open Food Facts.
+- Look up one product barcode.
+
+## When not to use
+
+- Nutrient data for foods. Use https://skills.duaer.com/usda-fdc.md.
 
 ## Call
 
@@ -20,19 +30,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`. If you send both, Duaer uses `id`.
+
 - `words` — product name, such as yogurt.
-- `id` — optional. Barcode such as 3017620422003.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. Barcode such as 3017620422003.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/open-food-facts?words=yogurt&limit=10` — products matching yogurt.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`Open Food Facts`), `title`, `url`, and `summary`, plus:
+
+- `code`, `brands` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

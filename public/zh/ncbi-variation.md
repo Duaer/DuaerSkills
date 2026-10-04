@@ -3,12 +3,22 @@
 ---
 name: duaer-ncbi-variation
 description: >-
-  Look up RefSNP records in NCBI Variation through Duaer. One successful search uses 1 Duaer credit.
+  Duaer NCBI Variation. Look up RefSNP records in NCBI Variation.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer NCBI Variation
 
-Look up RefSNP records in NCBI Variation through Duaer. One successful search uses 1 Duaer credit.
+Look up RefSNP records in NCBI Variation. Data comes from NCBI Variation.
+
+## When to use
+
+- Look up a RefSNP record by number.
+- Confirm a RefSNP record exists.
+
+## When not to use
+
+- Clinical significance. Use https://skills.duaer.com/clinvar.md.
 
 ## Call
 
@@ -20,19 +30,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`. If you send both, Duaer uses `id`.
+
 - `words` — search words, such as 7412.
-- `id` — optional. Id such as 7412.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. Id such as 7412.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/ncbi-variation?words=7412&limit=10` — RefSNP 7412.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`NCBI Variation`), `title`, `url`, and `summary`, plus:
+
+- `refsnpId` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

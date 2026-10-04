@@ -3,12 +3,22 @@
 ---
 name: duaer-assays
 description: >-
-  Search ChEMBL assays through Duaer by words or assay id. One successful search uses 1 Duaer credit.
+  Duaer assays. Search ChEMBL assays by words or assay id.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer assays
 
-Search ChEMBL assays through Duaer by words or assay id. One successful search uses 1 Duaer credit.
+Search ChEMBL assays by words or assay id. Data comes from ChEMBL.
+
+## When to use
+
+- Find ChEMBL assays for a target and organism.
+- Filter assays by type, such as binding or functional.
+
+## When not to use
+
+- PubChem BioAssays for a gene. Use https://skills.duaer.com/pubchem-assay.md.
 
 ## Call
 
@@ -20,20 +30,34 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- `words` is required.
+## Parameters
+
+`words` is required.
+
 - `words` — words in the assay description, or a ChEMBL assay id (`CHEMBL5344031`).
-- `organism` — optional. Keep assays whose organism contains this text.
-- `assayType` — optional. Letter code (`B`/`F`/`A`/…) or words from the type description.
-- `limit` — optional. From 1 to 20. Default 10. Results prefer higher confidence.
+- `organism` — Optional. Keep assays whose organism contains this text.
+- `assayType` — Optional. Letter code (`B`/`F`/`A`/…) or words from the type description.
+- `limit` — Optional. From 1 to 20. Default 10. Results prefer higher confidence.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/assays?words=EGFR&organism=Homo%20sapiens&assayType=B&limit=10` — human EGFR binding assays.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`ChEMBL`), `title`, `url`, and `summary`, plus:
+
+- `assayChemblId`, `description`, `assayType`, `assayTypeDescription`, `organism`, `targetChemblId` — text.
+- `confidenceScore` — number.
+- `baoLabel`, `documentChemblId` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

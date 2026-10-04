@@ -54,12 +54,22 @@
 <pre><code>---
 name: duaer-expression-atlas
 description: &gt;-
-  Search bulk expression experiments in Expression Atlas through Duaer. One successful search uses 1 Duaer credit.
+  Duaer Expression Atlas. Search bulk expression experiments in Expression Atlas.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer Expression Atlas
 
-Search bulk expression experiments in Expression Atlas through Duaer. One successful search uses 1 Duaer credit.
+Search bulk expression experiments in Expression Atlas. Data comes from Expression Atlas.
+
+## When to use
+
+- Find bulk expression experiments in Expression Atlas.
+- Look up one experiment by accession.
+
+## When not to use
+
+- Single-cell experiments. Use https://skills.duaer.com/single-cell-atlas.md.
 
 ## Call
 
@@ -71,19 +81,32 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`.
+
 - `words` — experiment words, such as human liver.
-- `id` — optional. Accession such as E-MTAB-5214.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. Accession such as E-MTAB-5214.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/expression-atlas?words=human%20liver&amp;limit=10` — experiments matching human liver.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ &quot;items&quot;: [...] }`. Each item has `source` (`Expression Atlas`), `title`, `url`, and `summary`, plus:
+
+- `accession`, `species`, `experimentType` — text.
+- `assayCount` — number.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 </code></pre>

@@ -54,12 +54,22 @@
 <pre><code>---
 name: duaer-mirbase
 description: &gt;-
-  Search miRNA entries via RNAcentral through Duaer. One successful search uses 1 Duaer credit.
+  Duaer miRBase. Search miRNA entries from RNAcentral.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer miRBase
 
-Search miRNA entries via RNAcentral through Duaer. One successful search uses 1 Duaer credit.
+Search miRNA entries from RNAcentral. Data comes from miRBase via RNAcentral.
+
+## When to use
+
+- Find miRNA entries from miRBase via RNAcentral.
+- Look up one miRNA id.
+
+## When not to use
+
+- All non-coding RNA. Use https://skills.duaer.com/rnacentral.md.
 
 ## Call
 
@@ -71,19 +81,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`. If you send both, Duaer uses `id`.
+
 - `words` — such as hsa-let-7a.
 - `id` — optional.
-- `limit` — optional. From 1 to 20. Default 10.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/mirbase?words=hsa-let-7a&amp;limit=10` — miRNA entries for hsa-let-7a.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ &quot;items&quot;: [...] }`. Each item has `source` (`miRBase via RNAcentral`), `title`, `url`, and `summary`, plus:
+
+- `ursId`, `description` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 </code></pre>

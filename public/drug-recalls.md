@@ -3,12 +3,22 @@
 ---
 name: duaer-drug-recalls
 description: >-
-  Search FDA drug recall enforcement reports through Duaer via OpenFDA. One successful search uses 1 Duaer credit.
+  Duaer drug recalls. Search FDA drug recall enforcement reports from OpenFDA.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer drug recalls
 
-Search FDA drug recall enforcement reports through Duaer via OpenFDA. One successful search uses 1 Duaer credit.
+Search FDA drug recall enforcement reports from OpenFDA. Data comes from OpenFDA.
+
+## When to use
+
+- Find FDA drug recall reports by brand or generic name.
+- Check recall class and reason.
+
+## When not to use
+
+- Device recalls. Use https://skills.duaer.com/device-recall.md.
 
 ## Call
 
@@ -20,20 +30,32 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words`, `brand`, or `generic` (or combine brand and generic).
+## Parameters
+
+Provide `words`, `brand`, or `generic` (or combine brand and generic).
+
 - `words` — brand, generic, substance, or product text.
-- `brand` — optional. OpenFDA brand name.
-- `generic` — optional. OpenFDA generic name.
-- `limit` — optional. From 1 to 20. Default 10.
+- `brand` — Optional. OpenFDA brand name.
+- `generic` — Optional. OpenFDA generic name.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/drug-recalls?words=aspirin&limit=10` — recalls mentioning aspirin.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`OpenFDA`), `title`, `url`, and `summary`, plus:
+
+- `recallNumber`, `status`, `classification`, `reason`, `product`, `firm`, `reportDate` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

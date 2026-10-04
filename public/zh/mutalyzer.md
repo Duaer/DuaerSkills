@@ -3,12 +3,22 @@
 ---
 name: duaer-mutalyzer
 description: >-
-  Normalize an HGVS description with Mutalyzer through Duaer. One successful search uses 1 Duaer credit.
+  Duaer Mutalyzer. Normalize an HGVS description with Mutalyzer.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer Mutalyzer
 
-Normalize an HGVS description with Mutalyzer through Duaer. One successful search uses 1 Duaer credit.
+Normalize an HGVS description with Mutalyzer. Data comes from Mutalyzer.
+
+## When to use
+
+- Normalize an HGVS description with Mutalyzer.
+- Check HGVS syntax before sharing a variant.
+
+## When not to use
+
+- Validate against transcripts. Use https://skills.duaer.com/variant-validator.md.
 
 ## Call
 
@@ -20,18 +30,30 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`.
+
 - `words` — HGVS description, such as NM_007294.4:c.68_69del.
-- `id` — optional. HGVS description.
+- `id` — Optional. HGVS description.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/mutalyzer?words=NM_007294.4:c.68_69del` — Mutalyzer check of one BRCA1 HGVS.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`Mutalyzer`), `title`, `url`, and `summary`, plus:
+
+- `inputDescription`, `normalizedDescription`, `proteinDescription` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

@@ -3,12 +3,22 @@
 ---
 name: duaer-xao
 description: >-
-  Search Xenopus anatomy via XAO through Duaer. One successful search uses 1 Duaer credit.
+  Duaer XAO. Search Xenopus anatomy from XAO.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer XAO
 
-Search Xenopus anatomy via XAO through Duaer. One successful search uses 1 Duaer credit.
+Search Xenopus anatomy from XAO. Data comes from XAO.
+
+## When to use
+
+- Find Xenopus anatomy terms and XAO ids.
+- Look up one XAO id.
+
+## When not to use
+
+- Cross-species anatomy. Use https://skills.duaer.com/uberon.md.
 
 ## Call
 
@@ -20,19 +30,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`. If you send both, Duaer uses `id`.
+
 - `words` — search words, such as heart.
-- `id` — optional. Id such as XAO:0000001.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. Id such as XAO:0000001.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/xao?words=heart&limit=10` — XAO terms matching heart.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`XAO`), `title`, `url`, and `summary`, plus:
+
+- `xaoId`, `description`, `synonyms`, `iri` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

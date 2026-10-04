@@ -54,12 +54,22 @@
 <pre><code>---
 name: duaer-zfin
 description: &gt;-
-  Search zebrafish genes via Alliance / ZFIN through Duaer. One successful search uses 1 Duaer credit.
+  Duaer ZFIN. Search zebrafish genes from Alliance / ZFIN.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer ZFIN
 
-Search zebrafish genes via Alliance / ZFIN through Duaer. One successful search uses 1 Duaer credit.
+Search zebrafish genes from Alliance / ZFIN. Data comes from ZFIN.
+
+## When to use
+
+- Find zebrafish genes.
+- Look up one ZFIN gene id.
+
+## When not to use
+
+- Mouse genes. Use https://skills.duaer.com/mgi.md.
 
 ## Call
 
@@ -71,19 +81,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`. If you send both, Duaer uses `id`.
+
 - `words` — such as pax2a.
 - `id` — optional.
-- `limit` — optional. From 1 to 20. Default 10.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/zfin?words=pax2a&amp;limit=10` — ZFIN genes matching pax2a.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ &quot;items&quot;: [...] }`. Each item has `source` (`ZFIN`), `title`, `url`, and `summary`, plus:
+
+- `geneId`, `symbol`, `species` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 </code></pre>
