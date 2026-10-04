@@ -54,12 +54,22 @@
 <pre><code>---
 name: duaer-crossref-funders
 description: &gt;-
-  Search funders in Crossref through Duaer. One successful search uses 1 Duaer credit.
+  Duaer Crossref Funders. Search funders in Crossref.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer Crossref Funders
 
-Search funders in Crossref through Duaer. One successful search uses 1 Duaer credit.
+Search funders in Crossref. Data comes from Crossref Funders.
+
+## When to use
+
+- Find funders in the Crossref funder registry.
+- Look up one funder id.
+
+## When not to use
+
+- OpenAlex funders. Use https://skills.duaer.com/openalex-funders.md.
 
 ## Call
 
@@ -71,19 +81,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`. If you send both, Duaer uses `id`.
+
 - `words` — search words, such as wellcome.
-- `id` — optional. Id such as 100000002.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. Id such as 100000002.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/crossref-funders?words=wellcome&amp;limit=10` — Crossref funders matching wellcome.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ &quot;items&quot;: [...] }`. Each item has `source` (`Crossref Funders`), `title`, `url`, and `summary`, plus:
+
+- `funderId`, `location` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 </code></pre>

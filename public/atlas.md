@@ -3,12 +3,22 @@
 ---
 name: duaer-atlas
 description: >-
-  Search Human Protein Atlas tissue-enriched expression through Duaer. One successful search uses 1 Duaer credit.
+  Duaer tissue atlas. Search Human Protein Atlas tissue-enriched expression.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer tissue atlas
 
-Search Human Protein Atlas tissue-enriched expression through Duaer. One successful search uses 1 Duaer credit.
+Search Human Protein Atlas tissue-enriched expression. Data comes from HPA.
+
+## When to use
+
+- Check which tissues enrich a gene in the Human Protein Atlas.
+- Compare enrichment for one tissue.
+
+## When not to use
+
+- Median RNA expression by tissue. Use https://skills.duaer.com/expression.md.
 
 ## Call
 
@@ -20,19 +30,34 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- `gene` is required.
+## Parameters
+
+`gene` is required.
+
 - `gene` — gene symbol or Ensembl id. Look up symbols with https://skills.duaer.com/genes.md.
-- `tissue` — optional. Keep only enriched tissues whose name contains this text (for example `pancreas`).
-- `limit` — optional. From 1 to 20. Default 10. Results sort by nTPM descending.
+- `tissue` — Optional. Keep only enriched tissues whose name contains this text (for example `pancreas`).
+- `limit` — Optional. From 1 to 20. Default 10. Results sort by nTPM descending.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/atlas?gene=INS&limit=10` — tissue enrichment of INS.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`HPA`), `title`, `url`, and `summary`, plus:
+
+- `gene`, `ensemblId`, `description`, `tissue` — text.
+- `nTPM` — number.
+- `specificity`, `distribution`, `proteinClasses`, `secretomeLocation` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+If you send a `gene` that the Human Protein Atlas does not know, Duaer returns no items and uses 0.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

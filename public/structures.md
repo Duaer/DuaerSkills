@@ -3,12 +3,22 @@
 ---
 name: duaer-structures
 description: >-
-  Search protein structures through Duaer. One successful search uses 1 Duaer credit.
+  Duaer structures. Search protein structures.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer structures
 
-Search protein structures through Duaer. One successful search uses 1 Duaer credit.
+Search protein structures. Data comes from RCSB PDB.
+
+## When to use
+
+- Find experimental 3D structures of a protein in an organism.
+- Filter structures by method, resolution, release date, or bound ligand.
+
+## When not to use
+
+- Predicted models without an experimental structure. Use https://skills.duaer.com/alphafold.md.
 
 ## Call
 
@@ -20,7 +30,10 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- At least one search field is required. Fields combine.
+## Parameters
+
+At least one search field is required. Fields combine.
+
 - `q` — words in the structure record.
 - `pdbId` — structure id, such as `4HHB`.
 - `organism` — scientific name. Look up formal names with https://skills.duaer.com/organisms.md.
@@ -29,16 +42,25 @@ Get a Duaer key: https://skills.duaer.com/keys.md
 - `releasedFrom`, `releasedTo` — release date as `YYYY-MM-DD`.
 - `polymer` — `protein`, `dna`, or `rna`.
 - `ligand` — bound chemical name.
-- `limit` — optional. From 1 to 20. Default 10.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/structures?q=insulin&organism=Homo%20sapiens&method=X-RAY%20DIFFRACTION&resolutionTo=2.5&limit=10` — human insulin X-ray structures at 2.5 Å or better.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`RCSB PDB`), `title`, `url`, and `summary`, plus:
+
+- `pdbId`, `method`, `resolution`, `organism`, `released`, `ligand` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

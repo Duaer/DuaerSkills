@@ -54,12 +54,22 @@
 <pre><code>---
 name: duaer-rxnorm
 description: &gt;-
-  Look up drug names through Duaer via RxNorm (NLM RxNav). One successful search uses 1 Duaer credit.
+  Duaer RxNorm. Look up drug names from RxNorm (NLM RxNav).
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer RxNorm
 
-Look up drug names through Duaer via RxNorm (NLM RxNav). One successful search uses 1 Duaer credit.
+Look up drug names from RxNorm (NLM RxNav). Data comes from RxNorm.
+
+## When to use
+
+- Normalize a drug name to an RxNorm concept id.
+- Look up an RxCUI.
+
+## When not to use
+
+- Drug classes. Use https://skills.duaer.com/rxclass.md.
 
 ## Call
 
@@ -71,19 +81,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id` (or both; id wins).
+## Parameters
+
+Provide `words` or `id` (or both; id wins).
+
 - `words` — drug or ingredient name.
-- `id` — optional. RxNorm concept id (RxCUI). Overrides words when set.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. RxNorm concept id (RxCUI). Overrides words when set.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/rxnorm?words=aspirin&amp;limit=10` — RxNorm concepts for aspirin.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ &quot;items&quot;: [...] }`. Each item has `source` (`RxNorm`), `title`, `url`, and `summary`, plus:
+
+- `rxcui`, `tty`, `synonym`, `score` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 </code></pre>

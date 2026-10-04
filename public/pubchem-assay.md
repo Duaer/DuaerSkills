@@ -3,12 +3,22 @@
 ---
 name: duaer-pubchem-assay
 description: >-
-  List PubChem BioAssays for a gene through Duaer. One successful search uses 1 Duaer credit.
+  Duaer PubChem Assay. List PubChem BioAssays for a gene.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer PubChem Assay
 
-List PubChem BioAssays for a gene through Duaer. One successful search uses 1 Duaer credit.
+List PubChem BioAssays for a gene. Data comes from PubChem Assay.
+
+## When to use
+
+- List PubChem BioAssays for a gene.
+- Find screening data for a target.
+
+## When not to use
+
+- ChEMBL assays. Use https://skills.duaer.com/assays.md.
 
 ## Call
 
@@ -20,19 +30,32 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`.
+
 - `words` — gene symbol, such as BRCA1.
-- `id` — optional. NCBI Gene id such as 672.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. NCBI Gene id such as 672.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/pubchem-assay?words=BRCA1&limit=10` — PubChem assays for BRCA1.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`PubChem Assay`), `title`, `url`, and `summary`, plus:
+
+- `aid`, `sourceName` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+If you send a gene that NCBI does not resolve, or a gene with no assays, Duaer returns no items and uses 0.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

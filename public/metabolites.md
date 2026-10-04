@@ -3,12 +3,22 @@
 ---
 name: duaer-metabolites
 description: >-
-  Search metabolites through Duaer via ChEBI. One successful search uses 1 Duaer credit.
+  Duaer metabolites. Search metabolites from ChEBI.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer metabolites
 
-Search metabolites through Duaer via ChEBI. One successful search uses 1 Duaer credit.
+Search metabolites from ChEBI. Data comes from ChEBI.
+
+## When to use
+
+- Find a metabolite and its ChEBI id.
+- Get synonyms and a description of a small molecule.
+
+## When not to use
+
+- Compound properties from PubChem. Use https://skills.duaer.com/compounds.md.
 
 ## Call
 
@@ -20,19 +30,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id` (or both; id wins).
+## Parameters
+
+Provide `words` or `id` (or both; id wins).
+
 - `words` — metabolite or small-molecule name.
-- `id` — optional. ChEBI id (`CHEBI:17234` or `17234`). Overrides words when set.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. ChEBI id (`CHEBI:17234` or `17234`). Overrides words when set.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/metabolites?words=glucose&limit=10` — metabolites matching glucose.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`ChEBI`), `title`, `url`, and `summary`, plus:
+
+- `chebiId`, `description`, `synonyms` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

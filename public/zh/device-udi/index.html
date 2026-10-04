@@ -54,12 +54,22 @@
 <pre><code>---
 name: duaer-device-udi
 description: &gt;-
-  Search FDA device UDI records through Duaer. One successful search uses 1 Duaer credit.
+  Duaer OpenFDA Device UDI. Search FDA device UDI records.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer OpenFDA Device UDI
 
-Search FDA device UDI records through Duaer. One successful search uses 1 Duaer credit.
+Search FDA device UDI records. Data comes from OpenFDA Device UDI.
+
+## When to use
+
+- Find FDA device UDI records.
+- Look up one device identifier.
+
+## When not to use
+
+- Device classes. Use https://skills.duaer.com/device-classification.md.
 
 ## Call
 
@@ -71,19 +81,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`. If you send both, Duaer uses `id`.
+
 - `words` — search words, such as catheter.
-- `id` — optional. Id such as UDI-123.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. Id such as UDI-123.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/device-udi?words=catheter&amp;limit=10` — UDI records matching catheter.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ &quot;items&quot;: [...] }`. Each item has `source` (`OpenFDA Device UDI`), `title`, `url`, and `summary`, plus:
+
+- `udiId`, `applicant`, `deviceName`, `product`, `reason` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 </code></pre>

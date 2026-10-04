@@ -3,12 +3,22 @@
 ---
 name: duaer-intact
 description: >-
-  Search molecular interactions in IntAct through Duaer. One successful search uses 1 Duaer credit.
+  Duaer IntAct. Search molecular interactions in IntAct.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer IntAct
 
-Search molecular interactions in IntAct through Duaer. One successful search uses 1 Duaer credit.
+Search molecular interactions in IntAct. Data comes from IntAct.
+
+## When to use
+
+- Find curated molecular interactions in IntAct.
+- Look up one interaction by id.
+
+## When not to use
+
+- Scored interaction partners. Use https://skills.duaer.com/interactions.md.
 
 ## Call
 
@@ -20,19 +30,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`. If you send both, Duaer uses `id`.
+
 - `words` — gene or protein words, such as tp53.
-- `id` — optional. Interactor id such as P04637.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. Interactor id such as P04637.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/intact?words=tp53&limit=10` — IntAct interactions for tp53.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`IntAct`), `title`, `url`, and `summary`, plus:
+
+- `interactionAc`, `moleculeA`, `moleculeB`, `uniqueIdA`, `uniqueIdB`, `interactionType`, `detectionMethod`, `publication` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

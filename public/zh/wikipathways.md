@@ -3,12 +3,22 @@
 ---
 name: duaer-wikipathways
 description: >-
-  Search community pathways in WikiPathways through Duaer. One successful search uses 1 Duaer credit.
+  Duaer WikiPathways. Search community pathways in WikiPathways.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer WikiPathways
 
-Search community pathways in WikiPathways through Duaer. One successful search uses 1 Duaer credit.
+Search community pathways in WikiPathways. Data comes from WikiPathways.
+
+## When to use
+
+- Find community pathways in WikiPathways.
+- Look up one WP id.
+
+## When not to use
+
+- Reactome pathways. Use https://skills.duaer.com/pathways.md.
 
 ## Call
 
@@ -20,19 +30,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`. If you send both, Duaer uses `id`.
+
 - `words` — search words, such as apoptosis.
-- `id` — optional. Pathway id such as WP254.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. Pathway id such as WP254.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/wikipathways?words=apoptosis&limit=10` — WikiPathways matching apoptosis.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`WikiPathways`), `title`, `url`, and `summary`, plus:
+
+- `pathwayId` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

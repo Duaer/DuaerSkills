@@ -3,12 +3,22 @@
 ---
 name: duaer-organisms
 description: >-
-  Search organism names through Duaer. Use the scientific name with proteins.organism and structures.organism. One successful search uses 1 Duaer credit.
+  Duaer organisms. Search organism names. Use the scientific name with proteins.organism and structures.organism.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer organisms
 
-Search organism names through Duaer. Use the scientific name with proteins.organism and structures.organism. One successful search uses 1 Duaer credit.
+Search organism names. Use the scientific name with proteins.organism and structures.organism. Data comes from UniProt.
+
+## When to use
+
+- Get the scientific name or taxonomy id before searching proteins or structures.
+- Look up the common name of a species.
+
+## When not to use
+
+- Full taxonomic classification. Use https://skills.duaer.com/ncbi-taxon.md.
 
 ## Call
 
@@ -20,23 +30,36 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- At least one search field is required. Fields combine.
-- Search with `q` first; use `taxonId` only when you already have it from a result.
+## Parameters
+
+At least one search field is required. Fields combine. Search with `q` first; use `taxonId` only when you already have it from a result.
+
 - `q` — words in the scientific or common name.
-- `taxonId` — optional. NCBI / UniProt taxon id from a result (`taxonId`), such as `9606`.
-- `scientific` — optional. Scientific name, such as `Homo sapiens`.
-- `common` — optional. Common name, such as `human`.
-- `limit` — optional. From 1 to 20. Default 10.
-- Use `title` (scientific name) as `organism` when searching proteins or structures. Reuse `taxonId` as `taxonomyId` on proteins.
+- `taxonId` — Optional. NCBI / UniProt taxon id from a result (`taxonId`), such as `9606`.
+- `scientific` — Optional. Scientific name, such as `Homo sapiens`.
+- `common` — Optional. Common name, such as `human`.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/organisms?q=human&limit=10` — organisms matching human.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`UniProt`), `title`, `url`, and `summary`, plus:
+
+- `taxonId` — number.
+- `scientificName`, `commonName`, `mnemonic`, `rank` — text.
+
+Use `title` (scientific name) as `organism` when searching proteins or structures. Reuse `taxonId` as `taxonomyId` on proteins.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

@@ -3,12 +3,22 @@
 ---
 name: duaer-mgnify
 description: >-
-  Search microbiome studies in MGnify through Duaer. One successful search uses 1 Duaer credit.
+  Duaer MGnify. Search microbiome studies in MGnify.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer MGnify
 
-Search microbiome studies in MGnify through Duaer. One successful search uses 1 Duaer credit.
+Search microbiome studies in MGnify. Data comes from MGnify.
+
+## When to use
+
+- Find microbiome studies in MGnify.
+- Look up one study id.
+
+## When not to use
+
+- MG-RAST projects. Use https://skills.duaer.com/mgrast.md.
 
 ## Call
 
@@ -20,19 +30,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`. If you send both, Duaer uses `id`.
+
 - `words` — search words, such as soil.
-- `id` — optional. Id such as MGYS00005798.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. Id such as MGYS00005798.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/mgnify?words=soil&limit=10` — MGnify studies matching soil.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`MGnify`), `title`, `url`, and `summary`, plus:
+
+- `studyId` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

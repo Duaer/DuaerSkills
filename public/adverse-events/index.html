@@ -54,12 +54,22 @@
 <pre><code>---
 name: duaer-adverse-events
 description: &gt;-
-  Search FDA adverse event reports through Duaer via OpenFDA FAERS. One successful search uses 1 Duaer credit.
+  Duaer adverse events. Search FDA adverse event reports from OpenFDA FAERS.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer adverse events
 
-Search FDA adverse event reports through Duaer via OpenFDA FAERS. One successful search uses 1 Duaer credit.
+Search FDA adverse event reports from OpenFDA FAERS. Data comes from OpenFDA.
+
+## When to use
+
+- Review FAERS adverse event reports for a drug.
+- Check reported reactions by brand or generic name.
+
+## When not to use
+
+- Drug labels. Use https://skills.duaer.com/drug-labels.md.
 
 ## Call
 
@@ -71,20 +81,32 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words`, `brand`, or `generic` (or combine; brand/generic narrow when set).
+## Parameters
+
+Provide `words`, `brand`, or `generic` (or combine; brand/generic narrow when set).
+
 - `words` — brand, generic, substance, or medicinal product.
-- `brand` — optional. OpenFDA brand name.
-- `generic` — optional. OpenFDA generic name.
-- `limit` — optional. From 1 to 20. Default 10.
+- `brand` — Optional. OpenFDA brand name.
+- `generic` — Optional. OpenFDA generic name.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/adverse-events?words=aspirin&amp;limit=10` — adverse event reports for aspirin.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ &quot;items&quot;: [...] }`. Each item has `source` (`OpenFDA`), `title`, `url`, and `summary`, plus:
+
+- `reportId`, `serious`, `receiptDate`, `country`, `drugs`, `reactions` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 </code></pre>

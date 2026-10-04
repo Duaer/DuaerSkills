@@ -54,12 +54,22 @@
 <pre><code>---
 name: duaer-uberon
 description: &gt;-
-  Search anatomy terms via Uberon through Duaer. One successful search uses 1 Duaer credit.
+  Duaer Uberon. Search anatomy terms from Uberon.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer Uberon
 
-Search anatomy terms via Uberon through Duaer. One successful search uses 1 Duaer credit.
+Search anatomy terms from Uberon. Data comes from Uberon.
+
+## When to use
+
+- Find anatomy terms and Uberon ids.
+- Standardize tissue names across species.
+
+## When not to use
+
+- Human-only anatomy. Use https://skills.duaer.com/fma.md.
 
 ## Call
 
@@ -71,19 +81,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`. If you send both, Duaer uses `id`.
+
 - `words` — anatomy words, such as liver.
-- `id` — optional. Uberon id such as UBERON:0002107.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. Uberon id such as UBERON:0002107.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/uberon?words=liver&amp;limit=10` — Uberon terms matching liver.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ &quot;items&quot;: [...] }`. Each item has `source` (`Uberon`), `title`, `url`, and `summary`, plus:
+
+- `uberonId`, `description`, `synonyms`, `iri` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 </code></pre>

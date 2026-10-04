@@ -54,12 +54,22 @@
 <pre><code>---
 name: duaer-pathways
 description: &gt;-
-  Search Reactome pathways through Duaer. Use the pathwayId with proteins.pathway. One successful search uses 1 Duaer credit.
+  Duaer pathways. Search Reactome pathways. Use the pathwayId with proteins.pathway.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer pathways
 
-Search Reactome pathways through Duaer. Use the pathwayId with proteins.pathway. One successful search uses 1 Duaer credit.
+Search Reactome pathways. Use the pathwayId with proteins.pathway. Data comes from Reactome.
+
+## When to use
+
+- Get a Reactome pathway id before searching proteins.
+- Find human pathways for a process or molecule.
+
+## When not to use
+
+- KEGG pathways. Use https://skills.duaer.com/kegg.md.
 
 ## Call
 
@@ -71,25 +81,37 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- At least one search field is required. Fields combine.
-- Search with `q` first; use `id` only when you already have it from a result.
-- Word searches default to Homo sapiens pathways.
+## Parameters
+
+Provide `q`, `name`, or `id`. When you send more than one, Duaer uses `id`, else `name`, else `q`. Search with `q` first; use `id` only when you already have it from a result. Word searches default to Homo sapiens pathways.
+
 - `q` — words in the pathway name or summary.
-- `id` — optional. Reactome pathway id from a result (`pathwayId`), such as `R-HSA-264876`.
-- `name` — optional. Pathway name.
-- `limit` — optional. From 1 to 20. Default 10.
-- Use `pathwayId` as `pathway` when searching proteins. Reuse `pathwayId` in `id` for an exact lookup.
-- Open `browserUrl` for the interactive Reactome diagram, or `diagramUrl` for a PNG export.
-- Result fields: source, title, url, summary, pathwayId, dbId, stIdVersion, species, browserUrl, diagramUrl, figureUrl, hasDiagram, hasEHLD, isDisease, doi, releaseDate, lastUpdatedDate, compartments, compartmentAccessions, goId, goName, schemaClass. Words and name searches are enriched with Reactome detail, same as an id lookup.
+- `id` — Optional. Reactome pathway id from a result (`pathwayId`), such as `R-HSA-264876`.
+- `name` — Optional. Pathway name.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/pathways?q=insulin&amp;limit=10` — human Reactome pathways matching insulin.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ &quot;items&quot;: [...] }`. Each item has `source` (`Reactome`), `title`, `url`, and `summary`, plus:
+
+- `pathwayId`, `dbId`, `stIdVersion`, `species`, `browserUrl`, `diagramUrl`, `figureUrl` — text.
+- `hasDiagram`, `hasEHLD`, `isDisease` — true or false.
+- `doi`, `releaseDate`, `lastUpdatedDate`, `compartments`, `compartmentAccessions`, `goId`, `goName`, `schemaClass` — text.
+
+Use `pathwayId` as `pathway` when searching proteins. Reuse `pathwayId` in `id` for an exact lookup.
+Open `browserUrl` for the interactive Reactome diagram, or `diagramUrl` for a PNG export.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 </code></pre>

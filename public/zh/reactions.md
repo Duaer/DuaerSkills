@@ -3,12 +3,22 @@
 ---
 name: duaer-reactions
 description: >-
-  Search biochemical reactions through Duaer via Rhea. One successful search uses 1 Duaer credit.
+  Duaer reactions. Search biochemical reactions from Rhea.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer reactions
 
-Search biochemical reactions through Duaer via Rhea. One successful search uses 1 Duaer credit.
+Search biochemical reactions from Rhea. Data comes from Rhea.
+
+## When to use
+
+- Find Rhea reactions by words or EC number.
+- Get reaction equations for an enzyme class.
+
+## When not to use
+
+- Model reactions in ModelSEED. Use https://skills.duaer.com/modelseed.md.
 
 ## Call
 
@@ -20,19 +30,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `ec` (or both).
+## Parameters
+
+Provide `words` or `ec` (or both).
+
 - `words` — words in the equation, or a Rhea id (`RHEA:10596`).
-- `ec` — optional. Enzyme Commission number (`2.7.10.1` or `ec:2.7.10.1`). Alone is enough.
-- `limit` — optional. From 1 to 20. Default 10.
+- `ec` — Optional. Enzyme Commission number (`2.7.10.1` or `ec:2.7.10.1`). Alone is enough.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/reactions?words=kinase&ec=2.7.10.1&limit=10` — kinase reactions with EC 2.7.10.1.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`Rhea`), `title`, `url`, and `summary`, plus:
+
+- `rheaId`, `equation`, `ec`, `status` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 

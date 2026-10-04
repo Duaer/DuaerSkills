@@ -54,12 +54,22 @@
 <pre><code>---
 name: duaer-hal
 description: &gt;-
-  Search open archive documents in HAL through Duaer. One successful search uses 1 Duaer credit.
+  Duaer HAL. Search open archive documents in HAL.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer HAL
 
-Search open archive documents in HAL through Duaer. One successful search uses 1 Duaer credit.
+Search open archive documents in HAL. Data comes from HAL.
+
+## When to use
+
+- Find documents in the HAL open archive.
+- Look up one HAL id.
+
+## When not to use
+
+- OpenAlex papers. Use https://skills.duaer.com/papers.md.
 
 ## Call
 
@@ -71,19 +81,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`. If you send both, Duaer uses `id`.
+
 - `words` — search words, such as biologie.
-- `id` — optional. Id such as hal-01234567.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. Id such as hal-01234567.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/hal?words=biologie&amp;limit=10` — HAL documents matching biologie.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ &quot;items&quot;: [...] }`. Each item has `source` (`HAL`), `title`, `url`, and `summary`, plus:
+
+- `halId` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 </code></pre>

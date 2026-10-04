@@ -3,12 +3,22 @@
 ---
 name: duaer-ot-drugs
 description: >-
-  Search drug entities in Open Targets through Duaer. One successful search uses 1 Duaer credit.
+  Duaer Open Targets drugs. Search drug entities in Open Targets.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer Open Targets drugs
 
-Search drug entities in Open Targets through Duaer. One successful search uses 1 Duaer credit.
+Search drug entities in Open Targets. Data comes from Open Targets drugs.
+
+## When to use
+
+- Find drug entities in Open Targets.
+- Look up one ChEMBL drug id in Open Targets.
+
+## When not to use
+
+- Gene–disease associations. Use https://skills.duaer.com/targets.md.
 
 ## Call
 
@@ -20,19 +30,31 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- Provide `words` or `id`.
+## Parameters
+
+Provide `words` or `id`. If you send both, Duaer uses `id`.
+
 - `words` — search words, such as imatinib.
-- `id` — optional. ChEMBL id such as CHEMBL941.
-- `limit` — optional. From 1 to 20. Default 10.
+- `id` — Optional. ChEMBL id such as CHEMBL941.
+- `limit` — Optional. From 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/ot-drugs?words=imatinib&limit=10` — Open Targets drugs matching imatinib.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ "items": [...] }`. Each item has `source` (`Open Targets drugs`), `title`, `url`, and `summary`, plus:
+
+- `drugId`, `entity` — text.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
