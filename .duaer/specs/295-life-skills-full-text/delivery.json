@@ -1,0 +1,12 @@
+{
+  "status": "accepted",
+  "spec": "295-life-skills-full-text",
+  "verification": [
+    "node scripts/render.mjs rendered 846 pages",
+    "415 Data skills: each section once",
+    "0 links to missing skills",
+    "documented params vs backend: 280 life routes compared; only the crossrefs words alias is undocumented",
+    "0 template placeholders in public/"
+  ],
+  "notes": "Branch only until merged and published."
+}
