@@ -92,6 +92,16 @@ The response is \`{ "items": [...] }\`. Each item has:
 - \`summary\` — abstract, up to 1000 characters. Empty when OpenAlex has no abstract.
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/trials.md — Duaer clinical trials
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/preprints.md — Duaer preprints
+- https://skills.duaer.com/grants.md — Duaer grants
+- https://skills.duaer.com/patents.md — Duaer patents
+- https://skills.duaer.com/life-research-brief.md — Digital employee: Life research brief
 `,
 
 	proteins: `---
@@ -161,9 +171,22 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`UniProt\`), 
 - \`reviewed\` — true for Swiss-Prot entries.
 - \`disease\`, \`location\` — linked diseases and subcellular locations.
 
+For interaction partners of a gene or protein, use https://skills.duaer.com/interactions.md.
+
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/structures.md — Duaer structures
+- https://skills.duaer.com/pathways.md — Duaer pathways
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/interactions.md — Duaer interactions
+- https://skills.duaer.com/atlas.md — Duaer tissue atlas
+- https://skills.duaer.com/alphafold.md — Duaer AlphaFold
+- https://skills.duaer.com/complexes.md — Duaer complexes
 `,
 
 	trials: `---
@@ -231,6 +254,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`ClinicalTria
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/papers.md — Duaer papers
 `,
 
 	compounds: `---
@@ -290,9 +319,27 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`PubChem\`), 
 - \`hbondDonors\`, \`hbondAcceptors\`, \`rotatableBonds\` — counts used in drug-likeness rules.
 - \`complexity\`, \`charge\` — structural complexity and formal charge.
 
+Reuse a compound name as \`molecule\` when searching activities: https://skills.duaer.com/activities.md.
+
 ${blank}
 
 ${compoundCredits}
+
+## Related
+
+- https://skills.duaer.com/trials.md — Duaer clinical trials
+- https://skills.duaer.com/structures.md — Duaer structures
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/activities.md — Duaer activities
+- https://skills.duaer.com/indications.md — Duaer indications
+- https://skills.duaer.com/mechanisms.md — Duaer mechanisms
+- https://skills.duaer.com/assays.md — Duaer assays
+- https://skills.duaer.com/patents.md — Duaer patents
+- https://skills.duaer.com/drug-gene.md — Duaer drug–gene
+- https://skills.duaer.com/reactions.md — Duaer reactions
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
+- https://skills.duaer.com/drug-labels.md — Duaer drug labels
+- https://skills.duaer.com/adverse-events.md — Duaer adverse events
 `,
 
 	genes: `---
@@ -354,9 +401,23 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`MyGene\`), \
 
 Use \`symbol\` as \`gene\` in https://skills.duaer.com/proteins.md and https://skills.duaer.com/variants.md.
 
+For tissue expression, use https://skills.duaer.com/expression.md.
+
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/pathways.md — Duaer pathways
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
+- https://skills.duaer.com/expression.md — Duaer expression
+- https://skills.duaer.com/atlas.md — Duaer tissue atlas
+- https://skills.duaer.com/geo.md — Duaer GEO
+- https://skills.duaer.com/drug-gene.md — Duaer drug–gene
+- https://skills.duaer.com/life-research-brief.md — Digital employee: Life research brief
 `,
 
 	variants: `---
@@ -418,6 +479,13 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`MyVariant\`)
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/life-research-brief.md — Digital employee: Life research brief
 `,
 
 	structures: `---
@@ -473,6 +541,13 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`RCSB PDB\`),
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/alphafold.md — Duaer AlphaFold
 `,
 
 	diseases: `---
@@ -527,6 +602,15 @@ Use \`title\` as \`disease\` when searching proteins. Reuse \`diseaseId\` in \`i
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/trials.md — Duaer clinical trials
+- https://skills.duaer.com/indications.md — Duaer indications
+- https://skills.duaer.com/cell-lines.md — Duaer cell lines
 `,
 
 	organisms: `---
@@ -581,6 +665,13 @@ Use \`title\` (scientific name) as \`organism\` when searching proteins or struc
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/geo.md — Duaer GEO
+- https://skills.duaer.com/cell-lines.md — Duaer cell lines
 `,
 
 	keywords: `---
@@ -634,6 +725,11 @@ Use \`title\` as \`keyword\` when searching proteins. Reuse \`keywordId\` in \`i
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
 `,
 
 	locations: `---
@@ -687,6 +783,11 @@ Use \`title\` as \`location\` when searching proteins. Reuse \`locationId\` in \
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/genes.md — Duaer genes
 `,
 
 	'gene-ontology': `---
@@ -740,6 +841,12 @@ Use \`title\` or \`goId\` as \`go\` when searching proteins. Reuse \`goId\` in \
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/pathways.md — Duaer pathways
 `,
 
 	pathways: `---
@@ -791,10 +898,19 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Reactome\`),
 
 Use \`pathwayId\` as \`pathway\` when searching proteins. Reuse \`pathwayId\` in \`id\` for an exact lookup.
 Open \`browserUrl\` for the interactive Reactome diagram, or \`diagramUrl\` for a PNG export.
+Open \`browserUrl\` for the interactive Reactome diagram, or \`diagramUrl\` for a PNG export. Words and name searches are enriched with Reactome detail (doi, GO, figure, dates, diagram flags), same as an id lookup.
+Words and name searches are enriched with Reactome detail, same as an id lookup.
 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/reactions.md — Duaer reactions
 `,
 
 	domains: `---
@@ -847,6 +963,12 @@ Use \`domainId\` as \`domain\` when searching proteins. Reuse \`domainId\` in \`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
+- https://skills.duaer.com/pathways.md — Duaer pathways
 `,
 
 	preprints: `---
@@ -902,6 +1024,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`EuropePMC\`)
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/genes.md — Duaer genes
 `,
 
 	grants: `---
@@ -957,6 +1084,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`NIH RePORTER
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/preprints.md — Duaer preprints
 `,
 
 	interactions: `---
@@ -1005,9 +1137,19 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`STRING\`), \
 - \`proteinA\`, \`proteinB\`, \`stringIdA\`, \`stringIdB\`, \`partner\`, \`partnerStringId\` — text.
 - \`score\`, \`neighborhood\`, \`fusion\`, \`cooccurrence\`, \`coexpression\`, \`experimental\`, \`database\`, \`textmining\`, \`taxId\` — number.
 
+Reuse \`partner\` as \`gene\` when searching proteins or expression, or as \`protein\` for further interaction partners.
+
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/expression.md — Duaer expression
+- https://skills.duaer.com/complexes.md — Duaer complexes
 `,
 
 	expression: `---
@@ -1057,6 +1199,8 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`GTEx\`), \`t
 - \`median\` — number.
 - \`unit\`, \`ontologyId\`, \`dataset\` — text.
 
+Reuse \`gene\` when searching proteins or genes. Reuse \`gencodeId\` in \`gencodeId\` for an exact expression lookup. For gene–disease associations, use https://skills.duaer.com/targets.md. For HPA tissue enrichment, use https://skills.duaer.com/atlas.md.
+
 ${blank}
 
 ## Credits
@@ -1067,6 +1211,15 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/interactions.md — Duaer interactions
+- https://skills.duaer.com/targets.md — Duaer targets
+- https://skills.duaer.com/atlas.md — Duaer tissue atlas
+- https://skills.duaer.com/geo.md — Duaer GEO
 `,
 
 	targets: `---
@@ -1114,6 +1267,8 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Open Targets
 - \`gene\`, \`ensemblId\`, \`disease\`, \`diseaseId\` — text.
 - \`score\` — number.
 
+Reuse \`gene\` when searching proteins, genes, expression, interactions, or orthologs. Reuse \`disease\` when searching diseases or proteins.
+
 ${blank}
 
 ## Credits
@@ -1124,6 +1279,17 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/expression.md — Duaer expression
+- https://skills.duaer.com/orthologs.md — Duaer orthologs
+- https://skills.duaer.com/activities.md — Duaer activities
+- https://skills.duaer.com/assays.md — Duaer assays
+- https://skills.duaer.com/drug-gene.md — Duaer drug–gene
 `,
 
 	orthologs: `---
@@ -1176,6 +1342,8 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`MyGene\`), \
 - \`queryGene\` — text.
 - \`queryTaxId\` — number.
 
+Reuse \`gene\` when searching proteins, genes, expression, or targets.
+
 ${blank}
 
 ## Credits
@@ -1186,6 +1354,13 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/targets.md — Duaer targets
 `,
 
 	activities: `---
@@ -1233,6 +1408,8 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`ChEMBL\`), \
 - \`activityId\`, \`moleculeChemblId\`, \`moleculeName\`, \`targetChemblId\`, \`targetName\`, \`targetOrganism\`, \`standardType\`, \`standardRelation\`, \`standardValue\`, \`standardUnits\`, \`pchemblValue\`, \`assayChemblId\`, \`assayDescription\`, \`assayType\` — text.
 - \`documentYear\` — number.
 
+Reuse \`moleculeChemblId\` / names when searching compounds or indications: https://skills.duaer.com/indications.md. Reuse \`targetChemblId\` / gene symbols when searching targets or genes.
+
 ${blank}
 
 ## Credits
@@ -1243,6 +1420,15 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/targets.md — Duaer targets
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/indications.md — Duaer indications
+- https://skills.duaer.com/mechanisms.md — Duaer mechanisms
+- https://skills.duaer.com/assays.md — Duaer assays
 `,
 
 	atlas: `---
@@ -1291,6 +1477,8 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`HPA\`), \`ti
 - \`nTPM\` — number.
 - \`specificity\`, \`distribution\`, \`proteinClasses\`, \`secretomeLocation\` — text.
 
+Reuse \`gene\` when searching proteins, genes, expression, or targets. For GTEx median TPM across tissues, use https://skills.duaer.com/expression.md. For GEO experiment series, use https://skills.duaer.com/geo.md.
+
 ${blank}
 
 ## Credits
@@ -1301,6 +1489,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/expression.md — Duaer expression
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/proteins.md — Duaer proteins
 `,
 
 	indications: `---
@@ -1347,6 +1541,8 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`ChEMBL\`), \
 - \`indicationId\`, \`moleculeChemblId\`, \`efoId\`, \`efoTerm\`, \`meshId\`, \`meshHeading\` — text.
 - \`maxPhase\` — number.
 
+Reuse \`moleculeChemblId\` / names when searching compounds, activities, or mechanisms: https://skills.duaer.com/mechanisms.md. Reuse \`efoTerm\` / \`meshHeading\` when searching diseases or trials.
+
 ${blank}
 
 ## Credits
@@ -1357,6 +1553,13 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/activities.md — Duaer activities
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/mechanisms.md — Duaer mechanisms
 `,
 
 	mechanisms: `---
@@ -1404,6 +1607,8 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`ChEMBL\`), \
 - \`maxPhase\` — number.
 - \`directInteraction\` — true or false.
 
+Reuse \`moleculeChemblId\` / names when searching compounds, activities, or indications. Reuse \`targetChemblId\` when searching activities or targets.
+
 ${blank}
 
 ## Credits
@@ -1414,6 +1619,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/activities.md — Duaer activities
+- https://skills.duaer.com/indications.md — Duaer indications
 `,
 
 	geo: `---
@@ -1463,9 +1674,17 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`GEO\`), \`ti
 - \`sampleCount\` — number.
 - \`pubDate\`, \`pubmedId\` — text.
 
+Reuse gene symbols from related studies when searching expression: https://skills.duaer.com/expression.md.
+
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/expression.md — Duaer expression
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/genes.md — Duaer genes
 `,
 
 	assays: `---
@@ -1515,9 +1734,18 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`ChEMBL\`), \
 - \`confidenceScore\` — number.
 - \`baoLabel\`, \`documentChemblId\` — text.
 
+Reuse \`assayChemblId\` / \`targetChemblId\` when searching activities: https://skills.duaer.com/activities.md.
+
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/activities.md — Duaer activities
+- https://skills.duaer.com/targets.md — Duaer targets
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/patents.md — Duaer patents
 `,
 
 	patents: `---
@@ -1568,6 +1796,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Europe PMC\`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/assays.md — Duaer assays
 `,
 
 	alphafold: `---
@@ -1620,6 +1854,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`AlphaFold\`)
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/structures.md — Duaer structures
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/genes.md — Duaer genes
 `,
 
 	'cell-lines': `---
@@ -1670,6 +1910,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Cellosaurus\
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/assays.md — Duaer assays
 `,
 
 	'drug-gene': `---
@@ -1724,6 +1970,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`DGIdb\`), \`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/targets.md — Duaer targets
 `,
 
 	reactions: `---
@@ -1773,6 +2025,13 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Rhea\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/pathways.md — Duaer pathways
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
 `,
 
 	complexes: `---
@@ -1825,6 +2084,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Complex Port
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/interactions.md — Duaer interactions
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/organisms.md — Duaer organisms
 `,
 
 	metabolites: `---
@@ -1874,6 +2139,14 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`ChEBI\`), \`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/reactions.md — Duaer reactions
+- https://skills.duaer.com/pathways.md — Duaer pathways
+- https://skills.duaer.com/drug-labels.md — Duaer drug labels
+- https://skills.duaer.com/metabolic-dark-matter.md — Duaer: annotate an unknown feature (metabolic dark matter)
 `,
 
 	'drug-labels': `---
@@ -1924,6 +2197,14 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OpenFDA\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/indications.md — Duaer indications
+- https://skills.duaer.com/drug-gene.md — Duaer drug–gene
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
+- https://skills.duaer.com/adverse-events.md — Duaer adverse events
 `,
 
 	'adverse-events': `---
@@ -1974,6 +2255,14 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OpenFDA\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/drug-labels.md — Duaer drug labels
+- https://skills.duaer.com/trials.md — Duaer clinical trials
+- https://skills.duaer.com/indications.md — Duaer indications
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/gwas.md — Duaer GWAS
 `,
 
 	gwas: `---
@@ -2025,6 +2314,13 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`GWAS Catalog
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/adverse-events.md — Duaer adverse events
 `,
 
 	rxnorm: `---
@@ -2074,6 +2370,13 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`RxNorm\`), \
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/drug-labels.md — Duaer drug labels
+- https://skills.duaer.com/indications.md — Duaer indications
+- https://skills.duaer.com/gwas.md — Duaer GWAS
 `,
 
 	mesh: `---
@@ -2123,6 +2426,13 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`MeSH\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/keywords.md — Duaer keywords
+- https://skills.duaer.com/rxnorm.md — Duaer RxNorm
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/trials.md — Duaer clinical trials
 `,
 
 	phenotypes: `---
@@ -2172,6 +2482,13 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`HPO\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/mesh.md — Duaer MeSH
+- https://skills.duaer.com/trials.md — Duaer clinical trials
+- https://skills.duaer.com/adverse-events.md — Duaer adverse events
 `,
 
 	crossrefs: `---
@@ -2220,6 +2537,13 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`UniChem\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
+- https://skills.duaer.com/drug-labels.md — Duaer drug labels
+- https://skills.duaer.com/indications.md — Duaer indications
 `,
 
 	'drug-recalls': `---
@@ -2270,6 +2594,13 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OpenFDA\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/adverse-events.md — Duaer adverse events
+- https://skills.duaer.com/drug-labels.md — Duaer drug labels
+- https://skills.duaer.com/rxnorm.md — Duaer RxNorm
+- https://skills.duaer.com/compounds.md — Duaer compounds
 `,
 
 	ligands: `---
@@ -2319,6 +2650,13 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`PDBe\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/structures.md — Duaer structures
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/crossrefs.md — Duaer crossrefs
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
 `,
 
 	chembl: `---
@@ -2368,6 +2706,13 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`ChEMBL\`), \
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/ligands.md — Duaer ligands
+- https://skills.duaer.com/crossrefs.md — Duaer crossrefs
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
 `,
 
 	ensembl: `---
@@ -2418,6 +2763,13 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Ensembl\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/orthologs.md — Duaer orthologs
 `,
 
 	kegg: `---
@@ -2468,6 +2820,13 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`KEGG\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/pathways.md — Duaer pathways
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
 `,
 
 	monarch: `---
@@ -2518,6 +2877,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Monarch\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+- https://skills.duaer.com/genes.md — Duaer genes
 `,
 
 	hgnc: `---
@@ -2567,6 +2932,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`HGNC\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/ensembl.md — Duaer Ensembl
+- https://skills.duaer.com/proteins.md — Duaer proteins
 `,
 
 	pride: `---
@@ -2616,6 +2987,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`PRIDE\`), \`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/geo.md — Duaer GEO
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/expression.md — Duaer expression
 `,
 
 	uberon: `---
@@ -2665,6 +3042,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Uberon\`), \
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/locations.md — Duaer locations
+- https://skills.duaer.com/atlas.md — Duaer tissue atlas
+- https://skills.duaer.com/organisms.md — Duaer organisms
 `,
 
 	biostudies: `---
@@ -2714,6 +3097,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`BioStudies\`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/geo.md — Duaer GEO
+- https://skills.duaer.com/pride.md — Duaer PRIDE
+- https://skills.duaer.com/expression.md — Duaer expression
 `,
 
 	orphanet: `---
@@ -2763,6 +3152,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Orphanet\`),
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/monarch.md — Duaer Monarch
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 `,
 
 	efo: `---
@@ -2812,6 +3207,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`EFO\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/gwas.md — Duaer GWAS
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+- https://skills.duaer.com/mesh.md — Duaer MeSH
 `,
 
 	rnacentral: `---
@@ -2863,6 +3264,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`RNAcentral\`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/ensembl.md — Duaer Ensembl
+- https://skills.duaer.com/hgnc.md — Duaer HGNC
 `,
 
 	mondo: `---
@@ -2912,6 +3319,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Mondo\`), \`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/orphanet.md — Duaer Orphanet
+- https://skills.duaer.com/monarch.md — Duaer Monarch
 `,
 
 	'cell-ontology': `---
@@ -2961,6 +3374,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Cell Ontolog
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/cell-lines.md — Duaer cell lines
+- https://skills.duaer.com/uberon.md — Duaer Uberon
+- https://skills.duaer.com/atlas.md — Duaer tissue atlas
 `,
 
 	mp: `---
@@ -3010,6 +3429,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`MP\`), \`tit
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+- https://skills.duaer.com/monarch.md — Duaer Monarch
+- https://skills.duaer.com/gwas.md — Duaer GWAS
 `,
 
 	mydisease: `---
@@ -3059,6 +3484,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`MyDisease\`)
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/mondo.md — Duaer Mondo
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/orphanet.md — Duaer Orphanet
 `,
 
 	metabolomics: `---
@@ -3108,6 +3539,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Metabolomics
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
+- https://skills.duaer.com/biostudies.md — Duaer BioStudies
+- https://skills.duaer.com/pride.md — Duaer PRIDE
 `,
 
 	intact: `---
@@ -3157,6 +3594,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`IntAct\`), \
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/interactions.md — Duaer interactions
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/complexes.md — Duaer complexes
 `,
 
 	biosamples: `---
@@ -3208,6 +3651,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`BioSamples\`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/geo.md — Duaer GEO
+- https://skills.duaer.com/biostudies.md — Duaer BioStudies
+- https://skills.duaer.com/cell-lines.md — Duaer cell lines
 `,
 
 	encode: `---
@@ -3257,6 +3706,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`ENCODE\`), \
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/geo.md — Duaer GEO
+- https://skills.duaer.com/expression.md — Duaer expression
+- https://skills.duaer.com/jaspar.md — Duaer JASPAR
 `,
 
 	'pathway-commons': `---
@@ -3306,6 +3761,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Pathway Comm
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/pathways.md — Duaer pathways
+- https://skills.duaer.com/interactions.md — Duaer interactions
+- https://skills.duaer.com/kegg.md — Duaer KEGG
 `,
 
 	alliance: `---
@@ -3355,6 +3816,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Alliance\`),
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/orthologs.md — Duaer orthologs
+- https://skills.duaer.com/hgnc.md — Duaer HGNC
 `,
 
 	clinvar: `---
@@ -3404,6 +3871,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`ClinVar\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/dbsnp.md — Duaer dbSNP
+- https://skills.duaer.com/gwas.md — Duaer GWAS
 `,
 
 	dbsnp: `---
@@ -3453,6 +3926,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`dbSNP\`), \`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/clinvar.md — Duaer ClinVar
+- https://skills.duaer.com/gwas.md — Duaer GWAS
 `,
 
 	jaspar: `---
@@ -3502,6 +3981,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`JASPAR\`), \
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/encode.md — Duaer ENCODE
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
 `,
 
 	cbioportal: `---
@@ -3552,6 +4037,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`cBioPortal\`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/gdc.md — Duaer GDC
+- https://skills.duaer.com/gwas.md — Duaer GWAS
+- https://skills.duaer.com/variants.md — Duaer variants
 `,
 
 	gdc: `---
@@ -3601,6 +4092,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`GDC\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/cbioportal.md — Duaer cBioPortal
+- https://skills.duaer.com/gwas.md — Duaer GWAS
+- https://skills.duaer.com/trials.md — Duaer clinical trials
 `,
 
 	'expression-atlas': `---
@@ -3651,6 +4148,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Expression A
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/expression.md — Duaer expression
+- https://skills.duaer.com/geo.md — Duaer GEO
+- https://skills.duaer.com/single-cell-atlas.md — Duaer Single Cell Atlas
 `,
 
 	'single-cell-atlas': `---
@@ -3701,6 +4204,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Single Cell 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/expression-atlas.md — Duaer Expression Atlas
+- https://skills.duaer.com/expression.md — Duaer expression
+- https://skills.duaer.com/cell-ontology.md — Duaer Cell Ontology
 `,
 
 	ndc: `---
@@ -3750,6 +4259,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OpenFDA\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/rxnorm.md — Duaer RxNorm
+- https://skills.duaer.com/drug-labels.md — Duaer drug labels
+- https://skills.duaer.com/adverse-events.md — Duaer adverse events
 `,
 
 	'device-events': `---
@@ -3799,6 +4314,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OpenFDA\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/adverse-events.md — Duaer adverse events
+- https://skills.duaer.com/ndc.md — Duaer NDC
+- https://skills.duaer.com/drug-recalls.md — Duaer drug recalls
 `,
 
 	'sequence-ontology': `---
@@ -3848,6 +4369,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Sequence Ont
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
+- https://skills.duaer.com/ensembl.md — Duaer Ensembl
+- https://skills.duaer.com/rnacentral.md — Duaer RNAcentral
 `,
 
 	doid: `---
@@ -3897,6 +4424,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`DOID\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/mondo.md — Duaer Mondo
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/orphanet.md — Duaer Orphanet
 `,
 
 	'ncbi-taxon': `---
@@ -3946,6 +4479,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`NCBI Taxonom
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/alliance.md — Duaer Alliance
+- https://skills.duaer.com/uberon.md — Duaer Uberon
 `,
 
 	glygen: `---
@@ -3998,6 +4537,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`GlyGen\`), \
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/reactions.md — Duaer reactions
 `,
 
 	chebi: `---
@@ -4047,6 +4592,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`ChEBI\`), \`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/chembl.md — Duaer ChEMBL
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
 `,
 
 	ncit: `---
@@ -4096,6 +4647,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`NCIt\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/mondo.md — Duaer Mondo
+- https://skills.duaer.com/doid.md — Duaer DOID
+- https://skills.duaer.com/orphanet.md — Duaer Orphanet
 `,
 
 	pfam: `---
@@ -4145,6 +4702,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Pfam\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/domains.md — Duaer domains
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
 `,
 
 	emdb: `---
@@ -4194,6 +4757,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`EMDB\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/structures.md — Duaer structures
+- https://skills.duaer.com/alphafold.md — Duaer AlphaFold
+- https://skills.duaer.com/pride.md — Duaer PRIDE
 `,
 
 	uniparc: `---
@@ -4245,6 +4814,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`UniParc\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/pfam.md — Duaer Pfam
+- https://skills.duaer.com/domains.md — Duaer domains
 `,
 
 	'europe-pmc': `---
@@ -4294,6 +4869,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Europe PMC\`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/preprints.md — Duaer preprints
+- https://skills.duaer.com/crossref.md — Duaer Crossref
 `,
 
 	orcid: `---
@@ -4343,6 +4924,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`ORCID\`), \`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/europe-pmc.md — Duaer Europe PMC
+- https://skills.duaer.com/crossref.md — Duaer Crossref
 `,
 
 	'protein-ontology': `---
@@ -4392,6 +4979,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Protein Onto
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/chebi.md — Duaer ChEBI
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
 `,
 
 	obi: `---
@@ -4441,6 +5034,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OBI\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/assays.md — Duaer assays
+- https://skills.duaer.com/expression-atlas.md — Duaer Expression Atlas
+- https://skills.duaer.com/geo.md — Duaer GEO
 `,
 
 	mpath: `---
@@ -4490,6 +5089,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`MPATH\`), \`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/ncit.md — Duaer NCIt
+- https://skills.duaer.com/mondo.md — Duaer Mondo
+- https://skills.duaer.com/doid.md — Duaer DOID
 `,
 
 	crossref: `---
@@ -4539,6 +5144,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Crossref\`),
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/europe-pmc.md — Duaer Europe PMC
+- https://skills.duaer.com/preprints.md — Duaer preprints
 `,
 
 	mychem: `---
@@ -4588,6 +5199,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`MyChem\`), \
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/chebi.md — Duaer ChEBI
+- https://skills.duaer.com/chembl.md — Duaer ChEMBL
 `,
 
 	'drugs-fda': `---
@@ -4637,6 +5254,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Drugs@FDA\`)
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/ndc.md — Duaer NDC
+- https://skills.duaer.com/drug-labels.md — Duaer drug labels
+- https://skills.duaer.com/drug-recalls.md — Duaer drug recalls
 `,
 
 	uniref: `---
@@ -4688,6 +5311,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`UniRef\`), \
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/uniparc.md — Duaer UniParc
+- https://skills.duaer.com/proteomes.md — Duaer Proteomes
 `,
 
 	unirule: `---
@@ -4739,6 +5368,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`UniRule\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/uniref.md — Duaer UniRef
 `,
 
 	proteomes: `---
@@ -4790,6 +5424,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Proteomes\`)
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/organisms.md — Duaer organisms
 `,
 
 	ena: `---
@@ -4839,6 +5478,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`ENA\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/genes.md — Duaer genes
 `,
 
 	empiar: `---
@@ -4888,6 +5532,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`EMPIAR\`), \
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/structures.md — Duaer structures
+- https://skills.duaer.com/emdb.md — Duaer EMDB
 `,
 
 	bmrb: `---
@@ -4937,6 +5586,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`BMRB\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/structures.md — Duaer structures
+- https://skills.duaer.com/proteins.md — Duaer proteins
 `,
 
 	'swiss-model': `---
@@ -4986,6 +5640,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Swiss-Model\
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/structures.md — Duaer structures
+- https://skills.duaer.com/alphafold.md — Duaer AlphaFold
+- https://skills.duaer.com/proteins.md — Duaer proteins
 `,
 
 	'lipid-maps': `---
@@ -5035,6 +5695,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Lipid Maps\`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
+- https://skills.duaer.com/chebi.md — Duaer ChEBI
 `,
 
 	mgnify: `---
@@ -5084,6 +5750,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`MGnify\`), \
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/geo.md — Duaer GEO
+- https://skills.duaer.com/biosamples.md — Duaer BioSamples
 `,
 
 	'bv-brc': `---
@@ -5133,6 +5804,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`BV-BRC\`), \
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/genes.md — Duaer genes
 `,
 
 	clinpgx: `---
@@ -5182,6 +5858,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`ClinPGx\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/drug-gene.md — Duaer drug–gene
+- https://skills.duaer.com/genes.md — Duaer genes
 `,
 
 	'daily-med': `---
@@ -5231,6 +5912,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`DailyMed\`),
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/ndc.md — Duaer NDC
+- https://skills.duaer.com/drug-labels.md — Duaer drug labels
+- https://skills.duaer.com/drugs-fda.md — Duaer Drugs@FDA
 `,
 
 	rxclass: `---
@@ -5280,6 +5967,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`RxClass\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/rxnorm.md — Duaer RxNorm
+- https://skills.duaer.com/ndc.md — Duaer NDC
 `,
 
 	'device-510k': `---
@@ -5329,6 +6021,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OpenFDA 510(
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/device-events.md — Duaer Device events
+- https://skills.duaer.com/ndc.md — Duaer NDC
 `,
 
 	'food-enforcement': `---
@@ -5378,6 +6075,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OpenFDA Food
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/drug-recalls.md — Duaer drug recalls
+- https://skills.duaer.com/ndc.md — Duaer NDC
 `,
 
 	zenodo: `---
@@ -5427,6 +6129,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Zenodo\`), \
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/preprints.md — Duaer preprints
 `,
 
 	figshare: `---
@@ -5476,6 +6183,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Figshare\`),
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/zenodo.md — Duaer Zenodo
 `,
 
 	dryad: `---
@@ -5525,6 +6237,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Dryad\`), \`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/zenodo.md — Duaer Zenodo
 `,
 
 	proteomexchange: `---
@@ -5574,6 +6291,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`ProteomeXcha
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/pride.md — Duaer PRIDE
+- https://skills.duaer.com/proteins.md — Duaer proteins
 `,
 
 	omnipath: `---
@@ -5623,6 +6345,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Omnipath\`),
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/interactions.md — Duaer interactions
+- https://skills.duaer.com/intact.md — Duaer IntAct
 `,
 
 	oma: `---
@@ -5672,6 +6399,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OMA\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/orthologs.md — Duaer orthologs
+- https://skills.duaer.com/proteins.md — Duaer proteins
 `,
 
 	orthodb: `---
@@ -5721,6 +6453,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OrthoDB\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/orthologs.md — Duaer orthologs
+- https://skills.duaer.com/oma.md — Duaer OMA
 `,
 
 	panther: `---
@@ -5770,6 +6507,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`PANTHER\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/orthologs.md — Duaer orthologs
 `,
 
 	pato: `---
@@ -5819,6 +6561,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`PATO\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+- https://skills.duaer.com/mp.md — Duaer MP
 `,
 
 	edam: `---
@@ -5868,6 +6615,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`EDAM\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/assays.md — Duaer assays
+- https://skills.duaer.com/bio-tools.md — Duaer bio.tools
 `,
 
 	bao: `---
@@ -5917,6 +6669,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`BAO\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/assays.md — Duaer assays
+- https://skills.duaer.com/obi.md — Duaer OBI
 `,
 
 	bto: `---
@@ -5966,6 +6723,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`BTO\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/uberon.md — Duaer Uberon
+- https://skills.duaer.com/atlas.md — Duaer tissue atlas
 `,
 
 	pw: `---
@@ -6015,6 +6777,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`PW\`), \`tit
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/pathways.md — Duaer pathways
+- https://skills.duaer.com/kegg.md — Duaer KEGG
 `,
 
 	vo: `---
@@ -6064,6 +6831,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`VO\`), \`tit
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+- https://skills.duaer.com/mesh.md — Duaer MeSH
 `,
 
 	oncotree: `---
@@ -6113,6 +6885,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OncoTree\`),
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/cbioportal.md — Duaer cBioPortal
+- https://skills.duaer.com/ncit.md — Duaer NCIt
 `,
 
 	idr: `---
@@ -6162,6 +6939,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`IDR\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/geo.md — Duaer GEO
+- https://skills.duaer.com/expression-atlas.md — Duaer Expression Atlas
 `,
 
 	hca: `---
@@ -6211,6 +6993,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`HCA\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/expression-atlas.md — Duaer Expression Atlas
+- https://skills.duaer.com/single-cell-atlas.md — Duaer Single Cell Atlas
 `,
 
 	ucsc: `---
@@ -6260,6 +7047,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`UCSC\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/ensembl.md — Duaer Ensembl
+- https://skills.duaer.com/genes.md — Duaer genes
 `,
 
 	harmonizome: `---
@@ -6309,6 +7101,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Harmonizome\
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/expression.md — Duaer expression
 `,
 
 	pubtator: `---
@@ -6358,6 +7155,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`PubTator\`),
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/genes.md — Duaer genes
 `,
 
 	icite: `---
@@ -6408,6 +7210,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`iCite\`), \`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/europe-pmc.md — Duaer Europe PMC
 `,
 
 	ror: `---
@@ -6457,6 +7264,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`ROR\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/orcid.md — Duaer ORCID
 `,
 
 	'openalex-authors': `---
@@ -6507,6 +7319,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OpenAlex Aut
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/orcid.md — Duaer ORCID
 `,
 
 	'openalex-institutions': `---
@@ -6557,6 +7374,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OpenAlex Ins
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/ror.md — Duaer ROR
 `,
 
 	'openalex-topics': `---
@@ -6607,6 +7429,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OpenAlex Top
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/crossref.md — Duaer Crossref
 `,
 
 	'crossref-funders': `---
@@ -6656,6 +7483,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Crossref Fun
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/grants.md — Duaer grants
+- https://skills.duaer.com/papers.md — Duaer papers
 `,
 
 	'nsf-awards': `---
@@ -6705,6 +7537,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`NSF Awards\`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/grants.md — Duaer grants
+- https://skills.duaer.com/papers.md — Duaer papers
 `,
 
 	eva: `---
@@ -6754,6 +7591,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`EVA\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/dbsnp.md — Duaer dbSNP
+- https://skills.duaer.com/clinvar.md — Duaer ClinVar
 `,
 
 	'ensembl-vep': `---
@@ -6803,6 +7646,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Ensembl VEP\
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/ensembl.md — Duaer Ensembl
+- https://skills.duaer.com/dbsnp.md — Duaer dbSNP
 `,
 
 	'ncbi-datasets': `---
@@ -6852,6 +7701,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`NCBI Dataset
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/ensembl.md — Duaer Ensembl
 `,
 
 	'4dn': `---
@@ -6901,6 +7755,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`4DN\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/encode.md — Duaer ENCODE
+- https://skills.duaer.com/geo.md — Duaer GEO
 `,
 
 	rgd: `---
@@ -6950,6 +7809,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`RGD\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/alliance.md — Duaer Alliance
 `,
 
 	sgd: `---
@@ -6999,6 +7863,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`SGD\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/alliance.md — Duaer Alliance
 `,
 
 	nextstrain: `---
@@ -7048,6 +7917,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Nextstrain\`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/geo.md — Duaer GEO
+- https://skills.duaer.com/organisms.md — Duaer organisms
 `,
 
 	medlineplus: `---
@@ -7097,6 +7971,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`MedlinePlus\
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/mesh.md — Duaer MeSH
 `,
 
 	icd10: `---
@@ -7146,6 +8025,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`ICD-10\`), \
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/medlineplus.md — Duaer MedlinePlus
 `,
 
 	bioregistry: `---
@@ -7195,6 +8079,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Bioregistry\
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/crossrefs.md — Duaer crossrefs
+- https://skills.duaer.com/node-norm.md — Duaer NodeNorm
 `,
 
 	'bio-tools': `---
@@ -7244,6 +8133,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`bio.tools\`)
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/assays.md — Duaer assays
+- https://skills.duaer.com/dockstore.md — Duaer Dockstore
 `,
 
 	dockstore: `---
@@ -7293,6 +8187,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Dockstore\`)
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/bio-tools.md — Duaer bio.tools
+- https://skills.duaer.com/workflowhub.md — Duaer WorkflowHub
 `,
 
 	workflowhub: `---
@@ -7342,6 +8241,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`WorkflowHub\
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/dockstore.md — Duaer Dockstore
+- https://skills.duaer.com/bio-tools.md — Duaer bio.tools
 `,
 
 	doaj: `---
@@ -7391,6 +8295,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`DOAJ\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/europe-pmc.md — Duaer Europe PMC
 `,
 
 	wikidata: `---
@@ -7440,6 +8349,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Wikidata\`),
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/crossrefs.md — Duaer crossrefs
+- https://skills.duaer.com/mesh.md — Duaer MeSH
 `,
 
 	'node-norm': `---
@@ -7489,6 +8403,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`NodeNorm\`),
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/crossrefs.md — Duaer crossrefs
+- https://skills.duaer.com/name-resolver.md — Duaer NameResolver
 `,
 
 	'name-resolver': `---
@@ -7538,6 +8457,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`NameResolver
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/node-norm.md — Duaer NodeNorm
+- https://skills.duaer.com/crossrefs.md — Duaer crossrefs
 `,
 
 	gbif: `---
@@ -7587,6 +8511,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`GBIF\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/ncbi-taxon.md — Duaer NCBI Taxonomy
 `,
 
 	itis: `---
@@ -7636,6 +8565,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`ITIS\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/gbif.md — Duaer GBIF
 `,
 
 	worms: `---
@@ -7685,6 +8619,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`WoRMS\`), \`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/gbif.md — Duaer GBIF
 `,
 
 	inaturalist: `---
@@ -7734,6 +8673,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`iNaturalist\
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/gbif.md — Duaer GBIF
 `,
 
 	disprot: `---
@@ -7783,6 +8727,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`DisProt\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
 `,
 
 	lotus: `---
@@ -7832,6 +8780,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`LOTUS\`), \`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
 `,
 
 	massbank: `---
@@ -7885,6 +8837,13 @@ To work an unannotated feature step by step, follow https://skills.duaer.com/met
 Fields without a value are empty strings or left out.
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/metabolic-dark-matter.md — Duaer: annotate an unknown feature (metabolic dark matter)
+- https://skills.duaer.com/mona.md — Duaer MoNA spectra
+- https://skills.duaer.com/mass-candidates.md — Duaer mass candidates
+- https://skills.duaer.com/spectrum.md — Duaer spectrum by USI
 `,
 
 	mona: `---
@@ -7935,6 +8894,12 @@ To work an unannotated feature step by step, follow https://skills.duaer.com/met
 Fields without a value are empty strings or left out.
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/metabolic-dark-matter.md — Duaer: annotate an unknown feature (metabolic dark matter)
+- https://skills.duaer.com/massbank.md — Duaer MassBank spectra
+- https://skills.duaer.com/mass-candidates.md — Duaer mass candidates
 `,
 
 	'mass-candidates': `---
@@ -7985,6 +8950,13 @@ To work an unannotated feature step by step, follow https://skills.duaer.com/met
 Fields without a value are empty strings or left out.
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/metabolic-dark-matter.md — Duaer: annotate an unknown feature (metabolic dark matter)
+- https://skills.duaer.com/mona.md — Duaer MoNA spectra
+- https://skills.duaer.com/massbank.md — Duaer MassBank spectra
+- https://skills.duaer.com/compounds.md — Duaer compounds
 `,
 
 	spectrum: `---
@@ -8031,6 +9003,12 @@ To work an unannotated feature step by step, follow https://skills.duaer.com/met
 Fields without a value are empty strings or left out.
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/metabolic-dark-matter.md — Duaer: annotate an unknown feature (metabolic dark matter)
+- https://skills.duaer.com/massbank.md — Duaer MassBank spectra
+- https://skills.duaer.com/masst.md — Duaer MASST
 `,
 
 	masst: `---
@@ -8086,6 +9064,12 @@ To work an unannotated feature step by step, follow https://skills.duaer.com/met
 Fields without a value are empty strings or left out.
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/metabolic-dark-matter.md — Duaer: annotate an unknown feature (metabolic dark matter)
+- https://skills.duaer.com/spectrum.md — Duaer spectrum by USI
+- https://skills.duaer.com/massbank.md — Duaer MassBank spectra
 `,
 
 	lincs: `---
@@ -8135,6 +9119,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`LINCS\`), \`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/expression.md — Duaer expression
 `,
 
 	cellxgene: `---
@@ -8184,6 +9172,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`CELLxGENE\`)
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/expression.md — Duaer expression
 `,
 
 	mgrast: `---
@@ -8233,6 +9225,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`MG-RAST\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/expression.md — Duaer expression
 `,
 
 	galaxy: `---
@@ -8282,6 +9278,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Galaxy\`), \
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/bio-tools.md — Duaer bio.tools
 `,
 
 	'nf-core': `---
@@ -8331,6 +9331,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`nf-core\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/workflowhub.md — Duaer WorkflowHub
 `,
 
 	re3data: `---
@@ -8380,6 +9384,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`re3data\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/zenodo.md — Duaer Zenodo
 `,
 
 	arxiv: `---
@@ -8429,6 +9437,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`arXiv\`), \`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/preprints.md — Duaer preprints
 `,
 
 	hal: `---
@@ -8478,6 +9490,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`HAL\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
 `,
 
 	huggingface: `---
@@ -8527,6 +9543,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Hugging Face
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/bio-tools.md — Duaer bio.tools
 `,
 
 	openaire: `---
@@ -8576,6 +9596,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OpenAIRE\`),
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
 `,
 
 	'harvard-dataverse': `---
@@ -8625,6 +9649,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Harvard Data
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/zenodo.md — Duaer Zenodo
 `,
 
 	'doaj-journals': `---
@@ -8674,6 +9702,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`DOAJ Journal
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/doaj.md — Duaer DOAJ
 `,
 
 	'openalex-sources': `---
@@ -8724,6 +9756,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OpenAlex Sou
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
 `,
 
 	'openalex-funders': `---
@@ -8774,6 +9810,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OpenAlex Fun
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
 `,
 
 	'openalex-publishers': `---
@@ -8824,6 +9864,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OpenAlex Pub
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
 `,
 
 	'openalex-concepts': `---
@@ -8874,6 +9918,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OpenAlex Con
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
 `,
 
 	'device-udi': `---
@@ -8923,6 +9971,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OpenFDA Devi
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/device-events.md — Duaer Device events
 `,
 
 	'device-pma': `---
@@ -8972,6 +10024,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OpenFDA Devi
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/device-events.md — Duaer Device events
 `,
 
 	'device-recall': `---
@@ -9021,6 +10077,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OpenFDA Devi
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/device-events.md — Duaer Device events
 `,
 
 	'device-classification': `---
@@ -9070,6 +10130,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OpenFDA Devi
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/device-events.md — Duaer Device events
 `,
 
 	'animal-events': `---
@@ -9119,6 +10183,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OpenFDA Anim
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/device-events.md — Duaer Device events
 `,
 
 	'food-events': `---
@@ -9168,6 +10236,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OpenFDA Food
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/device-events.md — Duaer Device events
 `,
 
 	tobacco: `---
@@ -9217,6 +10289,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OpenFDA Toba
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/device-events.md — Duaer Device events
 `,
 
 	rxterms: `---
@@ -9266,6 +10342,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`RxTerms\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/rxnorm.md — Duaer RxNorm
 `,
 
 	'ncbi-assembly': `---
@@ -9315,6 +10395,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`NCBI Assembl
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
 `,
 
 	'ncbi-bioproject': `---
@@ -9364,6 +10448,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`NCBI BioProj
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
 `,
 
 	'ncbi-sra': `---
@@ -9413,6 +10501,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`NCBI SRA\`),
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
 `,
 
 	'ncbi-gtr': `---
@@ -9462,6 +10554,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`NCBI GTR\`),
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
 `,
 
 	'ncbi-medgen': `---
@@ -9511,6 +10607,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`NCBI MedGen\
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
 `,
 
 	'ncbi-variation': `---
@@ -9560,6 +10660,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`NCBI Variati
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/variants.md — Duaer variants
 `,
 
 	dbvar: `---
@@ -9609,6 +10713,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`dbVar\`), \`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
 `,
 
 	homologene: `---
@@ -9658,6 +10766,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`HomoloGene\`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
 `,
 
 	'gtex-eqtl': `---
@@ -9707,6 +10819,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`GTEx eQTL\`)
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/expression.md — Duaer expression
 `,
 
 	scop: `---
@@ -9756,6 +10872,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`SCOP\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/structures.md — Duaer structures
 `,
 
 	pombase: `---
@@ -9805,6 +10925,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`PomBase\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
 `,
 
 	mgi: `---
@@ -9854,6 +10978,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`MGI\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
 `,
 
 	clo: `---
@@ -9903,6 +11031,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`CLO\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 `,
 
 	ecto: `---
@@ -9952,6 +11084,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`ECTO\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 `,
 
 	ro: `---
@@ -10001,6 +11137,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`RO\`), \`tit
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 `,
 
 	fbbt: `---
@@ -10050,6 +11190,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`FBbt\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 `,
 
 	zfa: `---
@@ -10099,6 +11243,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`ZFA\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 `,
 
 	wbbt: `---
@@ -10148,6 +11296,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`WBbt\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 `,
 
 	xao: `---
@@ -10197,6 +11349,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`XAO\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 `,
 
 	envo: `---
@@ -10246,6 +11402,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`ENVO\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 `,
 
 	foodon: `---
@@ -10295,6 +11455,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`FOODON\`), \
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 `,
 
 	oae: `---
@@ -10344,6 +11508,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OAE\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 `,
 
 	ido: `---
@@ -10393,6 +11561,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`IDO\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 `,
 
 	cido: `---
@@ -10442,6 +11614,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`CIDO\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 `,
 
 	agro: `---
@@ -10491,6 +11667,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`AGRO\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 `,
 
 	po: `---
@@ -10540,6 +11720,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`PO\`), \`tit
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 `,
 
 	to: `---
@@ -10589,6 +11773,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`TO\`), \`tit
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 `,
 
 	chmo: `---
@@ -10638,6 +11826,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`CHMO\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 `,
 
 	ms: `---
@@ -10687,6 +11879,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`MS\`), \`tit
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 `,
 
 	stato: `---
@@ -10736,6 +11932,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`STATO\`), \`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 `,
 
 	duo: `---
@@ -10785,6 +11985,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`DUO\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 `,
 
 	iao: `---
@@ -10834,6 +12038,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`IAO\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 `,
 
 	sio: `---
@@ -10883,6 +12091,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`SIO\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 `,
 
 	cheminf: `---
@@ -10932,6 +12144,10 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`CHEMINF\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 `,
 
 	maxo: `---
@@ -10981,6 +12197,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`MAXO\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+- https://skills.duaer.com/mpath.md — Duaer MPATH
+- https://skills.duaer.com/obi.md — Duaer OBI
 `,
 
 	eco: `---
@@ -11030,6 +12252,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`ECO\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
+- https://skills.duaer.com/obi.md — Duaer OBI
 `,
 
 	peco: `---
@@ -11079,6 +12306,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`PECO\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/envo.md — Duaer ENVO
+- https://skills.duaer.com/po.md — Duaer PO
+- https://skills.duaer.com/to.md — Duaer TO
 `,
 
 	nbo: `---
@@ -11128,6 +12361,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`NBO\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+- https://skills.duaer.com/mp.md — Duaer MP
 `,
 
 	geno: `---
@@ -11177,6 +12415,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`GENO\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/sequence-ontology.md — Duaer Sequence Ontology
+- https://skills.duaer.com/variants.md — Duaer variants
 `,
 
 	symp: `---
@@ -11226,6 +12469,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`SYMP\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+- https://skills.duaer.com/diseases.md — Duaer diseases
 `,
 
 	upheno: `---
@@ -11275,6 +12523,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`uPheno\`), \
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+- https://skills.duaer.com/mondo.md — Duaer Mondo
 `,
 
 	fma: `---
@@ -11324,6 +12577,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`FMA\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/uberon.md — Duaer Uberon
+- https://skills.duaer.com/cell-ontology.md — Duaer Cell Ontology
 `,
 
 	loinc: `---
@@ -11373,6 +12631,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`LOINC\`), \`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/rxnorm.md — Duaer RxNorm
+- https://skills.duaer.com/icd10.md — Duaer ICD-10
 `,
 
 	enrichr: `---
@@ -11422,6 +12685,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Enrichr\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/pathways.md — Duaer pathways
 `,
 
 	unpaywall: `---
@@ -11471,6 +12739,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Unpaywall\`)
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/europe-pmc.md — Duaer Europe PMC
 `,
 
 	datacite: `---
@@ -11520,6 +12793,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`DataCite\`),
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/zenodo.md — Duaer Zenodo
+- https://skills.duaer.com/crossref.md — Duaer Crossref
 `,
 
 	cpic: `---
@@ -11569,6 +12847,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`CPIC\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/clinpgx.md — Duaer ClinPGx
+- https://skills.duaer.com/drug-gene.md — Duaer drug–gene
 `,
 
 	osf: `---
@@ -11618,6 +12901,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OSF\`), \`ti
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/zenodo.md — Duaer Zenodo
+- https://skills.duaer.com/dryad.md — Duaer Dryad
 `,
 
 	ukri: `---
@@ -11667,6 +12955,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`UKRI\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/nsf-awards.md — Duaer NSF Awards
+- https://skills.duaer.com/grants.md — Duaer grants
 `,
 
 	cellosaurus: `---
@@ -11716,6 +13009,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Cellosaurus\
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/cell-lines.md — Duaer cell lines
+- https://skills.duaer.com/clo.md — Duaer CLO
 `,
 
 	bindingdb: `---
@@ -11765,6 +13063,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`BindingDB\`)
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/targets.md — Duaer targets
+- https://skills.duaer.com/ligands.md — Duaer ligands
 `,
 
 	iedb: `---
@@ -11814,6 +13118,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`IEDB\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/assays.md — Duaer assays
 `,
 
 	rfam: `---
@@ -11863,6 +13172,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Rfam\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/rnacentral.md — Duaer RNAcentral
+- https://skills.duaer.com/genes.md — Duaer genes
 `,
 
 	checklistbank: `---
@@ -11912,6 +13226,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`ChecklistBan
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/ncbi-taxon.md — Duaer NCBI Taxonomy
+- https://skills.duaer.com/gbif.md — Duaer GBIF
 `,
 
 	togovar: `---
@@ -11961,6 +13281,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`TogoVar\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/dbsnp.md — Duaer dbSNP
+- https://skills.duaer.com/clinvar.md — Duaer ClinVar
 `,
 
 	pubmed: `---
@@ -12010,6 +13336,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`PubMed\`), \
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/europe-pmc.md — Duaer Europe PMC
+- https://skills.duaer.com/preprints.md — Duaer preprints
 `,
 
 	core: `---
@@ -12059,6 +13391,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`CORE\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/pubmed.md — Duaer PubMed
+- https://skills.duaer.com/europe-pmc.md — Duaer Europe PMC
 `,
 
 	opentree: `---
@@ -12108,6 +13446,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Open Tree\`)
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/ncbi-taxon.md — Duaer NCBI Taxonomy
+- https://skills.duaer.com/checklistbank.md — Duaer ChecklistBank
 `,
 
 	'europe-pmc-annotations': `---
@@ -12157,6 +13501,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Europe PMC A
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/europe-pmc.md — Duaer Europe PMC
+- https://skills.duaer.com/pubmed.md — Duaer PubMed
+- https://skills.duaer.com/papers.md — Duaer papers
 `,
 
 	bigg: `---
@@ -12206,6 +13556,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`BiGG\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
+- https://skills.duaer.com/reactions.md — Duaer reactions
+- https://skills.duaer.com/kegg.md — Duaer KEGG
 `,
 
 	gnomad: `---
@@ -12255,6 +13611,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`gnomAD\`), \
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/clinvar.md — Duaer ClinVar
+- https://skills.duaer.com/dbsnp.md — Duaer dbSNP
 `,
 
 	mirna: `---
@@ -12304,6 +13666,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`miRNA\`), \`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/rnacentral.md — Duaer RNAcentral
+- https://skills.duaer.com/rfam.md — Duaer Rfam
+- https://skills.duaer.com/genes.md — Duaer genes
 `,
 
 	humanmine: `---
@@ -12353,6 +13721,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`HumanMine\`)
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/monarch.md — Duaer Monarch
 `,
 
 	regulomedb: `---
@@ -12402,6 +13776,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`RegulomeDB\`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/dbsnp.md — Duaer dbSNP
+- https://skills.duaer.com/encode.md — Duaer ENCODE
 `,
 
 	civic: `---
@@ -12451,6 +13831,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`CIViC\`), \`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/clinvar.md — Duaer ClinVar
+- https://skills.duaer.com/gwas.md — Duaer GWAS
 `,
 
 	omicsdi: `---
@@ -12500,6 +13886,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`OmicsDI\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/geo.md — Duaer GEO
+- https://skills.duaer.com/pride.md — Duaer PRIDE
+- https://skills.duaer.com/expression-atlas.md — Duaer Expression Atlas
 `,
 
 	'gtex-expression': `---
@@ -12557,6 +13949,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/gtex-eqtl.md — Duaer GTEx eQTL
+- https://skills.duaer.com/expression.md — Duaer expression
+- https://skills.duaer.com/atlas.md — Duaer tissue atlas
 `,
 
 	biomodels: `---
@@ -12606,6 +14004,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`BioModels\`)
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/pathways.md — Duaer pathways
+- https://skills.duaer.com/reactions.md — Duaer reactions
+- https://skills.duaer.com/bigg.md — Duaer BiGG
 `,
 
 	'ot-drugs': `---
@@ -12655,6 +14059,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Open Targets
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/targets.md — Duaer targets
+- https://skills.duaer.com/chembl.md — Duaer ChEMBL
+- https://skills.duaer.com/drug-gene.md — Duaer drug–gene
 `,
 
 	wikipathways: `---
@@ -12704,6 +14114,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`WikiPathways
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/pathways.md — Duaer pathways
+- https://skills.duaer.com/kegg.md — Duaer KEGG
 `,
 
 	panelapp: `---
@@ -12753,6 +14168,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`PanelApp\`),
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/clinvar.md — Duaer ClinVar
+- https://skills.duaer.com/civic.md — Duaer CIViC
 `,
 
 	goa: `---
@@ -12809,6 +14230,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/genes.md — Duaer genes
 `,
 
 	'pubchem-assay': `---
@@ -12865,6 +14292,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/assays.md — Duaer assays
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/chembl.md — Duaer ChEMBL
 `,
 
 	massive: `---
@@ -12914,6 +14347,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`MassIVE\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/pride.md — Duaer PRIDE
+- https://skills.duaer.com/proteomexchange.md — Duaer ProteomeXchange
+- https://skills.duaer.com/proteins.md — Duaer proteins
 `,
 
 	interpro: `---
@@ -12963,6 +14402,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`InterPro\`),
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/pfam.md — Duaer Pfam
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/domains.md — Duaer domains
 `,
 
 	rhea: `---
@@ -13012,6 +14457,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Rhea\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/reactions.md — Duaer reactions
+- https://skills.duaer.com/bigg.md — Duaer BiGG
+- https://skills.duaer.com/kegg.md — Duaer KEGG
 `,
 
 	prosite: `---
@@ -13061,6 +14512,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`PROSITE\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/pfam.md — Duaer Pfam
+- https://skills.duaer.com/interpro.md — Duaer InterPro
 `,
 
 	dgidb: `---
@@ -13110,6 +14567,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`DGIdb\`), \`
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/ot-drugs.md — Duaer Open Targets drugs
+- https://skills.duaer.com/drug-gene.md — Duaer drug–gene
+- https://skills.duaer.com/chembl.md — Duaer ChEMBL
 `,
 
 	mutalyzer: `---
@@ -13158,6 +14621,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Mutalyzer\`)
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/clinvar.md — Duaer ClinVar
+- https://skills.duaer.com/dbsnp.md — Duaer dbSNP
 `,
 
 	'variant-validator': `---
@@ -13206,6 +14675,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`VariantValid
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/mutalyzer.md — Duaer Mutalyzer
+- https://skills.duaer.com/clinvar.md — Duaer ClinVar
 `,
 
 	metabolights: `---
@@ -13255,6 +14730,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`MetaboLights
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/metabolomics.md — Duaer Metabolomics
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
+- https://skills.duaer.com/omicsdi.md — Duaer OmicsDI
 `,
 
 	modelseed: `---
@@ -13304,6 +14785,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`ModelSEED\`)
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/bigg.md — Duaer BiGG
+- https://skills.duaer.com/reactions.md — Duaer reactions
+- https://skills.duaer.com/rhea.md — Duaer Rhea
 `,
 
 	'usda-fdc': `---
@@ -13353,6 +14840,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`USDA FoodDat
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
+- https://skills.duaer.com/lipid-maps.md — Duaer Lipid Maps
+- https://skills.duaer.com/compounds.md — Duaer compounds
 `,
 
 	alphafill: `---
@@ -13402,6 +14895,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`AlphaFill\`)
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/alphafold.md — Duaer AlphaFold
+- https://skills.duaer.com/structures.md — Duaer structures
+- https://skills.duaer.com/proteins.md — Duaer proteins
 `,
 
 	pdbe: `---
@@ -13451,6 +14950,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`PDBe\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/structures.md — Duaer structures
+- https://skills.duaer.com/alphafold.md — Duaer AlphaFold
+- https://skills.duaer.com/emdb.md — Duaer EMDB
 `,
 
 	metacyc: `---
@@ -13500,6 +15005,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`MetaCyc\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/pathways.md — Duaer pathways
+- https://skills.duaer.com/wikipathways.md — Duaer WikiPathways
 `,
 
 	'string-enrichment': `---
@@ -13549,6 +15059,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`STRING enric
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/interactions.md — Duaer interactions
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
 `,
 
 	foldseek: `---
@@ -13598,6 +15114,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Foldseek\`),
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/structures.md — Duaer structures
+- https://skills.duaer.com/alphafold.md — Duaer AlphaFold
+- https://skills.duaer.com/pdbe.md — Duaer PDBe
 `,
 
 	'ensembl-homology': `---
@@ -13647,6 +15169,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Ensembl homo
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/orthologs.md — Duaer orthologs
+- https://skills.duaer.com/ensembl.md — Duaer Ensembl
+- https://skills.duaer.com/genes.md — Duaer genes
 `,
 
 	ols: `---
@@ -13696,6 +15224,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`EBI OLS\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
+- https://skills.duaer.com/mesh.md — Duaer MeSH
+- https://skills.duaer.com/mondo.md — Duaer Mondo
 `,
 
 	refmet: `---
@@ -13745,6 +15279,13 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`RefMet\`), \
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
+- https://skills.duaer.com/metabolights.md — Duaer MetaboLights
+- https://skills.duaer.com/chebi.md — Duaer ChEBI
+- https://skills.duaer.com/metabolic-dark-matter.md — Duaer: annotate an unknown feature (metabolic dark matter)
 `,
 
 	wormbase: `---
@@ -13794,6 +15335,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`WormBase\`),
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/alliance.md — Duaer Alliance
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/orthologs.md — Duaer orthologs
 `,
 
 	flybase: `---
@@ -13843,6 +15390,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`FlyBase\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/alliance.md — Duaer Alliance
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/orthologs.md — Duaer orthologs
 `,
 
 	zfin: `---
@@ -13892,6 +15445,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`ZFIN\`), \`t
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/alliance.md — Duaer Alliance
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/orthologs.md — Duaer orthologs
 `,
 
 	biorxiv: `---
@@ -13941,6 +15500,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`bioRxiv\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/preprints.md — Duaer preprints
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/europe-pmc.md — Duaer Europe PMC
 `,
 
 	medrxiv: `---
@@ -13990,6 +15555,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`medRxiv\`), 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/preprints.md — Duaer preprints
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/europe-pmc.md — Duaer Europe PMC
 `,
 
 	mirbase: `---
@@ -14039,6 +15610,12 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`miRBase via 
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/rnacentral.md — Duaer RNAcentral
+- https://skills.duaer.com/mirna.md — Duaer miRNA
+- https://skills.duaer.com/genes.md — Duaer genes
 `,
 
 	'open-food-facts': `---
@@ -14088,5 +15665,11 @@ The response is \`{ "items": [...] }\`. Each item has \`source\` (\`Open Food Fa
 ${blank}
 
 ${credits}
+
+## Related
+
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
+- https://skills.duaer.com/usda-fdc.md — Duaer USDA FoodData Central
+- https://skills.duaer.com/compounds.md — Duaer compounds
 `,
 };
