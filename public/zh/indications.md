@@ -48,6 +48,8 @@ The response is `{ "items": [...] }`. Each item has `source` (`ChEMBL`), `title`
 - `indicationId`, `moleculeChemblId`, `efoId`, `efoTerm`, `meshId`, `meshHeading` — text.
 - `maxPhase` — number.
 
+Reuse `moleculeChemblId` / names when searching compounds, activities, or mechanisms: https://skills.duaer.com/mechanisms.md. Reuse `efoTerm` / `meshHeading` when searching diseases or trials.
+
 Fields without a value are empty strings.
 
 ## Credits
@@ -58,6 +60,13 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/activities.md — Duaer activities
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/mechanisms.md — Duaer mechanisms
 
 ## 相关技能
 

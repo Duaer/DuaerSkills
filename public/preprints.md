@@ -64,6 +64,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/genes.md — Duaer genes
+
 ## Related skills
 
 - [Search papers in Duaer](https://skills.duaer.com/papers.md)

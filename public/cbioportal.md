@@ -59,6 +59,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/gdc.md — Duaer GDC
+- https://skills.duaer.com/gwas.md — Duaer GWAS
+- https://skills.duaer.com/variants.md — Duaer variants
+
 ## Related skills
 
 - [Search GDC in Duaer](https://skills.duaer.com/gdc.md)

@@ -1,0 +1,12 @@
+{
+  "status": "accepted",
+  "spec": "296-skill-text-sync",
+  "verification": [
+    "node scripts/render.mjs rendered 846 pages",
+    "415 Data skills: each section once, including Related",
+    "0 links to missing skills",
+    "281 texts byte-identical to DuaerMain dataMarket (fix/skill-text-sync 8c0cfcae6)",
+    "281 texts verbatim on DuaerDoc en and zh pages (fix/skill-text-sync)"
+  ],
+  "notes": "Publish after DuaerDoc so both sites change together. The market changes when DuaerMain ships."
+}

@@ -71,6 +71,8 @@ The response is `{ "items": [...] }`. Each item has `source` (`UniProt`), `title
 - `reviewed` — true for Swiss-Prot entries.
 - `disease`, `location` — linked diseases and subcellular locations.
 
+For interaction partners of a gene or protein, use https://skills.duaer.com/interactions.md.
+
 Fields without a value are empty strings.
 
 ## Credits
@@ -80,6 +82,17 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/structures.md — Duaer structures
+- https://skills.duaer.com/pathways.md — Duaer pathways
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/interactions.md — Duaer interactions
+- https://skills.duaer.com/atlas.md — Duaer tissue atlas
+- https://skills.duaer.com/alphafold.md — Duaer AlphaFold
+- https://skills.duaer.com/complexes.md — Duaer complexes
 
 ## 相关技能
 

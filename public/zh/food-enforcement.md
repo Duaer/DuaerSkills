@@ -58,6 +58,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/drug-recalls.md — Duaer drug recalls
+- https://skills.duaer.com/ndc.md — Duaer NDC
+
 ## 相关技能
 
 - [在 Duaer 里检索药品召回](https://skills.duaer.com/zh/drug-recalls.md)

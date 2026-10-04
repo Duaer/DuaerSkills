@@ -51,6 +51,8 @@ The response is `{ "items": [...] }`. Each item has `source` (`GEO`), `title`, `
 - `sampleCount` — number.
 - `pubDate`, `pubmedId` — text.
 
+Reuse gene symbols from related studies when searching expression: https://skills.duaer.com/expression.md.
+
 Fields without a value are empty strings.
 
 ## Credits
@@ -60,6 +62,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/expression.md — Duaer expression
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/genes.md — Duaer genes
 
 ## Related skills
 

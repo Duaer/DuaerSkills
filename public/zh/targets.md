@@ -49,6 +49,8 @@ The response is `{ "items": [...] }`. Each item has `source` (`Open Targets`), `
 - `gene`, `ensemblId`, `disease`, `diseaseId` — text.
 - `score` — number.
 
+Reuse `gene` when searching proteins, genes, expression, interactions, or orthologs. Reuse `disease` when searching diseases or proteins.
+
 Fields without a value are empty strings.
 
 ## Credits
@@ -59,6 +61,17 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/expression.md — Duaer expression
+- https://skills.duaer.com/orthologs.md — Duaer orthologs
+- https://skills.duaer.com/activities.md — Duaer activities
+- https://skills.duaer.com/assays.md — Duaer assays
+- https://skills.duaer.com/drug-gene.md — Duaer drug–gene
 
 ## 相关技能
 

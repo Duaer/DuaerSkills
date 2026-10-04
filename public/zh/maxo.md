@@ -58,6 +58,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+- https://skills.duaer.com/mpath.md — Duaer MPATH
+- https://skills.duaer.com/obi.md — Duaer OBI
+
 ## 相关技能
 
 - [在 Duaer 里检索表型](https://skills.duaer.com/zh/phenotypes.md)

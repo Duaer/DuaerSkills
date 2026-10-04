@@ -53,6 +53,8 @@ The response is `{ "items": [...] }`. Each item has `source` (`Reactome`), `titl
 
 Use `pathwayId` as `pathway` when searching proteins. Reuse `pathwayId` in `id` for an exact lookup.
 Open `browserUrl` for the interactive Reactome diagram, or `diagramUrl` for a PNG export.
+Open `browserUrl` for the interactive Reactome diagram, or `diagramUrl` for a PNG export. Words and name searches are enriched with Reactome detail (doi, GO, figure, dates, diagram flags), same as an id lookup.
+Words and name searches are enriched with Reactome detail, same as an id lookup.
 
 Fields without a value are empty strings.
 
@@ -63,6 +65,13 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/reactions.md — Duaer reactions
 
 ## Related skills
 

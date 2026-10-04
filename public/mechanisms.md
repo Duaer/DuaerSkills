@@ -49,6 +49,8 @@ The response is `{ "items": [...] }`. Each item has `source` (`ChEMBL`), `title`
 - `maxPhase` — number.
 - `directInteraction` — true or false.
 
+Reuse `moleculeChemblId` / names when searching compounds, activities, or indications. Reuse `targetChemblId` when searching activities or targets.
+
 Fields without a value are empty strings.
 
 ## Credits
@@ -59,6 +61,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/activities.md — Duaer activities
+- https://skills.duaer.com/indications.md — Duaer indications
 
 ## Related skills
 

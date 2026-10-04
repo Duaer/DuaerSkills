@@ -58,6 +58,13 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/keywords.md — Duaer keywords
+- https://skills.duaer.com/rxnorm.md — Duaer RxNorm
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/trials.md — Duaer clinical trials
+
 ## 相关技能
 
 - [在 Duaer 里检索关键词](https://skills.duaer.com/zh/keywords.md)

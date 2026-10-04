@@ -1006,6 +1006,16 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/trials.md — Duaer clinical trials
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/preprints.md — Duaer preprints
+- https://skills.duaer.com/grants.md — Duaer grants
+- https://skills.duaer.com/patents.md — Duaer patents
+- https://skills.duaer.com/life-research-brief.md — Digital employee: Life research brief
+
 ---
 name: duaer-proteins
 description: >-
@@ -1077,6 +1087,8 @@ The response is `{ "items": [...] }`. Each item has `source` (`UniProt`), `title
 - `reviewed` — true for Swiss-Prot entries.
 - `disease`, `location` — linked diseases and subcellular locations.
 
+For interaction partners of a gene or protein, use https://skills.duaer.com/interactions.md.
+
 Fields without a value are empty strings.
 
 ## Credits
@@ -1086,6 +1098,17 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/structures.md — Duaer structures
+- https://skills.duaer.com/pathways.md — Duaer pathways
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/interactions.md — Duaer interactions
+- https://skills.duaer.com/atlas.md — Duaer tissue atlas
+- https://skills.duaer.com/alphafold.md — Duaer AlphaFold
+- https://skills.duaer.com/complexes.md — Duaer complexes
 
 ---
 name: duaer-trials
@@ -1163,6 +1186,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/papers.md — Duaer papers
+
 ---
 name: duaer-compounds
 description: >-
@@ -1224,6 +1253,8 @@ The response is `{ "items": [...] }`. Each item has `source` (`PubChem`), `title
 - `hbondDonors`, `hbondAcceptors`, `rotatableBonds` — counts used in drug-likeness rules.
 - `complexity`, `charge` — structural complexity and formal charge.
 
+Reuse a compound name as `molecule` when searching activities: https://skills.duaer.com/activities.md.
+
 Fields without a value are empty strings.
 
 ## Credits
@@ -1234,6 +1265,22 @@ Wrong input, a missing identifier, or more than one identifier returns 400 with 
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/trials.md — Duaer clinical trials
+- https://skills.duaer.com/structures.md — Duaer structures
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/activities.md — Duaer activities
+- https://skills.duaer.com/indications.md — Duaer indications
+- https://skills.duaer.com/mechanisms.md — Duaer mechanisms
+- https://skills.duaer.com/assays.md — Duaer assays
+- https://skills.duaer.com/patents.md — Duaer patents
+- https://skills.duaer.com/drug-gene.md — Duaer drug–gene
+- https://skills.duaer.com/reactions.md — Duaer reactions
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
+- https://skills.duaer.com/drug-labels.md — Duaer drug labels
+- https://skills.duaer.com/adverse-events.md — Duaer adverse events
 
 ---
 name: duaer-structures
@@ -1299,6 +1346,13 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/alphafold.md — Duaer AlphaFold
+
 ---
 name: duaer-diseases
 description: >-
@@ -1361,6 +1415,15 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/trials.md — Duaer clinical trials
+- https://skills.duaer.com/indications.md — Duaer indications
+- https://skills.duaer.com/cell-lines.md — Duaer cell lines
 
 ---
 name: duaer-organisms
@@ -1425,6 +1488,13 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/geo.md — Duaer GEO
+- https://skills.duaer.com/cell-lines.md — Duaer cell lines
+
 ---
 name: duaer-keywords
 description: >-
@@ -1486,6 +1556,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
 
 ---
 name: duaer-locations
@@ -1549,6 +1624,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/genes.md — Duaer genes
+
 ---
 name: duaer-gene-ontology
 description: >-
@@ -1611,6 +1691,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/pathways.md — Duaer pathways
+
 ---
 name: duaer-pathways
 description: >-
@@ -1664,6 +1750,8 @@ The response is `{ "items": [...] }`. Each item has `source` (`Reactome`), `titl
 
 Use `pathwayId` as `pathway` when searching proteins. Reuse `pathwayId` in `id` for an exact lookup.
 Open `browserUrl` for the interactive Reactome diagram, or `diagramUrl` for a PNG export.
+Open `browserUrl` for the interactive Reactome diagram, or `diagramUrl` for a PNG export. Words and name searches are enriched with Reactome detail (doi, GO, figure, dates, diagram flags), same as an id lookup.
+Words and name searches are enriched with Reactome detail, same as an id lookup.
 
 Fields without a value are empty strings.
 
@@ -1674,6 +1762,13 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/reactions.md — Duaer reactions
 
 ---
 name: duaer-genes
@@ -1738,6 +1833,8 @@ The response is `{ "items": [...] }`. Each item has `source` (`MyGene`), `title`
 
 Use `symbol` as `gene` in https://skills.duaer.com/proteins.md and https://skills.duaer.com/variants.md.
 
+For tissue expression, use https://skills.duaer.com/expression.md.
+
 Fields without a value are empty strings.
 
 ## Credits
@@ -1747,6 +1844,18 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/pathways.md — Duaer pathways
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
+- https://skills.duaer.com/expression.md — Duaer expression
+- https://skills.duaer.com/atlas.md — Duaer tissue atlas
+- https://skills.duaer.com/geo.md — Duaer GEO
+- https://skills.duaer.com/drug-gene.md — Duaer drug–gene
+- https://skills.duaer.com/life-research-brief.md — Digital employee: Life research brief
 
 ---
 name: duaer-variants
@@ -1818,6 +1927,13 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/life-research-brief.md — Digital employee: Life research brief
+
 ---
 name: duaer-domains
 description: >-
@@ -1878,6 +1994,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
+- https://skills.duaer.com/pathways.md — Duaer pathways
 
 ---
 name: duaer-preprints
@@ -1943,6 +2065,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/genes.md — Duaer genes
+
 ---
 name: duaer-grants
 description: >-
@@ -2007,6 +2134,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/preprints.md — Duaer preprints
+
 ---
 name: duaer-interactions
 description: >-
@@ -2057,6 +2189,8 @@ The response is `{ "items": [...] }`. Each item has `source` (`STRING`), `title`
 - `proteinA`, `proteinB`, `stringIdA`, `stringIdB`, `partner`, `partnerStringId` — text.
 - `score`, `neighborhood`, `fusion`, `cooccurrence`, `coexpression`, `experimental`, `database`, `textmining`, `taxId` — number.
 
+Reuse `partner` as `gene` when searching proteins or expression, or as `protein` for further interaction partners.
+
 Fields without a value are empty strings.
 
 ## Credits
@@ -2066,6 +2200,14 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/expression.md — Duaer expression
+- https://skills.duaer.com/complexes.md — Duaer complexes
 
 ---
 name: duaer-expression
@@ -2118,6 +2260,8 @@ The response is `{ "items": [...] }`. Each item has `source` (`GTEx`), `title`, 
 - `median` — number.
 - `unit`, `ontologyId`, `dataset` — text.
 
+Reuse `gene` when searching proteins or genes. Reuse `gencodeId` in `gencodeId` for an exact expression lookup. For gene–disease associations, use https://skills.duaer.com/targets.md. For HPA tissue enrichment, use https://skills.duaer.com/atlas.md.
+
 Fields without a value are empty strings.
 
 ## Credits
@@ -2128,6 +2272,15 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/interactions.md — Duaer interactions
+- https://skills.duaer.com/targets.md — Duaer targets
+- https://skills.duaer.com/atlas.md — Duaer tissue atlas
+- https://skills.duaer.com/geo.md — Duaer GEO
 
 ---
 name: duaer-targets
@@ -2178,6 +2331,8 @@ The response is `{ "items": [...] }`. Each item has `source` (`Open Targets`), `
 - `gene`, `ensemblId`, `disease`, `diseaseId` — text.
 - `score` — number.
 
+Reuse `gene` when searching proteins, genes, expression, interactions, or orthologs. Reuse `disease` when searching diseases or proteins.
+
 Fields without a value are empty strings.
 
 ## Credits
@@ -2188,6 +2343,17 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/expression.md — Duaer expression
+- https://skills.duaer.com/orthologs.md — Duaer orthologs
+- https://skills.duaer.com/activities.md — Duaer activities
+- https://skills.duaer.com/assays.md — Duaer assays
+- https://skills.duaer.com/drug-gene.md — Duaer drug–gene
 
 ---
 name: duaer-orthologs
@@ -2243,6 +2409,8 @@ The response is `{ "items": [...] }`. Each item has `source` (`MyGene`), `title`
 - `queryGene` — text.
 - `queryTaxId` — number.
 
+Reuse `gene` when searching proteins, genes, expression, or targets.
+
 Fields without a value are empty strings.
 
 ## Credits
@@ -2253,6 +2421,13 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/targets.md — Duaer targets
 
 ---
 name: duaer-activities
@@ -2303,6 +2478,8 @@ The response is `{ "items": [...] }`. Each item has `source` (`ChEMBL`), `title`
 - `activityId`, `moleculeChemblId`, `moleculeName`, `targetChemblId`, `targetName`, `targetOrganism`, `standardType`, `standardRelation`, `standardValue`, `standardUnits`, `pchemblValue`, `assayChemblId`, `assayDescription`, `assayType` — text.
 - `documentYear` — number.
 
+Reuse `moleculeChemblId` / names when searching compounds or indications: https://skills.duaer.com/indications.md. Reuse `targetChemblId` / gene symbols when searching targets or genes.
+
 Fields without a value are empty strings.
 
 ## Credits
@@ -2313,6 +2490,15 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/targets.md — Duaer targets
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/indications.md — Duaer indications
+- https://skills.duaer.com/mechanisms.md — Duaer mechanisms
+- https://skills.duaer.com/assays.md — Duaer assays
 
 ---
 name: duaer-atlas
@@ -2364,6 +2550,8 @@ The response is `{ "items": [...] }`. Each item has `source` (`HPA`), `title`, `
 - `nTPM` — number.
 - `specificity`, `distribution`, `proteinClasses`, `secretomeLocation` — text.
 
+Reuse `gene` when searching proteins, genes, expression, or targets. For GTEx median TPM across tissues, use https://skills.duaer.com/expression.md. For GEO experiment series, use https://skills.duaer.com/geo.md.
+
 Fields without a value are empty strings.
 
 ## Credits
@@ -2374,6 +2562,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/expression.md — Duaer expression
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/proteins.md — Duaer proteins
 
 ---
 name: duaer-indications
@@ -2423,6 +2617,8 @@ The response is `{ "items": [...] }`. Each item has `source` (`ChEMBL`), `title`
 - `indicationId`, `moleculeChemblId`, `efoId`, `efoTerm`, `meshId`, `meshHeading` — text.
 - `maxPhase` — number.
 
+Reuse `moleculeChemblId` / names when searching compounds, activities, or mechanisms: https://skills.duaer.com/mechanisms.md. Reuse `efoTerm` / `meshHeading` when searching diseases or trials.
+
 Fields without a value are empty strings.
 
 ## Credits
@@ -2433,6 +2629,13 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/activities.md — Duaer activities
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/mechanisms.md — Duaer mechanisms
 
 ---
 name: duaer-mechanisms
@@ -2483,6 +2686,8 @@ The response is `{ "items": [...] }`. Each item has `source` (`ChEMBL`), `title`
 - `maxPhase` — number.
 - `directInteraction` — true or false.
 
+Reuse `moleculeChemblId` / names when searching compounds, activities, or indications. Reuse `targetChemblId` when searching activities or targets.
+
 Fields without a value are empty strings.
 
 ## Credits
@@ -2493,6 +2698,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/activities.md — Duaer activities
+- https://skills.duaer.com/indications.md — Duaer indications
 
 ---
 name: duaer-geo
@@ -2545,6 +2756,8 @@ The response is `{ "items": [...] }`. Each item has `source` (`GEO`), `title`, `
 - `sampleCount` — number.
 - `pubDate`, `pubmedId` — text.
 
+Reuse gene symbols from related studies when searching expression: https://skills.duaer.com/expression.md.
+
 Fields without a value are empty strings.
 
 ## Credits
@@ -2554,6 +2767,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/expression.md — Duaer expression
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/genes.md — Duaer genes
 
 ---
 name: duaer-assays
@@ -2606,6 +2825,8 @@ The response is `{ "items": [...] }`. Each item has `source` (`ChEMBL`), `title`
 - `confidenceScore` — number.
 - `baoLabel`, `documentChemblId` — text.
 
+Reuse `assayChemblId` / `targetChemblId` when searching activities: https://skills.duaer.com/activities.md.
+
 Fields without a value are empty strings.
 
 ## Credits
@@ -2615,6 +2836,13 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/activities.md — Duaer activities
+- https://skills.duaer.com/targets.md — Duaer targets
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/patents.md — Duaer patents
 
 ---
 name: duaer-patents
@@ -2674,6 +2902,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/assays.md — Duaer assays
 
 ---
 name: duaer-alphafold
@@ -2736,6 +2970,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/structures.md — Duaer structures
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/genes.md — Duaer genes
+
 ---
 name: duaer-cell-lines
 description: >-
@@ -2794,6 +3034,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/assays.md — Duaer assays
 
 ---
 name: duaer-drug-gene
@@ -2858,6 +3104,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/targets.md — Duaer targets
+
 ---
 name: duaer-reactions
 description: >-
@@ -2915,6 +3167,13 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/pathways.md — Duaer pathways
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
 
 ---
 name: duaer-complexes
@@ -2977,6 +3236,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/interactions.md — Duaer interactions
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/organisms.md — Duaer organisms
+
 ---
 name: duaer-metabolites
 description: >-
@@ -3034,6 +3299,14 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/reactions.md — Duaer reactions
+- https://skills.duaer.com/pathways.md — Duaer pathways
+- https://skills.duaer.com/drug-labels.md — Duaer drug labels
+- https://skills.duaer.com/metabolic-dark-matter.md — Duaer: annotate an unknown feature (metabolic dark matter)
 
 ---
 name: duaer-drug-labels
@@ -3094,6 +3367,14 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/indications.md — Duaer indications
+- https://skills.duaer.com/drug-gene.md — Duaer drug–gene
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
+- https://skills.duaer.com/adverse-events.md — Duaer adverse events
+
 ---
 name: duaer-adverse-events
 description: >-
@@ -3152,6 +3433,14 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/drug-labels.md — Duaer drug labels
+- https://skills.duaer.com/trials.md — Duaer clinical trials
+- https://skills.duaer.com/indications.md — Duaer indications
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/gwas.md — Duaer GWAS
 
 ---
 name: duaer-gwas
@@ -3213,6 +3502,13 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/adverse-events.md — Duaer adverse events
+
 ---
 name: duaer-rxnorm
 description: >-
@@ -3270,6 +3566,13 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/drug-labels.md — Duaer drug labels
+- https://skills.duaer.com/indications.md — Duaer indications
+- https://skills.duaer.com/gwas.md — Duaer GWAS
 
 ---
 name: duaer-mesh
@@ -3329,6 +3632,13 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/keywords.md — Duaer keywords
+- https://skills.duaer.com/rxnorm.md — Duaer RxNorm
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/trials.md — Duaer clinical trials
+
 ---
 name: duaer-phenotypes
 description: >-
@@ -3387,6 +3697,13 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/mesh.md — Duaer MeSH
+- https://skills.duaer.com/trials.md — Duaer clinical trials
+- https://skills.duaer.com/adverse-events.md — Duaer adverse events
+
 ---
 name: duaer-crossrefs
 description: >-
@@ -3443,6 +3760,13 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
+- https://skills.duaer.com/drug-labels.md — Duaer drug labels
+- https://skills.duaer.com/indications.md — Duaer indications
 
 ---
 name: duaer-drug-recalls
@@ -3503,6 +3827,13 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/adverse-events.md — Duaer adverse events
+- https://skills.duaer.com/drug-labels.md — Duaer drug labels
+- https://skills.duaer.com/rxnorm.md — Duaer RxNorm
+- https://skills.duaer.com/compounds.md — Duaer compounds
+
 ---
 name: duaer-ligands
 description: >-
@@ -3561,6 +3892,13 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/structures.md — Duaer structures
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/crossrefs.md — Duaer crossrefs
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
+
 ---
 name: duaer-chembl
 description: >-
@@ -3618,6 +3956,13 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/ligands.md — Duaer ligands
+- https://skills.duaer.com/crossrefs.md — Duaer crossrefs
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
 
 ---
 name: duaer-ensembl
@@ -3678,6 +4023,13 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/orthologs.md — Duaer orthologs
+
 ---
 name: duaer-kegg
 description: >-
@@ -3736,6 +4088,13 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/pathways.md — Duaer pathways
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
 
 ---
 name: duaer-monarch
@@ -3796,6 +4155,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+- https://skills.duaer.com/genes.md — Duaer genes
+
 ---
 name: duaer-hgnc
 description: >-
@@ -3853,6 +4218,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/ensembl.md — Duaer Ensembl
+- https://skills.duaer.com/proteins.md — Duaer proteins
 
 ---
 name: duaer-pride
@@ -3912,6 +4283,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/geo.md — Duaer GEO
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/expression.md — Duaer expression
+
 ---
 name: duaer-uberon
 description: >-
@@ -3969,6 +4346,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/locations.md — Duaer locations
+- https://skills.duaer.com/atlas.md — Duaer tissue atlas
+- https://skills.duaer.com/organisms.md — Duaer organisms
 
 ---
 name: duaer-biostudies
@@ -4028,6 +4411,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/geo.md — Duaer GEO
+- https://skills.duaer.com/pride.md — Duaer PRIDE
+- https://skills.duaer.com/expression.md — Duaer expression
+
 ---
 name: duaer-orphanet
 description: >-
@@ -4086,6 +4475,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/monarch.md — Duaer Monarch
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+
 ---
 name: duaer-efo
 description: >-
@@ -4143,6 +4538,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/gwas.md — Duaer GWAS
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+- https://skills.duaer.com/mesh.md — Duaer MeSH
 
 ---
 name: duaer-rnacentral
@@ -4204,6 +4605,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/ensembl.md — Duaer Ensembl
+- https://skills.duaer.com/hgnc.md — Duaer HGNC
+
 ---
 name: duaer-mondo
 description: >-
@@ -4261,6 +4668,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/orphanet.md — Duaer Orphanet
+- https://skills.duaer.com/monarch.md — Duaer Monarch
 
 ---
 name: duaer-cell-ontology
@@ -4320,6 +4733,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/cell-lines.md — Duaer cell lines
+- https://skills.duaer.com/uberon.md — Duaer Uberon
+- https://skills.duaer.com/atlas.md — Duaer tissue atlas
+
 ---
 name: duaer-mp
 description: >-
@@ -4377,6 +4796,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+- https://skills.duaer.com/monarch.md — Duaer Monarch
+- https://skills.duaer.com/gwas.md — Duaer GWAS
 
 ---
 name: duaer-mydisease
@@ -4436,6 +4861,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/mondo.md — Duaer Mondo
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/orphanet.md — Duaer Orphanet
+
 ---
 name: duaer-metabolomics
 description: >-
@@ -4494,6 +4925,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
+- https://skills.duaer.com/biostudies.md — Duaer BioStudies
+- https://skills.duaer.com/pride.md — Duaer PRIDE
+
 ---
 name: duaer-intact
 description: >-
@@ -4551,6 +4988,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/interactions.md — Duaer interactions
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/complexes.md — Duaer complexes
 
 ---
 name: duaer-biosamples
@@ -4612,6 +5055,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/geo.md — Duaer GEO
+- https://skills.duaer.com/biostudies.md — Duaer BioStudies
+- https://skills.duaer.com/cell-lines.md — Duaer cell lines
+
 ---
 name: duaer-encode
 description: >-
@@ -4669,6 +5118,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/geo.md — Duaer GEO
+- https://skills.duaer.com/expression.md — Duaer expression
+- https://skills.duaer.com/jaspar.md — Duaer JASPAR
 
 ---
 name: duaer-pathway-commons
@@ -4728,6 +5183,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/pathways.md — Duaer pathways
+- https://skills.duaer.com/interactions.md — Duaer interactions
+- https://skills.duaer.com/kegg.md — Duaer KEGG
+
 ---
 name: duaer-alliance
 description: >-
@@ -4785,6 +5246,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/orthologs.md — Duaer orthologs
+- https://skills.duaer.com/hgnc.md — Duaer HGNC
 
 ---
 name: duaer-clinvar
@@ -4844,6 +5311,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/dbsnp.md — Duaer dbSNP
+- https://skills.duaer.com/gwas.md — Duaer GWAS
+
 ---
 name: duaer-dbsnp
 description: >-
@@ -4902,6 +5375,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/clinvar.md — Duaer ClinVar
+- https://skills.duaer.com/gwas.md — Duaer GWAS
+
 ---
 name: duaer-jaspar
 description: >-
@@ -4959,6 +5438,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/encode.md — Duaer ENCODE
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
 
 ---
 name: duaer-cbioportal
@@ -5019,6 +5504,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/gdc.md — Duaer GDC
+- https://skills.duaer.com/gwas.md — Duaer GWAS
+- https://skills.duaer.com/variants.md — Duaer variants
+
 ---
 name: duaer-gdc
 description: >-
@@ -5076,6 +5567,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/cbioportal.md — Duaer cBioPortal
+- https://skills.duaer.com/gwas.md — Duaer GWAS
+- https://skills.duaer.com/trials.md — Duaer clinical trials
 
 ---
 name: duaer-expression-atlas
@@ -5136,6 +5633,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/expression.md — Duaer expression
+- https://skills.duaer.com/geo.md — Duaer GEO
+- https://skills.duaer.com/single-cell-atlas.md — Duaer Single Cell Atlas
+
 ---
 name: duaer-single-cell-atlas
 description: >-
@@ -5195,6 +5698,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/expression-atlas.md — Duaer Expression Atlas
+- https://skills.duaer.com/expression.md — Duaer expression
+- https://skills.duaer.com/cell-ontology.md — Duaer Cell Ontology
+
 ---
 name: duaer-ndc
 description: >-
@@ -5252,6 +5761,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/rxnorm.md — Duaer RxNorm
+- https://skills.duaer.com/drug-labels.md — Duaer drug labels
+- https://skills.duaer.com/adverse-events.md — Duaer adverse events
 
 ---
 name: duaer-device-events
@@ -5311,6 +5826,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/adverse-events.md — Duaer adverse events
+- https://skills.duaer.com/ndc.md — Duaer NDC
+- https://skills.duaer.com/drug-recalls.md — Duaer drug recalls
+
 ---
 name: duaer-sequence-ontology
 description: >-
@@ -5368,6 +5889,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
+- https://skills.duaer.com/ensembl.md — Duaer Ensembl
+- https://skills.duaer.com/rnacentral.md — Duaer RNAcentral
 
 ---
 name: duaer-doid
@@ -5427,6 +5954,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/mondo.md — Duaer Mondo
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/orphanet.md — Duaer Orphanet
+
 ---
 name: duaer-ncbi-taxon
 description: >-
@@ -5484,6 +6017,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/alliance.md — Duaer Alliance
+- https://skills.duaer.com/uberon.md — Duaer Uberon
 
 ---
 name: duaer-glygen
@@ -5546,6 +6085,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/reactions.md — Duaer reactions
+
 ---
 name: duaer-chebi
 description: >-
@@ -5603,6 +6148,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/chembl.md — Duaer ChEMBL
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
 
 ---
 name: duaer-ncit
@@ -5662,6 +6213,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/mondo.md — Duaer Mondo
+- https://skills.duaer.com/doid.md — Duaer DOID
+- https://skills.duaer.com/orphanet.md — Duaer Orphanet
+
 ---
 name: duaer-pfam
 description: >-
@@ -5720,6 +6277,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/domains.md — Duaer domains
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
+
 ---
 name: duaer-emdb
 description: >-
@@ -5777,6 +6340,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/structures.md — Duaer structures
+- https://skills.duaer.com/alphafold.md — Duaer AlphaFold
+- https://skills.duaer.com/pride.md — Duaer PRIDE
 
 ---
 name: duaer-uniparc
@@ -5838,6 +6407,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/pfam.md — Duaer Pfam
+- https://skills.duaer.com/domains.md — Duaer domains
+
 ---
 name: duaer-europe-pmc
 description: >-
@@ -5895,6 +6470,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/preprints.md — Duaer preprints
+- https://skills.duaer.com/crossref.md — Duaer Crossref
 
 ---
 name: duaer-orcid
@@ -5954,6 +6535,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/europe-pmc.md — Duaer Europe PMC
+- https://skills.duaer.com/crossref.md — Duaer Crossref
+
 ---
 name: duaer-protein-ontology
 description: >-
@@ -6011,6 +6598,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/chebi.md — Duaer ChEBI
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
 
 ---
 name: duaer-obi
@@ -6070,6 +6663,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/assays.md — Duaer assays
+- https://skills.duaer.com/expression-atlas.md — Duaer Expression Atlas
+- https://skills.duaer.com/geo.md — Duaer GEO
+
 ---
 name: duaer-mpath
 description: >-
@@ -6127,6 +6726,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/ncit.md — Duaer NCIt
+- https://skills.duaer.com/mondo.md — Duaer Mondo
+- https://skills.duaer.com/doid.md — Duaer DOID
 
 ---
 name: duaer-crossref
@@ -6186,6 +6791,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/europe-pmc.md — Duaer Europe PMC
+- https://skills.duaer.com/preprints.md — Duaer preprints
+
 ---
 name: duaer-mychem
 description: >-
@@ -6244,6 +6855,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/chebi.md — Duaer ChEBI
+- https://skills.duaer.com/chembl.md — Duaer ChEMBL
+
 ---
 name: duaer-drugs-fda
 description: >-
@@ -6301,6 +6918,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/ndc.md — Duaer NDC
+- https://skills.duaer.com/drug-labels.md — Duaer drug labels
+- https://skills.duaer.com/drug-recalls.md — Duaer drug recalls
 
 ---
 name: duaer-uniref
@@ -6362,6 +6985,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/uniparc.md — Duaer UniParc
+- https://skills.duaer.com/proteomes.md — Duaer Proteomes
+
 ---
 name: duaer-unirule
 description: >-
@@ -6421,6 +7050,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/uniref.md — Duaer UniRef
 
 ---
 name: duaer-proteomes
@@ -6482,6 +7116,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/organisms.md — Duaer organisms
+
 ---
 name: duaer-ena
 description: >-
@@ -6539,6 +7178,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/genes.md — Duaer genes
 
 ---
 name: duaer-empiar
@@ -6598,6 +7242,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/structures.md — Duaer structures
+- https://skills.duaer.com/emdb.md — Duaer EMDB
+
 ---
 name: duaer-bmrb
 description: >-
@@ -6655,6 +7304,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/structures.md — Duaer structures
+- https://skills.duaer.com/proteins.md — Duaer proteins
 
 ---
 name: duaer-swiss-model
@@ -6714,6 +7368,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/structures.md — Duaer structures
+- https://skills.duaer.com/alphafold.md — Duaer AlphaFold
+- https://skills.duaer.com/proteins.md — Duaer proteins
+
 ---
 name: duaer-lipid-maps
 description: >-
@@ -6771,6 +7431,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
+- https://skills.duaer.com/chebi.md — Duaer ChEBI
 
 ---
 name: duaer-mgnify
@@ -6830,6 +7496,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/geo.md — Duaer GEO
+- https://skills.duaer.com/biosamples.md — Duaer BioSamples
+
 ---
 name: duaer-bv-brc
 description: >-
@@ -6887,6 +7558,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/genes.md — Duaer genes
 
 ---
 name: duaer-clinpgx
@@ -6946,6 +7622,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/drug-gene.md — Duaer drug–gene
+- https://skills.duaer.com/genes.md — Duaer genes
+
 ---
 name: duaer-daily-med
 description: >-
@@ -7003,6 +7684,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/ndc.md — Duaer NDC
+- https://skills.duaer.com/drug-labels.md — Duaer drug labels
+- https://skills.duaer.com/drugs-fda.md — Duaer Drugs@FDA
 
 ---
 name: duaer-rxclass
@@ -7062,6 +7749,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/rxnorm.md — Duaer RxNorm
+- https://skills.duaer.com/ndc.md — Duaer NDC
+
 ---
 name: duaer-device-510k
 description: >-
@@ -7119,6 +7811,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/device-events.md — Duaer Device events
+- https://skills.duaer.com/ndc.md — Duaer NDC
 
 ---
 name: duaer-food-enforcement
@@ -7178,6 +7875,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/drug-recalls.md — Duaer drug recalls
+- https://skills.duaer.com/ndc.md — Duaer NDC
+
 ---
 name: duaer-zenodo
 description: >-
@@ -7235,6 +7937,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/preprints.md — Duaer preprints
 
 ---
 name: duaer-figshare
@@ -7294,6 +8001,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/zenodo.md — Duaer Zenodo
+
 ---
 name: duaer-dryad
 description: >-
@@ -7351,6 +8063,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/zenodo.md — Duaer Zenodo
 
 ---
 name: duaer-proteomexchange
@@ -7410,6 +8127,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/pride.md — Duaer PRIDE
+- https://skills.duaer.com/proteins.md — Duaer proteins
+
 ---
 name: duaer-omnipath
 description: >-
@@ -7467,6 +8189,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/interactions.md — Duaer interactions
+- https://skills.duaer.com/intact.md — Duaer IntAct
 
 ---
 name: duaer-oma
@@ -7526,6 +8253,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/orthologs.md — Duaer orthologs
+- https://skills.duaer.com/proteins.md — Duaer proteins
+
 ---
 name: duaer-orthodb
 description: >-
@@ -7583,6 +8315,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/orthologs.md — Duaer orthologs
+- https://skills.duaer.com/oma.md — Duaer OMA
 
 ---
 name: duaer-panther
@@ -7642,6 +8379,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/orthologs.md — Duaer orthologs
+
 ---
 name: duaer-pato
 description: >-
@@ -7699,6 +8441,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+- https://skills.duaer.com/mp.md — Duaer MP
 
 ---
 name: duaer-edam
@@ -7758,6 +8505,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/assays.md — Duaer assays
+- https://skills.duaer.com/bio-tools.md — Duaer bio.tools
+
 ---
 name: duaer-bao
 description: >-
@@ -7815,6 +8567,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/assays.md — Duaer assays
+- https://skills.duaer.com/obi.md — Duaer OBI
 
 ---
 name: duaer-bto
@@ -7874,6 +8631,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/uberon.md — Duaer Uberon
+- https://skills.duaer.com/atlas.md — Duaer tissue atlas
+
 ---
 name: duaer-pw
 description: >-
@@ -7931,6 +8693,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/pathways.md — Duaer pathways
+- https://skills.duaer.com/kegg.md — Duaer KEGG
 
 ---
 name: duaer-vo
@@ -7990,6 +8757,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+- https://skills.duaer.com/mesh.md — Duaer MeSH
+
 ---
 name: duaer-oncotree
 description: >-
@@ -8047,6 +8819,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/cbioportal.md — Duaer cBioPortal
+- https://skills.duaer.com/ncit.md — Duaer NCIt
 
 ---
 name: duaer-idr
@@ -8106,6 +8883,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/geo.md — Duaer GEO
+- https://skills.duaer.com/expression-atlas.md — Duaer Expression Atlas
+
 ---
 name: duaer-hca
 description: >-
@@ -8163,6 +8945,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/expression-atlas.md — Duaer Expression Atlas
+- https://skills.duaer.com/single-cell-atlas.md — Duaer Single Cell Atlas
 
 ---
 name: duaer-ucsc
@@ -8222,6 +9009,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/ensembl.md — Duaer Ensembl
+- https://skills.duaer.com/genes.md — Duaer genes
+
 ---
 name: duaer-harmonizome
 description: >-
@@ -8280,6 +9072,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/expression.md — Duaer expression
+
 ---
 name: duaer-pubtator
 description: >-
@@ -8337,6 +9134,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/genes.md — Duaer genes
 
 ---
 name: duaer-icite
@@ -8397,6 +9199,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/europe-pmc.md — Duaer Europe PMC
+
 ---
 name: duaer-ror
 description: >-
@@ -8454,6 +9261,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/orcid.md — Duaer ORCID
 
 ---
 name: duaer-openalex-authors
@@ -8514,6 +9326,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/orcid.md — Duaer ORCID
+
 ---
 name: duaer-openalex-institutions
 description: >-
@@ -8572,6 +9389,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/ror.md — Duaer ROR
 
 ---
 name: duaer-openalex-topics
@@ -8632,6 +9454,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/crossref.md — Duaer Crossref
+
 ---
 name: duaer-crossref-funders
 description: >-
@@ -8689,6 +9516,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/grants.md — Duaer grants
+- https://skills.duaer.com/papers.md — Duaer papers
 
 ---
 name: duaer-nsf-awards
@@ -8748,6 +9580,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/grants.md — Duaer grants
+- https://skills.duaer.com/papers.md — Duaer papers
+
 ---
 name: duaer-eva
 description: >-
@@ -8805,6 +9642,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/dbsnp.md — Duaer dbSNP
+- https://skills.duaer.com/clinvar.md — Duaer ClinVar
 
 ---
 name: duaer-ensembl-vep
@@ -8864,6 +9707,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/ensembl.md — Duaer Ensembl
+- https://skills.duaer.com/dbsnp.md — Duaer dbSNP
+
 ---
 name: duaer-ncbi-datasets
 description: >-
@@ -8921,6 +9770,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/ensembl.md — Duaer Ensembl
 
 ---
 name: duaer-4dn
@@ -8980,6 +9834,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/encode.md — Duaer ENCODE
+- https://skills.duaer.com/geo.md — Duaer GEO
+
 ---
 name: duaer-rgd
 description: >-
@@ -9037,6 +9896,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/alliance.md — Duaer Alliance
 
 ---
 name: duaer-sgd
@@ -9096,6 +9960,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/alliance.md — Duaer Alliance
+
 ---
 name: duaer-nextstrain
 description: >-
@@ -9153,6 +10022,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/geo.md — Duaer GEO
+- https://skills.duaer.com/organisms.md — Duaer organisms
 
 ---
 name: duaer-medlineplus
@@ -9212,6 +10086,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/mesh.md — Duaer MeSH
+
 ---
 name: duaer-icd10
 description: >-
@@ -9269,6 +10148,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/diseases.md — Duaer diseases
+- https://skills.duaer.com/medlineplus.md — Duaer MedlinePlus
 
 ---
 name: duaer-bioregistry
@@ -9328,6 +10212,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/crossrefs.md — Duaer crossrefs
+- https://skills.duaer.com/node-norm.md — Duaer NodeNorm
+
 ---
 name: duaer-bio-tools
 description: >-
@@ -9385,6 +10274,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/assays.md — Duaer assays
+- https://skills.duaer.com/dockstore.md — Duaer Dockstore
 
 ---
 name: duaer-dockstore
@@ -9444,6 +10338,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/bio-tools.md — Duaer bio.tools
+- https://skills.duaer.com/workflowhub.md — Duaer WorkflowHub
+
 ---
 name: duaer-workflowhub
 description: >-
@@ -9501,6 +10400,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/dockstore.md — Duaer Dockstore
+- https://skills.duaer.com/bio-tools.md — Duaer bio.tools
 
 ---
 name: duaer-doaj
@@ -9560,6 +10464,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/europe-pmc.md — Duaer Europe PMC
+
 ---
 name: duaer-wikidata
 description: >-
@@ -9617,6 +10526,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/crossrefs.md — Duaer crossrefs
+- https://skills.duaer.com/mesh.md — Duaer MeSH
 
 ---
 name: duaer-node-norm
@@ -9676,6 +10590,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/crossrefs.md — Duaer crossrefs
+- https://skills.duaer.com/name-resolver.md — Duaer NameResolver
+
 ---
 name: duaer-name-resolver
 description: >-
@@ -9733,6 +10652,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/node-norm.md — Duaer NodeNorm
+- https://skills.duaer.com/crossrefs.md — Duaer crossrefs
 
 ---
 name: duaer-gbif
@@ -9792,6 +10716,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/ncbi-taxon.md — Duaer NCBI Taxonomy
+
 ---
 name: duaer-itis
 description: >-
@@ -9849,6 +10778,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/gbif.md — Duaer GBIF
 
 ---
 name: duaer-worms
@@ -9908,6 +10842,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/gbif.md — Duaer GBIF
+
 ---
 name: duaer-inaturalist
 description: >-
@@ -9965,6 +10904,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/gbif.md — Duaer GBIF
 
 ---
 name: duaer-disprot
@@ -10024,6 +10968,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+
 ---
 name: duaer-lotus
 description: >-
@@ -10081,6 +11029,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
 
 ---
 name: duaer-metabolic-dark-matter
@@ -10208,6 +11160,13 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/metabolic-dark-matter.md — Duaer: annotate an unknown feature (metabolic dark matter)
+- https://skills.duaer.com/mona.md — Duaer MoNA spectra
+- https://skills.duaer.com/mass-candidates.md — Duaer mass candidates
+- https://skills.duaer.com/spectrum.md — Duaer spectrum by USI
+
 ---
 name: duaer-mona
 description: >-
@@ -10266,6 +11225,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/metabolic-dark-matter.md — Duaer: annotate an unknown feature (metabolic dark matter)
+- https://skills.duaer.com/massbank.md — Duaer MassBank spectra
+- https://skills.duaer.com/mass-candidates.md — Duaer mass candidates
 
 ---
 name: duaer-mass-candidates
@@ -10326,6 +11291,13 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/metabolic-dark-matter.md — Duaer: annotate an unknown feature (metabolic dark matter)
+- https://skills.duaer.com/mona.md — Duaer MoNA spectra
+- https://skills.duaer.com/massbank.md — Duaer MassBank spectra
+- https://skills.duaer.com/compounds.md — Duaer compounds
+
 ---
 name: duaer-spectrum
 description: >-
@@ -10380,6 +11352,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/metabolic-dark-matter.md — Duaer: annotate an unknown feature (metabolic dark matter)
+- https://skills.duaer.com/massbank.md — Duaer MassBank spectra
+- https://skills.duaer.com/masst.md — Duaer MASST
 
 ---
 name: duaer-masst
@@ -10445,6 +11423,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/metabolic-dark-matter.md — Duaer: annotate an unknown feature (metabolic dark matter)
+- https://skills.duaer.com/spectrum.md — Duaer spectrum by USI
+- https://skills.duaer.com/massbank.md — Duaer MassBank spectra
+
 ---
 name: duaer-lincs
 description: >-
@@ -10502,6 +11486,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/expression.md — Duaer expression
 
 ---
 name: duaer-cellxgene
@@ -10561,6 +11549,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/expression.md — Duaer expression
+
 ---
 name: duaer-mgrast
 description: >-
@@ -10618,6 +11610,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/expression.md — Duaer expression
 
 ---
 name: duaer-galaxy
@@ -10677,6 +11673,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/bio-tools.md — Duaer bio.tools
+
 ---
 name: duaer-nf-core
 description: >-
@@ -10734,6 +11734,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/workflowhub.md — Duaer WorkflowHub
 
 ---
 name: duaer-re3data
@@ -10793,6 +11797,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/zenodo.md — Duaer Zenodo
+
 ---
 name: duaer-arxiv
 description: >-
@@ -10850,6 +11858,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/preprints.md — Duaer preprints
 
 ---
 name: duaer-hal
@@ -10909,6 +11921,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+
 ---
 name: duaer-huggingface
 description: >-
@@ -10966,6 +11982,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/bio-tools.md — Duaer bio.tools
 
 ---
 name: duaer-openaire
@@ -11025,6 +12045,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+
 ---
 name: duaer-harvard-dataverse
 description: >-
@@ -11083,6 +12107,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/zenodo.md — Duaer Zenodo
+
 ---
 name: duaer-doaj-journals
 description: >-
@@ -11140,6 +12168,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/doaj.md — Duaer DOAJ
 
 ---
 name: duaer-openalex-sources
@@ -11200,6 +12232,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+
 ---
 name: duaer-openalex-funders
 description: >-
@@ -11258,6 +12294,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
 
 ---
 name: duaer-openalex-publishers
@@ -11318,6 +12358,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+
 ---
 name: duaer-openalex-concepts
 description: >-
@@ -11377,6 +12421,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+
 ---
 name: duaer-device-udi
 description: >-
@@ -11434,6 +12482,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/device-events.md — Duaer Device events
 
 ---
 name: duaer-device-pma
@@ -11493,6 +12545,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/device-events.md — Duaer Device events
+
 ---
 name: duaer-device-recall
 description: >-
@@ -11550,6 +12606,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/device-events.md — Duaer Device events
 
 ---
 name: duaer-device-classification
@@ -11609,6 +12669,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/device-events.md — Duaer Device events
+
 ---
 name: duaer-animal-events
 description: >-
@@ -11666,6 +12730,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/device-events.md — Duaer Device events
 
 ---
 name: duaer-food-events
@@ -11725,6 +12793,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/device-events.md — Duaer Device events
+
 ---
 name: duaer-tobacco
 description: >-
@@ -11782,6 +12854,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/device-events.md — Duaer Device events
 
 ---
 name: duaer-rxterms
@@ -11841,6 +12917,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/rxnorm.md — Duaer RxNorm
+
 ---
 name: duaer-ncbi-assembly
 description: >-
@@ -11898,6 +12978,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
 
 ---
 name: duaer-ncbi-bioproject
@@ -11957,6 +13041,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+
 ---
 name: duaer-ncbi-sra
 description: >-
@@ -12014,6 +13102,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
 
 ---
 name: duaer-ncbi-gtr
@@ -12073,6 +13165,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+
 ---
 name: duaer-ncbi-medgen
 description: >-
@@ -12130,6 +13226,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
 
 ---
 name: duaer-ncbi-variation
@@ -12189,6 +13289,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/variants.md — Duaer variants
+
 ---
 name: duaer-dbvar
 description: >-
@@ -12246,6 +13350,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
 
 ---
 name: duaer-homologene
@@ -12305,6 +13413,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+
 ---
 name: duaer-gtex-eqtl
 description: >-
@@ -12362,6 +13474,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/expression.md — Duaer expression
 
 ---
 name: duaer-scop
@@ -12421,6 +13537,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/structures.md — Duaer structures
+
 ---
 name: duaer-pombase
 description: >-
@@ -12478,6 +13598,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
 
 ---
 name: duaer-mgi
@@ -12537,6 +13661,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+
 ---
 name: duaer-clo
 description: >-
@@ -12594,6 +13722,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 
 ---
 name: duaer-ecto
@@ -12653,6 +13785,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+
 ---
 name: duaer-ro
 description: >-
@@ -12710,6 +13846,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 
 ---
 name: duaer-fbbt
@@ -12769,6 +13909,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+
 ---
 name: duaer-zfa
 description: >-
@@ -12826,6 +13970,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 
 ---
 name: duaer-wbbt
@@ -12885,6 +14033,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+
 ---
 name: duaer-xao
 description: >-
@@ -12942,6 +14094,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 
 ---
 name: duaer-envo
@@ -13001,6 +14157,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+
 ---
 name: duaer-foodon
 description: >-
@@ -13058,6 +14218,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 
 ---
 name: duaer-oae
@@ -13117,6 +14281,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+
 ---
 name: duaer-ido
 description: >-
@@ -13174,6 +14342,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 
 ---
 name: duaer-cido
@@ -13233,6 +14405,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+
 ---
 name: duaer-agro
 description: >-
@@ -13290,6 +14466,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 
 ---
 name: duaer-po
@@ -13349,6 +14529,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+
 ---
 name: duaer-to
 description: >-
@@ -13406,6 +14590,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 
 ---
 name: duaer-chmo
@@ -13465,6 +14653,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+
 ---
 name: duaer-ms
 description: >-
@@ -13522,6 +14714,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 
 ---
 name: duaer-stato
@@ -13581,6 +14777,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+
 ---
 name: duaer-duo
 description: >-
@@ -13638,6 +14838,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 
 ---
 name: duaer-iao
@@ -13697,6 +14901,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+
 ---
 name: duaer-sio
 description: >-
@@ -13754,6 +14962,10 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
 
 ---
 name: duaer-cheminf
@@ -13813,6 +15025,10 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+
 ---
 name: duaer-enrichr
 description: >-
@@ -13870,6 +15086,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/pathways.md — Duaer pathways
 
 ---
 name: duaer-unpaywall
@@ -13929,6 +15150,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/europe-pmc.md — Duaer Europe PMC
+
 ---
 name: duaer-datacite
 description: >-
@@ -13986,6 +15212,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/zenodo.md — Duaer Zenodo
+- https://skills.duaer.com/crossref.md — Duaer Crossref
 
 ---
 name: duaer-cpic
@@ -14045,6 +15276,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/clinpgx.md — Duaer ClinPGx
+- https://skills.duaer.com/drug-gene.md — Duaer drug–gene
+
 ---
 name: duaer-osf
 description: >-
@@ -14102,6 +15338,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/zenodo.md — Duaer Zenodo
+- https://skills.duaer.com/dryad.md — Duaer Dryad
 
 ---
 name: duaer-ukri
@@ -14161,6 +15402,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/nsf-awards.md — Duaer NSF Awards
+- https://skills.duaer.com/grants.md — Duaer grants
+
 ---
 name: duaer-cellosaurus
 description: >-
@@ -14218,6 +15464,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/cell-lines.md — Duaer cell lines
+- https://skills.duaer.com/clo.md — Duaer CLO
 
 ---
 name: duaer-bindingdb
@@ -14277,6 +15528,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/targets.md — Duaer targets
+- https://skills.duaer.com/ligands.md — Duaer ligands
+
 ---
 name: duaer-iedb
 description: >-
@@ -14334,6 +15591,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/assays.md — Duaer assays
 
 ---
 name: duaer-maxo
@@ -14393,6 +15655,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+- https://skills.duaer.com/mpath.md — Duaer MPATH
+- https://skills.duaer.com/obi.md — Duaer OBI
+
 ---
 name: duaer-eco
 description: >-
@@ -14450,6 +15718,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
+- https://skills.duaer.com/obi.md — Duaer OBI
 
 ---
 name: duaer-rfam
@@ -14509,6 +15782,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/rnacentral.md — Duaer RNAcentral
+- https://skills.duaer.com/genes.md — Duaer genes
+
 ---
 name: duaer-checklistbank
 description: >-
@@ -14566,6 +15844,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/ncbi-taxon.md — Duaer NCBI Taxonomy
+- https://skills.duaer.com/gbif.md — Duaer GBIF
 
 ---
 name: duaer-togovar
@@ -14625,6 +15909,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/dbsnp.md — Duaer dbSNP
+- https://skills.duaer.com/clinvar.md — Duaer ClinVar
+
 ---
 name: duaer-pubmed
 description: >-
@@ -14682,6 +15972,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/europe-pmc.md — Duaer Europe PMC
+- https://skills.duaer.com/preprints.md — Duaer preprints
 
 ---
 name: duaer-peco
@@ -14741,6 +16037,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/envo.md — Duaer ENVO
+- https://skills.duaer.com/po.md — Duaer PO
+- https://skills.duaer.com/to.md — Duaer TO
+
 ---
 name: duaer-nbo
 description: >-
@@ -14798,6 +16100,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+- https://skills.duaer.com/mp.md — Duaer MP
 
 ---
 name: duaer-geno
@@ -14857,6 +16164,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/sequence-ontology.md — Duaer Sequence Ontology
+- https://skills.duaer.com/variants.md — Duaer variants
+
 ---
 name: duaer-symp
 description: >-
@@ -14914,6 +16226,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+- https://skills.duaer.com/diseases.md — Duaer diseases
 
 ---
 name: duaer-upheno
@@ -14973,6 +16290,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/phenotypes.md — Duaer phenotypes
+- https://skills.duaer.com/mondo.md — Duaer Mondo
+
 ---
 name: duaer-fma
 description: >-
@@ -15030,6 +16352,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/uberon.md — Duaer Uberon
+- https://skills.duaer.com/cell-ontology.md — Duaer Cell Ontology
 
 ---
 name: duaer-loinc
@@ -15089,6 +16416,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/rxnorm.md — Duaer RxNorm
+- https://skills.duaer.com/icd10.md — Duaer ICD-10
+
 ---
 name: duaer-core
 description: >-
@@ -15146,6 +16478,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/pubmed.md — Duaer PubMed
+- https://skills.duaer.com/europe-pmc.md — Duaer Europe PMC
 
 ---
 name: duaer-opentree
@@ -15205,6 +16543,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/ncbi-taxon.md — Duaer NCBI Taxonomy
+- https://skills.duaer.com/checklistbank.md — Duaer ChecklistBank
+
 ---
 name: duaer-europe-pmc-annotations
 description: >-
@@ -15262,6 +16606,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/europe-pmc.md — Duaer Europe PMC
+- https://skills.duaer.com/pubmed.md — Duaer PubMed
+- https://skills.duaer.com/papers.md — Duaer papers
 
 ---
 name: duaer-bigg
@@ -15321,6 +16671,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
+- https://skills.duaer.com/reactions.md — Duaer reactions
+- https://skills.duaer.com/kegg.md — Duaer KEGG
+
 ---
 name: duaer-gnomad
 description: >-
@@ -15378,6 +16734,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/clinvar.md — Duaer ClinVar
+- https://skills.duaer.com/dbsnp.md — Duaer dbSNP
 
 ---
 name: duaer-mirna
@@ -15437,6 +16799,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/rnacentral.md — Duaer RNAcentral
+- https://skills.duaer.com/rfam.md — Duaer Rfam
+- https://skills.duaer.com/genes.md — Duaer genes
+
 ---
 name: duaer-humanmine
 description: >-
@@ -15494,6 +16862,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/monarch.md — Duaer Monarch
 
 ---
 name: duaer-regulomedb
@@ -15553,6 +16927,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/dbsnp.md — Duaer dbSNP
+- https://skills.duaer.com/encode.md — Duaer ENCODE
+
 ---
 name: duaer-civic
 description: >-
@@ -15611,6 +16991,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/clinvar.md — Duaer ClinVar
+- https://skills.duaer.com/gwas.md — Duaer GWAS
+
 ---
 name: duaer-omicsdi
 description: >-
@@ -15668,6 +17054,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/geo.md — Duaer GEO
+- https://skills.duaer.com/pride.md — Duaer PRIDE
+- https://skills.duaer.com/expression-atlas.md — Duaer Expression Atlas
 
 ---
 name: duaer-gtex-expression
@@ -15729,6 +17121,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/gtex-eqtl.md — Duaer GTEx eQTL
+- https://skills.duaer.com/expression.md — Duaer expression
+- https://skills.duaer.com/atlas.md — Duaer tissue atlas
+
 ---
 name: duaer-biomodels
 description: >-
@@ -15786,6 +17184,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/pathways.md — Duaer pathways
+- https://skills.duaer.com/reactions.md — Duaer reactions
+- https://skills.duaer.com/bigg.md — Duaer BiGG
 
 ---
 name: duaer-ot-drugs
@@ -15845,6 +17249,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/targets.md — Duaer targets
+- https://skills.duaer.com/chembl.md — Duaer ChEMBL
+- https://skills.duaer.com/drug-gene.md — Duaer drug–gene
+
 ---
 name: duaer-wikipathways
 description: >-
@@ -15903,6 +17313,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/pathways.md — Duaer pathways
+- https://skills.duaer.com/kegg.md — Duaer KEGG
+
 ---
 name: duaer-panelapp
 description: >-
@@ -15960,6 +17375,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/clinvar.md — Duaer ClinVar
+- https://skills.duaer.com/civic.md — Duaer CIViC
 
 ---
 name: duaer-goa
@@ -16020,6 +17441,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/genes.md — Duaer genes
+
 ---
 name: duaer-pubchem-assay
 description: >-
@@ -16079,6 +17506,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/assays.md — Duaer assays
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/chembl.md — Duaer ChEMBL
+
 ---
 name: duaer-massive
 description: >-
@@ -16136,6 +17569,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/pride.md — Duaer PRIDE
+- https://skills.duaer.com/proteomexchange.md — Duaer ProteomeXchange
+- https://skills.duaer.com/proteins.md — Duaer proteins
 
 ---
 name: duaer-interpro
@@ -16195,6 +17634,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/pfam.md — Duaer Pfam
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/domains.md — Duaer domains
+
 ---
 name: duaer-rhea
 description: >-
@@ -16252,6 +17697,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/reactions.md — Duaer reactions
+- https://skills.duaer.com/bigg.md — Duaer BiGG
+- https://skills.duaer.com/kegg.md — Duaer KEGG
 
 ---
 name: duaer-prosite
@@ -16311,6 +17762,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/pfam.md — Duaer Pfam
+- https://skills.duaer.com/interpro.md — Duaer InterPro
+
 ---
 name: duaer-dgidb
 description: >-
@@ -16369,6 +17826,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/ot-drugs.md — Duaer Open Targets drugs
+- https://skills.duaer.com/drug-gene.md — Duaer drug–gene
+- https://skills.duaer.com/chembl.md — Duaer ChEMBL
+
 ---
 name: duaer-mutalyzer
 description: >-
@@ -16426,6 +17889,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/clinvar.md — Duaer ClinVar
+- https://skills.duaer.com/dbsnp.md — Duaer dbSNP
+
 ---
 name: duaer-variant-validator
 description: >-
@@ -16482,6 +17951,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/mutalyzer.md — Duaer Mutalyzer
+- https://skills.duaer.com/clinvar.md — Duaer ClinVar
 
 ---
 name: duaer-metabolights
@@ -16541,6 +18016,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/metabolomics.md — Duaer Metabolomics
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
+- https://skills.duaer.com/omicsdi.md — Duaer OmicsDI
+
 ---
 name: duaer-modelseed
 description: >-
@@ -16598,6 +18079,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/bigg.md — Duaer BiGG
+- https://skills.duaer.com/reactions.md — Duaer reactions
+- https://skills.duaer.com/rhea.md — Duaer Rhea
 
 ---
 name: duaer-usda-fdc
@@ -16657,6 +18144,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
+- https://skills.duaer.com/lipid-maps.md — Duaer Lipid Maps
+- https://skills.duaer.com/compounds.md — Duaer compounds
+
 ---
 name: duaer-alphafill
 description: >-
@@ -16714,6 +18207,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/alphafold.md — Duaer AlphaFold
+- https://skills.duaer.com/structures.md — Duaer structures
+- https://skills.duaer.com/proteins.md — Duaer proteins
 
 ---
 name: duaer-pdbe
@@ -16773,6 +18272,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/structures.md — Duaer structures
+- https://skills.duaer.com/alphafold.md — Duaer AlphaFold
+- https://skills.duaer.com/emdb.md — Duaer EMDB
+
 ---
 name: duaer-metacyc
 description: >-
@@ -16830,6 +18335,11 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/pathways.md — Duaer pathways
+- https://skills.duaer.com/wikipathways.md — Duaer WikiPathways
 
 ---
 name: duaer-string-enrichment
@@ -16889,6 +18399,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/interactions.md — Duaer interactions
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
+
 ---
 name: duaer-foldseek
 description: >-
@@ -16946,6 +18462,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/structures.md — Duaer structures
+- https://skills.duaer.com/alphafold.md — Duaer AlphaFold
+- https://skills.duaer.com/pdbe.md — Duaer PDBe
 
 ---
 name: duaer-ensembl-homology
@@ -17005,6 +18527,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/orthologs.md — Duaer orthologs
+- https://skills.duaer.com/ensembl.md — Duaer Ensembl
+- https://skills.duaer.com/genes.md — Duaer genes
+
 ---
 name: duaer-ols
 description: >-
@@ -17062,6 +18590,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
+- https://skills.duaer.com/mesh.md — Duaer MeSH
+- https://skills.duaer.com/mondo.md — Duaer Mondo
 
 ---
 name: duaer-refmet
@@ -17121,6 +18655,13 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
+- https://skills.duaer.com/metabolights.md — Duaer MetaboLights
+- https://skills.duaer.com/chebi.md — Duaer ChEBI
+- https://skills.duaer.com/metabolic-dark-matter.md — Duaer: annotate an unknown feature (metabolic dark matter)
+
 ---
 name: duaer-wormbase
 description: >-
@@ -17178,6 +18719,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/alliance.md — Duaer Alliance
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/orthologs.md — Duaer orthologs
 
 ---
 name: duaer-flybase
@@ -17237,6 +18784,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/alliance.md — Duaer Alliance
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/orthologs.md — Duaer orthologs
+
 ---
 name: duaer-zfin
 description: >-
@@ -17294,6 +18847,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/alliance.md — Duaer Alliance
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/orthologs.md — Duaer orthologs
 
 ---
 name: duaer-biorxiv
@@ -17353,6 +18912,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/preprints.md — Duaer preprints
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/europe-pmc.md — Duaer Europe PMC
+
 ---
 name: duaer-medrxiv
 description: >-
@@ -17410,6 +18975,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/preprints.md — Duaer preprints
+- https://skills.duaer.com/papers.md — Duaer papers
+- https://skills.duaer.com/europe-pmc.md — Duaer Europe PMC
 
 ---
 name: duaer-mirbase
@@ -17469,6 +19040,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/rnacentral.md — Duaer RNAcentral
+- https://skills.duaer.com/mirna.md — Duaer miRNA
+- https://skills.duaer.com/genes.md — Duaer genes
+
 ---
 name: duaer-open-food-facts
 description: >-
@@ -17526,6 +19103,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/metabolites.md — Duaer metabolites
+- https://skills.duaer.com/usda-fdc.md — Duaer USDA FoodData Central
+- https://skills.duaer.com/compounds.md — Duaer compounds
 
 ---
 name: duaer-weather

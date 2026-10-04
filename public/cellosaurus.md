@@ -58,6 +58,11 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/cell-lines.md — Duaer cell lines
+- https://skills.duaer.com/clo.md — Duaer CLO
+
 ## Related skills
 
 - [Search cell lines in Duaer](https://skills.duaer.com/cell-lines.md)

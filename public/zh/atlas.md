@@ -50,6 +50,8 @@ The response is `{ "items": [...] }`. Each item has `source` (`HPA`), `title`, `
 - `nTPM` — number.
 - `specificity`, `distribution`, `proteinClasses`, `secretomeLocation` — text.
 
+Reuse `gene` when searching proteins, genes, expression, or targets. For GTEx median TPM across tissues, use https://skills.duaer.com/expression.md. For GEO experiment series, use https://skills.duaer.com/geo.md.
+
 Fields without a value are empty strings.
 
 ## Credits
@@ -60,6 +62,12 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/expression.md — Duaer expression
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/proteins.md — Duaer proteins
 
 ## 相关技能
 

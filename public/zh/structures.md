@@ -64,6 +64,13 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/alphafold.md — Duaer AlphaFold
+
 ## 相关技能
 
 - [在 Duaer 里检索基因和蛋白](https://skills.duaer.com/zh/proteins.md)
