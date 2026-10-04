@@ -59,6 +59,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/genes.md — Duaer genes
+
 ## Related skills
 
 - [Search Gene Ontology in Duaer](https://skills.duaer.com/gene-ontology.md)

@@ -58,6 +58,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/alliance.md — Duaer Alliance
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/orthologs.md — Duaer orthologs
+
 ## Related skills
 
 - [Search Alliance genes in Duaer](https://skills.duaer.com/alliance.md)

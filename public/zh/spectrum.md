@@ -55,6 +55,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/metabolic-dark-matter.md — Duaer: annotate an unknown feature (metabolic dark matter)
+- https://skills.duaer.com/massbank.md — Duaer MassBank spectra
+- https://skills.duaer.com/masst.md — Duaer MASST
+
 ## 相关技能
 
 - [用 Duaer 注释未知特征（代谢暗物质）](https://skills.duaer.com/zh/metabolic-dark-matter.md)

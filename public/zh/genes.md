@@ -63,6 +63,8 @@ The response is `{ "items": [...] }`. Each item has `source` (`MyGene`), `title`
 
 Use `symbol` as `gene` in https://skills.duaer.com/proteins.md and https://skills.duaer.com/variants.md.
 
+For tissue expression, use https://skills.duaer.com/expression.md.
+
 Fields without a value are empty strings.
 
 ## Credits
@@ -72,6 +74,18 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/variants.md — Duaer variants
+- https://skills.duaer.com/pathways.md — Duaer pathways
+- https://skills.duaer.com/gene-ontology.md — Duaer Gene Ontology
+- https://skills.duaer.com/expression.md — Duaer expression
+- https://skills.duaer.com/atlas.md — Duaer tissue atlas
+- https://skills.duaer.com/geo.md — Duaer GEO
+- https://skills.duaer.com/drug-gene.md — Duaer drug–gene
+- https://skills.duaer.com/life-research-brief.md — Digital employee: Life research brief
 
 ## 相关技能
 

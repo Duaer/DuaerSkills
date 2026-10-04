@@ -50,6 +50,8 @@ The response is `{ "items": [...] }`. Each item has `source` (`STRING`), `title`
 - `proteinA`, `proteinB`, `stringIdA`, `stringIdB`, `partner`, `partnerStringId` — text.
 - `score`, `neighborhood`, `fusion`, `cooccurrence`, `coexpression`, `experimental`, `database`, `textmining`, `taxId` — number.
 
+Reuse `partner` as `gene` when searching proteins or expression, or as `protein` for further interaction partners.
+
 Fields without a value are empty strings.
 
 ## Credits
@@ -59,6 +61,14 @@ Wrong input or a missing search field returns 400 with a message and uses 0.
 A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
+
+## Related
+
+- https://skills.duaer.com/proteins.md — Duaer proteins
+- https://skills.duaer.com/genes.md — Duaer genes
+- https://skills.duaer.com/organisms.md — Duaer organisms
+- https://skills.duaer.com/expression.md — Duaer expression
+- https://skills.duaer.com/complexes.md — Duaer complexes
 
 ## 相关技能
 

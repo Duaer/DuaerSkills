@@ -58,6 +58,14 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/compounds.md — Duaer compounds
+- https://skills.duaer.com/reactions.md — Duaer reactions
+- https://skills.duaer.com/pathways.md — Duaer pathways
+- https://skills.duaer.com/drug-labels.md — Duaer drug labels
+- https://skills.duaer.com/metabolic-dark-matter.md — Duaer: annotate an unknown feature (metabolic dark matter)
+
 ## Related skills
 
 - [Search compounds in Duaer](https://skills.duaer.com/compounds.md)

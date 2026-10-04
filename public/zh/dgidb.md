@@ -58,6 +58,12 @@ A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 
+## Related
+
+- https://skills.duaer.com/ot-drugs.md — Duaer Open Targets drugs
+- https://skills.duaer.com/drug-gene.md — Duaer drug–gene
+- https://skills.duaer.com/chembl.md — Duaer ChEMBL
+
 ## 相关技能
 
 - [在 Duaer 里检索 Open Targets drugs](https://skills.duaer.com/zh/ot-drugs.md)
