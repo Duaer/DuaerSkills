@@ -1,0 +1,10 @@
+{
+  "status": "accepted",
+  "spec": "293-skills-related-links",
+  "verification": [
+    "catalog check: 0 related slugs without a skill",
+    "node scripts/render.mjs rendered 846 pages",
+    "public/bioregistry.md links node-norm"
+  ],
+  "notes": "Local branch only. skills.duaer.com shows the change after the next skills publish."
+}

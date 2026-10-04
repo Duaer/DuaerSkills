@@ -3181,7 +3181,7 @@ Acceptance: https://doc.duaer.com/getting-started/accept-deliverables/
 
 	{
 		slug: 'bioregistry',
-		related: ["crossrefs","identifiers"],
+		related: ["crossrefs","node-norm"],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search Bioregistry in Duaer', zh: '在 Duaer 里检索 Bioregistry' },
 		lede: { en: 'In Duaer, search prefix registry entries in Bioregistry. One successful search uses 1 credit.', zh: '在 Duaer 里在 Bioregistry 检索前缀注册表。一次成功查询用 1 额度。' },
@@ -4994,7 +4994,7 @@ Acceptance: https://doc.duaer.com/getting-started/accept-deliverables/
 
 	{
 		slug: 'wikipathways',
-		related: ["pathways","reactome","kegg"],
+		related: ["pathways","kegg"],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search WikiPathways in Duaer', zh: '在 Duaer 里检索 WikiPathways' },
 		lede: { en: 'In Duaer, search community pathways in WikiPathways. One successful search uses 1 credit.', zh: '在 Duaer 里在 WikiPathways 搜索社区通路。一次成功查询用 1 额度。' },
@@ -5236,7 +5236,7 @@ Acceptance: https://doc.duaer.com/getting-started/accept-deliverables/
 	},
 	{
 		slug: 'metacyc',
-		related: ["pathways","wikipathways","reactome"],
+		related: ["pathways","wikipathways"],
 		type: { en: 'Data', zh: '数据' },
 		title: { en: 'Search MetaCyc in Duaer', zh: '在 Duaer 里检索 MetaCyc' },
 		lede: { en: 'In Duaer, search pathways in MetaCyc. One successful search uses 1 credit.', zh: '在 Duaer 里在 MetaCyc 搜索通路。一次成功查询用 1 额度。' },
