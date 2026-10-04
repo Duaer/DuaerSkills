@@ -39,3 +39,4 @@ A missing key returns 401.
 ## Related skills
 
 - [Search crossrefs in Duaer](https://skills.duaer.com/crossrefs.md)
+- [Search NodeNorm in Duaer](https://skills.duaer.com/node-norm.md)

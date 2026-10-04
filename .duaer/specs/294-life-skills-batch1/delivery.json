@@ -1,0 +1,11 @@
+{
+  "status": "accepted",
+  "spec": "294-life-skills-batch1",
+  "verification": [
+    "node scripts/render.mjs rendered 846 pages",
+    "params checked against DuaerMain develop 0c98de6b6 (duaer-data-life.service.ts, duaer-data-papers.service.ts)",
+    "examples checked upstream: OpenAlex DOI and topic, ClinicalTrials.gov NCT04368728, MyVariant chr7:g.140453136A>T, MyGene Trp53 mouse",
+    "all skills.duaer.com links in the new text name existing skills"
+  ],
+  "notes": "Local branch only. skills.duaer.com shows the change after the next skills publish."
+}

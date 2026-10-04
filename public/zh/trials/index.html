@@ -54,12 +54,24 @@
 <pre><code>---
 name: duaer-trials
 description: &gt;-
-  Search clinical trials through Duaer. One successful search uses 1 Duaer credit.
+  Duaer clinical trials. ClinicalTrials.gov studies by condition, intervention, location, title, outcome, sponsor, NCT id, status, or phase.
+  One successful search uses 1 Duaer credit.
 ---
 
-# Duaer trials
+# Duaer clinical trials
 
-Search clinical trials through Duaer. One successful search uses 1 Duaer credit.
+Duaer clinical trials searches ClinicalTrials.gov. Fields combine, so each one narrows the search. Results are ordered by relevance unless you sort by last update.
+
+## When to use
+
+- Find recruiting trials for a condition and a drug.
+- List phase 3 trials a sponsor runs.
+- Look up one study by its NCT id.
+
+## When not to use
+
+- Published trial results in papers. Use https://skills.duaer.com/papers.md.
+- Drug adverse event reports. Use https://skills.duaer.com/adverse-events.md.
 
 ## Call
 
@@ -71,29 +83,47 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- At least one search field is required. Sort alone is not a search. Fields combine.
-- `condition` — disease or condition.
-- `term` — other words.
-- `intervention` — drug, device, or other intervention.
-- `location` — where the study runs.
-- `title` — words in the title.
-- `outcome` — words in the outcome.
-- `sponsor` — sponsor name.
-- `lead` — lead sponsor name.
-- `nctId` — study id.
-- `status` — recruitment status, such as `RECRUITING` or `COMPLETED`.
-- `phase` — `EARLY_PHASE1`, `PHASE1`, `PHASE2`, `PHASE3`, `PHASE4`, or `NA`.
-- `sort` — `recent` orders by last update. Omit it for relevance.
-- `limit` — optional. From 1 to 20. Default 10.
+## Parameters
+
+Provide at least one search field. `status` or `phase` alone counts. `sort` and `limit` alone are not a search.
+
+- `condition` — Optional. Disease or condition.
+- `term` — Optional. Other words.
+- `intervention` — Optional. Drug, device, or other intervention.
+- `location` — Optional. Where the study runs, such as a city or country.
+- `title` — Optional. Words in the title.
+- `outcome` — Optional. Words in the outcome measures.
+- `sponsor` — Optional. Sponsor or collaborator name.
+- `lead` — Optional. Lead sponsor name.
+- `nctId` — Optional. Study id, such as `NCT04368728`.
+- `status` — Optional. `NOT_YET_RECRUITING`, `RECRUITING`, `ENROLLING_BY_INVITATION`, `ACTIVE_NOT_RECRUITING`, `SUSPENDED`, `TERMINATED`, `COMPLETED`, `WITHDRAWN`, or `UNKNOWN`.
+- `phase` — Optional. `EARLY_PHASE1`, `PHASE1`, `PHASE2`, `PHASE3`, `PHASE4`, or `NA`.
+- `sort` — Optional. `recent` orders by last update. Omit it for relevance.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/trials?condition=diabetes&amp;intervention=insulin&amp;status=RECRUITING` — recruiting insulin trials for diabetes.
+- `GET https://api.duaer.com/v1/data/trials?lead=Pfizer&amp;phase=PHASE3&amp;sort=recent` — Pfizer phase 3 trials, latest update first.
+- `GET https://api.duaer.com/v1/data/trials?nctId=NCT04368728` — one study by NCT id.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ &quot;items&quot;: [...] }`. Each item has `source` (`ClinicalTrials.gov`), `title`, `url`, and `summary`, plus:
+
+- `nctId` — study id.
+- `status`, `phase` — recruitment status and phase.
+- `conditions`, `interventions` — conditions and interventions studied.
+- `sponsor` — lead sponsor.
+- `startDate` — start date.
+
+Fields without a value are empty strings.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 </code></pre>

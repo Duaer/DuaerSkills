@@ -54,12 +54,25 @@
 <pre><code>---
 name: duaer-papers
 description: &gt;-
-  Search published papers through Duaer. One successful search uses 1 Duaer credit.
+  Duaer papers. Published papers from OpenAlex by words, title, abstract, author, year, type, open access, citations, language, DOI, journal, institution, or topic.
+  One successful search uses 1 Duaer credit.
 ---
 
 # Duaer papers
 
-Search published papers through Duaer. One successful search uses 1 Duaer credit.
+Duaer papers searches published works in OpenAlex: articles, reviews, preprints, books, datasets, and more. Filters combine. Results are ordered by relevance unless you sort by citations.
+
+## When to use
+
+- Find the most cited papers on a topic in a range of years.
+- Check what an author or institution published.
+- Resolve a DOI to its title and abstract.
+
+## When not to use
+
+- Preprints from bioRxiv or medRxiv only. Use https://skills.duaer.com/preprints.md.
+- Research grants. Use https://skills.duaer.com/grants.md.
+- Patents. Use https://skills.duaer.com/patents.md.
 
 ## Call
 
@@ -71,28 +84,44 @@ Use an account key or a model API key.
 
 Get a Duaer key: https://skills.duaer.com/keys.md
 
-- `q` — words in the title, abstract, or full text.
-- `title` — words in the title.
-- `abstract` — words in the abstract.
-- `author` — author name.
-- `yearFrom`, `yearTo` — publication year. Leave a year out, or send `0`, for any year. A set year is from 1000 to 2100.
-- `type` — work type, such as `article`, `preprint`, or `review`.
-- `openAccess` — `yes` or `no`.
-- `citationsFrom`, `citationsTo` — citation count. `0` means no bound.
-- `language` — code such as `en` or `zh`.
-- `doi` — digital object identifier.
-- `journal`, `institution`, `topic` — names. Duaer uses the closest match.
-- `sort` — `citations` orders by most cited. Omit it for relevance.
-- `limit` — optional. From 1 to 20. Default 10.
+## Parameters
+
+Provide at least one search field. `sort` and `limit` alone are not a search.
+
+- `q` — Optional. Words in the title, abstract, or full text.
+- `title` — Optional. Words in the title.
+- `abstract` — Optional. Words in the abstract.
+- `author` — Optional. Author name.
+- `yearFrom`, `yearTo` — Optional. Publication years from 1000 to 2100. Leave a year out, or send `0`, for any year.
+- `type` — Optional. Work type: `article`, `book`, `book-chapter`, `dataset`, `dissertation`, `editorial`, `erratum`, `letter`, `libguides`, `other`, `paratext`, `peer-review`, `preprint`, `reference-entry`, `report`, `retraction`, `review`, `standard`, or `supplementary-materials`.
+- `openAccess` — Optional. `yes` or `no`.
+- `citationsFrom`, `citationsTo` — Optional. Citation count. `0` means no bound.
+- `language` — Optional. Language code, such as `en` or `zh`.
+- `doi` — Optional. Digital object identifier, such as `10.1038/nature12373`.
+- `journal`, `institution`, `topic` — Optional. Names. Duaer uses the closest OpenAlex match. A name with no match returns 400.
+- `sort` — Optional. `citations` orders by most cited. Omit it for relevance.
+- `limit` — Optional. Rows to return, from 1 to 20. Default 10.
+
+## Examples
+
+- `GET https://api.duaer.com/v1/data/papers?q=CRISPR%20base%20editing&amp;yearFrom=2022&amp;sort=citations` — most cited base editing papers since 2022.
+- `GET https://api.duaer.com/v1/data/papers?doi=10.1038/nature12373` — one paper by DOI.
+- `GET https://api.duaer.com/v1/data/papers?topic=lithium%20batteries&amp;type=review&amp;openAccess=yes` — open access reviews on a topic.
 
 ## Result
 
-Each item includes `source`, `title`, `url`, and `summary`, plus the fields named on this skill.
+The response is `{ &quot;items&quot;: [...] }`. Each item has:
+
+- `source` — `OpenAlex`.
+- `title` — work title.
+- `url` — DOI link, or the OpenAlex page when there is no DOI.
+- `summary` — abstract, up to 1000 characters. Empty when OpenAlex has no abstract.
 
 ## Credits
 
-One successful search uses 1 credit.
-An empty search, a failed search, a compound that matches nothing, or no remaining credits uses 0.
+A successful search uses 1 credit, even when it finds nothing.
+Wrong input or a missing search field returns 400 with a message and uses 0.
+A failed upstream search returns 503 and uses 0.
 No remaining credits returns 402 and does not search.
 A missing key returns 401.
 </code></pre>

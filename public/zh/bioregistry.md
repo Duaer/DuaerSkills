@@ -39,3 +39,4 @@ A missing key returns 401.
 ## 相关技能
 
 - [在 Duaer 里检索交叉引用](https://skills.duaer.com/zh/crossrefs.md)
+- [在 Duaer 里检索 NodeNorm](https://skills.duaer.com/zh/node-norm.md)
